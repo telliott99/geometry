@@ -1,0 +1,229 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+
+\title{Isosceles triangles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+There are several characteristics one can use to classify triangles.  For example on the basis of angles:  acute, right, and obtuse.  
+\begin{center} \includegraphics [scale=0.4] {tri_types.png} \end{center}
+
+The acute triangle (left) has all three angles smaller than a right angle.  The right triangle, naturally, has one right angle.  We'll say a lot more about right triangles later.
+
+An obtuse triangle has one angle larger than a right angle (third panel, above).
+
+\subsection*{symmetry}
+
+One can also talk about the situation where either two sides, or all three sides, have the same length.  
+
+An \emph{equilateral} triangle has all three sides the same, while an \emph{isosceles} triangle has two sides the same length.
+
+The most important consequence of three sides equal for an equilateral triangle is three-fold rotational symmetry.  Three turns of $120$ degrees, and we're back where we started.  Each of the two intermediates is identical.
+
+\begin{center} \includegraphics [scale=0.4] {equilateral.png} \end{center}
+
+The implication of rotational symmetry is that the three angles are also equal because there is no reason to choose one larger than any other.  
+
+Therefore each angle of an equilateral triangle is $2/3$ of a right angle, or $60^{\circ}$, by the triangle sum theorem (\hyperref[sec:triangle_sum_theorem]{\textbf{ref}}).
+
+It is also true that if all three angles are equal, then the triangle is equilateral (three sides equal).
+
+\subsection*{notation}
+
+To repeat a point we made previously, the Greeks, including Euclid, always label points with letters, line segments are referred to by the endpoints, and angles and triangles are denoted by the line segments from which they are composed, as in $\angle ABC$, and triangles by their vertices:  $\triangle ABC$.
+
+\begin{center} \includegraphics [scale=0.4] {triangle7.png} \end{center}
+
+This is problematic. I find myself tracing out angles from the three points, often again and again.
+
+We can give labels to the angles like $\theta$ and $\phi$ or $\alpha, \beta \dots$.  We may also assign letters to the sides opposite vertices as in side $a$ opposite vertex (angle) $A$ and so on.  
+
+Sometimes, we will boldly dispense with labels altogether and use colored dots for equal angles and colored bars for equal lengths.  
+
+\subsection*{theorem from Thales}
+
+$\bullet$ \ In an isosceles triangle (two sides equal), the base angles are also equal.
+
+The converse is
+
+$\bullet$  \ If two base angles are equal, the triangle is isosceles.
+
+Actually, my favorite proof of the forward theorem about isosceles triangles is from reflective or mirror image symmetry.  
+
+\begin{center} \includegraphics [scale=0.6] {isosceles.png} \end{center}
+
+\emph{Proof}.
+
+Imagine walking around behind the triangle and looking from that side, it would look the same.  Pappus does this and then invokes SAS, saying (basically) that the left side as viewed from the front is equal to the right side viewed from the back, etc. and the angle is shared.  So the triangle as we look from the front is equal to the one where we look from the back.  Which means that the base angles are equal.
+
+$\square$
+
+\subsection*{proofs based on triangle bisection}
+
+\label{sec:isosceles_triangle_theorem}
+
+The forward theorem about isosceles triangles is that equal sides $\rightarrow$ equal angles.
+
+\begin{center} \includegraphics [scale=0.4] {iso6.png} \end{center}
+
+\emph{Proof}.
+
+We are given $AB = AC$ (left panel).  
+
+Draw the bisector of the angle $A$ (middle panel).  This construction forms equal angles at the top, marked with 'x'.  
+
+But then, the two smaller triangles $\triangle ABC$ and $\triangle ACD$ are congruent by SAS since
+
+$\circ$ \ \ $AB = AC$
+
+$\circ$ \ \ $\angle BAD = \angle DAC$
+
+$\circ$ \ \ $AD$ is shared 
+
+We write that as $\triangle ABD \cong \triangle ACD$.
+
+Therefore (as corresponding parts of congruent triangles) the base angles are equal (right panel).  Other corresponding angles and sides are equal as well.
+
+$\square$
+
+The full set of equal angles and sides is:
+
+\begin{center} \includegraphics [scale=0.4] {iso14.png} \end{center}
+
+plus of course the central line segment $AD$, which is equal to itself.
+
+\subsection*{converse}
+
+\label{sec:isosceles_converse}
+
+We will prove equal angles $\rightarrow$ equal sides.
+
+\begin{center} \includegraphics [scale=0.4] {iso7.png} \end{center}
+
+\emph{Proof}.
+
+We are given that the angles marked with black dots are equal. 
+
+We again draw the bisector of the angle $A$.  Then we have all three angles the same, and the side $AD$ is shared.
+
+Therefore, $\triangle ABD \cong \triangle ADC$ by ASA or AAS.
+
+Thus, $AB = AC$.  And then, as before, there are right angles at the base, and the base is bisected.
+
+$\square$
+
+\subsection*{other proofs}
+
+We used the angle bisector at vertex $A$ for the proofs above.  But we might equally have used a right angle at $D$, or bisected the base.  We will just show diagrams for both proofs adapted to these methods and sketch the idea.
+
+\begin{center} \includegraphics [scale=0.4] {iso8.png} \end{center}
+
+Above, we are given $AB = AC$ and right angles at $D$.  We have SS-right angle, so the two small triangles are congruent.
+
+\begin{center} \includegraphics [scale=0.4] {iso9.png} \end{center}
+
+Above, we are given equal angles at $B$ and $C$ and right angles at $D$.  We have three angles equal plus a shared side, so congruent triangles by AAS (or after application of the triangle sum theorem, by SAS or ASA).
+ 
+\begin{center} \includegraphics [scale=0.4] {iso10.png} \end{center}
+
+Above, we are given $AB = AC$ and that $BD = DC$, i.e. the base is bisected.  Since $AD$ is shared we have that $\triangle ABD \cong \triangle ADC$ by SSS.
+
+\begin{center} \includegraphics [scale=0.4] {iso11.png} \end{center}
+
+Finally, we are given equal angles at $B$ and $C$ and we bisect the base.  We have SSA but do not know yet about the right triangle.  
+
+In this example, since $AD > DC$, there is no way to swing $AD$ over to form a triangle with a shorter side $AC$, so here SSA is enough.  But for a squished isosceles triangle with $AD < DC$, this wouldn't be the case.
+
+Euclid's proofs of the isosceles triangle theorem and its converse are \hyperref[sec:Euclid5]{\textbf{Prop $I.5$}} and \hyperref[sec:Euclid6]{\textbf{Prop $I.6$}}.  They are a little involved, so they will be shown later.
+
+\subsection*{perpendicular bisector}
+
+Suppose are given that $BD = DC$ and that $\angle ADC$ is a right angle.  For any point on $AD$, we can draw triangles with vertices at $B$ and $C$ that are congruent by SAS.
+
+\begin{center} \includegraphics [scale=0.4] {iso13.png} \end{center}
+
+We conclude that every point on $AD$ (and extensions of $AD$) is equidistant from $B$ and $C$.
+
+\subsection*{perpendicular bisector (converse)}
+
+\begin{center} \includegraphics [scale=0.4] {iso12.png} \end{center}
+
+Suppose a given point $P$ does not lie on the vertical bisector.  We claim that any such point cannot be equidistant from $B$ and $C$. 
+
+\emph{Proof}.
+
+We will use an argument by contradiction.  We assume the opposite of the statement we want to prove, and show that it leads to a contradiction and so cannot be correct.
+
+Now, suppose that $P$ \emph{is} equidistant, with $PB = PC$. By the forward theorem we have that $\angle PBC = \angle PCB$.
+
+Draw the perpendicular bisector and point $P'$ on $PB$ and on the perpendicular bisector.  By the forward theorem we have that $\angle P'BC = \angle P'CB$.  But $\angle P'BC$ and $\angle PBC$ are the same angle.
+
+Therefore
+\[ \angle PBC = \angle P'CB = \angle PCB \]
+
+But clearly $\angle PCB > \angle P'CB$.
+
+This is a contradiction.
+
+Therefore, $PB \ne PC$.
+
+$\square$
+
+If we raise the perpendicular bisector from a line segment, \emph{every} point on the bisector is equidistant from the ends of the line segment, and when the points are connected, forms an isosceles triangle.
+
+No other point not on the perpendicular bisector can be equidistant from the two endpoints.
+
+\subsection*{SSS $\rightarrow$ SAS}
+
+\label{sec:SSS_implies_SAS}
+
+Finally, we will prove that the SSS criterion implies SAS.
+
+\emph{Proof}.
+
+Draw $\triangle ABC$, and then place $D$ so that two sets of sides are equal.  $AC = AD$ and $AD = BC$, and the third side $AB$ is shared.  So we have SSS.
+
+To make the drawing, we have chosen a particular value for the total angle at vertex $C$.
+
+\begin{center} \includegraphics [scale=0.4] {SSS.png} \end{center}
+
+By the forward version of the isosceles triangle theorem, the angles marked with black dots are equal, as are the angles marked with red dots.  Therefore the $\angle D = \angle C$.  We have SAS, so $\triangle ABC \cong \triangle ABD$.
+
+$\square$
+
+\subsection*{problems}
+
+To prove:
+
+$\circ$ \ Prove that for two supplementary angle, the angle bisectors are perpendicular to each other.
+
+$\circ$ \ Prove that an equilateral triangle (all 3 sides equal) is equiangular (all 3 angles equal).
+
+$\circ$ \ A line perpendicular to the bisector of an angle cuts off congruent segments on its sides.
+
+In the figure below, given that $AC = AB$ and $\angle B = \angle C$.
+
+\begin{center} \includegraphics [scale=0.4] {iso1.png} \end{center}
+
+Prove that $BE = DC$.
+
+Hint:  draw $BC$ and then mark all the angles that are equal.
+
+\begin{center} \includegraphics [scale=0.4] {iso2.png} \end{center}
+
+\end{document}

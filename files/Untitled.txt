@@ -1,0 +1,82 @@
+\subsection*{more}
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_7.png} \end{center}
+
+Observe that the angle labeled $\phi$ has two supplementary angles, and in the second figure above we have labeled them as $\theta$ and $\theta'$.  We will see below that these two angles have the same measure:  $\theta = \theta'$.
+
+$\bullet$ \  the sum of two supplementary angles is a constant.
+
+You probably already know what this constant is equal to.  In one standard system of measurement, that dates from the Babylonians, it is $180^{\circ}$.
+
+The above statement marked with a bullet is something we will accept without proof, but it is not listed as one of the axioms or propositions written down by Euclid. 
+
+The idea can be extended to more than just two angles.  In the figure below
+\begin{center} \includegraphics [scale=0.4] {lines_angles_000.png} \end{center}
+
+\[ s = \phi_1 + \phi_2 + \phi_3 + \phi_4 + \phi_5 \]
+\[ t = \theta_1 + \theta_2 + \theta_3 \]
+\[ s = t = 180^{\circ} = \pi \]
+\[ s + t = 360^{\circ} = 2 \pi \]
+
+Both sums are equal to $180^{\circ}$.
+
+\subsection*{measure of an angle}
+
+We can see that obviously
+
+\[ \phi > \theta \]
+
+Writing the statement $\phi > \theta$ is easy, but for this to make sense (what if they are almost equal?), we must have some way of taking the measure of an angle.  We can't just rely on a picture.
+
+Our answer is to construct a circle around the central point.  
+
+$\circ$  The measure of the angle is the distance along the circumference between the points where the lines cross the circle.
+
+If that distance along the edge is larger for $\phi$ than for $\theta$, then $\phi > \theta$.  In the left panel, the arc between $Q$ and $R$ (call it arc $QR$) is larger than arc $PQ$.
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_00.png} \end{center}
+
+If we lay off the arcs starting from the same point $P$, the arc $PS$ is longer than the arc $PQ$ (right panel).
+
+We don't need to actually measure the arc itself to do this.  Measuring curved lengths is a bit tricky to do.
+
+Instead we can use a standard compass to lay off the linear distance from $P$ to $S$ and compare that with the distance from $P$ to $Q$.  Since the distance from $P$ to $S$ is a larger arc of the circle than from $P$ to $Q$, $\phi > \theta$.
+
+This doesn't work very well as $S$ approaches the diameter through $O$ and $P$, but we could lay off the distance in two parts and that would be fine.  
+
+\begin{center} \includegraphics [scale=0.3] {arcs11.png} \end{center}
+
+We \emph{define} the measure of an angle $s$ to be equal to the arc $a$ it sweeps out, or subtends, in a circle of radius $1$, a \emph{unit} circle.  Angles are not lengths, but numerically, the measure of the angle is the measure of the arc.
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_1.png} \end{center}
+
+- \ On the left, one of the angles, $\phi$, is larger than the other one, $\theta$.  
+
+- \ On the right, we have $\phi < \theta$.  
+
+- \ The third possibility is that $\theta = \phi$.
+
+\subsection*{right angles}
+
+
+
+A corollary is that 
+
+$\bullet$ \ the sum of all the angles on one side of a line (at a given point), is equal to two right angles.
+
+\begin{center} \includegraphics [scale=0.35] {lines_angles_5.png} \end{center}
+
+This is simply a matter of symmetry and subtraction.  If the sum of all the angles at a point is equal to four right angles, then the sum of the angles on each side of a line through that point is equal to two right angles.
+
+The convention that there are $360^{\circ}$ total in a circle dates to the time of the Babylonians (c. 2400 BC).
+
+In degrees, a right angle is $90^{\circ}$ and two supplementary angles measure $180^{\circ}$.  
+
+There is nothing particularly special about using $90^{\circ}$ as the measure of a right angle, or $360^{\circ}$ for one whole turn.  Well, there is one thing:  there are \emph{approximately} 360 days in a year, which marks the sun's track across the sky.  
+
+Euclid just talks about angle measurements in terms of right angles.  For example, that the sum of two supplementary angles is equal to two right angles.
+
+In his book, \emph{Measurement}, Lockhart adopts the convention that a whole turn is equal to $1$.  
+
+And we'll just mention here that one whole turn can be defined using a different unit of measure as $2 \pi$ \emph{radians}, and that convention turns out to be quite important for calculus.
+

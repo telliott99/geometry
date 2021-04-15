@@ -1,0 +1,170 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Computations}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{Law of cosines}
+
+\label{sec:law_of_cosines}
+
+The law of cosines relates the sides of any triangle to the cosine of one angle.  Rewritten appropriately, it applies to all three angles of the triangle.  The relationship is used extensively in geometry.
+
+For a triangle with sides $a$ and $b$ flanking vertex $C$, the formula is:
+\begin{center} \includegraphics [scale=0.5] {cosine_law.png} \end{center}
+
+The formula is the Pythagorean theorem with a correction factor, $-2ab \cos C$, that depends on the angle opposite the hypotenuse and which disappears when that angle is $\pi/2$.  The correction factor is negative for an angle $< \pi/2$, which makes sense, since the smaller angle squeezes the hypotenuse to be smaller as well.
+
+The correction factor is positive for an angle larger than $\pi/2$.  It also depends on the lengths of both the base sides, as we would expect.
+
+The law of cosines is developed relatively easily from the Pythagorean theorem by looking at the altitude.
+
+\begin{center} \includegraphics [scale=0.5] {Hopkins_964.png} \end{center}
+
+We switch to focus on $\angle A$.  We have that $\angle A$ is an acute angle, and the triangle is either obtuse (left) or acute (right).  We look at both cases for this example, although often in this book we just figure proofs or computations for acute triangles.  Usually that works out the same for both cases.
+
+Let $c$ be the base of the triangle, and let $x$ be the whole length of the line segment $AD$ from the vertex $A$ to the place where the altitude $h$ reaches $c$.
+
+For the first case, we have two right triangles.  The larger one gives:
+\[ x^2 + h^2 = b^2 \]
+and the other one is
+\[ (x - c)^2 + h^2 = a^2 \]
+Subtract
+\[ x^2 - (x - c)^2 = b^2 - a^2 \]
+\[ 2xc - c^2 = b^2 - a^2 \]
+\[ a^2 = b^2 + c^2 - 2xc \]
+and since $x/b = \cos A$
+\[ a^2 = b^2 + c^2 - 2bc \cos A \]
+
+This is the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them $\angle A$.
+
+Using the cosine in the formula is just a form of shorthand for the ratio $x/b$ and gets rid of that pesky term $x$.
+
+The same result will be found for the acute triangle.  Again $x$ is the length of $AD$.
+
+\begin{center} \includegraphics [scale=0.5] {Hopkins_964.png} \end{center}
+
+We write more directly:
+\[ b^2 - x^2 = a^2 - (c - x)^2 \]
+\[ = a^2 - c^2 + 2xc - x^2 \]
+\[ b^2 = a^2 - c^2 + 2xc \]
+Rearranging:
+\[ a^2 = b^2 + c^2 - 2xc \]
+
+That's exactly the same relationship.
+
+\subsection*{preview of another theorem}
+
+Let's just continue with a little more algebra:
+\[ a^2 = b^2 + c^2 - 2xc \]
+\[ x = \frac{-a^2 + b^2 + c^2}{2c} \]
+
+Recall that we had
+\[ x^2 + h^2 = b^2 \]
+\[ h^2 = b^2 - \ [ \  \frac{-a^2 + b^2 + c^2}{2c} \ ]^2 \]
+
+Put over a common denominator
+\[ h^2 = \frac{4b^2c^2 - (-a^2 + b^2 + c^2)^2}{4c^2} \]
+Get rid of that fraction
+\[ 4h^2c^2 = 4b^2c^2 - (-a^2 + b^2 + c^2)^2 \]
+
+A difference of squares $m^2 - n^2$ is equal to $(m-n)(m+n)$ so
+\[ 4h^2c^2 = [2bc + (-a^2 + b^2 + c^2)] \cdot [2bc - (-a^2 + b^2 + c^2)] \]
+
+At this point, if you're wondering why we bother, notice that the left-hand side is the area of the triangle (squared), with a factor $16$.
+
+The first term on the right-hand side can be rearranged
+\[ 2bc + (-a^2 + b^2 + c^2) = (b + c)^2 - a^2 \]
+\[ = [(b + c) + a] \cdot [(b + c) - a] \]
+\[ =  (a + b + c) \cdot (b + c - a) \]
+
+As can the second term
+\[ 2bc - (-a^2 + b^2 + c^2) = 2bc + a^2 - b^2 - c^2 \]
+\[ = a^2 - (b^2 - 2bc + c^2) \]
+\[ = a^2 - (b - c)^2 \]
+\[ = [a + (b - c)] \cdot [a - (b - c)] \]
+\[ = (a + b - c) \cdot (a + c - b) \]
+
+Putting it all back together
+\[ 4h^2c^2 = (a + b + c) \cdot (b + c - a)  \cdot (a + b - c) \cdot (a + c - b) \]
+
+but twice the area of the triangle is $ch$
+\[ 2A = ch \]
+\[ (2A)^2 = c^2h^2 \]
+
+\[ 16A^2 = (a + b + c) \cdot (b + c - a) \cdot (a + b - c) \cdot (a + c - b) \]
+
+We have an expression for the area of the triangle in terms of its sides.
+
+The result can be simplified still more by defining the semi-perimeter $s = (a + b + c)/2$ but we'll leave that for later.
+
+This is called \hyperref[sec:Heron_formula]{\textbf{Heron's formula}}.  It is fully symmetric in $a$, $b$ and $c$, as it should be.
+
+This formula has something to say about when the area is zero.  It will be zero, if any of the terms is zero. 
+
+\[ (a + b + c) = 0 \]
+
+This can only happen if the lengths of all three sides are individually zero.  This is a triangle that has degenerated to a mere point.
+
+It can also happen if any of the similar terms like
+
+\[ a + b - c = 0 \]
+\[ c = a + b \]
+
+This happens when any two sides are exactly equal to the third.  This is another degenerate case, the triangle has become a line segment.  Remember the \hyperref[sec:triangle_inequality]{\textbf{triangle inequality}}:  the sum of any two sides is greater than the third.
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.4] {dartmouth_4.png} \end{center}
+
+To prove:
+
+\begin{center} \includegraphics [scale=0.5] {dartmouth4b.png} \end{center}
+
+\[ c^2 = a^2 + b^2 + a \cdot b \cos \theta' \]
+\[ c^2 = a^2 + b^2 - a \cdot b \cos \theta \]
+
+Wonder if this is a misprint?   (Missing a factor of $2$.  Notice also
+\[ (a + b \cos \theta')^2 + b^2 \sin^2 \theta' = c^2 \]
+\[ a^2 + 2ab \cos \theta' + b^2 (\cos^2 \theta' + \sin^2 \theta') = c^2 \]
+
+Since $\cos \theta' = - \cos \theta$:
+\[ a^2 - 2ab \cos \theta + b^2 = c^2 \]
+
+\subsection*{philosophy}
+
+Trigonometry is not about finding the measure of the angle complementary to $23^{\circ}$ as $67^{\circ}$.
+
+Trigonometry uses formulas like the sum of angles, and especially, the law of cosines, to solve problems in calculus.
+
+One of the most famous applications came when Newton derived Kepler's laws about the orbits of the planets.  Originally, to do that he made the approximation that the mass of the earth acts \emph{as if} it were concentrated at a single point corresponding to the center of the earth, and likewise for the sun.
+
+However, for a rigorous demonstration he needed to prove that this approximation is correct.  We do not have the tools yet to see how he did that, but here are two equations from my write-up:
+\[ \rho^2 = D^2 + s^2 - 2Ds \cos \gamma \]
+\[ \cos \gamma = \frac{D^2 + s^2 - \rho^2}{2Ds} \]
+
+and the relevant diagram:
+\begin{center} \includegraphics [scale=0.35] {newton_volume.png} \end{center}
+
+You should recognize the law of cosines at work.
+
+Trigonometry is hugely important in math and science.  Although it has (simple) applications for activities like surveying that is not at all what it is about.
+
+\end{document}

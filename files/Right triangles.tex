@@ -1,0 +1,225 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Right triangles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:right_triangles}
+
+A right triangle is a triangle containing one right angle.  Right angles (and right triangles) are special.  We saw previously that the definition of a right angle is that two of them add up to one straight line or $180$ degrees.  
+
+Since we proved that the sum of the three angles in any triangle is equal to one straight line, by extension, the sum of angles in any triangle is also equal to two right angles.
+
+In the figure below, the angle at vertex $P$ is a right angle.  It is common to mark a right angle with a little square, as shown, but these are a pain to draw, so I will often not do that.  The side opposite $P$, namely $c$, is the \emph{hypotenuse}.
+
+\begin{center} \includegraphics [scale=0.35] {right_triangle.png} \end{center}
+
+\subsection*{complementary angles}
+
+\label{sec:complementary_angle_theorem}
+
+Since the sum of angles in a triangle is equal to two right angles, the sum of the angles $\theta$ and $\phi$ above is also equal to one right angle, or 90 degrees.  
+
+Angles $\theta$ and $\phi$ are said to be \emph{complementary}.  This fact is often exploited in proofs.
+
+$\bullet$ \ the sum of two smaller angles in a right triangle is equal to one right angle.
+
+\subsection*{hypotenuse-angle (HA)}
+
+For two right triangles, if one hypotenuse is equal to the other, and also one set of angles equal, the two triangles are congruent.
+
+\emph{Proof}.
+
+Given two triangles with the right angle plus one other angle congruent, then we have all three angles congruent (AAA) by the triangle sum theorem.
+
+If we also have the longest side (hypotenuse) congruent, then the triangles are congruent by ASA.
+
+$\square$
+
+\subsection*{hypotenuse-leg (HL)}
+ 
+For two right triangles, if one hypotenuse is equal to the other, and also one set of legs equal, the two triangles are congruent.
+
+\begin{center} \includegraphics [scale=0.4] {hyp_side_cong.png} \end{center}
+
+In the figure, imagine the hypotenuse swinging on the hinge of its vertex with the horizontal base.  There is only one angle where it will terminate on the vertical side with the correct length.  That point is marked with a black dot.
+
+This determines the angle between the known sides, and simultaneously, the length of the third side. 
+
+In terms of our conditions for congruence, this is SSA (which we said doesn't work always).  However, it does work if the angle is a right angle.  $SSA$ in a right triangle means we know \emph{which} side is the hypotenuse.
+
+\emph{Proof}.
+
+Although we haven't proved it yet, we call on the Pythagorean theorem.  Given the hypotenuse and one leg of a right triangle, $h$ and $a$, the theorem says that
+\[ a^2 + b^2 = h^2 \]
+
+so the third leg is determined by the other two sides and therefore we have SSS.
+
+$\square$
+
+\subsection*{SS-right angle}
+
+\label{sec:SSA_in_right}
+
+Previously we showed this figure:
+
+\begin{center} \includegraphics [scale=0.4] {angle_side_side.png} \end{center}
+
+and we said that in the special case where $b$ meets the opposing side in a right angle, that SSA is enough to prove congruence.  Call it HL to be safe, as we did above.
+
+Other named methods of proof for right triangles can be found in some books, but these do not add anything because they are exactly equivalent to methods we already know:
+
+$\circ$ Leg-Leg, the two legs flank the right angle (SAS).
+
+$\circ$ Hypotenuse-Acute angle (AAS).
+
+$\circ$ Leg-Acute angle (ASA).
+
+\subsection*{altitudes}
+
+\begin{center} \includegraphics [scale=0.5] {complementary.png} \end{center}
+
+In the large right triangle above, we know that
+\[ s + t = 90 \]
+When we draw the perpendicular to the hypotenuse that goes through the upper vertex, that is an \emph{altitude} of the triangle.  Because of the right angle, we obtain two smaller right triangles.  Thus
+\[ s + t' = 90 \]
+\[ s' + t = 90 \]
+Hence
+\[ s + t = 90 = s + t' \]
+so
+\[ t = t' \]
+and similarly, $s = s'$.
+
+\subsection*{theorems about right triangles}
+
+\label{sec:right_angle_largest}
+
+$\bullet$ \ In any right triangle, the right angle is larger than either of the other two angles.
+
+\emph{Proof}.
+
+Suppose $\alpha$ and $\beta$ are complementary angles in a right triangle,  Then $\alpha + \beta$ is equal to one right angle.  
+
+Both angles $\alpha$ and $\beta$ must be non-zero:  $\alpha > 0$ and $\beta > 0$ (otherwise one leg is exactly equal to the hypotenuse and we do not have a triangle).  
+
+Suppose that $\alpha \le \beta$.  As complementary angles in a right triangle
+
+\[ \alpha + \beta = 90 \]
+
+Subtract $\alpha$ from both sides
+
+\[ \beta = 90 - \alpha \]
+
+But $90 - \alpha < 90$ (since $\alpha > 0$), so $\beta < 90$.  And since $\alpha \le \beta$, $\alpha < 90$ also.
+
+$\square$
+
+\subsection*{only one perpendicular to a line from a point}
+
+This basic result is assumed in some of the theorems that follow.  Suppose we have a line and a point not on the line.
+
+\begin{center} \includegraphics [scale=0.4] {perp1.png} \end{center}
+
+We claim that only one perpendicular can be drawn from the point to the line.
+
+\emph{Proof}.
+
+Assume that two such lines can be drawn.  So, in addition to $PQ \perp AB$, we draw $PR$ and claim that it is also perpendicular to $AB$.
+
+Then, by the converse of the alternate interior angles theorem, $PQ \parallel PR$.  
+
+But $PQ$ and $PR$ also meet at the point $P$.  This contradicts the fundamental definition of parallel lines.  Our assumption must be false.
+
+Only one such line can be drawn.
+
+$\square$
+
+\subsection*{hypotenuse longest side}
+
+\label{sec:hypotenuse_longest}
+
+$\bullet$ \ In any right triangle, the hypotenuse is longer than either side.
+
+\emph{Proof}.
+
+We showed above that in any right triangle, the right angle is larger than either of the other two angles.
+
+Now we claim that the right angle is the largest angle in a right triangle.
+
+By Euclid \hyperref[sec:Euclid1]{\textbf{Prop $I.18$}}:  in any triangle, a greater side is opposite a greater angle.  
+
+$\square$
+
+The fact that the hypotenuse is the longest side in a right triangle will come in handy when we investigate the tangent to a circle.  It is also useful here.
+
+\subsection*{shortest distance from a point to a line}
+
+\label{sec:shortest_distance_to_line}
+
+$\bullet$ \ The distance from a fixed point to a line is least when the new line segment makes a right angle with the line.
+
+\emph{Proof}.
+
+Draw the perpendicular $QR$.  We showed that only one such perpendicular can be drawn.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector2a.png} \end{center}
+
+Any other line segment  (for example, the dotted line) from $R$ to the upper edge (the extension of $PQ$), forms a right triangle also containing $QR$, where the dotted line is the hypotenuse.
+
+Since the hypotenuse is the longest side of a right triangle, by the previous theorem, $QR$ must be shorter.
+
+\subsection*{bisector equidistant from sides}
+
+\label{sec:bisector_equidistant_sides}
+
+$\bullet$ \ Any point on the bisector of an angle is equidistant from the sides at the point of closest approach.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector2b.png} \end{center}
+
+We simply draw the vertical line $RS$.  The resulting triangle is congruent to $\triangle PQR$ by AAS.  Therefore, $QR = RS$.
+
+$\square$
+
+\subsection*{equidistant from sides $\rightarrow$ bisector}
+
+\label{sec:bisector_equidistant_sides_converse}
+
+$\bullet$ \ If a point is equidistant from the sides of an angle, then it lies on the angle bisector.
+
+\emph{Proof}.
+
+We are given $QR = RS$ and have the shared side $PR$, which is the hypotenuse, in two right triangles.  We have hypotenuse-leg (HL), hence the two triangles are congruent.  
+
+Therefore the two smaller angles at $P$ are equal, so $PR$ is the bisector of $\angle QPS$.
+
+$\square$
+
+\subsection*{problem}
+
+Here is a problem to exercise some concepts we've seen to this point:  isosceles triangles, complementary angles, and vertical angles.
+
+\begin{center} \includegraphics [scale=0.4] {tr3.png} \end{center}
+
+Given that $AB = AC$.  Pick any point $D$ on the base $BC$ (except directly under $A$), and draw the vertical $DF$.  Extend $AC$ to meet that vertical line.
+
+Prove that $\triangle AEF$ is isosceles.
+
+
+\end{document}

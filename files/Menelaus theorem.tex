@@ -1,0 +1,120 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Ceva's theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+We will be talking about four special points in triangles including the orthocenter, circumcenter, incenter and centroid.  The first is the point where the altitudes cross, the second is the center of the circle which includes all three vertices, and the third is the center of a circle which just fits inside the triangle.  The last is formed by drawing lines from each vertex to the midpoint of the opposing side.
+
+These have the common feature that three lines with certain properties cross at a single point.  When this happens, they are said to be concurrent.  
+
+We establish the general conditions under which this happens.  This is the subject of Ceva's theorem.
+
+We first establish a preliminary result, which is called \hyperref[sec:Menelaus_theorem]{\textbf{Menelaus' theorem}}, due to Menelaus of Alexandria (the geometer, not the mythological figure). 
+
+\subsection*{Menelaus' theorem}
+
+\label{sec:Menelaus_theorem}
+
+This simple but powerful theorem is based on similar triangles.  In the figure below, subscripts indicate the parts of a side, for example, $a_1$ and $a_2$ are the components of side $a$.  The length $c$ is the length of the whole side, and $c'$ is the extension of side $c$.
+
+We will show that the product of three ratios is equal to $1$:
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c'} = 1 \]
+
+\begin{center} \includegraphics [scale=0.5] {menelaus.png} \end{center}
+
+\emph{Proof}.
+
+Draw the dotted line segment parallel to $b$ and label it $d$.  We have two pairs of similar triangles.  The first pair has side ratios
+\[ \frac{d}{a_1} = \frac{b_1}{a_2} \]
+while the second has
+\[ \frac{d}{c'} = \frac{b_2}{c} \]
+
+Combining the two results:
+\[ d = \frac{a_1 b_1}{a_2} = \frac{b_2 c' }{c} \]
+So
+\[ \frac{a_1 \cdot b_1\cdot c}{a_2 \cdot b_2\cdot c'} = 1 \]
+
+$\square$
+
+We should note that Menelaus' theorem is true even when the line segment going through $Y$ does not go through the triangle (right panel, below).  The proof is straightforward and relies on a construction giving similar triangles.
+
+\begin{center} \includegraphics [scale=0.4] {further2.png} \end{center}
+
+\subsection*{Einstein's proof of Menelaus}
+
+There is a story that Einstein disliked the proof of Menelaus' theorem given above.
+
+He said it was ugly, and that it didn't involve the vertices symmetrically.  I read that Einstein's proof starts by dropping altitudes to the traversal, and then uses similar triangles.  Here's what I came up with.
+
+\begin{center} \includegraphics [scale=0.4] {menelaus1.png} \end{center}
+
+\emph{Proof}.
+
+The right triangle with $c$ as hypotenuse is similar to the one with $c'$ as hypotenuse.  The ratio of short sides gives
+\[ \frac{q}{r} = \frac{c}{c'} \]
+
+The right triangles with $a_1$ and $a_2$ as hypotenuse are similar.  We form the ratio of altitudes:
+
+\[ \frac{r}{p} = \frac{a_1}{a_2} \]
+
+Finally, the right triangles with $b_1$ and $b_2$ as hypotenuse are similar.  We form the ratio of altitudes again:
+
+\[ \frac{p}{q} = \frac{b_1}{b_2} \]
+
+Multiply the left-hand sides all together to obtain $1$.  Therefore
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c'} = 1 \]
+
+$\square$
+
+According to
+
+\url{https://www.cut-the-knot.org/Generalization/MenelausByEinstein.shtml}
+
+\begin{quote}
+... [in] correspondence between Albert Einstein and a friend of his, Max Wertheimer. In the first letter, Einstein apparently continues a discussion on elegance of mathematical proofs. A proof may require introduction of additional elements, like line AP in the first of the cited proofs. In Einstein's opinion, "... we are completely satisfied only if we feel of each intermediate concept that it has to do with the proposition to be proved."
+
+As an illustration of his viewpoint, Einstein gives two proofs of the same proposition - one ugly, the other elegant. Curiously, the proposition he proves is that of the Menelaus theorem, and the proof ugly in his view is the first of the cited proofs. He writes, "Although the first proof is somewhat simpler, it is not satisfying. For it uses an auxiliary line which has nothing to do with the content of the proposition to be proved, and the proof favors, for no reason, the vertex A, although the proposition is symmetrical in relation to A, B, and C. The second proof, however, is symmetrical, and can be read off directly from the figure."
+\end{quote}
+
+\subsection*{converse}
+
+We've drawn $\triangle ABC$ as an acute triangle, with the traversal crossing through points internal to two sides and on the extension of the third. There are other possibilities.  However, if we restrict ourselves to this case, then the converse can be stated as
+
+Given that the product of ratios is equal to $1$, the three points are colinear.
+
+\begin{center} \includegraphics [scale=0.5] {menelaus.png} \end{center}
+
+\emph{Proof}.
+
+An easy proof draws on the forward theorem.  Assume that the product of ratios is $1$.
+
+Suppose the points are not colinear, so the case with product $1$ has $c''$ and the case with colinear points has $c'$.  We are given that
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c''} = 1 \]
+
+But, by the forward theorem
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c'} = 1 \]
+
+We conclude that $c' = c''$  Hence, if the product is equal to $1$, the points lie on the same line.
+
+$\square$
+
+
+\end{document}

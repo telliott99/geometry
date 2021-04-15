@@ -1,0 +1,141 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Area}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{similar right triangles}
+
+\label{sec:similar_right_triangles}
+
+We will prove that for similar right triangles, all angles equal implies equal ratios of sides.  Our approach is from Acheson and is based on an observation about area.
+
+\begin{quote}Draw a rectangle ABCD, and a diagonal AC.  Then pick a point E on the diagonal and draw lines through it parallel to the sides.\end{quote}
+
+\begin{center} \includegraphics [scale=0.6] {Acheson_G42.png} \end{center}
+
+All of the right triangles in the figure are similar.  Start with the alternate interior angles theorem, then use complementary angles in a right triangle, and finish with vertical angles.  
+
+By changing the height of the figure, we can obtain any two complementary angles we wish.  And by changing the placement of $E$ we can get any ratio we like.
+
+So then, the two shaded rectangles are bisected by the diagonal $AEC$ (\emph{proof}:  this is a basic property of rectangles;  we have congruent $\triangle$ by SSS).  So the two light-gray triangles have equal area, and the two dark gray ones do as well.
+
+But $\triangle ABC$ and $\triangle ADC$ also have equal area.
+
+Therefore, we just subtract equal areas to find that the two unshaded rectangles above and below the diagonal are equal in area.  The one on top has area $bc$ and the one below has area $ad$.  We have
+
+\[ bc = ad \]
+\[ \frac{a}{c} = \frac{b}{d} \]
+
+$\square$
+
+A bit of algebra gives:
+\[ \frac{a}{c} + \frac{c}{c} = \frac{b}{d} + \frac{d}{d} \]
+\[ \frac{a + c}{c} = \frac{b + d}{d} \]
+\[ \frac{a + c}{b + d} = \frac{c}{d} = \frac{a}{b} \]
+
+\begin{center} \includegraphics [scale=0.6] {Acheson_G42.png} \end{center}
+
+\subsection*{hypotenuse in proportion}
+
+It is natural to ask, what about the hypotenuse?
+
+\begin{center} \includegraphics [scale=0.5] {similar18.png} \end{center}
+
+Let us look ahead briefly to the Pythagorean theorem.  As you likely know, for a right triangle with sides $a$ and $b$ and hypotenuse $h$:
+\[ a^2 + b^2 = h^2 \]
+
+We can use the Pythagorean theorem to prove that:
+\[ \frac{a}{c} = \frac{b}{d} = \frac{g}{h} \]
+
+\emph{All} of the sides of two similar right triangles have the same ratio.  
+
+We must be careful, however.  There is a deep connection between similarity, area and the Pythagorean theorem.  It is important that we will have Euclid's proof of the theorem, which does not depend on similarity.
+
+\emph{Proof}.
+
+Start with 
+\[ \frac{a}{c} = \frac{b}{d} = k \]
+\[ a = kc, \ \ \ \ \ \ b = kd \]
+\[ a^2 + b^2 = k^2c^2 + k^2d^2 \]
+\[ g^2 = k^2h^2 \]
+
+Since these are lengths, we can take the positive square root and obtain
+
+\[ \frac{g}{h} = k \]
+\[ = \frac{a}{c} = \frac{b}{d} \]
+
+$\square$
+
+\subsection*{similar right triangles}
+
+\emph{Proof}.  (Alternate).
+
+We are given that the three triangles in the figure below are right triangles.  Using complementary angles, they are all three similar triangles by AAA.
+
+We will prove that the ratio of the hypotenuse to the short side is the same for both 
+\[ \frac{c}{a} = \frac{a}{d} \]
+by first proving that
+\[ a^2 = cd \]
+
+\emph{Proof.}
+
+We have that
+\[ c^2 = a^2 + b^2 \]
+\[ = a^2 + (c-d)^2 + h^2 \]
+\[ = a^2 + c^2 - 2cd + d^2 + h^2 \]
+so
+\[ a^2 + h^2 + d^2 = 2cd \]
+
+\begin{center} \includegraphics [scale=0.45] {pythagoras5.png} \end{center}
+
+But 
+\[ a^2 = h^2 + d^2 \]
+So
+\[ 2a^2 = 2cd \]
+\[ a^2 = cd \]
+\[ \frac{c}{a} = \frac{a}{d} \]
+
+$\square$
+
+Thus, AAA similarity is established for right triangles.  If either of the smaller angles matches between two right triangles, then they are not only similar but all the side lengths are in the same ratio as well.
+
+\subsection*{altitudes in proportion}
+
+Note that, as well as the sides, the altitudes are also in proportion with the same ratio.
+
+One way to see this is to drop an altitude and then consider the two similar right triangles on one side of it.  The altitudes are sides of this triangle.
+
+For similar triangles, where the sides are in proportion $k$, the areas are in proportion $k^2$.  The reason is that the altitudes are in the same proportion, namely $k$.
+
+\begin{center} \includegraphics [scale=0.4] {similarity_by_area3.png} \end{center}
+
+Given that $DF \parallel BC$, so $\triangle ADF \sim \triangle ABC$.
+
+Drop the altitude $AGH$.
+
+Now we see that $\triangle ADG \sim \triangle ABH$ and $\triangle AGF \sim \triangle AHC$, with the same proportionality constant, \emph{since they share the sides} $AG$ and $AH$.
+
+Suppose that $AD/AB = DF/BC = k$.  Then $AG/AH$ also is equal to $k$.
+
+The ratio of areas is then
+\[ \frac{\Delta_{ADF}}{\Delta_{ABC}} =  \frac{\frac{1}{2} DF \cdot AG}{\frac{1}{2} BC \cdot AH} = k^2 \]
+
+\end{document}

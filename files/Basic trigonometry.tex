@@ -1,0 +1,238 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Area}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{radian measure}
+
+In this book, we make an effort not to use degrees for angular measure.  They aren't seen much after elementary school.  
+
+The Greeks thought in terms of one or two right angles, or four right angles for an entire circle.  In more advanced mathematics we invariably use radians.  Angles are measured in terms of the arc of the circle that they \emph{subtend} or cut out.
+
+Since the circumference of an entire circle is equal to $2 \pi$ radians, a right angle is one-quarter of that or $\pi/2$ radians.
+
+When we do a little trigonometry in this book, we will use radian measure for angles.  Some common angles:  $\pi/6 = 30^{\circ}$, $\pi/4 = 45^{\circ}$, and $\pi/3 = 60^{\circ}$.
+
+\subsection*{sine and cosine}
+
+\label{sec:sine_and_cosine}
+
+You probably know already that trigonometry involves ratios called the sine, cosine and tangent, as well as a few others.  Knowing the basics of this will come in handy in a few places in the book.
+
+\begin{center} \includegraphics [scale=0.4] {sine_cosine.png} \end{center}
+
+So first, in a right triangle, for one of the complementary angles $\alpha$, the sine of the angle is defined as the ratio between the side opposite and the hypotenuse.  In the drawing
+
+\[ \sin \alpha = \frac{a}{h} \]
+
+while the cosine is 
+\[ \cos \alpha = \frac{b}{h} \]
+
+From our work earlier, we know that any similar right triangle (with the same angles) has its sides in the same ratios.  The sine and cosine are functions of the angle, but are independent of the size of the triangle.  
+
+Frequently, the hypotenuse is scaled to be equal to $1$, so then the opposite side is equal to the sine, and the adjacent side to the cosine.
+
+Switching our focus from $\alpha$ (the angle at $A$) to the angle at vertex $B$, switches opposite to adjacent and vice-versa.  The result of this is that the sine of an angle is equal to the cosine of its complementary angle, and vice-versa.
+
+\subsection*{particular values}
+We can easily determine the values for these functions in three special cases.  
+
+The first is the angle $45$ degrees or $\pi/4$.  Draw an isosceles right triangle with sides of length $1$ (left panel).
+
+\begin{center} \includegraphics [scale=0.4] {30_45_60.png} \end{center}
+
+Then the hypotenuse has length $\sqrt{2}$ (from Pythagoras) and the values are
+\[ \sin \frac{\pi}{4} = \frac{1}{\sqrt{2}} = \cos \frac{\pi}{4} \]
+
+For the other two, bisect an equilateral triangle and erase one half (right panel).  The smaller angle is $30$ degrees or $\pi/6$ and its complement is $60$ degrees or $\pi/3$.
+
+The values are
+\[ \sin \frac{\pi}{6} = \frac{1}{2} = \cos \frac{\pi}{3}, \ \ \ \ \ \ \cos \frac{\pi}{6} = \frac{\sqrt{3}}{2} = \sin \frac{\pi}{3} \]
+
+\subsection*{area of any triangle}
+
+The altitude to any base of  triangle is equal to the length of the side of a triangle times the sine of the angle that side makes with the base.
+
+\begin{center} \includegraphics [scale=0.4] {triangle5.png} \end{center}
+
+\[ \frac{h}{b} = \sin A \]
+\[ h = b \sin A \]
+
+Therefore (if $\Delta$ is the area of the triangle):
+\[ 2 \Delta = hc = bc \sin A \]
+
+One can equally well write
+\[ h = a \sin B \]
+\[ 2 \Delta = hc = ac \sin B \]
+
+Any two sides of a triangle multiplied together, and then times the sine of the angle between them.
+
+\subsection*{law of sines}
+
+This also leads to the equality
+\[ b \sin A = a \sin B \]
+\[ \frac{a}{b} = \frac{\sin A}{\sin B} \]
+
+which by symmetry we extend to all three angles
+\[ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} \]
+
+This simple formula is called the law of sines.
+
+\subsection*{area proportional to the product of two sides}
+
+For any figure in the plane, the area is proportional to the product of two sides.  This is obvious for a square or a rectangle.
+
+It's also true of a circle, as we will see, since $A = \pi r^2$.
+
+And it is true for any triangle.  Rewriting what we had above
+
+\[ \Delta =  \frac{1}{2} ac \sin B \]
+
+But similar triangles grow without changing the angle, or its sine.  Hence the area of a triangle is proportional to the product of any two of its sides.
+
+Since a parallelogram consists of two congruent triangles, it is also true of them as well.
+
+\subsection*{a favorite trigonometric identity}
+
+Now that we know about the sine and cosine, we can look at what Pythagoras tells us about them:
+
+\begin{center} \includegraphics [scale=0.4] {trig2.png} \end{center}
+
+Notice that in the figure, the sine and cosine of an angle are the sides of a right triangle with hypotenuse equal to $1$.  It follows from the Pythagorean theorem that for any angle $\theta$
+
+\[ \sin^2 \theta + \cos^2 \theta = 1 \]
+\[ \cos \theta = \sqrt{1 - \sin^2 \theta} \]
+
+This identity is very important in analytic geometry and in calculus.
+
+\subsection*{other functions}
+
+We'll just mention a few other common trig functions that are constructed from sine and cosine, although they aren't used in this book.
+
+\begin{center} \includegraphics [scale=0.4] {trig2.png} \end{center}
+
+First, the tangent of the angle is equal to the opposite side divided by the adjacent side.  In other words, it is equal to the sine divided by the cosine.
+\[ \tan \theta = \frac{\sin \theta}{\cos \theta} \]
+
+We can see the tangent as a length.  Extend the hypotenuse to make a similar triangle, where the adjacent side has length equal to the radius, i.e. $1$.  Now, opposite over adjacent gives tangent.
+
+\begin{center} \includegraphics [scale=0.4] {trig3.png} \end{center}
+
+There are also three inverse functions:  secant (inverse of the cosine), cosecant (inverse of the sine), and cotangent (inverse of the tangent).  From the drawing above, we can get that
+\[ \frac{1}{\sec \theta} = \cos \theta \]
+\[ \sec \theta = \frac{1}{\cos \theta} \]
+
+(We might also check by looking at the ratio $\tan \theta/\sec \theta = \sin \theta$).
+
+We include figures with the cotangent and cosecant as well, but put off discussion of them for now.
+
+\begin{center} \includegraphics [scale=0.4] {trig4.png} \end{center}
+
+There are several other common representations of the six functions.  We'll see more when we get to analytic geometry.  There is a common one where the tangent to the circle where the ray comes from $\angle \theta$ is equal to $\tan \theta$.
+
+\begin{center} \includegraphics [scale=0.28] {trig5.png} \end{center}
+
+\subsection*{signed angles}
+
+\label{sec:signed_angles}
+
+In analytic geometry we will introduce the idea of two axes in the plane, one for $x$-values and one for $y$-values.  The origin will become $(0,0)$, and values will have signs, i.e., $x$-values to the left of the origin will be minus some number, and $y$-values below the origin will be minus some number as well.
+
+\begin{center} \includegraphics [scale=0.5] {sine_cosine2.png} \end{center}
+
+Without getting into all the gory details, I hope you can see that when, as here, $s$ and $t$ are supplementary angles, then 
+\[ \sin s = \sin t \]
+\[ \cos s = - \cos t \]
+
+while for $s$ and $-s$
+\[ \sin s = - \sin -s \]
+\[ \cos s = \cos -s \]
+
+and as we said before, when $s$ and $t$ are complementary angles
+\[ \sin s = \cos t \]
+\[ \cos s = \sin t \]
+
+\subsection*{length of a secant or chord}
+
+\label{sec:sine_secant}
+
+By work done previously, we have established that if the angle $\theta$ (as a central angle) subtends the arc $PQ$, the same angle $\theta$ on the periphery subtends twice the arc, namely $PR$.  
+
+And since the central angle is equal to the arc it subtends, an angle on the periphery is one-half the arc it subtends.
+
+\begin{center} \includegraphics [scale=0.4] {secant2.png} \end{center}
+
+If the length of the chord $PR$ is $2y$, then the \hyperref[sec:sine_and_cosine]{\textbf{sine}}) of the angle $\theta$ is $y/r$, which in this unit circle is just $y$.  That is, the chord $PR$ for the peripheral angle $\theta$ is twice the sine of the angle times the radius.
+
+And since the vertex of the angle $\theta$ can be placed anywhere on the periphery and still subtend the same arc, the chord or secant of any angle on the periphery is the same length, regardless of how it is arranged with respect to the diameter or the tangent.
+
+\subsection*{problem}
+
+Here is a nice area problem I saw on Twitter.  (The attribution is "Paul Eigenmann, Stuttgart, 1967".  Web search finds what looks like a great text, but in German).
+
+\begin{center} \includegraphics [scale=0.4] {area_problem.png} \end{center}
+
+Given that the side is bisected and the unshaded areas are equal.  What is the area of the triangle shaded magenta?
+
+\emph{Solution}.
+
+Let's say this is a unit square and let the top vertex of the magenta triangle be a distance $x$ from the left-hand side of the box and a distance $1-x$ from the right-hand side.  Then the left-hand unshaded area is 
+\[ \frac{1}{2} \cdot x \cdot \frac{1}{2} \]
+and the right-hand shaded area is
+\[ \frac{1}{2} \cdot (1-x) \cdot 1 \]
+
+Set them equal:
+\[ \frac{x}{4} = \frac{1}{2} - \frac{x}{2} \]
+\[ x = 2 - 2x \]
+\[ x = \frac{2}{3} \]
+
+To find the height of the magenta triangle using pure geometry, notice that a line drawn vertically from the vertex forms two similar triangles, therefore $y$ is a distance $1/3 \cdot 1/2 = 1/6$ down vertically from the upper boundary.
+
+The height of the magenta triangle is therefore $5/6$ and its area is one-half that, or $5/12$ of the unit cube.
+
+Using analytic geometry, by inspection of the figure, write the equation for the side of the upper triangle as
+\[ y = \frac{1}{2} x + \frac{1}{2} \]
+\[ y = \frac{1}{3} + \frac{1}{2} = \frac{5}{6} \]
+
+\subsection*{double scoop problem}
+
+We have two lines tangent to two circles that just touch each other, the smaller one of radius $r$, and the larger of radius $R$.
+
+\begin{center} \includegraphics [scale=0.5] {double_scoop1.png} \end{center}
+
+There is a simple expression for the sine and cosine of $\theta$, the angle between the the two lines.  Recall our introduction to trigonometry \hyperref[sec:sine_and_cosine]{\textbf{here}}.
+
+The distance between the centers of the two circles is $r + R$.  Draw a horizontal line through the center of the smaller circle.
+
+\begin{center} \includegraphics [scale=0.5] {double_scoop2.png} \end{center}
+
+We have constructed a right triangle, which is similar to the original one.  It includes the angle $\theta$ and the hypotenuse is the distance between the two centers, $R + r$.  The opposite side has length $R - r$ and so
+
+\[ \sin \theta = \frac{R - r}{R + r} \]
+
+The adjacent side (the line segment colored black) has its squared length equal to 
+\[ (R + r)^2 - (R - r)^2 = 4Rr \]
+
+thus
+\[ \cos \theta = \frac{2 \sqrt{Rr}}{R + r} \]
+
+
+\end{document}

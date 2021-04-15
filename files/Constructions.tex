@@ -1,0 +1,260 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Constructions}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+A number of the propositions in book 1 of Euclid concern constructions.
+
+\begin{center} 
+\includegraphics [scale=0.2] {straightedge.png} 
+\includegraphics [scale=0.3] {compass.png} 
+\end{center}
+
+The tools we have are a straight-edge and a compass.  The compass is collapsible, meaning that it cannot be used to transfer distances since it loses its setting when lifted from the page.  This is a limitation Euclid solves in the second and third propositions of book I.  It's also important that the straight-edge is not a ruler, there is no way to measure distance by reference to marks on it.
+
+Euclid was smart enough to know about compasses and how to set them.  The idea he had was this:  to make the fewest possible assumptions.  A non-collapsible compass was a luxury he didn't need, since he could accomplish the same end without it.
+
+\subsection*{Euclid Prop. I.1:  equilateral triangle}
+
+\label{sec:Euclid1}
+
+To construct an equilateral triangle on a given line segment.
+\begin{center} \includegraphics [scale=0.4] {PI_1a.png} \end{center}
+
+The first step is to draw two circles on centers $A$ and $B$.
+\begin{center} \includegraphics [scale=0.3] {PI_1b.png} \end{center}
+
+The circles are drawn with each radius equal to the line segment $AB$.  It is a property of circles that all points on the circle are at the same distance from the center.  Thus all points on the left-hand circle are equidistant from $A$, and all points on the second one are equidistant from $B$.  
+
+Therefore, the point $C$  where the circles cross is equidistant from \emph{both} $A$ and $B$.
+
+For this, we don't really need the entire circles, just the part where the arcs cross at $C$.
+
+\begin{center} \includegraphics [scale=0.4] {PI_1c.png} \end{center}
+
+Now use the straight edge to draw $\triangle ABC$.  Since $AC = AB$ and $BC = AB$, we know that $AC = BC$.  The triangle is equilateral.
+
+$\square$
+
+The proof doesn't stand on its own.  We used one definition (D) and a common notion (CN).
+
+$\circ$ \ D I.15  all radii of a circle are equal.
+
+$\circ$ \ CN I.1  things which equal the same thing also equal one another.
+
+If we look again at the figure, and label the other point where the circles cross as $D$:
+\begin{center} \includegraphics [scale=0.3] {PI_1d.png} \end{center}
+
+\subsection*{perpendicular lines}
+
+When constructing a line segment perpendicular to another line segment, there are three common situations (see the figure below):
+
+- We want the bisector to pass through a given point $P$ on the line.
+
+- We know points $Q$ and $R$ on the line and want the bisector to pass halfway between them
+
+- We want the bisector to pass through a point $S$ not on the line
+
+\begin{center} \includegraphics [scale=0.4] {perp8.png} \end{center}
+
+We solve the second case and then show how the other two can be adapted to it.
+
+\subsection*{Euclid Prop. I.10:  perpendicular bisector}
+
+\label{sec:Euclid10}
+
+Simply construct two circles of equal radius, one centered at $Q$ and the other at $R$.  It's easiest to choose the radius to be equal to the length $QR$ (left panel, below).
+
+\begin{center} 
+\includegraphics [scale=0.3] {perp9.png} 
+\includegraphics [scale=0.3] {perp10.png} 
+\end{center}
+
+The point $S$ is on both circles, hence it is a radius of both, and therefore equidistant from $Q$ and $R$.  $QS = SR = QR$.  
+
+The three points form an equilateral triangle, $\triangle QRS$ (Euclid \hyperref[sec:Euclid1]{\textbf{Prop $I.1$}}).
+
+The point $T$ below the line segment has the same property, and $\triangle QRS$ is congruent to $\triangle QRT$ by SSS.
+
+Furthermore, we claim that the line segment $ST$ is perpendicular to $QR$ and the point $P$ where $ST$ intersects $QR$ is such that $QP = PR$, and $SP = PT$.
+
+\emph{Proof}.
+
+$\circ$ \ As radii of two congruent circles, we have four equal line segments:  $QS = SR = RT = QT$.
+
+$\circ$ \ Thus the tall triangles on the vertical midline are congruent $\triangle QST \cong \triangle SRT$ by SSS (two sides equal and one shared).  Similarly the squat triangles on the horizontal midline are also congruent:  $\triangle QRS \cong \triangle QRT$.
+
+$\circ$ \ Therefore the two angles at $S$, $\angle QSP$ and $\angle PSR$, are equal. 
+ 
+$\circ$ \ Therefore $\triangle QPS \cong \triangle PRS$ by SAS.  
+
+$\circ$ \ $\triangle QPT \cong \triangle PRT$, for the same reason.
+
+\begin{center} 
+\includegraphics [scale=0.3] {perp9.png} 
+\includegraphics [scale=0.3] {perp10.png} 
+\end{center}
+
+$\circ$ \ Hence, $QP = PR$ by congruent $\triangle$.  And $SP = PT$ for the same reason.
+
+$\circ$ \ $\angle QPS = \angle SPR$ by congruent $\triangle$, so both are right angles.
+
+$\circ$ \ Therefore all the angles at $P$ are right angles and all four small right triangles are congruent.
+
+$\square$
+
+\subsection*{Euclid Prop. I.11:  bisector through a given point on the line}
+
+\label{sec:Euclid11}
+
+Suppose we know a point $P$ on the line and wish to construct the vertical line through $P$.  
+
+Use the compass to mark off points $Q$ and $R$ on both sides of $P$, equidistant from it.  This can be done by drawing a circle with center at $P$.
+
+\begin{center} \includegraphics [scale=0.4] {perp_7.png} \end{center}
+
+Now, simply proceed as above.
+
+\subsection*{Euclid Prop. I.12:  bisector through a given point not on the line}
+
+\label{sec:Euclid12}
+
+Alternatively, suppose we know the line and the point $U$ but not $P$, and we wish to construct a vertical through the line that also passes through $U$.  
+
+Find $Q$ and $R$ on the line an equal distance from $U$ ($QU$ = $RU$), as radii of a circle centered at $U$ (left panel, below).  Their exact position is unimportant.  
+
+\begin{center} \includegraphics [scale=0.35] {perp11.png} \end{center}
+
+Now repeat the previous construction, using $Q$ and $R$.  The line segment $ST$ passes through $U$, as required.
+
+\emph{Proof}.
+
+(Sketch).  Since $QU = RU$, $\triangle QUR$ is isosceles.  Therefore the base angles are equal.  In an isosceles triangle, the top vertex lies on the perpendicular bisector of the base  (see the chapter on isosceles triangles).
+
+\subsection*{collapsible compass}
+
+We note briefly that there is a restriction in Euclid's \emph{Elements} to a \emph{collapsible} compass, one which loses its setting when lifted from the page.  That means that generally, you wouldn't be able to draw two circles of the same radius on different centers.
+
+We get around that restriction by drawing the circles on $Q$ and $R$ with the same radius $QR$.  
+
+We will call a compass that is able to hold its setting, a \emph{standard} compass.  Within the first few pages of that book, it is shown how to use a collapsible compass to carry out the very construction we said we couldn't do, namely, construct two circles on $Q$ and $R$ with equal radius and that radius not equal to $QR$ or $QP$.
+
+Also, see the video at the url:
+
+\url{https://www.mathopenref.com/constperpextpoint.html}
+
+We have skipped that part here.
+
+\subsection*{Euclid Prop. I.31:  construct a line parallel to another line}
+
+\label{sec:Euclid31}
+
+Suppose we are asked to construct a line parallel to a line or line segment, through a given point.  We remain true to the Greek ideal, that dividers should not come off the paper.  
+
+\emph{Proof}.
+
+First, pick some point on the line segment $P$, and draw a line segment through $OP$. 
+
+\begin{center} \includegraphics [scale=0.4] {parallel1.png} \end{center}
+
+Find $Q$ on the second line such that $QP > OQ$.
+
+\begin{center} \includegraphics [scale=0.4] {parallel2.png} \end{center}
+
+Now draw the circle with center $Q$ and radius $QP$ and, at the intersection with the first line, $R$.  Draw the line $QR$.  
+
+Finally, draw the circle with center $Q$ and radius $OQ$, and at the intersection of the circle with the last line, find $T$.
+
+We have that $OQ = QT$ and $QP = QR$.  Therefore the base angles of $\triangle QOT$ and $\triangle QPR$ are equal and therefore the triangles are similar by AAA.  
+
+Therefore the bases $PR$ and $OT$ are parallel, by the converse of the alternate interior angles theorem.
+
+$\square$
+
+\subsection*{Euclid Prop. VI.9:  division of a line segment into parts}
+
+\label{sec:Euclid6_9}
+
+We wish to divide a general segment (in red, below) into an even number of pieces.  Suppose that number is three.
+
+\begin{center} \includegraphics [scale=0.4] {division.png} \end{center}
+
+Using one end of the target segment, draw any other line, and mark off on that line segments of equal length, using a compass.  (Even with a collapsible compass, this can be done sequentially by moving the fixed point).
+
+Then, erect the perpendicular bisector of the black line at each point and extend the bisector to the target red line.
+
+We will have that $AB = BC = CD$.  Furthermore, since $AB = BC$, $AB = \frac{1}{2} (AB + BC)$ so $AC = 2 AB$.
+
+$\square$
+
+This construction uses properties of \emph{similar} triangles that we have not explained yet.  Since the angle at $A$ is shared and the angle with the black line is always the same, all the triangles have the same shape and their sides are in proportion.  We have fixed that proportion as an integer:  $1$, $2$ or $3$.
+
+\subsection*{Euclid Prop. I.9:  bisection of an angle}
+
+\label{sec:Euclid9}
+
+To bisect a given angle.
+
+\begin{center} \includegraphics [scale=0.4] {PI_9a.png} \end{center}
+
+As radii of a circle on center $O$, we first find points $A$ and $B$ equidistant from $O$ (left panel).  Let that distance be $r$.
+
+As radii of circles on the centers $A$ and $B$ that pass through $O$ (so the radius is equal to $r$), we find $C$ equidistant from $A$ and $B$ (middle panel), with radius also equal to $r$.
+
+Thus, $OA = OB = AC = BC$ (right panel).  
+
+So $\triangle OAC \cong \triangle OBC$ by SSS.
+
+Therefore $\angle BOC$ is equal to $\angle AOC$ and the given angle is bisected.
+
+$\square$
+
+\subsection*{bisector is the altitude of an isosceles triangle}
+
+Suppose we know two points $Q$ and $R$.  We find the point $P$ equidistant between them and construct the perpendicular bisector $PS$.  Then the two sides $SQ$ and $SR$ have equal length.  Triangle $\triangle SQR$ is isosceles.
+
+\begin{center} \includegraphics [scale=0.45] {perp_3.png} \end{center}
+
+We proved this in the chapter on isosceles triangles.
+
+It is true for \emph{any} point on the line drawn through $S$ and $P$.  For example, $TQ = TR$ in the figure above.
+
+\subsection*{three points}
+
+\label{sec:circumcenter}
+
+Suppose we have three points:  $Q$, $R$ and $S$.  We find the perpendicular bisector of $QR$ and also, the perpendicular bisector of $QS$.  Extend them to where they meet, at point $O$.
+
+\begin{center} \includegraphics [scale=0.35] {perp_4.png} \end{center}
+
+What can we say about point $O$?
+
+$\circ$ \ $O$ is equidistant from $Q$ and $R$.
+
+$\circ$ \ $O$ is also equidistant from $Q$ and $S$.
+
+Therefore, $OQ = OR = OS$.  If we draw a circle on center $O$ with radius $OR$, it will pass through all three points.
+
+\begin{center} \includegraphics [scale=0.3] {perp_5.png} \end{center}
+
+The point $O$ is the circumcenter of the circumcircle that includes all three vertices of a triangle.
+
+\end{document}

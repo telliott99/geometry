@@ -1,0 +1,176 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+
+\title{Midpoint theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:midpoint_theorem}
+
+$\bullet$  The line segment $BC$ connecting the midpoints of two sides of a triangle is parallel to the third side, and has one-half the length.
+
+In the figure below (left), given that $AB = BD$ and $AC = CE$.
+
+We are to show that $BC \parallel DE$, $BC = \frac{1}{2} DE$.
+
+\begin{center} \includegraphics [scale=0.4] {midpoint_thm.png} \end{center}
+
+\emph{Lemma}.
+
+We restate a proof about parallelograms.  If a quadrilateral has one pair of opposing sides equal in length and parallel to each other, it is a parallelogram.
+
+Given $AB = CD$ and $AB \parallel CD$.  The angles marked with red dots are equal, by alternate interior angles.
+
+\begin{center} \includegraphics [scale=0.4] {pgram3.png} \end{center}
+
+Then, $\triangle ABC \cong \triangle ACD$, by SAS.  Therefore, $AD = BC$.  Also (right panel), the angles marked with black dots are equal.  So $AD \parallel BC$, by alternate interior angles.
+
+$\square$
+
+\emph{Proof}.
+
+Extend $BC$ to $F$ such that $BC = CF$.  Draw $EF$.  
+
+The new $\triangle CEF$ is congruent to $\triangle ABC$ by SAS ($AC = CE$, $BC = CF$ and vertical angles).
+
+\begin{center} \includegraphics [scale=0.4] {similar16.png} \end{center}
+
+But then $AD \parallel EF$ by the converse of the alternate interior angles theorem.
+
+And since $EF = AB$, while $AB = BD$, so that $BD = EF$, we have a quadrilateral $BFED$ with a pair of opposite sides parallel and equal, so it is a parallelogram.
+
+By the properties of the parallelogram, $BC \parallel DE$, and $BF = DE$.  Since $BC$ is one-half of $BF$, $BC$ is also one-half of $DE$.
+
+$\square$
+
+And now, since $BC$ is parallel to $DE$, then by the alternate interior angles theorem, we can show that $\triangle ABC$ and $\triangle ADE$ have three angles the same.
+
+\begin{center} \includegraphics [scale=0.4] {similar6.png} \end{center}
+
+In the previous chapter, we extended this by adding two new congruent triangles to a parallelogram (below, left panel), by using the alternate interior angles theorem (and optionally, the sum of angles theorem).
+
+\begin{center} \includegraphics [scale=0.4] {similar9.png} \end{center}
+
+On the left is the easy case where $AB = BD$.  
+
+We will show that the sides are in proportion even when that proportion is not $1:2$, as on the right.
+
+\subsection*{generalization of midpoint theorem}
+
+\label{sec:mod_midpoint}
+
+In the midpoint theorem, we connected the midpoints of the sides.  Here we relax that assumption.  We prove that SAS with those two sides in proportion shows that two triangles are similar.
+
+\begin{center} \includegraphics [scale=0.5] {mod_midpoint.png} \end{center}
+
+\emph{Proof}.
+
+Given two triangles with the same vertex angle at $A$ and two of three sides in the same proportion ($BD/AB = CE/AC = k$).
+
+As before, draw $EF$ parallel to $AD$ and extend $BC$ to $F$.  
+
+$\triangle ABC \sim \triangle CEF$ by alternate interior angles plus vertical angles.
+
+By similar triangles, then
+\[ \frac{EF}{AB} = \frac{CE}{AC} = k = \frac{BD}{AB} \]
+
+Therefore, $BD = EF$.
+
+$BD \parallel EF$ by alternate interior angles.
+
+Therefore, $BDEF$ has a pair of opposing sides equal and parallel, so it is a parallelogram.  
+
+It follows that $BC \parallel DE$.
+
+$\square$
+
+We have given several proofs of the theorems about similar triangles, particularly the connection between equal angles and parallel sides, on the one hand, and equal ratios on the other.
+
+A powerful and general one is, naturally, the one from Euclid:   \hyperref[sec:Euclid6_2]{\textbf{Euclid VI.2}} (AAA $\rightarrow$ equal ratios).
+
+Two other proofs of this crucial theorem are in the appendix.  One relies on a subtle idea called a limit:  \hyperref[sec:similarity_theorem]{\textbf{AAA similarity theorem}} (Kiselev).  
+
+We also showed that this follows for right triangles easily from the properties of such triangles (\hyperref[sec:similar_right_triangles]{\textbf{here}}), and is related to the area-ratio theorem.
+
+And since any triangle can be dissected into two right triangles (\hyperref[sec:similarity_right_to_all_triangles]{\textbf{here}}) , the general result follows as well.
+
+\subsection*{Varignon's theorem}
+
+\label{sec:Varignon_theorem}
+
+This famous theorem concerns any quadrilateral.  Let's start with the four points lying flat in the same plane.  
+
+If we draw the lines connecting the midpoints of each side, the result must be a parallelogram.  Here is Acheson's figure:
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_G50.png} \end{center}
+
+To visualize this, imagine the quadrilateral drawn as two triangles connected at the diagonal.
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_G51.png} \end{center}
+
+This idea about the diagonal contains the germ of the answer.  In the second figure, above, by the midpoint theorem, $EF \parallel BD$, but also $BD \parallel GH$.  Thus $EF \parallel GH$.  We have opposite sides parallel.  Repeat with $FG$ and $EH$ to obtain the result.
+
+Now, if we imagine the quadrilateral folding on a hinge at $DB$, we see that the midlines $EF$ and $GH$ will remain parallel even if $C$ is no longer co-planar with $A$, $D$ and $B$.
+
+\subsection*{problem}
+
+The figure below is from Acheson's wonderful book aptly titled \emph{The Wonder Book of Geometry}.  He shows this problem, which he says "[goes] back to at least AD 850, when it appeared in a textbook by the Indian mathematician Mahavira."
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_ladders.png} \end{center}
+
+Looking down an alleyway, you see two ladders arranged as shown and wonder about the point where they cross, at height $h$ and distances $c_1$ and $c_2$ from the edges of the alley, where the width of the alley is $c = c_1 + c_2$.
+
+By similar triangles
+\[ \frac{c_1}{h} = \frac{c}{b} \]
+
+Can you see why?
+
+Going the opposite direction
+\[ \frac{c_2}{h} = \frac{c}{a} \]
+
+Adding the two equations and substituting for $c_1 + c_2$:
+\[ \frac{c}{h} = \frac{c}{a} + \frac{c}{b} \]
+
+Thus
+\[ \frac{1}{h} = \frac{1}{a} + \frac{1}{b} \]
+
+That's a simple and interesting result.  $h$ depends only on $a$ and $b$ and not on $c, c_1$, or $c_2$.
+
+\subsection*{problem}
+
+Here's a problem from the web.  Given that $AC \parallel EF$ and $AB \parallel DF$.
+
+We are to prove that the sum of the altitudes of the small triangles is equal to the altitude of the large one.
+
+\begin{center} \includegraphics [scale=0.4] {prob_similar_tri2.png} \end{center}
+
+Informal solution:  The smaller triangles are all similar to $\triangle ABC$ by the alternate interior angles and vertical angle theorems.
+
+For similar triangles, not only are the sides in the same ratio to each other, but so are other measures like the altitudes to a particular side.  So if we label the bases $b_1$ etc., collectively $b_i$ , then we have that
+\[ \frac{b_i}{h_i} = \frac{b}{h} \]
+\[ b_i = b \cdot h_i/h \]
+for each of the $b_i$.
+
+But the sum of the $b_i$ is simply equal to $b$ so
+\[ b_1 + b_2 + b_3 = b \cdot (h_1/h + h_2/h + h_3/h) \]
+\[ b = b \cdot (h_1/h + h_2/h + h_3/h) \]
+\[ 1 = h_1/h + h_2/h + h_3/h \]
+\[ h = h_1 + h_2 + h_3 \]
+
+
+\end{document}

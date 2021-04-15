@@ -1,0 +1,245 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Tangents}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{diameters}
+
+\label{sec:diameter_of_a_circle}
+
+From a previous chapter, Euclid's third postulate was:
+
+$\bullet$   Given any straight line segment, a circle can be drawn having the segment as radius and one endpoint as center.  
+
+A circle is all the points a given distance away from a given point.  That point is called the \emph{center} and the distance is called the \emph{radius}.  A circle can be drawn with a compass, as we saw previously.
+
+Now, extend any radius $PO$ of the circle to meet the circle on the other side at $Q$.  This whole line segment $PQ$ is called a \emph{diameter} of the circle.
+
+\begin{center} \includegraphics [scale=0.4] {circle1.png} \end{center}
+
+$\bullet$   Any diameter divides the circle into two equal parts.  
+
+(Recall that we allow a mirror image of something to be called equal to itself).  So then, if we take the bottom half and flip it over, it is exactly equal to the top half.
+
+\begin{center} \includegraphics [scale=0.4] {circle2.png} \end{center}
+
+\emph{Proof}.
+
+The proof is by contradiction.  Lay the two pieces on top of one another so that the diameters lie exactly on top of one another as well.
+
+The diameters of the half-circle are duplicates of the original.  Thus, they are equal to each other and each half is equal to one radius.
+
+We suppose that, in part, the two half-circles are not identical.  Then there is an angle where we can draw a line segment from the center that meets the two curves at different distances from the center.  There is a point on the same radius of each half-circle that lies at a different distance from the center.
+
+But then, the original figure could not be a circle, because all radii of a circle are equal.
+
+$\square$
+
+As a preliminary to the next section, we claim that 
+
+$\bullet$ \ \ A line through any internal point of a circle can be extended to intersect the circle at two and only two different points.
+
+\emph{Proof}.
+
+Assume there is a line segment that intersects a circle at more than two points, say at three points.  By the definition of a circle, those three points are equidistant from the center.
+
+Of the three points, one lies between the other two.  Use that point and (separately) the other two to construct two perpendicular bisectors of the two segments.  This is the classic way to find the center of a circle from points on the periphery.
+
+But then, we would have two bisectors that both run through the center.  Yet they are parallel to each other, because they have been constructed perpendicular to the same line.
+
+This is a contradiction.  There cannot be more than two points on intersection of a line with a circle.
+
+If there is no specification of an internal point, then it is possible for a line to intersect with the circle at only one point.
+
+\subsection*{tangent:  perpendicular $\rightarrow$ touches one point}
+
+\label{sec:tangent_one_point}
+
+We saw previously that one can construct a line perpendicular to any given line.  If that line is constructed perpendicular to the radius (or diameter) at the point where it meets the circle, the new line is called a tangent line.  
+
+$\bullet$   The tangent line touches the circle at a single point.
+
+\emph{Proof.}
+
+By definition, the tangent line at $P$ is perpendicular to the diameter or radius including $O$ and $P$.  Let $Q$ be any point on that tangent line.  Then $\angle OPQ$ is a right angle.
+
+\begin{center} \includegraphics [scale=0.4] {circle3.png} \end{center}
+
+As discussed \hyperref[sec:right_triangles]{\textbf{here}}, if we choose a  point $T$ on the tangent line very close to $P$ and draw the line segment $OT$, that line segment will be the hypotenuse in a right triangle having $OP$ as one of its sides.
+
+But the hypotenuse is the longest side in any right triangle.  Therefore $OT > OP$ and the point $T$ cannot be on the circle.  It must lie outside of the circle.
+
+$\square$
+
+\subsection*{tangent:  touches one point $\rightarrow$ perpendicular}
+
+\label{sec:tangent_perpendicular}
+
+An alternative definition of the tangent is that it is a line that touches the circle at just one point.  One can use this definition to prove that the angle between the tangent and the radius is a right angle.  This is the converse of the previous theorem.
+
+\emph{Proof}.
+
+Draw the line that touches the circle at only one point $P$, and draw the radius to that point, $OP$.  Assume that $OP$ is not perpendicular to $QPT$.
+
+The angle between the tangent and the radius is smaller on one side than the other (since the angle at $P$ is not a right angle).  On that side, find the point on the line that does form a right angle with a radius of the circle.  
+
+Suppose that point is $T$, in the figure above, and we are in doubt about whether $T$ lies inside or outside the circle.
+
+But then $OTP$ is a right angle, with the side opposite, namely, $OP$, the hypotenuse of a right triangle.  But the hypotenuse is the longest side in a right triangle, so therefore $OT < OP$, so the point $T$ is \emph{inside} the circle.
+
+We have a line with one point on the circle, and another point inside the circle.  Any line through an interior point of a circle must cross the circle at two points, which contradicts the assumption above.  Hence the angle at $P$ is a right angle.
+
+$\square$
+
+\subsection*{construction of a tangent}
+
+\label{sec:tangent_construction}
+
+Thales theorem (\hyperref[sec:Thales_theorem]{\textbf{ref}}) provides a way to construct the tangent to a circle passing through any exterior point $P$.
+
+\begin{center} \includegraphics [scale=0.4] {tangent1.png} \end{center}
+
+Use OP as the diameter of a circle.  Draw the line segment $OP$ and divide it in half by erecting the perpendicular bisector at $Q$.  Use that $Q$ as the center of a new circle.  The point $T$ is the intersection of the two circles.
+
+\begin{center} \includegraphics [scale=0.4] {tangent2.png} \end{center}
+
+By the theorem, $\angle OTP$ is a right angle, and since $OT$ is a radius of the original circle, $TP$ is the tangent to the smaller circle at the point $T$.
+
+To construct a tangent on a circle at a given point $T$
+
+\begin{center} \includegraphics [scale=0.4] {tangent3.png} \end{center}
+
+Extend $OT$ to $P$.  Construct the perpendicular bisector at $T$.  That is the tangent of the circle.
+
+$\bullet$   From any external point $P$, one can draw two tangents to a circle.  These two tangents have the same length.
+
+\begin{center} \includegraphics [scale=0.4] {tangent9.png} \end{center}
+
+\emph{Proof.}
+
+By definition, the angle between each tangent and its radius is a right angle.  The base lengths are both radii, so they are equal, and there is a shared side (the dotted line segment $OP$).  
+
+Therefore the two triangles are congruent, by SSA.  (Recall that this is a sufficient criterion for congruency for if the angle is a right angle).
+
+The two congruent sides $a$ and $b$ are the same length.
+
+\[ a = b \]
+
+$\square$
+
+\subsection*{problem}
+
+Two circles are tangent to each other at $A$.  A line tangent to both is drawn with tangent points $B$ and $C$.
+
+\begin{center} \includegraphics [scale=0.45] {3pts_tangent.png} \end{center}
+
+Prove that $\angle BAC$ is a right angle.
+
+\emph{Solution}.
+
+Draw the tangent line to both circles at $A$ (magenta, figure below), and drop radii of both circles to their respective tangent points at $B$ and $C$ (blue).  Draw the triangles $\triangle OAB$ and $\triangle PAC$.
+
+$OB$ and $PC$ are both $\perp BC$, since $BC$ is a tangent to both, so $OB \parallel PC$.  Therefore, the blue-dotted angles are equal, by alternate interior angles.
+
+\begin{center} \includegraphics [scale=0.45] {3pts_tangentb.png} \end{center}
+
+Two angles labeled $\angle s$ in $\triangle OAB$ are equal because the triangle is isosceles (with two radii for sides).  The same is true for the angles labeled $\angle t$.
+
+$s + s$ are equal to one blue, $t + t$ are equal to the supplement of one blue.  Hence $2s + 2t$ are equal to two right angles.
+
+Therefore, $s + t$ is equal to one right angle.  Since $\angle BAC$ adds to that to give two right angles, it is equal to one right angle.
+
+$\square$
+
+\subsection*{The eyeball theorem}
+
+\label{sec:eyeball_theorem}
+
+This problem is from Acheson's Geometry book (Fig 131).  We have two circles with tangents drawn from the center of each circle to the other one.  Let the radius of the large circle be $R$ and that of the small one be $r$.
+
+We are to compute the length of the chords formed by the tangents as they exit the originating circle.
+
+\begin{center} \includegraphics [scale=0.4] {eyeball1.png} \end{center}
+
+\emph{Solution}.
+
+Obviously, the result depends on the distance separating the two circles.  Let us call that distance $D$.
+
+\begin{center} \includegraphics [scale=0.4] {eyeball2.png} \end{center}
+
+The centerline (of length $D$) bisects the angle formed between the two tangents at $O$ (black lines).  (\emph{proof}:  the two right triangles containing the centers $O$ and $P$ as vertices and the black lines as hypotenuse are congruent by SSA in a right triangle.)  
+
+Let the half-angle at $O$ be $\theta$.
+
+There are two similar right triangles with angle $\theta$.  One has side $s$ and hypotenuse $R$, while the other has side $r$ and hypotenuse $D$.  By similar triangles:
+\[ \frac{s}{R} = \frac{r}{D} \]
+\[ s = \frac{rR}{D} \]
+
+This is one-half of the chord, so $2s$ is the whole.
+
+But the main result is that the expression for $s$ is symmetrical in $r$ and $R$.  Therefore the half-chord in the other circle has an identical length.
+
+The chords form the sides of a rectangle.
+
+\begin{center} \includegraphics [scale=0.4] {eyeball3.png} \end{center}
+
+Later on, after we have introduced trigonometry, we will compute the sine of the angle $\theta$ as the side opposite over the hypotenuse:
+
+\[ \sin \theta = \frac{s}{R} = \frac{r}{D} \]
+\[ s = R \sin \theta \]
+
+The total length of the chord is twice that for a central angle of $2 \theta$, so $2R \sin 2 \theta$.  
+
+This will be convenient because it will turn out that a peripheral angle (vertex on the circle), with the chord as its opposite side, will have a measure of one-half the central angle so its chord length will be $2R \sin \theta$.
+
+\subsection*{penny-farthing problem problem}
+
+Here is a problem with a fascinating history (see Acheson).  Find an expression for $D$ in terms of $a$ and $b$.
+
+\begin{center} \includegraphics [scale=0.5] {tangent10.png} \end{center}
+
+Its solution is very easy, so I will not give it here but I encourage you to try.  
+
+\subsection*{problem}
+
+Harvard 1899 exam:
+\begin{center} \includegraphics [scale=0.5] {Harvard1899_4.png}  \end{center}
+
+\emph{Solution}.
+
+The tangent lines are perpendicular to a radius drawn to the point of tangency.  As a result, two corresponding radii meet at the point of tangency and the corresponding centers are co-linear with the point of tangency.
+
+\begin{center} \includegraphics [scale=0.4] {Harvard1899_4p.png}  \end{center}
+
+Therefore, we have a triangle with sides as shown. The tangent lines are perpendicular to the sides of the triangle, but will not, in general, pass through a vertex or center of the third circle, for any pair of circles and their tangent line.
+
+But for each vertex of the triangle, the bisector of the angle gives congruent triangles, in which one of the sides is a blue dotted line, forming a right angle with the radius.  The hypotenuse of one such pair is shown in magenta.
+
+$\square$
+
+Show that the two triangles that share the magenta line as hypotenuse are congruent, and therefore the two blue dotted lines meeting in the center have equal length.  Now do the same for the circle with radius $r$ and then for the circle with radius $\rho$.
+
+The blue-dotted lines are thus all equal.  So they can be used to draw a circle that just touches the sides of the triangle.  That circle is called the incircle of the triangle.
+
+The point where these tangents meet is the incenter of the triangle.  Since the incenter exists, the three angle bisectors are concurrent, the point where the tangents meet is the same and it also exists.
+
+
+\end{document}

@@ -1,0 +1,229 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+
+\title{Parallelograms}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Polygons are figures constructed from straight sides, that is, line segments.  If the sides are all the same length, it's called a \emph{regular} polygon.
+
+A polygon may have $3$, $4$, $5$ or more sides.  (There is a famous theorem from Gauss that involves a 17-sided regular polygon).
+
+In this chapter we deal with four-sided polygons, called quadrilaterals.
+
+\subsection*{quadrilaterals}
+
+There are a number of types, some of which are:
+
+$\circ$ square:  four sides equal, four right angles 
+
+$\circ$ rectangle:  opposite sides equal, four right angles
+
+$\circ$ parallelogram: opposite sides parallel, opposite sides equal, opposite angles equal
+
+There are three more that we won't say much about.
+
+$\circ$ rhombus:  parallelogram with all sides equal
+
+$\circ$ trapezoid: just two sides parallel
+
+$\circ$ kite: pairs of adjacent sides equal
+
+So parallelograms have both pairs of opposing sides parallel to each other, where the sides do not meet at right angles (that would be a rectangle).
+
+\subsection*{parallelogram}
+
+\label{sec:parallelogram_theorems}
+
+Let's look at parallelograms, which as we just defined them, have opposite sides equal and parallel (left panel, below).
+
+\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+
+They also have opposite angles equal.
+
+We want to find the \emph{minimum} conditions that ensure a given quadrilateral is a parallelogram.
+
+$\circ$ \ \ If a quadrilateral has two pairs of parallel line segments, then the opposing angles and sides are equal.
+
+\emph{Proof.}
+
+The interior angles theorem gives us the angle equalities shown.  
+
+$AD$ is parallel to $BC$, therefore the angles marked with black circles are equal.  $AB$ is parallel to $DC$, therefore the angles marked with red circles are equal.
+
+In the left panel, we have three angles the same and a shared side, hence $\triangle ABC \cong \triangle ACD$.
+
+Therefore, $AB = DC$ and $AD = BC$, fulfilling the definition. 
+
+$\square$
+
+$\circ$ \ \ If a quadrilateral has opposing angles equal, then the opposing sides are parallel and equal.
+
+\emph{Proof.}
+
+\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+
+The sum of all the angles is equal to four right angles or $360^{\circ}$.  This follows from the fact that any quadrilateral can be decomposed into two triangles, and the sum of angles in any triangle is equal to two right angles.
+
+Since there are two pairs of angles, the sum of one from each pair, say $\angle A$ (red + black) + $\angle B$ (green + blue) is equal to two right angles.  Therefore, the opposing sides are parallel.
+
+Then proceed as in the previous proof to show equality of opposing sides.
+
+$\square$
+
+$\circ$ \ \ If a quadrilateral has opposing sides equal, the other properties follow.
+
+\emph{Proof.}
+
+Parallelograms can be viewed as two congruent triangles that have been stitched together.  In the left panel, we are given that $AB = CD$ and $AD = BC$ and the diagonal is shared.  Therefore $\triangle ABC \cong \triangle ADC$ by SSS.
+
+It follows that opposing angles ($\angle A$ and $\angle C$) of the quadrilateral are equal (red and black dots, and their sums).  $\angle B = \angle D$ as well.
+
+\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+
+But there is nothing special about the diagonal $AC$.  So draw diagonal $BD$.  The equality of the angles marked with green dots, and the pair marked with blue dots, follows.  
+
+But then the opposing sides are parallel, by the converse of alternate interior angles.  And opposing angles are equal, by summing the individual components.
+
+$\square$
+
+An important property of parallelograms follows from this congruency relationship:  the \emph{diagonals cross at their midpoints}.  \emph{proof}:  $\triangle ABE \cong \triangle CDE$.  Therefore $AE = EC$ and $DE = EB$.
+
+\subsection*{summary and one more}
+
+\label{sec:one_pair_of_sides}
+
+We've shown that we have a parallelogram when
+
+$\circ$ \ \ both pairs of opposing sides are parallel
+
+$\circ$ \ \ both pairs of opposing angles are equal
+
+$\circ$ \ \ both pairs of opposing sides are equal
+
+There is one other important case we will need soon
+
+$\circ$ \ \ one set of opposing sides both parallel and equal
+
+\emph{Proof}.
+
+In the figure below (left panel), suppose we know only that $AB = DC$ and $AB \parallel DC$.  
+
+\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+
+By alternate interior angles, the red-dotted angles are equal.  So the two triangles are congruent by SAS:  $\triangle ABC \cong \triangle ACD$.  
+
+Therefore the black-dotted angles are equal.  As well, $AD \parallel BC$ and $AD = BC$.
+
+We can also draw the crossed diagonals.  We have the angles with red dots and the angles with green dots equal by alternate interior angles.  
+
+So then $\triangle AEB \cong \triangle DEC$ by ASA (three equal angles and $AB = DC$).
+
+Considering the other pair of triangles $\triangle AED \cong \triangle BCE$ by SAS (vertical angles and congruent sides $DE = EB$ and $AE = EC$).  Therefore the other marked angles are equal.
+
+Then $AD = BC$ (congruent triangles) and $AD \parallel BC$ by the converse of the alternate interior angles theorem.  
+
+$\square$
+
+\subsection*{rhombus}
+
+If we further constrain all the sides to be equal, then the half triangles like $\triangle ADC$ become isosceles.  
+
+The isosceles triangle theorem says that in a triangle with two sides equal the base angles are equal.  The converse is also true.
+
+By the isosceles triangle theorem, all the angles marked with red dots in figure below are equal, and all the blue ones as well.  Because each quarter triangle has a red and a blue, the central angles are all equal.
+
+Therefore, all four central angles (at the midpoint $F$) are all right angles.
+
+\begin{center} \includegraphics [scale=0.4] {pgram2.png} \end{center}
+
+\subsection*{adding triangles}
+
+Going back to the parallelogram, let us assemble one whole parallelogram and two half parallelograms (triangles) starting with the same triangle (left panel).  
+
+\begin{center} \includegraphics [scale=0.3] {pgram4c.png} \end{center}
+
+The four small triangles are congruent, and the angles are all as marked, by construction.
+
+The large triangle is similar to the four smaller ones.
+
+\emph{Proof}.
+
+We need to show that line segments are parallel and points colinear (lying in a straight line), by repeated application of alternate interior angles or congruent triangles.
+
+$\circ$ \ $BC \parallel DE$ and $BC = DE$.
+
+$\circ$ \ $BD \parallel CE$ and $BD = CE$.
+
+For the triangles:
+
+$\circ$ \ $AB \parallel BD$ and $ABD$ colinear.
+
+$\circ$ \ $AC \parallel CF$ and $ACF$ colinear.
+
+$\circ$ \ $DE \parallel EF$ and $DEF$ colinear.
+
+Finally, $BC = 1/2 \cdot DF$ and the same again for pairs $BE,AF$ and $CE,AD$.
+
+$\square$
+
+\emph{Proof}.  (alternate).
+
+Start with parallel and colinear sides and show the angles are correct.
+
+\begin{center} \includegraphics [scale=0.3] {pgram4b.png} \end{center}
+
+Extend the side $DB$ upward.  Then $ABD \parallel CE$.
+
+Extend the side $DE$ to the right.  The extension is parallel to $BC$.
+
+Draw a line through $C$ parallel to $BE$ and extend it to meet the other two extensions at $A$ and $F$.
+
+So now, we know that there are three pairs of parallel sides.
+
+We will show that the two new triangles are congruent to the component triangles of the parallelogram.
+
+Recall that the angles marked within the parallelogram that have the same color, are equal as we proved above.
+
+By the alternate interior angles theorem, $\angle ABC$ and $\angle ADE$ are equal.
+
+By the same theorem (using $AC \parallel BE$), $\angle DBE$ and the angle at vertex $A$ are equal.  Then $\angle ACB = \angle BEC$ by the sum of angles theorem. 
+
+Similarly arguments will show that $\triangle CEF$ is congruent to the two half triangles of the parallelogram.
+
+Since $EF$ is parallel to $BC$ and $CE \parallel AB$, $\angle ABC = \angle CEF$.
+
+$\angle A = \angle ECF$ by alternate interior angles.
+
+Then, $\angle CFE = \angle ACB$ by the sum of angles theorem.
+
+Therefore all three angles of $\triangle ABC$ are equal to the component angles of the two congruent triangles that make up the parallelogram.  By ASA, $\triangle ABC$ is congruent to $\triangle BCE$.
+
+Similar reasoning will show that $\triangle CEF \cong \triangle ABC$ as well.
+
+\begin{center} \includegraphics [scale=0.3] {pgram4b.png} \end{center}
+
+Since the two new triangles are congruent to the others, it follows that $AB = BD = CE$ and $DE = EF = BC$.
+
+Therefore, this figure has four small triangles with solid lines marking the sides, all congruent  
+
+The larger $\triangle ADF$ has all three angles equal to the four smaller ones so it is similar to the smaller ones.  
+
+Notice that each of the sides of $ADF$ is parallel to one of the sides of $ABC$.  Furthermore, each pair of parallel sides has lengths in the same ratio, $2:1$.
+
+\end{document}

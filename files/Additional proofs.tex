@@ -1,0 +1,326 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+
+\title{Midpoint theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{tangents of similar triangles}
+
+\label{sec:tangents_similar_triangles}
+
+Here is a mixed geometric/algebraic proof of the Pythagorean theorem.
+
+\emph{Proof}.
+
+$S$ is the midpoint of the hypotenuse in a right triangle.  $S$ is the midpoint of that side, by the \hyperref[sec:right_triangle_midpoint_theorem]{\textbf{midpoint theorem}} that we talked about previously.
+
+So the length $a$ is, among other things, the radius of a circle centered at $S$ that contains the three vertices of the original right triangle.
+
+\begin{center} \includegraphics [scale=0.4] {pythagoras7.png} \end{center}
+
+Now, draw the altitude from the right angle at $P$ to the hypotenuse $PQ$.  Suppose $QS = x$, then the length $a$ is divided into $x$ and $a - x$ as shown.
+
+The angle $\phi$ and the angle at vertex $R$ labeled $\theta$ are complementary angles in a right triangle, they add up to one right angle.  Therefore both angles labeled $\theta$ are equal.  
+
+So we can form the equal ratios of sides:
+
+\[ \frac{a-x}{y} = \frac{y}{a + x} \]
+\[ (a - x)(a + x) = y^2 \]
+\[ x^2 + y^2 = a^2 \]
+
+$\square$
+
+The second line from the last:
+\[ (a - x)(a + x) = y^2 \]
+
+is a statement of our theorem that the altitude of a right triangle is the geometric mean of the two sections of the base.
+
+\subsection*{scaled triangle proof}
+
+\label{sec:Pythagoras_scaled_triangles}
+
+This next example is a proof based on areas and similar triangles.  It is an interesting mixture of algebraic and geometric methods.  At its core it is really the same as other algebraic proofs.
+
+\emph{Proof.}
+Draw a right triangle and label sides $a,b$ and $c$.
+
+\begin{center} \includegraphics [scale=0.5] {pyth1.png} \end{center}
+Now, flip and rotate the triangle.  Make a copy of that one and rotate the copy so that the shortest side is to the left.  Enlarge the copy until the two adjacent sides are equal in length.
+\begin{center} \includegraphics [scale=0.5] {pyth2.png} \end{center}
+
+These are similar triangles so the angles are all equal, but the sides are proportional, multiplied by a common factor, which here is $b$.
+
+The adjacent sides show that $ab = b$, so this choice of scaling defines $a = 1$.  And since $a = 1$, we can also view each side of the original triangle as being scaled by a factor of $a$.  
+
+We just tried scaling by a factor of $b$ and then by $a$, so that naturally suggests we try scaling by a factor of $c$.  
+
+\begin{center} \includegraphics [scale=0.5] {pyth2b.png} \end{center}
+All sides of the enlarged triangle have been multiplied by the same factor, namely, $c$.  Notice that $c = ac$, as required.
+
+We're nearly done.  Put the three triangles together.
+
+\begin{center} \includegraphics [scale=0.5] {pyth2c.png} \end{center}
+
+The lower left and right corners are places where two vertices come together.  By complementary angles, these sum to be right angles.  
+
+Since there are two other right angles at the vertices of the quadrilateral, it is a rectangle.  Therefore the place where three vertices come together is a straight line, which we can also verify because there are two complementary angles plus a right angle.
+
+Since the composite figure is a rectangle, opposing sides are equal, so $a^2 + b^2 = c^2$.
+
+$\square$
+
+\subsection*{Condit proof}
+
+\label{sec:Condit}
+
+Finally, here is a proof by a student named Ann Condit, who was a sophomore in high school at the time.  It is one that Euclid would approve of.
+
+We start by drawing the right $\triangle ABC$ and the squares on each side, as with Euclid $I.47$.
+
+\begin{center} \includegraphics [scale=0.35] {Condit1.png} \end{center}
+
+Next, join two nearby points on the two smaller squares to form $DF$ as shown.  
+
+(1) $\triangle CDF$ is congruent to the original triangle $ABC$, by SAS.
+
+We number our conclusions to keep track of everything, because the proof is a bit longer than many.
+
+Next, find the midpoints of each side of $\triangle ABC$ at $P$, $Q$ and $R$.  
+
+\begin{center} \includegraphics [scale=0.35] {Condit2.png} \end{center}
+
+The line segment joining the midpoints of opposite sides forms a smaller triangle similar to the larger one.  $\triangle BPR$ and $\triangle APQ$ are both similar to $\triangle ABC$ and congruent to each other.  Therefore
+
+(2) $PQ$ and $PR$ form right angles with the sides $AC$ and $CB$, respectively.
+
+(3)  Thus, $CRPQ$ is a rectangle (four right angles), so opposing sides are equal.
+
+We will erase the dotted lines to reduce clutter, but remember the essential property that $P$, $Q$ and $R$ are midpoints;  as well as that $QP$ and $CR$ are parallel sides of a rectangle and equal in length.
+
+We will show that the area of $\triangle APG$ is the sum of the area of $\triangle DQC$ plus that of $\triangle FRC$.  
+
+\begin{center} \includegraphics [scale=0.35] {Condit2b.png} \end{center}
+
+Since each triangle is one-fourth the area of its respective square, this proves that the sum the two smaller squares is equal in area to the largest square.  This is the theorem of Pythagoras.
+
+We need one more line segment.
+
+\begin{center} \includegraphics [scale=0.35] {Condit3.png} \end{center}
+
+Draw $PC$ and extend it to the opposite side $DF$ ending at $E$.  
+
+\subsection*{main idea of the proof}
+
+We claim that $PC$ extended to $CE$, is perpendicular to $DF$.
+
+Recall that when the side of the hypotenuse is bisected in a right triangle, as we did by drawing $CP$, the two resulting smaller triangles are both isosceles.  
+
+(4) Because of this, $\angle ACP$ is equal to the angle at the vertex $A$ ($\angle CAB$) of the original $\triangle ABC$.  $\angle ACP$ is also equal to $\angle EDC$, by congruent triangles. 
+
+(5) $\angle PCB$ is equal to the angle at vertex $B$ ($\angle CBA$) as well as to $\angle EFC$, for the same reason. 
+
+\begin{center} \includegraphics [scale=0.35] {Condit3b.png} \end{center}
+
+(6) Therefore $\triangle CDE$ is similar to $\triangle CEF$, which means that the angles at $E$ are identical and so are right angles.
+
+This is the key step of the proof.  Now we just look at the areas of different triangles.
+
+\begin{center} \includegraphics [scale=0.35] {Condit4.png} \end{center}
+
+First, the area of $\triangle FRC$ (one-quarter of the square of $BC$) is equal to the area of $\triangle FCP$, because they share the base $CF$, and $QP$ is parallel to $CR$ and equal in length to it (opposite sides of a rectangle).
+
+But the area of $\triangle FCP$ is equal to $PC \cdot EF$, because $EF$ is the altitude of $\triangle FCP$ (since $\angle FEP$ is a right angle).
+
+By symmetry, the one-quarter of the small square's area is equal to that of $PC \cdot DE$, so together they equal 
+\[ PC \cdot DE + PC \cdot EF = PC \cdot DF \]
+
+But we have that $AP = CP$ and $AG = AB = DF$, so they have the same base and the same height and therefore the same area.  
+
+Thus, the two triangles together have the same area as the triangle with base $AG$ and height $AP$.
+
+$\square$
+
+
+\subsection*{Ptolemy's theorem from similar triangles}
+
+\begin{center} \includegraphics [scale=0.3] {Ptolemy1.png} \end{center}
+
+\[ AB \cdot CD + BC \cdot AD = AC \cdot BD \]
+
+\emph{Proof}.
+
+Note first that, since they cut off equal arcs of the circle
+
+$\circ \ \angle BAC \cong \angle BDC$
+
+$\circ \ \angle ADB \cong \angle ACB$
+
+as indicated by the colored dots below.  
+
+\begin{center} \includegraphics [scale=0.3] {Ptolemy2.png} \end{center}
+
+Now, construct $BK$ such that
+
+$\circ \  \angle ABK \cong \angle CBD$
+
+and adding the middle $\angle DBK$ to each of the previous ones
+
+$\circ \  \angle ABD \cong \angle CBK$.
+
+We thus have two pairs of similar triangles
+
+$\circ \  \triangle ABK \cong \angle DBC$
+
+$\circ \  \triangle ABD \cong \angle KBC$
+
+\begin{center} \includegraphics [scale=0.4] {Ptolemy3.png} \end{center}
+
+\url{https://en.wikipedia.org/wiki/Ptolemy%27s_theorem}
+
+Algebra:  this gives us some equal ratios of sides including:
+
+\[ \frac{AK}{AB} = \frac{CD}{BD} \]
+\[ \frac{CK}{BC} = \frac{DA}{BD} \]
+
+cross-multiplying
+\[ AK \cdot BD = AB \cdot CD \]
+\[ CK \cdot BD = BC \cdot DA \]
+
+By addition:
+\[ (AK + CK) \cdot BD  = AB \cdot CD + BC \cdot DA \]
+\[ AC \cdot BD  = AB \cdot CD + BC \cdot DA \]
+
+$\square$
+
+Note:  there is a technical restriction on the proof that we will not worry about.  See wikipedia.
+
+\subsection*{another way}
+
+Euclid $VI-2$ gives us all we need.  However, let's take a moment to look at a different proof.
+
+We showed previously that all the statements about similarity that we made in this chapter apply to similar right triangles.
+
+\label{sec:similarity_equal_ratios}
+
+But we can cut any triangle into two right triangles.
+
+\begin{center} \includegraphics [scale=0.5] {similar19.png} \end{center}
+
+If these are right triangles, then the two on the right are similar as well as the two on the left, using complementary angles.
+
+We have
+\[ \frac{a}{c} = \frac{b}{d} \]
+
+but also
+\[ \frac{b}{d} = \frac{a'}{c'} \]
+
+So then
+\[ \frac{a}{c} = \frac{a'}{c'} \]
+
+and then
+\[ \frac{a}{a'} = \frac{c}{c'} \]
+\[ \frac{a + a'}{a'} = \frac{c + c'}{c'} \]
+\[ \frac{a + a'}{c + c'} = \frac{a'}{c'} = \frac{a}{c} = \frac{b}{d} \]
+
+$\square$
+
+We showed before that the hypotenuses of similar triangles are in the same ratio also.
+
+\subsection*{all triangles}
+
+\label{sec:similarity_right_to_all_triangles}
+
+Any triangle can be decomposed into two right triangles.  So, combining the results for the two sub-triangles, we will have the result for the general case.  
+
+We use a flipped and rotated copy of the smaller triangle.  We start with two triangles similar because the angles are the same (left panel).  
+
+\begin{center} \includegraphics [scale=0.35] {similar13.png} \end{center}
+
+Make a copy of the smaller triangle and rotate it and then attach at the top (forming a parallelogram).  The original small triangle and the flipped version are congruent by our construction.
+
+From congruent triangles we get the angle equalities in the right panel.
+
+We also have two pairs of parallel sides, either by alternate interior angles or because $s + t + u$ is equal to two right angles.
+
+Now, draw the two altitudes, label the sides, and suppress the labels for the angles but just mark them with colored circles.
+
+\begin{center} \includegraphics [scale=0.35] {similar14.png} \end{center}
+
+We have two different pairs of similar right triangles.  
+
+We have
+\[ \frac{a}{h} = \frac{a'}{h'} \]
+\[ \frac{b}{h} = \frac{b'}{h'} \]
+
+So then
+\[ \frac{h}{h'} = \frac{a}{a'} =  \frac{b}{b'} \]
+
+There is nothing special about this pair of sides, we could have chosen any other pair, either $a$ and $c$ or $b$ and $c$, and have the same result.
+
+Therefore if any two triangles have three angles the same, the side lengths are all in the same proportion.
+
+$\square$
+
+
+\subsection*{AAA similarity theorem}
+
+\label{sec:similarity_theorem}
+
+
+\begin{center} \includegraphics [scale=0.4] {similar9.png} \end{center}
+
+On the left is the easy case where $AB = BD$.  
+
+We will show that the sides are in proportion even when that proportion is not $1:2$, as on the right.
+
+Note:  we proved this theorem for right triangles already, based on an idea I found in Acheson's book, and combined it with an extension to all triangles.
+
+If the horizontal bisector is parallel to the base, then the triangles are similar.  We will have AAA.  This is true regardless of which side of the large triangle we choose to be the base.
+
+\begin{center} \includegraphics [scale=0.25] {Kiselev166.png} \end{center}
+
+His notation is different than what we used above, drawing $\triangle BDE$ smaller than $\triangle BAC$.  We follow Kiselev for this section.
+
+There are two cases.  The first is when the lengths of $BA$ and $BD$ are commensurable.  
+
+Two lengths are commensurable when there is some small length $\ell$ that we can define as one unit, such that for integers $m$ and $n$, $BD = m\ell = m$ and $BA = n\ell = n$.
+
+Divide the side as shown.  Draw lines parallel to $AC$ and also those parallel to $BC$.  
+
+Then $BE$ and $BC$ will be divided into congruent parts, numbering $m$ and $n$ for each, respectively.  The same thing happens on the bottom.  It is clear that 
+\[ \frac{m}{n} = \frac{BD}{BA} = \frac{DE}{AC} = \frac{BE}{BC} \]
+
+The second, harder, case is shown in the right panel above.  
+
+$BD$ and $BA$ are not commensurate and there is some small remainder when dividing the first into the second.  Put another way, if $BA = n\ell$, then there are two integers $m$ and $m+1$ such that
+\[ m\ell < BD < (m+1)\ell \]
+
+But if $\ell$ is small, with $n$ and $m$  large,
+\[ \frac{m}{n} \approx \frac{BD}{BA}, \ \ \ \ \ \ \frac{m}{n} \approx \frac{DE}{AC}, \ \ \ \ \ \ \frac{m}{n} \approx  \frac{BE}{BC} \]
+
+Crucially, by choosing the unit length $\ell$ smaller and smaller, and thus $n$ being larger and larger, we can make the remainder $BD - m\ell$ \textbf{as small as we like}.  
+
+As $n$ gets very large we approach equality:
+\[ \frac{m}{n} = \frac{BD}{BA} = \frac{DE}{AC} = \frac{BE}{BC} \]
+for the second case as well.
+
+In calculus we say that, in the limit, as $n \rightarrow \infty$, they become equal.  If this seems strange, wait for the discussion of the limit concept, in calculus.
+
+
+\end{document}

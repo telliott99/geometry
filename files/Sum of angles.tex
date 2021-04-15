@@ -1,0 +1,267 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Basic trigonometry}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Previously, we introduced the elements of trigonometry, which all start from two basic ratios of sides in right triangles (\hyperref[sec:sine_and_cosine]{\textbf{here}}).  Earlier in that chapter we also talked about radian measure for angles.
+
+In this chapter we will work out some crucial formulas and in the process, and get more experience with trigonometry.
+
+Consider the following right triangle with sides $a$, $b$, and $c$, where $c$ is the hypotenuse.
+
+\begin{center} \includegraphics [scale=0.5] {sum1.png} \end{center}
+
+If $\theta$ is one of the two smaller angles in a right triangle, then the sine of the angle $\theta$ is defined to be the ratio between the side \emph{opposite} $\theta$, which is $a$ in this example, and the hypotenuse, which here is side $c$.  
+
+The sine of $\theta$ (abbreviated as $\sin \theta$) is
+
+\[ \sin \theta = \frac{a}{c} \]
+
+while the cosine is  the ratio of the side \emph{adjacent} to $\theta$ over the hypotenuse.
+\[ \cos \theta = \frac{b}{c} \]
+
+There is also a third ratio which is used frequently, called the tangent:
+\[ \tan \theta = \frac{a}{b} = \frac{\sin \theta}{\cos \theta} \]
+
+Here are a few basic points about the sine and cosine.
+
+The scale of the triangle doesn't matter.  All right triangles with the same angles, $\theta$ plus $\phi$ plus a right angle, have the same values for the sine and cosine of the angles.
+
+The reason is that these are similar triangles, and as we've seen, the sides of similar triangles always grow in the same ratio with each other.  So if a triangle has the same angles but is one-half size then
+
+\begin{center} \includegraphics [scale=0.5] {sum1b.png} \end{center}
+
+\[ \sin \theta = \frac{a/2}{c/2} = \frac{a}{c} \]
+
+In general, if the sides are rescaled by some constant $k$, then
+
+\[ \sin \theta = \frac{ka}{kc} = \frac{a}{c} \]
+\[ \cos \theta = \frac{kb}{kc} = \frac{b}{c} \]
+
+It is usual to simplify notation by working with right triangles drawn in a unit circle, a circle of radius $1$.
+
+\begin{center} \includegraphics [scale=0.4] {sum2.png} \end{center}
+
+Then, the length of the hypotenuse is $1$, so the ratio is the same as the side length.  In the figure above, the length of the side opposite angle $s$ \emph{is} the sine of $s$, and the length of the side adjacent to $s$ is the cosine of $s$.
+
+A second important point is that from the Pythagorean theorem we know that the sum of the squares of the two sides is equal to the square of the hypotenuse.
+
+\[ a^2 + b^2 = c^2 \]
+\[ \frac{a^2}{c^2} + \frac{b^2}{c^2} = 1 \]
+\[ \sin^2 \theta + \cos^2 \theta = 1 \]
+
+(Rather than write $(\sin \theta)^2$, the usual practice is to write it as $\sin^2 \theta$).
+
+This famous identity holds for any angle.
+
+A corollary is that
+\[ \sin \theta = \sqrt{1 - \cos^2 \theta} \]
+\[ \cos \theta = \sqrt{1 - \sin^2 \theta} \]
+
+which provides an algebraic way to interconvert them.
+
+\begin{center} \includegraphics [scale=0.5] {sum1.png} \end{center}
+
+A third consequence is that complementary angles, like $\theta$ and $\phi$ above, switch the opposite and adjacent sides.  Therefore
+
+\[ \sin \theta = \frac{a}{c} = \cos \phi \]
+\[ \cos \theta = \frac{b}{c} =  \sin \phi \]
+
+We might wonder what happens when $\theta$ gets very small and approaches zero.  It can't actually be zero and still make a triangle, but in this situation, the opposite side $a$ gets smaller and smaller and the ratio, which is the sine, approaches zero.  
+
+By the same token the adjacent side $b$ gets larger and becomes nearly the same length as the hypotenuse, so the ratio, which is the cosine, approaches $1$.
+
+We define $\sin 0 = 0$ and $\cos 0 = 1$.
+
+We also might wonder what happens when $\theta$ gets very large and approaches a right angle.  In the limit, it gets closer and closer to being a right angle.  In trigonometry we measure angles in radians, so a right angle has a measure of $\pi/2$.
+
+We define $\sin \pi/2 = 1$ and $\cos \pi/2 = 0$.
+
+\begin{center} \includegraphics [scale=0.5] {sum1.png} \end{center}
+
+It is helpful to be able to see at once
+\[ \frac{a}{c} = \sin \theta \]
+means that
+\[ a = c \sin \theta \]
+and 
+\[ b = c \cos \theta \]
+
+We often write these directly when $a$ or $b$ are unknowns.
+
+\begin{center} \includegraphics [scale=0.5] {sum1c.png} \end{center}
+
+\subsection*{sum of angles}
+
+\label{sec:sum_angles_similar_tri}
+
+In order to gain some practice thinking about sine and cosine, we will derive what are called the sum of angles formulas.  These are really for the sum and difference of two angles:
+
+\[ \sin (s \pm \ t), \ \ \ \ \ \ \cos (s \pm \ t) \]
+
+Here is one of them.  For angles $s$ and $t$
+
+\[ \cos s - t = \cos s \cos t + \sin s \sin t \]
+
+By $\cos s - t$ we mean $\cos (s - t)$, but have left off the parentheses. 
+
+There are four formulas, and then some special examples.  These are used a lot in calculus, not only for solving problems, but most important, in finding an expression for the derivatives of the sine and cosine functions in calculus.
+
+I've memorized only the equation given above.  Say "cos cos" and then recall the difference in sign, minus on the left, plus on the right.
+
+I like this version because it can be checked easily.  Just set $s = t$:
+\[ \cos s - t = \cos s - s = \cos 0 = 1 = \cos^2 s + \sin^2 s \]
+which is our favorite trigonometric identity and obviously correct.
+
+As so often, we begin with an inspired diagram.
+
+\begin{center} \includegraphics [scale=0.4] {sum3.png} \end{center}
+
+On the left, we have stacked two right triangles.  The one containing angle $t$ is rotated so that its base is parallel to the hypotenuse of the triangle containing angle $s$.  
+
+The crucial step is to re-scale the triangle on the bottom so that the parallel line segments are also equal in length (right panel).
+
+By re-scaling, we change the length of the hypotenuse of the triangle containing angle $s$.  Its hypotenuse is now the length $\cos t$.  
+
+Recall that when the length of the hypotenuse was $c$, we divided the length of the adjacent side by the hypotenuse to get the cosine.  There we had $b/c = \cos s$.  Now we have 
+\[ \cos s = \frac{\text{adjacent}}{\text{hypotenuse}} = \frac{\text{adjacent}}{\cos t} \]
+
+What should be the length of the base of the triangle with angle $s$?  It must be $\cos s \cos t$, the product of cosines!  Just multiply both sides above by $\cos t$.
+
+Or recognize that after dividing $\cos s \cos t$ by the hypotenuse, which is $\cos t$, we will then have what we want, the cosine of $s$ or $\cos s$.
+
+\[ \frac{\cos s \cos t}{\cos t} = \cos s \]
+
+\begin{center} \includegraphics [scale=0.5] {sum4.png} \end{center}
+
+By the same reasoning, the opposite side in the triangle with angle $s$ is $\sin s \cos t$, so that after dividing by $\cos t$ we obtain the correct value, $\sin s$.
+
+\subsection*{a similar triangle}
+
+We add another right triangle to the figure
+\begin{center} \includegraphics [scale=0.5] {sum5.png} \end{center}
+
+We claim that the angles labeled with blue dots are equal.  
+
+One way to prove that is to drop an altitude and then use similar triangles, followed by alternate interior angles (or a second application of similar triangles).
+
+\begin{center}
+\includegraphics [scale=0.5] {sum5b.png}
+\includegraphics [scale=0.5] {sum5c.png}
+\end{center}
+
+The other way is algebraic.  The angle that is complementary to $s$ in the bottom triangle is $s'$.  Complementarity means that $s + s'$ is equal to a right angle.  
+
+But the second blue dotted angle plus $s'$ is also equal to a right angle.  The reason is that, when added to another right angle, it makes two right angles or a straight line.  Using the language of radian measure
+\[ s + s' = \frac{\pi}{2} \]
+\[ s' + \frac{\pi}{2} + \text{blue dot} = \pi \]
+\[ s' + \text{blue dot} = \frac{\pi}{2} \]
+\[ \text{blue dot} = s \]
+
+So we add the correct label, and then play the same trick as before.
+
+\begin{center} \includegraphics [scale=0.5] {sum6.png} \end{center}
+
+The difference is that now, the length of the hypotenuse of the upper triangle containing angle $s$ is $\sin t$.  The two similar triangles are scaled differently from one another.
+
+We obtain $\sin s \sin t$ and $\cos s \sin t$ for the sides of the upper triangle, so that after dividing by the hypotenuse, which is $\sin t$, we obtain the correct values for the sine and cosine of angle $s$.
+
+\subsection*{finale}
+Why have we gone to the trouble of doing all this?
+
+The two angles, $s$ and $t$, taken together, are equal to the angle at the top of the figure labeled, naturally, $s + t$.
+
+\begin{center} \includegraphics [scale=0.5] {sum7.png} \end{center}
+
+We fill in lengths for the dotted lines of the fourth right triangle in the figure below.
+
+This is a rectangle (all four corners are right angles).  Therefore, opposite sides are equal.
+\begin{center} \includegraphics [scale=0.5] {sum8.png} \end{center}
+
+We just write down the formula by reading off the figure:
+\[ \sin s + t = \sin s \cos t + \cos s \sin t \]
+
+and
+\[ \cos s + t + \sin s \sin t = \cos s \cos t \]
+which can be rearranged to give
+\[ \cos s + t = \cos s \cos t - \sin s \sin t \]
+
+These are the sum of angles formulas.
+
+\subsection*{change signs}
+
+For $\cos s - t$, flip the sign on the second term.  
+\[ \cos s - t = \cos s \cos t + \sin s \sin t \]
+That's because
+\[ \cos -\theta = \cos \theta \]
+\[ \sin - \theta = - \sin \theta \]
+
+To show this we need to invoke analytic geometry (there's no such thing as a negative angle in classical geometry).
+
+\begin{center} \includegraphics [scale=0.4] {pm_theta.png} \end{center}
+
+The diagram shows the reason:
+\[ \cos \theta = x/r = \cos - \theta \]
+while
+\[ \sin \theta = y/r = -  (\sin - \theta ) = - (-y/r) \]
+
+Substitute $- \sin \theta$ for $\sin - \theta$ and $\cos \theta$ for $\cos - \theta$:
+\[ \cos s - t = \cos s \cos - t + \sin s \sin - t \]
+\[ = \cos s \cos t - \sin s \sin t \]
+and
+\[ \sin s - t = \sin s \cos t - \cos s \sin t \]
+
+It's kind of overkill, but still worth noting that a simple change to the figure we had above will give the difference formulas:
+
+\begin{center} \includegraphics [scale=0.5] {sum_angles_7.png} \end{center}
+We've changed symbols to $\theta$ and $\phi$ for the complementary angles.  
+
+We can justify the label $\phi - \theta$ for the angle at the lower left in various ways, for example, by adding up the three angles at that corner:
+\[ (\phi - \theta) + \theta + (90 - \phi) = 90 \]
+
+Switch the labels appropriately (it's easy since this $\phi$ is the complement of the old one).
+
+Read the result:
+\[ \sin \phi - \theta = \sin \phi \cos \theta - \cos \phi \sin \theta \]
+\[ \cos \phi - \theta = \cos \phi \cos \theta + \sin \phi \sin \theta \]
+
+\subsection*{check}
+
+Let's work with one of the formulas algebraically.
+
+Recall that
+\[ \sin \pi/6 = \frac{1}{2} \]
+
+Use $\sin^2 x + \cos^2 x = 1$ to obtain:
+
+\[ \cos^2 \pi/6 = \frac{3}{4} \]
+\[ \cos \pi/6 = \frac{\sqrt{3}}{2} \]
+
+We'll use
+\[ \cos s + t = \sin s \sin t - \cos s \cos t \]
+
+Let $s = t$
+\[ \cos 2s = \cos^2 s -  \sin^2 s \]
+\[ = \frac{\sqrt{3}^2}{2^2} - \frac{1^2}{2^2} = \frac{2}{2^2} = \frac{1}{2} \]
+
+That's correct.  We already know that
+\[ \cos \pi/3 = \sin \pi/6 = \frac{1}{2} \]
+
+\end{document}

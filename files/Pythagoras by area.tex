@@ -1,0 +1,203 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Pythagorean Theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{Proof based on area}
+
+\label{sec:Pythagoras_area}
+
+Late in his life, Albert Einstein wrote that he had two experiences as a youth that greatly influenced him.  The first was when he received a compass as a child and was intrigued by the question of what "force" made the needle turn to the north.
+
+The second was that, while studying geometry at about age 12, he had developed on his own a proof of the Pythagorean theorem.  He said the achievement had a profound effect on him in showing the power of pure thought.  
+
+Strogatz says that the proof relied in a simple way on symmetry.
+
+\url{https://www.newyorker.com/tech/annals-of-technology/einsteins-first-proof-pythagorean-theorem}
+
+\subsection*{areas in proportion}
+
+We will prove the part that Strogatz says was obvious to Einstein from symmetry, which he may have assumed.  The idea is that for similar right triangles, the area of each triangle is in a constant ratio to the square on any side, including the hypotenuse.  
+
+This is easy to see for an isosceles right triangle where we can calculate simply that $k = 1/4$.
+
+\begin{center} \includegraphics [scale=0.4] {einstein2.png} \end{center}
+
+But it is true for similar right triangles in general.
+
+\emph{Proof}.
+
+We assume that the sides of similar triangles are in proportion.  This fundamental proof has been given elsewhere.
+
+\begin{center} \includegraphics [scale=0.4] {similar2.png} \end{center}
+
+\[ \frac{a}{A} = \frac{b}{B} = \frac{c}{C} = k \]
+
+For right triangles, twice the area is the product of the two sides, hence the ratio of the areas is
+\[ \frac{ab}{AB} = \frac{a}{A} \cdot \frac{b}{B} = k^2 \]
+
+But $k = c/C$ so
+\[  \frac{ab}{AB}  = \frac{c^2}{C^2} \]
+which can be rearranged to give
+\[ \frac{ab}{c^2}  = \frac{AB}{C^2} \]
+
+We conclude that the area of each right triangle is in a constant ratio to the square on any side, including the hypotenuse.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.4] {einstein1.png} \end{center}
+
+\subsection*{Einstein's proof}
+
+Given this symmetry, here is what is thought to be Einstein's proof of the Pythagorean theorem.
+
+\begin{center} \includegraphics [scale=0.4] {triangle3.png} \end{center}
+
+\emph{Proof}.
+
+Let the constant of proportionality between area and hypotenuse squared be $f$.
+
+The two smaller triangles have areas $fa^2$ and $fb^2$ but they add to give the larger one so:
+\[ fa^2 + fb^2 = fc^2 \]
+
+Divide by $f$ and we're done.
+
+\begin{center} \includegraphics [scale=0.4] {einstein1.png} \end{center}
+
+$\square$
+
+We have done the arithmetic to prove this relationship, but an appeal to symmetry abstracts away the underlying arithmetic of ratios.  A true believer would simply write the last equation and then divide by $f$.
+
+\subsection*{lunes}
+
+Anything else that goes like the square of the side has the same relationship:
+
+\begin{center} \includegraphics [scale=0.35] {Posamentier5_12.png} \end{center}
+
+The areas add:  $Q + R = P$.
+
+These semi-circular areas are called lunes.
+
+
+\subsection*{Garfield's proof}
+
+\label{sec:Garfield}
+
+Here is a proof by a future President of the United States, James A. Garfield.  (He was a congressman at the time).
+
+\begin{center}
+\includegraphics [scale=0.5] {garfield4.png}
+\includegraphics [scale=0.5] {garfield2.png}
+\end{center}
+
+\emph{Proof}.
+
+Draw a right triangle with sides $a,b$ and $c$, and a second, rotated copy as shown.  The angles opposite sides $a$ and $b$ are complementary angles.  So the angle marked with a dot is a right angle, and the triangle with sides labeled $c$ is a right triangle.
+
+The area of the entire quadrilateral is the product of the left side $(a + b)$ and the \emph{average} of $a$ and $b$ (top and bottom).  This can be seen intuitively.  
+
+The halfway point of the solid red line has horizontal dimension $(a+b)/2$.  Hence
+\[ A = (a+b) \cdot \frac{1}{2} (a + b) \]
+
+If you're worried about that argument, just subtract the area of the triangle with two dotted sides from the quadrilateral that includes it:
+\[ A = (a + b)b - \frac{(a+b)(b-a)}{2} \]
+\[ = (a + b)(b - \frac{b}{2} + \frac{a}{2}) \]
+\[ = (a+b) \cdot \frac{1}{2} (a + b) \]
+which is just what we said.  
+
+So now:
+\[ A = \frac{a^2}{2} + ab + \frac{b^2}{2} \]
+
+But we can also calculate the area of the quadrilateral as the sum of the three triangles:
+\[ A = \frac{ab}{2} + \frac{ab}{2} + \frac{c^2}{2} \]
+Equate the two and the result follows almost immediately.
+
+$\square$
+
+\subsection*{another proof without words}
+
+This is a proof from Gelfand and Saul's trigonometry book.  
+
+\begin{center} \includegraphics [scale=0.5] {Gelfand2.png} \end{center}
+
+I have added the labels for side length.
+
+We start with two adjacent squares of area $a^2 + b^2$.  Two triangles (shaded) are cut off and re-arranged to make a shape whose area is $c^2$.
+
+\subsection*{SSA}
+
+Recall that SSA (side-side-angle) is not usually enough to determine congruence for triangles, but it \emph{is} enough if the angle is a right angle.  
+
+This follows as a natural consequence of the Pythagorean theorem.  Given one side and the hypotenuse (we know the first side in SSA is the hypotenuse), we can compute the missing side by
+
+\[ a^2 + b^2 = h^2 \]
+\[ h = \sqrt{a^2 + b^2} \]
+\[ a = \sqrt{h^2 - b^2} \]
+
+For a right triangle, SSA implies SSS.
+ 
+There are several important corollaries of the Pythagorean theorem.  We'll derive one later called the law of cosines and another from the Islamic geometer Ibn Quorra, who brought algebraic techniques, shunned by the Greeks, to geometry.
+
+\subsection*{product of slopes}
+
+Let's take Garfield's basic figure and turn it sideways.
+
+\begin{center} \includegraphics [scale=0.5] {garfield5.png} \end{center}
+
+As we said, since the triangles are right triangles, the angle marked with a red dot is also a right angle.
+
+Later, in analytical geometry, we will define the slope of a line as \emph{rise over run}.  So, for example, the slope of the hypotenuse of the right-hand triangle is $b/a$.
+
+In a similar way, the slope of the hypotenuse of the left-hand triangle is $-a/b$.  We think of the "run" of a line as going from left to right.  This line heads down as we go to the right, hence the minus sign.
+
+So then the product of slopes is
+
+\[ \frac{-a}{\ \ b} \cdot \frac{b}{a} = -1 \]
+
+This is a proof that the product of the slopes of two line segments that meet at a right angle is equal to $-1$.
+
+\subsection*{Quorra's corollary}
+
+\label{sec:Quorra}
+
+\begin{center} \includegraphics [scale=0.4] {pyth_corollary.png} \end{center}
+
+Let $\triangle ABC$ be \emph{any} triangle (here it is obtuse).  Draw $AM$ and $AN$ so that the new angles $\angle AMB$ and $\angle ANC$ are equal to $\angle A$.  The corresponding triangles are similar to the original, because they share the angle of measure $A$ plus one other from the original triangle.
+
+Then
+\[ BM:AB = AB:BC \]
+That is
+\[ \frac{BM}{AB} = \frac{AB}{BC} \]
+Thus, $AB^2 = BM \times BC$.  
+
+Similarly
+\[ NC:AC = AC:BC  \]
+So $AC^2 = NC \times BC$
+Therefore
+\[ AB^2 + AC^2 = BM \times BC + NC \times BC \]
+\[ = (BM + NC) \times BC \]
+
+The sum of the squares of the two short sides of a triangle is equal to the product of the third side with the the sum of the two components $BM + NC$.
+
+In the case where the angle at vertex $A$ is a right angle, then $M$ coincides with $N$, and $BM + NC = BC$, and this reduces to the Pythagorean theorem.
+
+
+\end{document}

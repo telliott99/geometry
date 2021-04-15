@@ -1,0 +1,55 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Connecting all four points}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+\subsection*{Euler line}
+
+\label{sec:Euler_line}
+
+Below we give a third proof.  This one, due to Euler, is stunning.  It follows:
+
+\url{https://artofproblemsolving.com/wiki/index.php/Orthocenter}
+
+A copy of their figure:
+
+\begin{center} \includegraphics [scale=0.35] {circumcenter4.png} \end{center}
+The orientation is reversed from what we had above.  First, the point $O$ is the circumcenter of the triangle:  the center of the circle which contains all three vertices of the triangle.  
+
+Clearly, this circle  has a center.  The classic construction is to bisect each side (here $BC$ is bisected at $A'$), and erect a perpendicular.  The point where the three perpendiculars cross is the circumcenter, which is the center of the circle.  
+
+\begin{center} \includegraphics [scale=0.45] {three_point_circle2.png} \end{center}
+
+So, assume we have done this and that point is $O$.
+
+The next point, $G$, is the centroid.  One way to find this point is to draw all three lines connecting vertices with the midpoints of the opposite side ($AA'$).  However, if you recall, the distance from the vertex $A$ to $G$ is twice the distance from the midpoint $A'$ to $G$.  Hence we draw point $G$ using arithmetic.
+
+Now, extend $OG$ by twice its length, to $H$.  ($2OG = GH$).
+\begin{center} \includegraphics [scale=0.35] {circumcenter4.png} \end{center}
+Because $AG$ is twice $A'G$ and $GH$ is twice $OG$ and the two triangles share both angle $\angle OGA'$ (equal to $\angle AGH$), they are similar triangles.  
+
+Since $\angle A'OG$ is a right angle, therefore so is $\angle AHG$.  This means that $AH$ is perpendicular to $BC$.  Thus, $AH$ is a part of the altitude from $A$ to $BC$ (the whole altitude is not shown).
+
+The same construction could be done for the other two vertices, each time ending at $H$.  This shows that $H$ is unique, and that $H$ is on all three altitudes.
+
+This proof also demonstrates that the orthocenter, centroid and circumcenter lie on a single line, and that the distance from centroid to orthocenter is twice that from centroid to circumcenter.
+
+
+\end{document}

@@ -1,0 +1,135 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Incenter, Orthocenter, Circumcenter}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+In the figure below, the outer black triangle lies on its circumcircle, where the circumcenter is the red point at the center.  
+
+The midpoints of the sides of the black outer triangle are joined to form a second triangle, in red.
+\begin{center} \includegraphics [scale=0.35] {three_points.png} \end{center}
+
+We will show that the perpendicular bisectors of the sides of the outer triangle are the altitudes of the red triangle.  
+
+Furthermore, if the points where the altitudes meet the sides of the red triangle are joined to form a third inner triangle, those same altitudes are the angle bisectors of the inner triangle.
+
+So for this arrangement, we have circumcenter concurrent (at the same point) with the orthocenter, which in turn is concurrent with the incenter.
+
+\subsection*{Gauss and altitude}
+
+\label{sec:Gauss_orthocenter}
+
+We will prove that the altitudes of a triangle are the perpendicular bisectors of a particular triangle which encloses it.  The proof is due to Gauss.
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.3] {gauss_altitudes.png} \end{center}
+
+Draw the outer triangle, in black.  Connect the midpoints of the sides to form an inner triangle, in red.  Also draw the perpendicular bisectors of the outer triangle.
+
+By the \hyperref[sec:midpoint_theorem]{\textbf{midpoint theorem}}, each side of the outer triangle is parallel to one side of the inner triangle and equal to twice its length.  Since we have opposing sides equal and parallel, this gives three parallelograms in the figure.
+
+The perpendicular bisector of each black side (dotted line) is the altitude of the paired red side, because starts from a vertex of the red triangle and meets the base at a right angle due to the parallel sides.
+
+This shows that the circumcenter of the enclosing triangle is the orthocenter of the smaller, enclosed triangle.  Since the circumcenter exists and is a single point, so is the orthocenter.
+
+$\square$
+
+\subsection*{orthocenter}
+
+\label{sec:orthocenter_and_incenter}
+
+We have shown previously that the three altitudes meet at a single point, the orthocenter.  The proofs include one from \hyperref[sec:Newton_altitude]{\textbf{Newton}}, and the previous one (from \hyperref[sec:Gauss_orthocenter]{\textbf{Gauss}}).
+
+\begin{center} \includegraphics [scale=0.4] {altitude_proof_1.png} \end{center}
+
+Above we have drawn the altitudes (left panel) and then also connected the points where the altitudes meet the sides at right angles.  We will prove that the dotted lines are the bisectors of the angles at the vertices of the small inset triangle. 
+
+In other words, the incenter of the small triangle is the same point as the orthocenter of the bigger one.  
+
+The key to the proof is to recognize that we can use a part of each dotted line as a diameter and draw a circle that includes four points:  the orthocenter, two vertices of the inset triangle, and one vertex of the large one.
+
+(Despite what it looks like, the figure is not symmetrical across the diameter, unless the triangles are isosceles).
+
+\begin{center} \includegraphics [scale=0.4] {altitude_proof_8.png} \end{center}
+
+This can be done for each vertex of the outer triangle (only one is shown).
+
+Now we can use the \hyperref[sec:equal_angles_same_arc]{\textbf{theorem}} about arcs subtended by an angle on the perimeter of the circle.  The two angles on the circle marked with red dots subtend the same arc of the magenta circle, so they are equal.
+
+For the next step, we use vertical angles (marked with black dots) to show that two triangles are similar, since they also contain right angles.  Therefore, we can mark a third angle as equal to the others with a red dot.
+
+\begin{center} \includegraphics [scale=0.4] {altitude_proof_9.png} \end{center}
+  
+Finally we draw a circle for a different vertex. Using the arc theorem, we find another equal angle, for a total of four angles marked with red dots.  We see that the one vertex of the inner triangle is bisected into two equal angles marked with red dots.
+
+\begin{center} \includegraphics [scale=0.4] {altitude_proof_10.png} \end{center}
+
+But the same thing can be done for the two other vertices of the inner triangle.  The pattern of the angles is the same.  
+
+With all the dots filled in:
+\begin{center} \includegraphics [scale=0.4] {altitude_proof_7.png} \end{center}
+
+We can see that the dotted lines are angle bisectors for the small triangle.
+
+Thus, the orthocenter of the large triangle and the incenter of the triangle inscribed between the points where altitudes meet the base, are the same point.
+
+$\square$
+
+\subsection*{nine-point circle}
+
+\label{sec:nine_point_circle}
+
+We've seen that the perpendicular bisectors of the sides and, separately, the angle bisectors of triangles converge on (are concurrent with) points that are the centers of circles with interesting properties.  These circles contain either the vertices of the triangle (circumcircle) or have the sides as tangents to the circle (incircle).
+
+Now we investigate the altitude and orthocenter.  It turns out there is a special circle, but it does not have the orthocenter as its center.  Quite surprisingly, there are nine points on the circle.  Three of these are medians of the sides.  This means that all four types of special points of a triangle are connected to circles of one kind or another.
+
+\begin{center} \includegraphics [scale=0.4] {nine_points1.png} \end{center}
+
+The circle that goes through the points where the altitudes of a triangle meet the sides also goes through six other points, the medians of the sides, and the midpoints of the part of each altitude that lies between the center and the vertex.
+
+(It's challenging to draw this figure.  Some of the measurements may look a little off, but the logic shows that the geometry is correct).
+
+In the first part of the proof, we will show that the circle that goes through the medians of all three sides also goes through the point where one altitude meets the base and the midpoint of the part of the same altitude that lies between the center and the vertex.
+
+\emph{Proof}.
+
+Consider the points $B_h$ and $C_m$.  These are midpoints of sides of a smaller triangle, and therefore parallel  to the base of that triangle, which is the part of the altitude terminating in $A$ that passes through $A_h$.
+
+\begin{center} \includegraphics [scale=0.4] {nine_points2.png} \end{center}
+
+The line segment $C_m B_m$ is also a midline, parallel to the side of the red triangle on the left.  Therefore these two lines are perpendicular and the angle formed at $C_m$ ($\angle B_h C_m B_m$) is a right angle.  Therefore by the converse of Thales theorem, there is a circle which has $B_h$ and $B_m$ as the diameter, and $C_m$ a point on the semicircle.
+
+Since the altitude to $B$ passes through $B_h$, and the bottom side of the red triangle passes through $B_m$ and these two line segments are perpendicular by the property of the altitude, the point $B$ lies on the same circle.
+
+\begin{center} \includegraphics [scale=0.4] {nine_points3.png} \end{center}
+
+Finally, the line segment $A_m B_h$ is on two midpoints of a small triangle whose base is the part of the altitude to $C$ that passes through $C_h$, while the line segment $A_m B_m$ goes through $A_m$ and is parallel to the side on the right, and therefore perpendicular to the altitude to $C$.  Thus $\angle B_h A_m B_m$ is a right angle and the point $A_m$ lies on the same circle as the others.
+
+We have established that the midpoint circle $A_m B_m C_m$ also contains points $B$ and $B_h$.
+
+\begin{center} \includegraphics [scale=0.4] {nine_points4.png} \end{center}
+
+Taking now $A_m A_h$ as the diameter of a circle we could show that $A$, $C_m$ and $B_m$ all lie on the same circle, then follow with diameter $C_m C_h$ in turn, but instead, we just appeal to symmetry.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.4] {nine_points1.png} \end{center}
+
+\end{document}

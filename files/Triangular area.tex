@@ -1,0 +1,204 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Area}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{area of a rectangle}
+
+One important aspect of calculus will be to determine the area of figures in the plane, particularly figures bounded by curves, as well as volumes in space.  The magic of calculus is that we can make curves conform to rectilinear concepts of area and volume.
+
+However, this book is about Euclidean geometry.  Let's just say a few words about rectalinear area, which we will then extend to the areas of triangles and parallelograms (like rectangles but skewed).
+
+To find areas, we must first fix a unit length.  Suppose that, in the figure below, the small squares have side lengths of 1 cm.
+
+\begin{center} \includegraphics [scale=0.35] {area5.png} \end{center}
+
+Then just multiply the width by the height (in cm) to obtain $48$ cm$^2$.
+
+Suppose, instead that the squares had side lengths of $1.356...$ cm.  Then, define $1$ yoyo $= 1.356...$ cm.  The area would be $48$ yoyo$^2$.
+
+The particular figure above (from Lockhart) shows the distributive law in action:
+\[ (3 + 5) \cdot (4 + 2) \]
+\[ =3 \cdot 4 + 3 \cdot 2 + 5 \cdot 4 + 5 \cdot 2 \]
+\[ = 48 \]
+Any combination of numbers that add up to $8$, times any combination of numbers that add up to $6$, gives the same result.
+
+\subsection*{problem}
+
+From Jacobs, chapter 9.  
+
+\begin{center} \includegraphics [scale=0.3] {sciam2.png} \end{center}
+
+Suppose each of $A$ through $I$ is a square, and the areas of squares $C$ and $D$ are 64 and 81, respectively.  
+
+Can you find the areas of all the other squares?  
+
+Is the entire figure a square?  What is the total area?
+
+\subsection*{area of a parallelogram}
+
+The next figure is a parallelogram, a four-sided polygon whose two pairs of opposite sides are equal and parallel.
+
+\begin{center} \includegraphics [scale=0.4] {pgram6.png} \end{center}
+
+Suppose we are given that $AD \parallel BC$.  
+
+Then the angles marked with black dots are equal, by the alternate interior angles theorem.  If we are also given that $AB \parallel CD$, the angles marked with red dots are equal.  This is one way to determine that we have a parallelogram.
+
+Notice that if we draw $AC$ as one diameter of $ABCD$, then the two resulting triangles are congruent by ASA.  One of the triangles is rotated by two right angles with respect to the other.
+
+To find the area of a parallelogram, cut off a right triangle from the left and attach it on the right.  The angles add up to form a straight line along the base and a right triangle at the upper right.    The area is clearly $h \cdot b$.
+
+\begin{center} \includegraphics [scale=0.4] {area7.png} \end{center}
+
+Note that if the parallelogram is particularly skinny for a given height (how skinny?), then it will not be possible to cut off just one triangle.  Euclid spends some time working through this issue to prove that the area of any parallelogram is the base times the "height".
+
+We will just note a simple solution:  turn any skinny parallelogram by one-quarter turn plus what is needed so that it is square with the top line and is also fat.  Then proceed as before.
+
+Alternatively, one can imagine slicing the parallelogram into (perhaps multiple) equal horizontal slices and add small triangles on to each slice.  
+
+One could even use non-equal slices and then scale the triangles in proportion.  You will find that each small rectangle will have the same base, and together, their heights will add to the whole.
+
+\begin{center} \includegraphics [scale=0.4] {pgram_sliced.png} \end{center}
+
+\subsection*{any triangle is one-half of a parallelogram}
+
+One way to obtain the formula for the area of a triangle, is to recognize that any triangle can be turned into a parallelogram, by attaching a rotated image of itself, like this:
+
+\begin{center} \includegraphics [scale=0.4] {area4.png} \end{center}
+
+$ACBC'$ is a parallelogram composed of two copies of $\triangle ABC$.  The copy has simply been rotated 180 degrees and re-attached along side $AB$.  The area of this parallelogram is twice that of $\triangle ABC$.  To obtain the value, multiply the base $BC$ times the "height" $E'H$.
+
+In this example, the horizontal line that runs through $C'$, $A$, $D$ and $E'$ is parallel to the line that contains the base segments $BC$ and $EF$.  $E'H$ is perpendicular to both lines.
+
+$E'H$ is equal in length to what we will call the altitude of the triangle.  That would be a line dropping vertically from $A$ and making a right angle with the base, $BC$.
+
+\subsection*{area of a triangle}
+
+\label{sec:triangle_area}
+
+The area of the triangle is one-half that of the parallelogram that contains two copies of the triangle.
+\[ A = \frac{1}{2} \cdot BC \cdot E'H \]
+
+This formula is correct even for an obtuse triangle (right panel, above).
+
+$\bullet$ \ the area of a triangle is one-half the base times the height.
+
+Another way to think about the area of a triangle is to start with the simplest case:  a right triangle.
+
+\begin{center} \includegraphics [scale=0.4] {area9.png} \end{center}
+
+In the figure, we are given that the triangle with side lengths $a,b$, and $c$ is a right triangle, with the angle between sides $a$ and $b$ being a right angle.  
+
+Any right triangle can be viewed as one-half of a rectangle, cut along the diagonal.  Using the theorem on complementary angles, we can show that all four corners of the figure on the right above are right angles.  
+
+As a result, this right triangle has one-half the area of a rectangle with the same two sides $a$ and $b$:
+\[ A_{\triangle} = \frac{1}{2} \ ab \]
+
+A right triangle has the largest area for a given pair of side lengths.  If we imagine side $a$ tilting right or left, then the resulting triangle will have a height that is less than $a$.
+
+Now, any triangle can be cut into two right triangles by drawing its \emph{altitude}, $h$, where $h$ is perpendicular to $c$.  
+
+\begin{center} \includegraphics [scale=0.4] {area10.png} \end{center}
+
+The area of the triangle with sides $a,d,h$ is $dh/2$, and that with sides $a,e,h$ is $eh/2$ so the area of the original triangle is
+\[ \frac{1}{2} d \cdot h + \frac{1}{2} e \cdot h = \frac{1}{2} (d+e) \cdot h = \frac{1}{2} c \cdot h \]
+
+An important consequence is that:
+
+$\bullet$ \ all triangles with the same base and height have the same area.
+
+Draw two parallel lines.  Mark off equal distances between adjacent points $A$ through $J$ on the bottom.  Now pick any point on the top and draw the triangle with two \emph{equidistant} points on the bottom.  Any other triangle drawn with an equal base has the same area.
+
+\begin{center} \includegraphics [scale=0.4] {area2.png} \end{center}
+
+In this figure the areas of $\triangle PAB$, $\triangle PDE$, and $QDE$ are equal, as are $\triangle QHJ$ and $\triangle RFH$.  Further, the latter two have twice the area of any of the first three.
+
+The reason is that all line segments drawn from $P$, $Q$ or $R$ to the base and perpendicular to it, are equal in length, so the areas are in proportion to the length of the base.
+
+You can move the top vertex as far to one side as you wish, as long as the movement is parallel to the base.  The area of these two triangles is the same.
+
+\begin{center} \includegraphics [scale=0.6] {area6.png} \end{center}
+
+The altitude of $\triangle PAB$ is equal to that of $PIJ$ because $PR \parallel AJ$.
+
+\subsection*{area-ratio theorem}
+
+\label{sec:area_ratio_theorem}
+
+Sometimes this corollary is called the area-ratio theorem (drawing from Acheson):
+
+\begin{center} \includegraphics [scale=0.5] {area11.png} \end{center}
+
+If in a triangle we draw the line connecting the upper vertex to any point on the bottom side, then the areas of the two smaller triangles are in the same ratio as the lengths of their bases.
+
+\emph{Proof.}
+
+The area of $\triangle A$ is $ah/2$, while that of $\triangle B$ is $bh/2$, so the ratio of areas is 
+\[ \frac{A_A}{A_B} = \frac{ah/2}{bh/2} = \frac{a}{b} \]
+
+$\square$
+
+It is also the case that the ratio of the area of any sub-triangle to the whole is the same as the proportion of its base length to that of the whole base.
+
+\[ \frac{A_A}{A_A + A_B} = \frac{a}{a+b} \]
+
+\emph{Proof}.  
+
+Simple algebra:  invert, add one to both sides, and invert again.  We show only the right-hand side.  Start with the fraction $b/a$ and add $1$ to it:
+
+\[ \frac{b}{a} + 1 = \frac{b}{a} + \frac{a}{a} = \frac{a + b}{a} \]
+
+Inverted:
+\[ \frac{a}{a + b} \]
+
+Do the same to both sides and the result follows.
+
+The area-ratio theorem shows the deep relationship between similarity and area.
+
+\subsection*{problem}
+
+Given that $D$ and $E$ are midpoints of their sides:  $AD = DB$ and $AE = EC$.  Prove that the colored areas are equal.
+
+\begin{center} \includegraphics [scale=0.4] {tra1.png} \end{center}
+
+\emph{Solution}.
+
+Let the white triangular area on the left, with side $BD$ and the central point as a vertex, have area $K$.  Let the other white triangular area with side $EC$ have area $M$.  
+
+Then, by the area-ratio theorem and using $AC$ as the base:
+
+\[ \text{green} + K = \text{blue} + M \]
+
+Using $AB$ as the base
+
+\[ \text{green} + M = \text{blue} + K \]
+
+Add the two equations:
+
+\[ 2 \text{ green} + M + K = 2 \text{ blue} + K + M \]
+\[ \text{green} = \text{blue}  \]
+
+
+
+$\square$
+
+\end{document}

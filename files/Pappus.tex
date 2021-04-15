@@ -1,0 +1,164 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Pappus' theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{more about Menelaus}
+
+We proved  \hyperref[sec:Menelaus_theorem]{\textbf{Menelaus' theorem}} previously.
+
+In the figure below, subscripts indicate the parts of a side, for example, $a_1$ and $a_2$ are the components of side $a$.  
+
+$c'$ is the extension of base.  We will take a different definition for $c$ in talking about this theorem, it is the length of the whole side plut the extension.  So we are redefining $c$, using that symbol to refer to what would normally be called $c + c'$.
+
+\begin{center} \includegraphics [scale=0.4] {menelaus1.png} \end{center}
+
+We showed that the product of three ratios is equal to $1$:
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c'} = 1 \]
+
+We get this result by similar triangles using the altitudes.  Take three terms in order for the left-hand and right-hand sides:
+
+\[ \frac{r}{p} \cdot \frac{p}{q} \cdot \frac{q}{r} = \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c'} \]
+
+One way to remember the terms is that, going around counter-clockwise, we take the first length we run into and put it into the numerator.  It doesn't matter which direction you go, as long as you take $c'$ first when going clockwise and $c$ first when going counter-clockwise.
+
+Take the extension first if you run into it first.
+
+We also need to prove the theorem for an alternative setup.  Even though the black line does not go through the triangle, it is technically a traversal.
+
+\begin{center} \includegraphics [scale=0.4] {menelaus3.png} \end{center}
+
+\[ \frac{r}{p} \cdot \frac{p}{q} \cdot \frac{q}{r} = \frac{a'}{a} \cdot \frac{b}{b'} \cdot \frac{c}{c'} \]
+
+Once again, we can remember this as, take the first length we run into, and put it on top.
+
+We mainly did this as a preliminary lemma to an easy proof of Ceva's theorem, which becomes important in thinking about the concurrency of lines in a triangle, like those which bisect the opposing sides and meet at the centroid.
+
+Ceva's theorem gives a condition under which three lines like this are concurrent, or meet at a point.
+
+Menelaus' theorem can be seen as in some sense as similar to Ceva, because it provides conditions under which three points can be proved co-linear, or on one line.
+
+\subsection*{Pappus' theorem}
+
+As a way to explore the usefulness of Menelaus' theorem, I thought I would look at a remarkable theorem of Pappus.  Pappus says that if we inscribe a hexagon in a circle and then connect some of the vertices, certain points will be co-linear.
+
+\begin{center} \includegraphics [scale=0.4] {pp0.png} \end{center}
+
+Although it has some symmetry (the connections on the left side are a reflection of the connections on the right side), it is not radially symmetric in terms of connections.
+
+Nevertheless, it seems like the red line does connect three co-linear points.  We will not prove this version of the theorem.
+
+Remarkably, this hexagon can be deformed into two lines.
+
+\begin{center} \includegraphics [scale=0.35] {pp1.png} \end{center}
+
+We claim that if $UVW$ and $XYZ$ are co-linear, then the three points $PQR$ are also co-linear.  These points are formed by the intersections of corresponding lines.  We count the intersection of top left to bottom middle v. bottom left to top middle at $P$, for example.  
+
+We will use some of the unlabeled intersections in our proof, as you will see.  We will focus on one particular triangle.
+\begin{center} \includegraphics [scale=0.35] {pp2.png} \end{center}
+
+I have labeled the vertices $ABC$.
+\begin{center} \includegraphics [scale=0.35] {pp3.png} \end{center}
+
+You will notice that the points $PQR$ apparently lie on a traversal of $\triangle ABC$.  In particular, if we can prove that the product of Menelaus' ratios is equal to $1$ for $PQR$ in $\triangle ABC$, we will have established co-linearity of the points $PQR$, in other words, that it really is a traversal.
+
+We will show that 
+\[ \frac{AQ}{QB} \cdot \frac{BR}{RC} \cdot \frac{CP}{AP} = 1 \] 
+
+\begin{center} \includegraphics [scale=0.35] {pp11.png} \end{center}
+
+We will achieve this by applying Menelaus' forward theorem to five other traversals.  
+
+\subsection*{first three}
+
+The first one is $VRZ$.  Just read it off the diagram below:
+\begin{center} \includegraphics [scale=0.35] {pp12.png} \end{center}
+\[ \frac{BR}{RC} \cdot \frac{CV}{VA} \cdot \frac{AZ}{BZ} = 1 \] 
+
+The second is $XQW$:
+\begin{center} \includegraphics [scale=0.35] {pp13.png} \end{center}
+\[ \frac{AQ}{QB} \cdot \frac{BW}{WC} \cdot \frac{CX}{AX} = 1 \] 
+
+And the third is $UPY$:
+
+\[ \frac{CP}{AP} \cdot \frac{UA}{UB} \cdot \frac{YB}{YC} = 1 \] 
+
+\begin{center} \includegraphics [scale=0.35] {pp14.png} \end{center}
+
+In this case, all three points of the "traversal" lie outside the triangle.  Just remember to take the extension in the numerator if we come from that end first.  This happens with the second and third terms.
+
+We have
+\[ \frac{BR}{RC} \cdot \frac{CV}{VA} \cdot \frac{AZ}{BZ} = 1 \] 
+\[ \frac{AQ}{QB} \cdot \frac{BW}{WC} \cdot \frac{CX}{AX} = 1 \] 
+\[ \frac{CP}{AP} \cdot \frac{UA}{UB} \cdot \frac{YB}{YC} = 1 \] 
+
+Recall that we need
+\[ \frac{AQ}{QB} \cdot \frac{BR}{RC} \cdot \frac{CP}{AP} = 1 \] 
+
+\subsection*{finishing up}
+
+Notice that the first term in each product above is one we want to keep at the end.  They are what we seek.  The other terms need to disappear.
+
+The fourth traversal is $UVW$.
+
+\[ \frac{BW}{WC} \cdot \frac{CV}{VA} \cdot \frac{UA}{UB} = 1 \] 
+which we invert as
+\[ \frac{WC}{BW} \cdot \frac{VA}{CV} \cdot \frac{UB}{UA} = 1 \] 
+\begin{center} \includegraphics [scale=0.35] {pp15.png} \end{center}
+
+The last "traversal" does not cross through the triangle either, like number 3 above.  We go clockwise, but that is OK.
+
+\[ \frac{BZ}{AZ} \cdot \frac{AX}{CX} \cdot \frac{CY}{BY} = 1 \] 
+
+\begin{center} \includegraphics [scale=0.35] {pp16.png} \end{center}
+
+If we multiply together all five of these expressions, all fifteen terms, on the right we obtain just $1$.  
+
+\[ \frac{BR}{RC} \cdot \frac{CV}{VA} \cdot \frac{AZ}{BZ} = 1 \] 
+\[ \frac{AQ}{QB} \cdot \frac{BW}{WC} \cdot \frac{CX}{AX} = 1 \] 
+\[ \frac{CP}{AP} \cdot \frac{UA}{UB} \cdot \frac{YB}{YC} = 1 \] 
+\[ \frac{WC}{BW} \cdot \frac{VA}{CV} \cdot \frac{UB}{UA} = 1 \] 
+\[ \frac{BZ}{AZ} \cdot \frac{AX}{CX} \cdot \frac{CY}{BY} = 1 \] 
+
+There are a number of pairs of terms that are inverses (actually, six of them), so these will cancel.  The pairs are (by row-position):
+
+1-2 and 4-2, 1-3 and 5-1, 2-2 and 4-1
+
+2-3 and 5-2, 3-2 and 4-3, 3-3 and 5-3
+
+We are left with 
+1-1, 2-1 and 3-1:
+\[ \frac{BR}{RC} \cdot \frac{AQ}{BQ} \cdot \frac{CP}{AP} = 1 \] 
+
+Compare with what we wanted
+\[ \frac{AQ}{QB} \cdot \frac{BR}{RC} \cdot \frac{CP}{AP} = 1 \] 
+
+By the converse of Menelaus' theorem, we have that $PQR$ are co-linear.
+
+$\square$
+
+There are some situations where it is useful to keep track of the sign of a length so that, for example:
+\[ \frac{AQ}{QB} = - \frac{AQ}{BQ} \]
+because $QB = - BQ$.  We are not worrying about that here.
+
+This proof is certainly a bit of a slog.  But projective geometry is well beyond what we can do now, so let's just wipe our brows and breathe a sigh of relief that it all came out.
+
+\end{document}

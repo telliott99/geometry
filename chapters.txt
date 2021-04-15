@@ -1,0 +1,89 @@
+# First
+
+Fundamentals
+Introduction
+Angles
+Parallel lines
+Congruent triangles
+Isosceles triangles
+Euclid's elements
+Right triangles
+
+Area
+Triangular area
+Altitudes
+Similarity and area
+Pythagorean theorem
+Euclid's proof
+Pythagoras by area
+
+Similar triangles
+Stacked triangles
+Parallelograms
+Similar triangles
+Midpoint theorem
+
+Circles
+Tangent to a circle
+Angles in a circle
+Arcs of a circle
+Secant tangent theorem
+
+More triangles
+Basic trigonometry
+Equilateral triangle
+Menelaus theorem
+Concurrence
+
+Polygons
+Cyclic quadrilateral
+Pentagon
+Polygons
+Ptolemy
+
+Special points
+Four points
+Triangles in triangles
+Euler line
+Special circles
+
+Pi
+Area of a circle
+Pi is a constant
+
+Proof
+Proof by contradiction
+Induction
+
+Trigonometry
+Sum of angles
+Law of Cosines
+Computations
+
+Celestial applications
+Equal area in equal time
+Aristarchus
+Circular orbits
+
+Curves
+Ellipse
+Parabola
+Cycloid
+
+Later geometry
+Pappus
+Hippocrates
+Heron and Brahmagupta
+
+Archimedes
+Pyramid and cone
+Archimedes and the sphere
+Platonic solids
+
+Addendum
+Angular measure
+Constructions
+Additional proofs
+Resources
+List of theorems
+References

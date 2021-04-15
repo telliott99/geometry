@@ -1,0 +1,117 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Altitudes}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Each of the three sides of a triangle has an altitude.
+
+For an acute triangle, the three altitudes meet at a point inside the triangle (they are said to be concurrent).  The point is called the \emph{orthocenter}.   We will prove this later.
+
+\begin{center} \includegraphics [scale=0.4] {tr1.png} \end{center}
+For a right triangle, the orthocenter is just the vertex containing the right angle.  
+
+For an obtuse triangle, two of the altitudes are external to the triangle, and the third altitude must be extended externally, past the vertex, to meet the other two at the orthocenter.
+
+In the latter case, it may take some thought to determine which altitude goes with which side.  The rule is that the altitude forming a right angle with any side originates at the vertex opposite that side.  If necessary, the side is extended to meet the altitude at a right angle.
+
+\begin{center} \includegraphics [scale=0.4] {tr2.png} \end{center}
+
+In the figure above, we have one obtuse angle in the triangle.  The altitudes to sides $a$, $b$ and $c$ are indicated, in turn, by arrows.
+
+\subsection*{computing triangular area}
+
+\begin{center} \includegraphics [scale=0.4] {area3.png} \end{center}
+
+You recall the formula:  one-half base times height.  Often I find it easier to dispense with the factor of one-half, and to do that, I will calculate twice the area.
+
+In the figure above, twice the area is 
+
+\[ 2A = af = bg = ch \]
+
+We can choose any side of the triangle to be the base and then multiply by the height to get twice the area.  
+
+We must always get the same answer!  The area of the triangle must be the same no matter how you calculate it.
+
+Here's a proof by counting up the area of smaller triangles:
+
+\begin{center} \includegraphics [scale=0.4] {area8b.png} \end{center}
+
+\emph{Proof}.
+
+In $\triangle ABC$ with sides $a,b,c$, drop the three altitudes from two of the three vertices to form right angles on the opposing sides.  We label two altitudes:  $f$ for side $a$ and $h$ for side $c$.
+
+Ceva's theorem says that these altitudes cross at a single point.  We look at Newton's proof of this in just a bit (\hyperref[sec:Newton_altitude]{\textbf{here}}).  
+
+Each altitude and side is then divided into two parts as shown.
+
+There are six small triangles.  To make it easier to keep track of them, they are labeled with colored dots (note:  for this time only, these are labels not for angles, but for triangles).
+
+So then twice the area of the whole triangle is
+\[ 2A = ch = c_1 h_1 + c_1 h_2 + c_2 h_1 + c_2 h_2 \]
+
+Two of these products correspond to single right triangles:  $c_1 h_2$ and $c_2 h_2$.  The other two are paired triangles with a base of $h_1$, and then, for green and blue, the height is $c_1$, or red and magenta, where the height is $c_2$.   For both, the height must be extended to the base at side $c$ to form the right angle.
+
+But the same six triangles can be arranged in a different way so that twice the area of the whole triangle is
+\[ 2A = af = a_1 f_1 + a_1 f_2 + a_2 f_1 + a_2 f_2 \]
+
+A similar calculation can be carried out for side $b$ and altitude $g$.  The area is the same regardless of which side is chosen as the base.
+
+\emph{Excercise}.  For an obtuse triangle with one angle greater than a right angle, two of the altitudes will lie outside the triangle.  In that case we can determine the area by finding the areas of two other triangles and then subtracting.  Draw an obtuse triangle and see if you can prove that this method works. $\square$
+
+\subsection*{orthocenter:  Newton's proof}
+
+\label{sec:Newton_altitude}
+
+As we've said, the orthocenter is the point where all three altitudes cross.
+
+\begin{center} \includegraphics [scale=0.6] {orthocenter2.png} \end{center}
+
+An altitude is a line drawn from any vertex to the opposing side, forming a right angle with the base, thereby dividing the triangle into two right triangles.
+
+\begin{center} \includegraphics [scale=0.4] {newton2.png} \end{center}
+
+In the left panel, we draw the altitude from the vertex $C$ down in $\triangle ABC$ to meet the base at a right angle.
+
+The altitude divides the base into lengths $a$ and $b$.  Now draw a second altitude from vertex $A$ to the side opposite (left panel).  
+
+What is the height $h$ above the base where the two lines cross?
+
+The small triangle with sides $a$ and $h$ and the large triangle $\triangle BCD$ are similar, which means that the angles marked with magenta dots are equal.  The reason is that they are both right triangles that have equal vertical angles.  Therefore the marked angles are also equal.
+
+In the small triangle the side opposite the marked angle ($\angle BAC$) has length $h$, while the entire length of the altitude is $L$.  Similar triangles have equal ratios for the corresponding sides.  By similar triangles
+
+\[ \frac{h}{a} = \frac{b}{L} \]
+
+(the side opposing the marked angle is in the numerator on both sides).  So the height $h$ is
+
+\[ h = \frac{ab}{L} \]
+
+The formula is noteworthy because it is symmetrical in $a$ and $b$.  It does not contain any term related to the length of side $AC$.
+
+Therefore, if we draw the third altitude to side $BC$, it crosses the vertical altitude at the same height $h = ab/L$ (right panel).
+
+This means that the three altitudes cross at a single point.
+
+\begin{center} \includegraphics [scale=0.5] {newton3.png} \end{center}
+
+Newton published this proof around 1680.
+
+\end{document}

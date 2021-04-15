@@ -1,0 +1,316 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Circles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\begin{center} \includegraphics [scale=0.4] {arcs11.png} \end{center}
+
+In the figure above, the angle $s$ is \emph{defined} as the length of arc $a$ that it sweeps out, or subtends, in a unit circle.
+
+In calculus and analytical geometry angles are defined in terms of radians of arc.  For a unit circle with radius = $1$, the total circumference is $2\pi$.
+
+If $s$ is the measure in radians and $D^{\circ}$ the measure in degrees, then
+\[ \frac{s}{2 \pi} = \frac{D^{\circ}}{360^{\circ}} \]
+
+It seems natural then to adopt the arc length as a measure of the angle, where $360^\circ$ is equal to $2 \pi$ \emph{radians}, and an angle of $90^\circ$, for example, a right angle, is equal to $\pi/2$ radians.
+
+\begin{center} \includegraphics [scale=0.30] {radian.png} \end{center}
+
+One can easily divide  $360$ by $2 \pi$ to find that one radian is approximately $57^\circ$.
+  
+To convert some more measures of angles in degrees to radians:
+\[ 180^\circ = \pi, \ 90^\circ = \frac{\pi}{2} \]
+\[ 60^\circ = \frac{\pi}{3}, \ 45^\circ = \frac{\pi}{4}, \ 30^\circ = \frac{\pi}{6} \]
+
+Central angle and subtended arc are numerically equal, but remember that they are dimensionally different.  Arc is a length, angle is just an angle.
+
+\subsection*{Thales' theorem}
+
+\label{sec:Thales_theorem}
+
+In this chapter, we introduce a few more theorems concerning circles.  We start by revisiting the last of Thales' theorems:
+
+$\bullet$  Any angle inscribed in a semicircle is a right angle.
+
+Think of three points on the circumference of the circle, forming a triangle. If two of the points are on a diameter of the circle, the angle formed at any arbitrary but distinct third point is always a right angle.
+
+$\angle PRQ$ is a right angle.
+\begin{center} \includegraphics [scale=0.4] {arcs12.png} \end{center}
+
+\emph{Proof}.
+
+Draw the radius $OR$ (right panel). 
+
+Notice that the two smaller triangles produced ($\triangle OPR$ and $\triangle OQR$) are both isosceles, since two of their sides are radii of the circle.
+
+Therefore, in each triangle the two angles marked with dots of the same color are equal, by the isosceles triangle theorem (\hyperref[sec:isosceles_triangle_theorem]{\textbf{ref}}).
+
+Since $\angle PRQ$ contains one angle of each type, it is equal to one-half the angle sum for the triangle, i.e., $\angle PRQ$ is a right angle.
+
+To restate this in more conventional notation:  in the figure below, $\angle PRQ = \phi + \theta$.  
+
+\begin{center} \includegraphics [scale=0.4] {arcs13.png} \end{center}
+
+Since the full measure of the triangle is $180^\circ = \pi$ radians, and
+\[ \phi + \phi + \theta + \theta = \pi \]
+it follows that
+\[ \phi + \theta = \pi/2 \]
+
+$\square$
+
+\subsection*{angles on the perimeter}
+
+\label{sec:peripheral_angle}
+
+The arc swept out by the angle $\angle POQ$ (equal to two right angles) is clearly equal to $\pi$, because that arc is one-half of a circle.  
+
+But the two angles on the perimeter of the circle which together subtend one-half of the circle arc add up to
+\[ \angle PRQ = \phi + \theta = \pi/2 \]
+
+What's going on?
+
+To clarify, let us label the angles at the center of the circle, as well as three segments of arc.
+
+\begin{center} \includegraphics [scale=0.4] {arcs8.png} \end{center}
+
+$a$ is the arc swept out by angle $s$, and $a$ and $s$ have the same measure by definition, although one is a length and the other an angle.
+
+\[ s = a \]
+
+By the external angle theorem (\hyperref[sec:external_angle_theorem]{\textbf{ref}}), we know that
+\[ s = 2 \phi \]
+and so conclude that
+\[ \phi = \frac{s}{2} \]
+
+The angle $\phi$ lying on the perimeter sweeps out the same arc as $s$, even though $\phi$ is one-half of $s$.
+
+$\square$
+
+$\phi$ is farther away from the arc, so we get a bigger arc for the same angular measure.  Another way to say the same thing:  $\phi$ is farther away from the arc, so we get a smaller angle for the same arc.
+
+$\bullet$  An angle on the perimeter (what we will call a peripheral angle) is twice the central angle subtending the same arc.  This is called the \emph{inscribed angle theorem}
+
+A related approach is to simply count up the angles in two triangles.  For the large right triangle we have
+
+\[ \pi = \phi + \phi + \theta + \theta \]
+
+and for the smaller triangle with central angle $s$
+
+\[ \pi = s + \theta + \theta \]
+
+Clearly, then, $s = 2 \phi$ so
+
+\[ \phi = \frac{s}{2} \]
+
+$\square$
+
+\subsection*{theorem on cyclic quadrilaterals}
+
+\label{sec:quadrilateral_supplementary}
+
+This leads to a wonderful simple theorem about quadrilaterals.
+
+\begin{center} \includegraphics [scale=0.4] {circles_4.png} \end{center}
+
+$\bullet$ \ For \emph{any} quadrilateral whose four vertices lie on a circle, the opposing angles are supplementary (they sum to $180^\circ$).
+
+\emph{Proof}.
+
+Together, opposing angles exactly subtend the whole arc of the circle.
+
+$\square$
+
+\subsection*{tangent}
+
+$\bullet$  The arc swept out between a tangent and a chord is equal to the arc lying between the point of tangency and the point where the arc meets the circle.
+
+Acheson calls this the alternate segment theorem.
+
+\begin{center} \includegraphics [scale=0.4] {arcs14.png} \end{center}
+
+\emph{Proof}.
+
+The arc $a$ is equal to twice the arc swept out by angle $\theta$ on the far right of the diameter.  But the angle between the tangent and the chord is also equal to $\theta$, because $\theta + \phi$ is equal to a right angle.
+
+Therefore the arc swept out between the tangent and the chord is equal to $a$.
+
+$\square$
+
+\subsection*{geometric mean}
+
+We showed in the chapter on the Pythagorean theorem (\hyperref[sec:pythagorean_thm]{\textbf{ref}}) that the altitude of a right triangle is the geometric mean of the two components of the base.
+
+\[ h^2 = pq \]
+\[ h = \sqrt{pq} \]
+
+According to wikipedia:
+
+\url{https://en.wikipedia.org/wiki/Geometric_mean}
+
+The fundamental property of the geometric mean is that (letting $m$ be the \emph{geometric mean} here):
+\[ m \ [ \ \frac{x_i}{y_i} \ ] \ = \frac{m(x_i)}{m(y_i)} \]
+
+and one consequence is that
+
+\begin{quote}This makes the geometric mean the only correct mean when averaging normalized results; that is, results that are presented as ratios to reference values.\end{quote}
+
+A number of examples are given in the article.
+
+This section is here because originally, there was a proof-without-words that the geometric mean is always less than or equal to the arithmetic mean.
+
+\begin{center} \includegraphics [scale=0.4] {arcs15.png} \end{center}
+
+I decided to add some words.  A right triangle is inscribed in a semicircle.  
+
+Let the length of the long dotted line be $c$.  Then
+\[ a^2 + h^2 = c^2 \]
+Let the length of the short dotted line be $d$.  Then
+\[ b^2 + h^2 = d^2 \]
+
+Adding together
+\[ a^2 + b^2 + 2 h^2 = c^2 + d^2 \]
+
+But a third application of the Pythagorean theorem shows that the right-hand side is just $(a + b)^2$ so
+\[ a^2 + b^2 + 2 h^2 = (a + b)^2 \]
+\[ 2 h^2 = 2 ab \]
+\[ h^2 = ab \]
+
+The square of the altitude $h$ is equal to the product of chord segments (we will prove this geometrically in the next chapter as well).
+
+\[ h = \sqrt{ab} \]
+
+But we also have that $a + b = 2r$ and hence
+\[ r = \frac{a + b}{2} \]
+Do you recognize these?  The second expression is the arithmetic mean of $a$ and $b$, while the first is the geometric mean.
+
+The geometry shows that $h \le r$ so:
+\[ \sqrt{ab} \le \frac{a + b}{2} \]
+
+The geometric mean is always less than the arithmetic mean, except when $a = b$, where they are equal (or all of $n$ values are equal).
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.3] {circles1.png} \end{center}
+
+Two circles meet at $Q$ and $S$.  $QR$ and $QT$ are diameters of the two circles.  Prove that $RST$ are colinear.
+
+\begin{center} \includegraphics [scale=0.3] {circles2.png} \end{center}
+
+Since $QR$ is a diameter of the circle centered at $O$, $\angle QSR$ is a right angle.  
+
+And so is $\angle QST$, since $QT$ is a diameter of the second circle.  
+
+Hence the total angle at $S$ is two right angles or a straight line.  Therefore $RS$ and $ST$ togethere form a straight line segment.
+
+\subsection*{double arc problem}
+
+This problem is taken from an online collection by David Surowski.
+
+\url{https://www.math.ksu.edu/~dbski/writings/further.pdf}
+
+\begin{center} \includegraphics [scale=0.6] {further1.png} \end{center}
+
+Given that $AB$ and $AC$ are tangents to the circle meeting at $A$.  Given a second tangent $DE$, meeting the circle at $P$.  Prove that the arc subtended by $\angle BOC$ is twice that subtended by $\angle DOE$.
+
+\emph{Proof}.
+
+Notice that $DB$ and $DP$ are tangents to the circle meeting at $D$.  Therefore $DB = DP$ and then $\triangle BOD \cong \triangle DOP$, so $\angle BOD = \angle DOP$.
+
+The same argument applies to $EC$ and $EP$.  Therefore the inner arc is composed of two angles, while the outer arc has two copies of each of those angles.
+
+$\square$
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.4] {Posamentier1_4.png} \end{center}
+
+Posamentier gives this problem.  I is the center of the circle (the circumcircle of $\triangle ABC$).  $AE$ is the altitude of $\triangle ABC$.  
+
+\emph{To prove}.
+
+If the angle at vertex $A$ is bisected (by $AD$), then $AD$ also bisects $\angle EAI$.
+
+First of all, I would restate the problem:  prove that $\angle BAE = \angle CAI$.  Then, the bisector of $A$ must bisect $\angle EAI$.
+
+Hint:  draw $IC$ and use the relationships from this chapter as well as complementary angles in a right triangle.
+
+\subsection*{problem}
+
+Here is another problem from Surowski.  This one is fairly easy, with one assumption, which I'm pretty sure is justified.
+
+Given a circle with center at $O$.  Points $XAFC$ are colinear and tangent at $A$.  Points $EOBDC$ colinear as well.  $FD$ is tangent at $D$.
+
+\begin{center} \includegraphics [scale=0.35] {Surowski_p30_5.png} \end{center}
+
+To prove:  $AE$ bisects $\angle BAX$ and $AD$ bisects $\angle BAC$.
+
+\emph{Proof}.
+
+We are not given that $AB \perp ED$.  On the other hand, if $AB$ is not constrained, I don't know how to solve the problem, and if $AB$ is not $\perp ED$, then the angle bisection we're supposed to prove would not be correct.
+
+$ED$ goes through the center $O$, so it is a diameter of the circle.  $\triangle EAD$ is inscribed in a semicircle, hence $\angle EAD$ is a right angle.
+
+\begin{center} \includegraphics [scale=0.5] {Surowski_p30_5a.png} \end{center}
+
+$\angle AEB$ and $\angle ADE$ are complementary.  Since $FD \perp EDC$, $\angle ADF$ and $\angle ADE$ are complementary, so $\angle ADF = \angle AEB$. 
+
+Since $FA$ and $FD$ are both tangents from the point $F$, they are equal so $\triangle ADF$ is isosceles, and $\angle FAD = \angle ADF$.
+
+To make further progress, we must assume $AB \perp ED$.
+
+\begin{center} \includegraphics [scale=0.5] {Surowski_p30_5b.png} \end{center}
+
+Then, the two component right triangles are similar to $\triangle ADE$, so the angles at vertex $A$ of $\triangle AED$ are complementary and equal as marked. 
+
+Finally, $\angle XAE$ is equal to $\angle EAB$ because two pairs of complementary angles add up to two right angles.
+
+$\square$
+
+\subsection*{Queen Dido}
+
+The mighty city of Carthage was the capital city of the Phoenicians.  As Rome grew strong, there was a titanic struggle between the two peoples, which Carthage eventually lost.  The ruins of Carthage lie near present-day Tunis.
+
+Queen Dido was the legendary founder of the the city of Carthage.  She was supposedly 
+
+\begin{quote}granted as much land as she could encompass with an oxhide.  She promptly cut the ox-hide into very thin strips.\end{quote}
+
+The problem then is to maximize the area enclosed by a curve of fixed length.
+
+\begin{center} \includegraphics [scale=0.5] {Dido.png} \end{center}
+
+In calculus there are a number of problems like this.  What's nice is that this problem has a wonderful solution that uses only the tools we have so far.  In particular, we need the \hyperref[sec:Thales_circle_theorem_converse]{\textbf{converse of Thales circle theorem}}.
+
+The argument goes as follows.  Suppose we have a particular outline for the city limits and we're pretty happy with it.  We suppose it is a maximum (left panel).
+
+\begin{center} \includegraphics [scale=0.5] {Dido2.png} \end{center}
+
+Then we notice that by rearranging $AD$ and $BD$ so they meet at a right angle, the crescent-shaped areas are unchanged, but the area of $\triangle ABD$ is a maximum.  That's because a right triangle, having the two sides at right angles, has area equal to the product of the two sides (divided by $2$).  No other triangle with the same two sides has as much area.
+
+So the arrangement on the right has a bigger area.
+
+But then, with $AB$ as the diameter of a circle, if $\angle ADB$ is a right angle, it must lie on the circumference of that circle, by the converse of Thales' theorem.
+
+And this is true regardless of the relative lengths of $AD$ and $BD$.  Therefore the maximum area is obtained when $D$ traces out a semi-circle.
+
+This example is in Acheson's Geometry.
+
+
+\end{document}
