@@ -61,7 +61,7 @@ $\bullet$ \ \ A line through any internal point of a circle can be extended to i
 
 Assume there is a line segment that intersects a circle at more than two points, say at three points.  By the definition of a circle, those three points are equidistant from the center.
 
-Of the three points, one lies between the other two.  Use that point and (separately) the other two to construct two perpendicular bisectors of the two segments.  This is the classic way to find the center of a circle from points on the periphery.
+Of the three points, one lies between the other two.  Use the middle point and (one at a time) the other two points to construct two perpendicular bisectors of the two segments.  This is the classic way to find the center of a circle from points on the periphery.
 
 But then, we would have two bisectors that both run through the center.  Yet they are parallel to each other, because they have been constructed perpendicular to the same line.
 
@@ -73,7 +73,7 @@ If there is no specification of an internal point, then it is possible for a lin
 
 \label{sec:tangent_one_point}
 
-We saw previously that one can construct a line perpendicular to any given line.  If that line is constructed perpendicular to the radius (or diameter) at the point where it meets the circle, the new line is called a tangent line.  
+We show \hyperref[sec:Euclid11]{\textbf{here}} that one can construct a line perpendicular to any given line.  If that line is constructed perpendicular to the radius (or diameter) at the point where it meets the circle, the new line is called a tangent line.  
 
 $\bullet$   The tangent line touches the circle at a single point.
 
@@ -123,7 +123,7 @@ Use OP as the diameter of a circle.  Draw the line segment $OP$ and divide it in
 
 By the theorem, $\angle OTP$ is a right angle, and since $OT$ is a radius of the original circle, $TP$ is the tangent to the smaller circle at the point $T$.
 
-To construct a tangent on a circle at a given point $T$
+To construct a tangent on a circle at a given point $T$:
 
 \begin{center} \includegraphics [scale=0.4] {tangent3.png} \end{center}
 
@@ -135,7 +135,9 @@ $\bullet$   From any external point $P$, one can draw two tangents to a circle. 
 
 \emph{Proof.}
 
-By definition, the angle between each tangent and its radius is a right angle.  The base lengths are both radii, so they are equal, and there is a shared side (the dotted line segment $OP$).  
+By definition, the angle between a tangent and the radius to the point where it touches the circle, is a right angle.  For a pair of tangent lines from a given point, there are two such points on the circle.
+
+The base lengths are both radii, so they are equal, and there is a shared side (the dotted line segment $OP$).  
 
 Therefore the two triangles are congruent, by SSA.  (Recall that this is a sufficient criterion for congruency for if the angle is a right angle).
 
@@ -225,7 +227,7 @@ Harvard 1899 exam:
 
 \emph{Solution}.
 
-The tangent lines are perpendicular to a radius drawn to the point of tangency.  As a result, two corresponding radii meet at the point of tangency and the corresponding centers are co-linear with the point of tangency.
+The tangent lines are perpendicular to a radius drawn to the point of tangency.  As a result, two corresponding radii meet at the point of tangency and the two corresponding centers are co-linear with the point of tangency.
 
 \begin{center} \includegraphics [scale=0.4] {Harvard1899_4p.png}  \end{center}
 
@@ -233,13 +235,12 @@ Therefore, we have a triangle with sides as shown. The tangent lines are perpend
 
 But for each vertex of the triangle, the bisector of the angle gives congruent triangles, in which one of the sides is a blue dotted line, forming a right angle with the radius.  The hypotenuse of one such pair is shown in magenta.
 
-$\square$
-
-Show that the two triangles that share the magenta line as hypotenuse are congruent, and therefore the two blue dotted lines meeting in the center have equal length.  Now do the same for the circle with radius $r$ and then for the circle with radius $\rho$.
+The two triangles that share the magenta line as hypotenuse are congruent by SSA in a right triangle, and therefore the two blue dotted lines meeting in the center have equal length.  Now do the same for the circle with radius $r$ and then for the circle with radius $\rho$.
 
 The blue-dotted lines are thus all equal.  So they can be used to draw a circle that just touches the sides of the triangle.  That circle is called the incircle of the triangle.
 
 The point where these tangents meet is the incenter of the triangle.  Since the incenter exists, the three angle bisectors are concurrent, the point where the tangents meet is the same and it also exists.
 
+$\square$
 
 \end{document}

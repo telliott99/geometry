@@ -31,7 +31,23 @@ $\circ$ \ \ induction
 
 Direct proof is the sort of thing we've been doing.  For example, the theorem about the sum of angles in a triangle being equal to two right angles, or the isosceles triangle theorem.
 
-This chapter introduces proof by contradiction.  In Latin it is called \emph{reductio ad absurdum}.  We start with four simple proofs, for problems which are not really related to geometry, but provide insight into the method.  They are all very famous.  
+Here is another direct proof, by what could be called enumeration of cases.
+
+\subsection*{odd and even squares}
+
+If the perfect square of a number ($n^2$) is even, then the number $n$ is even also;  while if the square is odd, the number must be odd.
+
+To see this, write $n = 2k$ for $k \in 1,2,3 \dots$ as the definition of an even number.  Then $n^2 = 4k^2$, which is even.  
+
+On the other hand, if $n$ is odd, write $n = 2k + 1$ with $k \in 0, 1, 2 \dots$, so $n^2 = 4k^2 + 4k + 1$, which is odd.  
+
+Since there are only these two cases, we can conclude that the converse is also true:  an even square comes from an even number and an odd square from an odd number.
+
+$\square$
+
+This chapter introduces a new method of proof called proof by contradiction.  In Latin it is called \emph{reductio ad absurdum}.  
+
+We start with four simple proofs, for problems which are not really related to geometry, but provide insight into the method.  They are all very famous.  
 
 \subsection*{Bridges of Konigsberg}
 
@@ -120,12 +136,12 @@ $\square$
 
 \subsection*{infinity of primes}
 
-The fraction of numbers which is prime (the density of primes) decreases as the integers get larger.  There are 25 primes smaller than 100, yet later on the density is substantially less.  
+The fraction of numbers which is prime (the density of primes) decreases as the integers get larger.  There are 25 primes smaller than 100, 168 smaller than 1000, and later on the density is substantially less.  
 
 There is a famous theorem which says that the number of primes less than a given number $k$ is approximately:
 \[ \pi(k) \approx \frac{k}{\ln k} \]  
 
-For $k$ equal to one million, $\ln k \approx 13.8$ so $\pi(k)$ is about 7\% of $k$.  For $k$ equal to one trillion, it's half that.
+For $k$ equal to one million, $\ln k \approx 13.8$ so $\pi(k)$ is about 7\% of $k$.  A quick check with Python gave 9592 for 100,000 and 78,498 for a million.
 
 The question arises, is the number of primes infinite?  The answer is yes.  Our proof follows Euclid:
 
@@ -146,7 +162,9 @@ Therefore, the number of primes is not infinite.
 
 $\square$.
 
-(Note:  this proof does not show that $N$ is the next prime greater than $p_n$.  For example, $2 \cdot 3 + 1 = 7$, which is prime, but $7$ is not the next prime after $3$.)
+(Note 1:  this proof does not show that $N$ is the next prime greater than $p_n$.  For example, $2 \cdot 3 + 1 = 7$, which is prime, but $7$ is not the next prime after $3$.)
+
+(Note 2:  this proof assumes that we have listed \emph{all} the primes.  Another way to set it up is to say "take any finite list of primes..."  Then, the resulting $N$ is either prime, or it has a prime factor which is not in the list, since none of those factors divides $N$.)
 
 \subsection*{Hardy}
 

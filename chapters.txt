@@ -84,6 +84,7 @@ Addendum
 Angular measure
 Constructions
 Additional proofs
+Pythagorean triples
 Resources
 List of theorems
 References

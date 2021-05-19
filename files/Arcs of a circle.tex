@@ -21,7 +21,9 @@
 
 %[my-super-duper-separator]
 
-An angle \emph{anywhere} on the periphery that subtends the same arc as a central angle is equal to one-half the central angle.
+By the definition of radian measure, a central angle is equal numerically to the arc it subtends on a unit circle.  
+
+A vertex placed \emph{at any point} on the periphery of a circle, forming an angle that subtends the same arc as a central angle, is equal to one-half the central angle.
 
 A corollary is that whenever two peripheral angles subtend the same arc, they are equal.
 
@@ -41,7 +43,7 @@ Now draw the radii $OA$ and $OB$.  The resulting $\triangle AOP$ and $\triangle 
 
 By the external angle theorem, the angles at the center are equal to $2a$ and $2b$, respectively.  This result holds for \emph{any} three points $A$, $P$ and $B$.
 
-A slight modification is needed if the arc does not include the center of the circle. Then we would have $PA$ and $PB$ on the same side of the diagonal, and the relevant arc would be that subtended by $a - b$ on the periphery, or $2(a-b)$ at the center.
+A slight modification is needed for the case where the arc does not include the center of the circle. Then we would have $PA$ and $PB$ on the same side of the diagonal, and the relevant arc would be that subtended by $a - b$ on the periphery, or $2(a-b)$ at the center.
 
 This result does not depend on where $P$ is placed.  Therefore all peripheral angles subtending the same arc are equal.  So we get the general case with only one proof.
 
@@ -63,7 +65,7 @@ We also showed, based on the fundamental theorem, that if an angle $s$ is formed
 \[ 2s = a \]  
 \[ s = \frac{1}{2} \ a \]
 
-Next, we generalize the result.  (The next few proofs are an alternative to the proof of the inscribed angle theorem given above).
+Next, we generalize the result.  (The next few proofs are alternatives to the proof of the inscribed angle theorem given above).
 
 \subsection*{arcs encompassing diameter}
 
@@ -170,7 +172,7 @@ We showed previously that when two tangents are drawn from an exterior point, on
 \begin{center} \includegraphics [scale=0.5] {tangent_arcs.png} \end{center}
 
 Let the whole arc between the two right angles be $s$ the short way and $t$ the long way around the circle, and let $\phi$ be the external angle.  By analogy with the results above, we expect that 
-\[ s = \frac{1}{2} (t - s) \]
+\[ \phi = \frac{1}{2} (t - s) \]
 
 \emph{Proof}.
 
@@ -180,8 +182,24 @@ By congruent triangles:
 
 In terms of arc $\theta = s$ and $s + t = 2 \pi$. Substituting into the last equation
 \[ 2 \phi = s + t - 2 s = t - s \]
-\[ s = \frac{1}{2} (t - s) \]
+\[ \phi = \frac{1}{2} (t - s) \]
 
 $\square$
+
+Alternatively, just say that, since the other two angles in the quadrilateral are right angles
+\[ \phi + \theta = \pi \]
+
+but $\theta = s$ and $2 \pi = s + t$ so
+\[ \phi = \pi - \theta = \frac{1}{2} (s + t) - s \]
+\[ = \frac{1}{2} (t - s) \]
+
+\subsection*{problem}
+
+Relate the angle at $P$ to the one at $X$.
+
+\begin{center} \includegraphics [scale=0.5] {tangent_arcs2.png} \end{center}
+
+By the previous example, $\theta + \phi = \pi$.  But $\angle X = \theta/2$.  Hence
+\[ P = \pi - \theta = \pi - 2 \angle X \]
 
 \end{document}

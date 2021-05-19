@@ -51,40 +51,6 @@ The second line from the last:
 
 is a statement of our theorem that the altitude of a right triangle is the geometric mean of the two sections of the base.
 
-\subsection*{scaled triangle proof}
-
-\label{sec:Pythagoras_scaled_triangles}
-
-This next example is a proof based on areas and similar triangles.  It is an interesting mixture of algebraic and geometric methods.  At its core it is really the same as other algebraic proofs.
-
-\emph{Proof.}
-Draw a right triangle and label sides $a,b$ and $c$.
-
-\begin{center} \includegraphics [scale=0.5] {pyth1.png} \end{center}
-Now, flip and rotate the triangle.  Make a copy of that one and rotate the copy so that the shortest side is to the left.  Enlarge the copy until the two adjacent sides are equal in length.
-\begin{center} \includegraphics [scale=0.5] {pyth2.png} \end{center}
-
-These are similar triangles so the angles are all equal, but the sides are proportional, multiplied by a common factor, which here is $b$.
-
-The adjacent sides show that $ab = b$, so this choice of scaling defines $a = 1$.  And since $a = 1$, we can also view each side of the original triangle as being scaled by a factor of $a$.  
-
-We just tried scaling by a factor of $b$ and then by $a$, so that naturally suggests we try scaling by a factor of $c$.  
-
-\begin{center} \includegraphics [scale=0.5] {pyth2b.png} \end{center}
-All sides of the enlarged triangle have been multiplied by the same factor, namely, $c$.  Notice that $c = ac$, as required.
-
-We're nearly done.  Put the three triangles together.
-
-\begin{center} \includegraphics [scale=0.5] {pyth2c.png} \end{center}
-
-The lower left and right corners are places where two vertices come together.  By complementary angles, these sum to be right angles.  
-
-Since there are two other right angles at the vertices of the quadrilateral, it is a rectangle.  Therefore the place where three vertices come together is a straight line, which we can also verify because there are two complementary angles plus a right angle.
-
-Since the composite figure is a rectangle, opposing sides are equal, so $a^2 + b^2 = c^2$.
-
-$\square$
-
 \subsection*{Condit proof}
 
 \label{sec:Condit}

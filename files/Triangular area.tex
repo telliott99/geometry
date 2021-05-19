@@ -25,7 +25,7 @@
 
 One important aspect of calculus will be to determine the area of figures in the plane, particularly figures bounded by curves, as well as volumes in space.  The magic of calculus is that we can make curves conform to rectilinear concepts of area and volume.
 
-However, this book is about Euclidean geometry.  Let's just say a few words about rectalinear area, which we will then extend to the areas of triangles and parallelograms (like rectangles but skewed).
+However, this book is about Euclidean geometry.  Let's just say a few words about rectalinear area, which we will then extend to the areas of triangles and parallelograms, which are like  squashed rectangles.
 
 To find areas, we must first fix a unit length.  Suppose that, in the figure below, the small squares have side lengths of 1 cm.
 
@@ -33,9 +33,9 @@ To find areas, we must first fix a unit length.  Suppose that, in the figure bel
 
 Then just multiply the width by the height (in cm) to obtain $48$ cm$^2$.
 
-Suppose, instead that the squares had side lengths of $1.356...$ cm.  Then, define $1$ yoyo $= 1.356...$ cm.  The area would be $48$ yoyo$^2$.
+Suppose, instead that the squares had side lengths of $2.54$ cm.  Then, define $1$ in $= 2.54$ cm.  The total area would be $48$ in$^2$.
 
-The particular figure above (from Lockhart) shows the distributive law in action:
+This particular figure above (from Lockhart) shows the distributive law in action:
 \[ (3 + 5) \cdot (4 + 2) \]
 \[ =3 \cdot 4 + 3 \cdot 2 + 5 \cdot 4 + 5 \cdot 2 \]
 \[ = 48 \]
@@ -45,7 +45,7 @@ Any combination of numbers that add up to $8$, times any combination of numbers 
 
 From Jacobs, chapter 9.  
 
-\begin{center} \includegraphics [scale=0.3] {sciam2.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {sciam2.png} \end{center}
 
 Suppose each of $A$ through $I$ is a square, and the areas of squares $C$ and $D$ are 64 and 81, respectively.  
 
@@ -59,19 +59,19 @@ The next figure is a parallelogram, a four-sided polygon whose two pairs of oppo
 
 \begin{center} \includegraphics [scale=0.4] {pgram6.png} \end{center}
 
-Suppose we are given that $AD \parallel BC$.  
+Suppose we are given, at first, only that $AD \parallel BC$.  Then the angles marked with black dots are equal, by the alternate interior angles theorem.  
 
-Then the angles marked with black dots are equal, by the alternate interior angles theorem.  If we are also given that $AB \parallel CD$, the angles marked with red dots are equal.  This is one way to determine that we have a parallelogram.
+If we are also given that $AB \parallel CD$, the angles marked with red dots are equal.  This is one way to determine that we have a parallelogram:  both pairs of opposing sides parallel.
 
-Notice that if we draw $AC$ as one diameter of $ABCD$, then the two resulting triangles are congruent by ASA.  One of the triangles is rotated by two right angles with respect to the other.
+Draw $AC$ as one diameter of $ABCD$, and notice that the two resulting triangles are congruent, by ASA.  One of the triangles is just rotated by $180^{\circ}$ with respect to the other.
 
-To find the area of a parallelogram, cut off a right triangle from the left and attach it on the right.  The angles add up to form a straight line along the base and a right triangle at the upper right.    The area is clearly $h \cdot b$.
+To find the area of this parallelogram, cut off a right triangle from the left side and attach it on the right.  The angles add up to form a straight line along the base and a right triangle at the upper right.    The area is clearly $h \cdot b$.
 
 \begin{center} \includegraphics [scale=0.4] {area7.png} \end{center}
 
-Note that if the parallelogram is particularly skinny for a given height (how skinny?), then it will not be possible to cut off just one triangle.  Euclid spends some time working through this issue to prove that the area of any parallelogram is the base times the "height".
+If the parallelogram is particularly skinny for a given height (how skinny?), then it will not be possible to cut off just one triangle.  Euclid spends some time working through this issue to prove that the area of any parallelogram is the base times the "height".
 
-We will just note a simple solution:  turn any skinny parallelogram by one-quarter turn plus what is needed so that it is square with the top line and is also fat.  Then proceed as before.
+A simple solution:  turn any skinny parallelogram by one-quarter turn plus or minus what is needed so that the top and bottom sides are horizontal, and it will become fat.  Then proceed as before.
 
 Alternatively, one can imagine slicing the parallelogram into (perhaps multiple) equal horizontal slices and add small triangles on to each slice.  
 
@@ -100,7 +100,7 @@ The area of the triangle is one-half that of the parallelogram that contains two
 
 This formula is correct even for an obtuse triangle (right panel, above).
 
-$\bullet$ \ the area of a triangle is one-half the base times the height.
+$\bullet$ \ the area of a triangle is one-half the base times the height
 
 Another way to think about the area of a triangle is to start with the simplest case:  a right triangle.
 
@@ -197,8 +197,23 @@ Add the two equations:
 \[ 2 \text{ green} + M + K = 2 \text{ blue} + K + M \]
 \[ \text{green} = \text{blue}  \]
 
-
-
 $\square$
+
+\subsection*{twice the area}
+
+It is probably less confusing for an introductory text to use the formula we gave above for a triangle's area:
+
+\[ A_{\triangle} = \frac{1}{2} \ ab \]
+
+However, it can be convenient to write the same formula as \emph{twice} the area, and we will often do that.
+
+\[ 2 A_{\triangle} = ab \]
+
+We rewrite two important formulas from this chapter:
+
+\[ d \cdot h + e \cdot h = (d+e) \cdot h = c \cdot h \]
+\[ \frac{A_A}{A_B} = \frac{ah}{bh} = \frac{a}{b} \]
+
+The first one is an equality of different areas, and the second involves a ratio of areas on the left-hand side.  The result is unchanged by using twice the area, as long as we are consistent.
 
 \end{document}

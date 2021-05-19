@@ -25,9 +25,9 @@
 
 \label{sec:Pythagoras_area}
 
-Late in his life, Albert Einstein wrote that he had two experiences as a youth that greatly influenced him.  The first was when he received a compass as a child and was intrigued by the question of what "force" made the needle turn to the north.
+Late in life, Albert Einstein wrote that he had two experiences as a youth that influenced him tremendously.  The first was when he received a compass as a child and was intrigued by the question of what "force" made the needle turn to the north.
 
-The second was that, while studying geometry at about age 12, he had developed on his own a proof of the Pythagorean theorem.  He said the achievement had a profound effect on him in showing the power of pure thought.  
+The second was that, while studying geometry at about age 12, he had developed on his own a proof of the Pythagorean theorem.  He said the achievement had a profound effect on him, illustrating the power of pure thought.  
 
 Strogatz says that the proof relied in a simple way on symmetry.
 
@@ -35,7 +35,9 @@ Strogatz says that the proof relied in a simple way on symmetry.
 
 \subsection*{areas in proportion}
 
-We will prove the part that Strogatz says was obvious to Einstein from symmetry, which he may have assumed.  The idea is that for similar right triangles, the area of each triangle is in a constant ratio to the square on any side, including the hypotenuse.  
+We will prove the part that Strogatz says was obvious to Einstein from symmetry, which he may have assumed.  The idea is that for two similar right triangles, the area of each triangle is in a constant ratio to the product on any two sides, including the square on any one side.  
+
+So the area is proportional to the hypotenuse squared.  
 
 This is easy to see for an isosceles right triangle where we can calculate simply that $k = 1/4$.
 
@@ -173,6 +175,40 @@ So then the product of slopes is
 \[ \frac{-a}{\ \ b} \cdot \frac{b}{a} = -1 \]
 
 This is a proof that the product of the slopes of two line segments that meet at a right angle is equal to $-1$.
+
+\subsection*{scaled triangle proof}
+
+\label{sec:Pythagoras_scaled_triangles}
+
+This next example is a proof based on areas and similar triangles.  It is an interesting mixture of algebraic and geometric methods.  At its core it is really the same as other algebraic proofs.
+
+\emph{Proof.}
+Draw a right triangle and label sides $a,b$ and $c$.
+
+\begin{center} \includegraphics [scale=0.5] {pyth1.png} \end{center}
+Now, flip and rotate the triangle.  Make a copy of that one and rotate the copy so that the shortest side is to the left.  Enlarge the copy until the two adjacent sides are equal in length.
+\begin{center} \includegraphics [scale=0.5] {pyth2.png} \end{center}
+
+These are similar triangles so the angles are all equal, but the sides are proportional, multiplied by a common factor, which here is $b$.
+
+The adjacent sides show that $ab = b$, so this choice of scaling defines $a = 1$.  And since $a = 1$, we can also view each side of the original triangle as being scaled by a factor of $a$.  
+
+We just tried scaling by a factor of $b$ and then by $a$, so that naturally suggests we try scaling by a factor of $c$.  
+
+\begin{center} \includegraphics [scale=0.5] {pyth2b.png} \end{center}
+All sides of the enlarged triangle have been multiplied by the same factor, namely, $c$.  Notice that $c = ac$, as required.
+
+We're nearly done.  Put the three triangles together.
+
+\begin{center} \includegraphics [scale=0.5] {pyth2c.png} \end{center}
+
+The lower left and right corners are places where two vertices come together.  By complementary angles, these sum to be right angles.  
+
+Since there are two other right angles at the vertices of the quadrilateral, it is a rectangle.  Therefore the place where three vertices come together is a straight line, which we can also verify because there are two complementary angles plus a right angle.
+
+Since the composite figure is a rectangle, opposing sides are equal, so $a^2 + b^2 = c^2$.
+
+$\square$
 
 \subsection*{Quorra's corollary}
 
