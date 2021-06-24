@@ -21,48 +21,6 @@
 
 %[my-super-duper-separator]
 
-\subsection*{Chords}
-
-$\circ$  \ Given a chord of a circle, if the radius is drawn so as to be perpendicular to it, the chord is bisected by the radius.
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords6.png} \end{center}
-
-\emph{Proof.}
-
-$OQ$ is a radius of the circle and $PR$ is a chord perpendicular to it ($\angle OSP$ is a right angle).
-
-$\triangle OPS$ is congruent to $\triangle ORS$ by SSA (in a right triangle).  Therefore $PS = SR$.
-
-$\square$
-
-Also, since $\triangle OPS \cong \triangle ORS$, $\angle POS = \angle ROS$, which means that the arcs $QP$ and $QR$ are subtended by equal central angles, therefore they are equal.
-
-$\circ$  \ If we have a tangent and any chord that is parallel to it, then the radius drawn to the point of tangency bisects the chord.
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords7.png} \end{center}
-
-\emph{Proof}.
-
-By the definition of the tangent $OT \perp$ to the tangent.  But $PR$ is parallel to the tangent, therefore $OT \perp PR$.
-
-By our previous theorem, $OT$ bisects $PR$ so that $PS = SR$.
-
-$\circ$  \ Given a point of tangency on a radius perpendicular to any chord, not only the chord but the arc lengths are evenly divided by the radius.  $PT = RT$.
-
-If we are given a tangent parallel to any chord of a circle, then the point of tangency divides the arc subtended by the chord into two equal parts.
-
-Given the tangent is $\parallel PR$, the radius $OT$ forms a right angle at $S$ with the chord, so all the properties given above follow.
-
-\subsection*{problem}
-
-Given that the line touching the circle at $T$ is a tangent and that $BC$ is parallel to it.  Show that the angles marked with black dots are equal.
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords8.png} \end{center}
-
-I think the idea of the problem was to use similar triangles somehow.  But given our previous work, this is a trivial consequence of the fact that the arcs $CT$ and $TB$ are equal.
-
-So, as peripheral angles subtending equal arcs, $\angle CAT = \angle TAB$.
-
 \subsection*{Chord segments}
 
 \label{sec:chord_segments}
@@ -170,6 +128,22 @@ The same angle marked in magenta is also complementary to $\angle PTQ$.  Therefo
 
 One application of this theorem is to a determination of the size of the earth.  We'll see that later in the book.
 
+\subsection*{power of a point}
+
+The previous results are sometimes united in a definition called the "power" of a point.  Recall that for these three situations
+
+\begin{center} \includegraphics [scale=0.5] {ppoint1.png} \end{center}
+
+\url{https://artofproblemsolving.com/wiki/index.php/Power_of_a_Point_Theorem}
+
+we can make the following definition.
+
+Draw a line through a point, which also goes through a circle.  The product of the distance to one intersection with the circle and the distance to the second intersection with the circle, is a constant.  
+
+(We use the same point twice in the case where the line is a tangent).
+
+If the point is \emph{on} the circle, it's a bit strange, but we can say that the point and the first intersection are separated by length zero, so then it still works.
+
 \subsection*{Looking at Euclid}
 
 I learned the secant-tangent theorem from Acheson, and continue in the same vein by appropriating an entire example from his book.  
@@ -209,104 +183,5 @@ which says that the square of the optimum viewing distance is $h\cdot g$.  The o
 I knew I'd seen this problem before, and I find that I wrote it up for my Calculus book.  It turns out to be from Acheson's book on Calculus, and is originally about Lord Nelson's statue in Trafalgar Square.
 
 The calculus treatment is not nearly as pretty as reasoning about the tangent;  fortunately we came to the same answer.
-
-\subsection*{Extraordinary property}
-
-\label{sec:extraordinary_property}
-
-Since essentially this entire chapter is derived from Acheson's book, let's do one more of his problems:  it comes from a book by Malton and is described as an "extraordinary property of the circle".
-
-\begin{center} \includegraphics [scale=0.6] {Acheson_G110.png} \end{center}
-
-$\bullet$  Let two chords of a circle meet at right angles.  Then the squares of the four components add up to a constant, and that constant is equal to $(2R)^2$, twice the radius of the circle, squared.
-
-The key to the proof is to draw both diameters of the circle that terminate on each end of one of the chords, let's say $a + b$.
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords3.png} \end{center}
-
-If the four points at the ends of the two diameters are joined to form a rectangle (only the horizontal components are shown in the figure above), then it is clear by mirror-image symmetry that the short extension at the top is also equal to $c$, so the height of the rectangle is $d - c$.
-
-We will prove this more formally, using the following preliminary steps.  This is the longest part of the proof.
-
-\emph{Lemma.}
-
-$\circ$  When any two diameters of a circle are drawn and the points on the circle joined together, the result is a rectangle.
-
-\emph{Proof}.
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords2.png} \end{center}
-
-There are four triangles in the diagram, the top and bottom are congruent by SAS (two radii and vertical angles), as are the left and right.  Further, all are isosceles triangles.
-
-The angles at the corners of the quadrilateral are all equal and so all are right angles, and therefore the quadrilateral is a rectangle.
-
-$\square$
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords4.png} \end{center}
-
-Recalling the first lemma, find the diameters terminating at $S$ and $R$ (not shown), and then draw the rectangle $PQRS$
-
-The original vertical chord is shown, which is divided into two segments $c$ and $d$ ($d$ is not labeled).  The vertical chord is given as perpendicular to $SR$.  
-
-Draw radius $OT$ perpendicular to the vertical chord.  By the second lemma, $OT$ bisects both the side of the rectangle $PS$ and the vertical chord.
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords5.png} \end{center}
-
-Bisection of $PS$ means that the two small rectangles with sides labeled $a$ and $e$ are congruent.  And since the chord was bisected, the line segment at the top of the figure also has length $c$, since $c + e$ is the same length above and below the bisector.
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords3.png} \end{center}
-
-Now for the main theorem.
-
-\emph{Proof.}
-
-This is trivial, now that we have $d - c$.  By the Pythagorean theorem
-\[ (a + b)^2 + (d - c)^2 = (2R)^2 \]
-\[ = a^2 + b^2 + d^2 + c^2 + 2ab - 2cd \]
-
-But $ab = cd$ so
-\[ 4R^2 = a^2 + b^2 + c^2 + d^2 \]
-
-$\square$
-
-Acheson says that this theorem leads to the "pizza proof".  
-
-\begin{center} \includegraphics [scale=0.6] {Acheson_G111.png} \end{center}
-
-Choose a point anywhere in the pie, draw two chords at right angles and then fill in with line segments at $45^{\circ}$.
-
-Form the sum of the areas of alternate slices.  The total dark and light areas are equal.
-
-Acheson does not give a proof but I found a number of images for a "proof without words" online and I also found a reference
-
-\url{https://www.math.uni-bielefeld.de/~sillke/PUZZLES/pizza-theorem}
-
-to some related proofs, as well as a discussion on Stack Exchange:
-
-\url{https://math.stackexchange.com/questions/865818/can-anyone-explain-pizza-theorem}
-
-$\bullet$  Pizza theorem.
-
-\emph{Partial proof.}
-
-Recall from our work with arcs that when two chords cross, the vertical angles at the junction are each equal to the \emph{average} of the two arcs subtended.
-
-In the pizza theorem, all the angles are equal.  
-
-Two opposing dark segments have have arcs that add up to $90^{\circ}$.
-
-I haven't worked out the rest yet.  
-
-The reference says
-
-\begin{quote}Sliding these arcs and
-chords together, we see that the chords form a right triangle with the
-diameter of the circle as the hypotenuse.\end{quote}
-
-The various pictures of the proof without words do not explain how the shapes were arrived at.  However, they do show that the complementary light and dark areas each add up to one-half of the pizza.
-
-\begin{center} \includegraphics [scale=0.4] {pizza2.png} \end{center}
-
-The Stack Exchange answers and a paper online compute the areas as integrals in polar coordinates.  It is somewhere between trivial and complicated to do, but in any case beyond the tools that we have right now.
 
 \end{document}

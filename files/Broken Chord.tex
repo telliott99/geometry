@@ -1,0 +1,240 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Broken Chord}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+The theorem of the "broken chord" is ascribed to Archimedes, although his original work has been lost.  It was analyzed by the Arabic mathematician Al Biruni in his \emph{Book on the Derivation of Chords in a Circle}.  Our source claims the book contains 22 proofs of the theorem, including 3 different ones due to Archimedes.  
+
+\url{https://www.uni-miskolc.hu/~matsefi/HMTM_2020/papers/HMTM_2020_Drakaki_Broken_chord.pdf}
+
+This theorem doesn't really lead to anything else important, as far as I know.  We will show a derivation of the sum of angles (but the nicest proof of sum of angles is so simple that it doesn't really add anything).  It's just very good practice to brush up our skills in geometric proofs.
+
+Here we look at one of them.
+
+\begin{center} \includegraphics [scale=0.4] {broken_chord2.png} \end{center}
+
+Let $A$ and $C$ be any two points on a circle, and let $M$ be equidistant from both so that arc $AM$ is equal to arc $MC$.  Let $B$ be another point on the circle, lying between $A$ and $M$, so $AB < BC$.
+
+Drop the perpendicular from $M$ to $F$ on $BC$.  
+
+We claim that $AB + BF = FC$.  
+
+The figure below shows an example with larger arcs (and switched notation).  Here, $AD = BC + CD$.
+
+\begin{center} \includegraphics [scale=0.6] {broken_chord6.png} \end{center}
+
+If the point $C$ coincides with $M$, the midpoint, then the arcs are equal.  It is natural to ask what happens when $C$ moves away from $M$.  We connect $M$ to the two chords with a perpendicular and wonder if maybe $AD$ is equal to the sum of the other two parts.
+
+If it is to be equal, then it is (again) natural to wonder if the point that divides $AC$ into two parts equal to $CD$ plus $BC$ leads to any insight.  We will see that both possible points of division do so.
+
+Before starting, let's recall the inscribed angle theorem.
+
+By definition, the central angle subtending a given arc is equal in measure to the length of the arc.  We claim that the peripheral angle subtending the same arc is one-half the central angle so  $2 \phi = \theta$.
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord1.png} \end{center}
+
+\emph{Proof}.
+
+The figure has two isosceles triangles, where the equal sides are all radii of the circle.  By the triangle sum theorem and the isosceles triangle theorem:
+
+\[ 2(A + \phi) + C = \pi \]
+\[ 2A + \theta + C = \pi \]
+
+Equating the two results and canceling we obtain
+\[ 2A + \theta = 2(A + \phi) \]
+\[ \theta = 2 \phi \]
+
+$\square$
+
+\subsection*{Broken chord theorem}
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord3.png} \end{center}
+
+\emph{Proof}.
+
+Draw $E$ such that $EC = AB$.
+
+We have that $MA = MC$ as two chords cutting out equal arcs in a circle.  We also have that $\angle A$ and $\angle C$ both subtend the same arc $BM$, so they are equal.  $EC = AB$ was given.  
+
+Therefore, $\triangle ABM \cong \triangle CEM$ by SAS.
+
+As corresponding sides in congruent triangles, $MB = ME$.  Therefore $\triangle MBE$ is isosceles.
+
+The altitude $MF$ cuts isosceles $\triangle MBE$ into two congruent right triangles, which means that the bases are equal.  $BF = FE$.
+
+We drew $E$ such that 
+\[ AB = EC \]
+Adding equals to equals 
+\[ AB + BF = FE + EC = FC \] 
+
+$\square$
+
+\subsection*{difference of sines}
+
+This result can be used to derive the formula for the sine of the difference of two angles.
+
+We first need another fundamental result about chords.
+
+\emph{Lemma}.
+
+Consider a peripheral angle and the corresponding central angle in a unit circle, cutting off a chord of the circle.  One-half of that central angle, equal to the peripheral angle, has a sine that is equal to one-half the chord.
+
+In other words, the chord corresponding to any peripheral angle is twice the sine of the peripheral angle.
+
+\begin{center} \includegraphics [scale=0.35] {secant2.png} \end{center}
+
+We now derive the formula for the sine of a difference of angles.
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord4.png} \end{center}
+
+Consider $\angle MBF$ at vertex $B$, let us call that angle $\beta$ for convenience.  
+
+Then the lemma says that
+\[ MC = 2 \sin \beta \]
+
+Similarly, let us label the angle at vertex $C$ as $\gamma$.  Then
+\[ BM = 2 \sin \gamma \]
+
+Now, we can also use the right triangle to find 
+\[ \cos \beta = \frac{BF}{BM} \]
+so 
+\[ BF = BM \cos \beta \]
+\[ = 2 \sin \gamma \cos \beta \]
+
+And
+\[ \cos \gamma = \frac{FC}{MC} \]
+so 
+\[ FC = MC \cos \gamma \]
+\[ = 2 \sin \beta \cos \gamma \]
+
+which starts to look familiar.
+
+By the theorem of the broken chord:
+\[ FC - BF = AB \]
+\[ AB = 2 \sin \beta \cos \gamma - 2 \sin \gamma \cos \beta \]
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord5.png} \end{center}
+
+What can we do with $AB$?  We also know the sum of arcs, namely 
+\[ \text{arc } AB + \text{arc } BM = \text{arc } MC \]
+\[ \text{arc } AB = \text{arc } MC - \text{arc } BM \]
+
+which means that if $\alpha$ is any peripheral angle subtending arc $AB$, then (after dividing by $2$):
+\[ \alpha = \beta - \gamma \]
+
+and by the lemma
+\[ AB = 2 \sin \alpha = 2 \sin (\beta - \gamma) \]
+
+So finally,
+\[ 2 \sin (\beta - \gamma) = 2 \sin \beta \cos \gamma - 2 \sin \gamma \cos \beta \]
+\[ \sin (\beta - \gamma) = \sin \beta \cos \gamma - \sin \gamma \cos \beta \]
+
+$\square$
+
+Sine is an odd function ($f(x) = -f(-x)$), so $\sin -x = - \sin x$.
+
+Cosine is even so $\cos x = \cos - x$.  Thus,
+\[ \sin (\beta + \gamma) = \sin \beta \cos \gamma + \sin \gamma \cos \beta \]
+
+\subsection*{second proof}
+
+Here is a second proof of the broken chord theorem which I also found on the web.  It has slightly different notation.  In the figure below, $P$ is the point on the circle midway between $A$ and $B$, and the vertical drops to $M$.
+
+The claim is that $AM = MC + BC$.
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord7.png} \end{center}
+
+A key step in the proof will be to show that $MM'M''P$ is a rectangle, and a consequence is that $AM' = MC$.  This conclusion relies on a lemma, namely, that given such a rectangle the extensions on the longer chord, $AM'$ and $MC$ are equal.  
+
+We depend on this fundamental result about chords from \hyperref[sec:rectangle_side_on_a_circle]{\textbf{here}}.
+
+Now for the main theorem.  
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord7.png} \end{center}
+
+Draw the diameter from $P$ through the center of the circle at $O$ to $P'$.  Since $P$ is midway between $A$ and $B$, this diameter is also the perpendicular bisector of $AB$ (relying on the same chapter cited above).
+
+Lay off a chord the same length as $CB$ from $P$ to $M''$.  Complete the second triangle by drawing $M''P'$.  We have that the angle at vertex $P'$ is equal to the angle at vertex $A$, since they are inscribed angles of equal chords.  
+
+(However, the other two angles are not equal and the two large triangles are not similar, which may be obvious since $AB$ is not a diameter of the circle).
+
+Since the angle at $A$ is equal to the angle at $P'$, and the smallest triangles with those vertices also contain two vertical angles, they are similar triangles.  And since $PP'$ is perpendicular to $AB$, the third angle in both triangles is a right angle.  Therefore, the angles at $M'$ are right angles.
+
+The vertex at $M''$ is also a right angle, by Thales' theorem.
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord7.png} \end{center}
+
+Since $\angle PMM'$ is a right angle, and we have established that both $\angle PM''M'$ and $MM'M''$ are right angles, the fourth angle $MPM''$ is also right, and $MM'M''P$ is a rectangle.  
+
+As opposing sides in a rectangle, $M'M = M''P = CB$.
+
+Because $MM'M''P$ is a rectangle, we reference the preliminary discussion to conclude that 
+\[ AM' = MC \]
+
+Adding equals to equals
+\[ AM' + M'M = MC + CB \]
+\[ AM = MC + CB \]
+
+$\square$
+
+The key to the construction was to make $PM''$ equal to $CB$.  An alternative approach is to construct $\angle P'$ on the diagonal $PP'$ such that $\angle P' = \angle A$.  From this it follows that $M''P = CB$.  We also have the two small similar triangles, which leads to right angles at $M'$.  This implies that $MM'M''P$ is a rectangle.
+
+\url{https://www.cut-the-knot.org/triangle/BrokenChordBQT.shtml}
+
+\subsection*{third proof}
+
+Here is a third simple proof of the broken chord theorem.  This one is in Al-Biruni's text and is attributed to El-Sidjzi (972).
+
+\url{https://www.researchgate.net/publication/341579803_FROM_THE_THEOREM_OF_THE_BROKEN_CHORD_TO_THE_BEGINNING_OF_TRIGONOMETRY}
+
+\begin{center} \includegraphics [scale=0.6] {broken_chord10.png} \end{center}
+
+In this version, $B$ is the midpoint, and $BH$ is the perpendicular to $CA$.  Arc $BD$ is equal to arc $BA$.
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.6] {broken_chord10.png} \end{center}
+
+Find $E$ such that $EA = CH$ and draw $EZ$ perpendicular to $CA$.  
+
+Then, $HEZA$ is a rectangle, by our work \hyperref[sec:rectangle_side_on_a_circle]{\textbf{here}}.
+
+$\triangle BCH \cong \triangle ZEA$ by SAS, so $ZA = BC$ and thus arc $ZA$ is equal to arc $BC$.
+
+Then
+\[ DB = BA \]
+\[ DB - BC = BA - ZA \]
+\[ CD = BZ \]
+
+But 
+\[ BZ = HE = CD \]
+
+Adding equals to equals:
+\[ HE + EA = CD + CH \]
+\[ HA = CD + CH \]
+
+$\square$
+
+\end{document}

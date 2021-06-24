@@ -27,10 +27,14 @@ Circles
 Tangent to a circle
 Angles in a circle
 Arcs of a circle
+Chords in a circle
 Secant tangent theorem
+Pizza theorem
 
 More triangles
 Basic trigonometry
+Sum of angles
+Broken Chord
 Equilateral triangle
 Menelaus theorem
 Concurrence
@@ -55,10 +59,14 @@ Proof
 Proof by contradiction
 Induction
 
-Trigonometry
-Sum of angles
+More Trigonometry
 Law of Cosines
 Computations
+
+Later geometry
+Pappus
+Hippocrates
+Heron and Brahmagupta
 
 Celestial applications
 Equal area in equal time
@@ -69,11 +77,6 @@ Curves
 Ellipse
 Parabola
 Cycloid
-
-Later geometry
-Pappus
-Hippocrates
-Heron and Brahmagupta
 
 Archimedes
 Pyramid and cone

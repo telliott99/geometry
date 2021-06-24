@@ -30,7 +30,7 @@ $\bullet$  Two triangles are \emph{congruent} if and only if they have the same 
 
 This test is often abbreviated SSS (side-side-side). 
 
-By definition, a triangle and its mirror image are congruent.  The three triangles shown below are all congruent, even though two are flipped (they are mirror images).
+By definition, a triangle and its mirror image are congruent.  The three triangles shown below are all congruent to the first, even though two are flipped (they are mirror images).
 
 \begin{center} \includegraphics [scale=0.4] {congruent.png} \end{center}
 
@@ -110,13 +110,13 @@ AAS.
 
 \subsection*{one that works only sometimes}
 
-There is one set of three that doesn't work in the general case, that is SSA (side-side-angle).  But don't just dismiss it, because it does work sometimes.
+There is one set of three that doesn't work in the general case, that is SSA (side-side-angle).
 
 \begin{center} \includegraphics [scale=0.4] {angle_side_side.png} \end{center}
 
 Suppose we know sides $a$ and $b$ and the angle $\theta$ adjacent to $a$ and facing opposite side $b$.  Imagine $b$ swinging on a hinge at the blue dot.  If $b < a$, there are two points where $b$ can intersect with the side projecting from angle $\theta$.
 
-There are two possibilities, not just one, so we say that the triangle is not determined.  And if two different triangles match the SSA criterion, we cannot always say whether they are congruent or not.  
+There are two possibilities, not just one, so we say that the triangle is not determined.  If two different triangles match the SSA criterion, we cannot always say whether they are congruent or not.  
 
 Two triangles which satisfy SSA will be congruent, \emph{if} one of these three cases holds:
 
@@ -124,9 +124,15 @@ $\circ$ \ $b > a$ (why?)
 
 $\circ$ \ $b = a$, in which case the triangle is isosceles and we have two angles plus two sides
 
-$\circ$ \ $b$ forms a right angle with the third side, in which case we also have two angles
+A third case is where
 
-There is a temptation to call this case ASS.  I think Tony Randall said it best:
+$\circ$ \ $b$ forms a right angle with the third side
+
+In this case we don't even need to know $\theta$, just SSA where the angle is a right angle.  Many books call this HL (hypotenuse-leg).
+
+Although SSA is often just dismissed out of hand, it does work sometimes.  We will use the third case often.  You can think of it like this:  in a right triangle the Pythagorean theorem will tell us the third side, given two.  Then we have SSS.
+
+There is a temptation to call this general case ASS.  I think Tony Randall said it best:
 
 \url{https://www.youtube.com/watch?v=KEP1acj29-Y}
 

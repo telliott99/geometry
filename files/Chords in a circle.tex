@@ -1,0 +1,138 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Rectangles in a circle}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{bisected chord theorem}
+
+\label{sec:perpendicular_bisector_of_a_chord}
+
+\label{sec:chords_and_bisectors}
+
+Given any chord of a circle and a line perpendicular to it, if the perpendicular is a diameter of the circle then the chord is bisected.  
+
+Conversely, if the perpendicular is a bisector, then it is also a diameter.  
+
+\begin{center} \includegraphics [scale=0.4] {perp_chords6.png} \end{center}
+
+\emph{Proof}.
+
+For the forward theorem:  we have that $OQ$ is a radius (it lies on the diameter), and it is perpendicular to chord $PR$.  
+
+We have $OP = OR$, side $OS$ is shared, and there are right angles at $S$.  So $\triangle OPS \cong \triangle ORS$ by SSA in a right triangle.  
+
+We conclude that $PS = SR$.  
+
+And since $\triangle OPS \cong \triangle ORS$, $\angle POS = \angle ROS$, the arcs $PT$ and $TR$ are subtended by equal central angles, therefore they are equal.
+
+$\square$
+
+The converse theorem was established when we derived the method to construct a circle given any three points on it.  Briefly, all points that are equidistant from the two ends of a chord must lie on its perpendicular bisector, and since the center of the circle containing the chord also has this property, it must lie on the perpendicular bisector.  Therefore the perpendicular bisector is a radius and part of a diameter.
+
+One consequence is that for two parallel chords, if a line is the perpendicular bisector of one, it is also the perpendicular bisector of the other.
+
+Furthermore, if we have a tangent and any chord that is parallel to it, then the radius drawn to the point of tangency bisects the chord.
+
+This follows simply from the definition of the tangent as perpendicular to the radius at the point of tangency.
+
+\begin{center} \includegraphics [scale=0.4] {perp_chords7.png} \end{center}
+
+By our previous theorem, $OT$ bisects $PR$ so that $PS = SR$.
+
+$\circ$  \ Given a point of tangency on a radius perpendicular to any chord, not only the chord but the arc lengths are evenly divided by the radius.  $PT = RT$.
+
+\subsection*{length of a secant or chord}
+
+\label{sec:sine_secant}
+
+By work done previously, we have established that if the angle $\theta$ (as a central angle) subtends the arc $PQ$, the same angle $\theta$ on the periphery subtends twice the arc, namely $PR$.  
+
+And since the central angle is equal to the arc it subtends, an angle on the periphery is one-half the arc it subtends.
+
+\begin{center} \includegraphics [scale=0.4] {secant2.png} \end{center}
+
+If the length of the chord $PR$ is $2y$, then the \hyperref[sec:sine_and_cosine]{\textbf{sine}} of the angle $\theta$ is $y/r$, which in this unit circle is just $y$.  That is, the chord $PR$ for the peripheral angle $\theta$ is twice the sine of the angle.
+
+The vertex of the angle $\theta$ can be placed anywhere on the periphery and still subtend the same arc.  It follows that the chord or secant of a fixed angle on the periphery is the same length, regardless of how it is arranged with respect to the diameter or the tangent.
+
+\subsection*{problem}
+
+Given that the line touching the circle at $T$ is a tangent and that $BC$ is parallel to it.  Show that the angles marked with black dots are equal.
+
+\begin{center} \includegraphics [scale=0.4] {perp_chords8.png} \end{center}
+
+I think the idea of the problem was to use similar triangles somehow.  But given our previous work, this is a trivial consequence of the fact that the arcs $CT$ and $TB$ are equal.
+
+So, as peripheral angles subtending equal arcs, $\angle CAT = \angle TAB$.
+
+\subsection*{rectangle side on a circle}
+
+\label{sec:rectangle_side_on_a_circle}
+
+We derive a useful theorem about any rectangle in a circle, and its converse.
+
+Suppose that $ACGE$ is a rectangle.  Let $OFB$ be a (part of a) radius of the circle, and also be the perpendicular bisector of $AC$.
+
+\begin{center} \includegraphics [scale=0.5] {perp_chords9.png} \end{center}
+
+Then, $OB$ is also the perpendicular bisector of $DH$, since $AC \parallel DEGH$.  So
+\[ DF = FH \]
+
+but $AB = BC = EF = FG$.  Subtracting equals from equals:
+\[ DF - EF = FH - FG \]
+\[ DE = GH \]
+
+$\square$
+
+For any rectangle with two points lying on a circle and two inside the circle, then the side which connects the inside points can be extended both ways to reach the circle, and the extensions will be equal.
+
+We can think of the converse theorem as analogous to the converse of the perpendicular bisector results.  There, given parallel chords and a perpendicular diagonal, we proved bisection.  Here we start with two bisected chords and establish that opposing sides form a rectangle.
+
+Consider this diagram.
+
+\begin{center} \includegraphics [scale=0.4] {broken_chord11.png} \end{center}
+
+Suppose the diameter through $O$ is drawn perpendicular to chord $AD$.  We are given that $AB = CD$, and $BE \parallel CF \perp AD$.  ($\angle EBG$ and $\angle FCG$ are both right angles).
+
+Then I claim that $BCFE$ is a rectangle, with $BE = CF$ and right angles at the vertices $E$ and $F$, as well as at $\angle EBG$ and $\angle FCG$.
+
+Since $AB = CD$ and $AG = GD$, by subtraction, $BG = GC$.  Therefore, since $GE = GF$ as radii of the circle, $\triangle BGE \cong \triangle GCF$ by SSA in a right triangle, and thus, $BE = CF$.
+
+Then (right panel), $\triangle BCE \cong \triangle BCF$ by SAS, so $BF = CE$.  As a result, $\triangle BEF \cong \triangle EFC$ by SSS.  Therefore $\angle BEF = \angle EFC$ and since $BE \parallel CF$, both are right angles.
+
+$\square$
+
+\subsection*{rectangle in a circle}
+
+\label{sec:rectangle_in_a_circle}
+
+$\circ$  When any two diameters of a circle are drawn and the points on the circle joined together, the result is a rectangle.
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.4] {perp_chords2.png} \end{center}
+
+There are four triangles in the diagram, the top and bottom are congruent by SAS (two radii and vertical angles), as are the left and right.  Further, all are isosceles triangles.
+
+The angles at the corners of the quadrilateral are all equal and so all are right angles, and therefore the quadrilateral is a rectangle.
+
+
+\end{document}
