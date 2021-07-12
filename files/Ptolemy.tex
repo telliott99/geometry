@@ -23,7 +23,7 @@
 
 \label{sec:Ptolemy}
 
-Ptolemy was a Greek astronomer and geographer who lived at Alexandria in the 2nd century AD (died c. 168 AD).  That is nearly 500 years after Euclid.  Ptolemy was a popular name for Egyptian pharaohs in earlier centuries.
+Ptolemy was a Greek astronomer and geographer who probably lived at Alexandria in the 2nd century AD (died c. 168 AD).  That is nearly 500 years after Euclid.  Ptolemy was a popular name for Egyptian pharaohs in earlier centuries.
 
 Our Ptolemy is known for many works including his book the \emph{Almagest}, and important to us, for a theorem in plane geometry concerning cyclic quadrilaterals.  These are 4-sided polygons all of whose vertices lie on a circle.  Recall that any triangle lies on a circle, so this is a restriction on the fourth vertex of the polygon.
 
@@ -37,23 +37,40 @@ Ptolemy's theorem says that for a cyclic quadrilateral, the product of opposing 
 
 \subsection*{proof without words}
 
-This one is complicated enough to benefit from labeled as well as colored angles.  They match the opposing sides.
-
 \url{https://www.cut-the-knot.org/proofs/PtolemyTheoremPWW.shtml}
 
-\begin{center} \includegraphics [scale=0.5] {pt9.png} \end{center}
+We'll actually use some words in an attempt to see how one might have developed this proof.
 
-\[ ac + bd = mn \]
+\begin{center} \includegraphics [scale=0.5] {pt11.png} \end{center}
 
-Three triangles
+Check first that we have the labels correct:  a (red), b(blue), c(magenta) and d(green).
 
-$\circ$ \ sides $bcn$, scaled by $a$.
+The idea is to construct a parallelogram.  We begin by cutting the figure in half along one of the diagonals, say $m$.
 
-$\circ$ \ sides $adn$, scaled by $b$.
+\begin{center} \includegraphics [scale=0.5] {pt12.png} \end{center}
 
-$\circ$ \ sides $abm$, scaled by $n$.
+Next, pick any two sides and align them along a horizontal line.  
 
-One strange thing, in $\triangle_{abm}$ the apex angles $\gamma$ and $\delta$ are flipped.  This is forced by alternate interior angles.
+Draw a second line across the top, parallel to the bottom, scaling one triangle as necessary to make it fit.  (Our drawing isn't perfect, so the left and right sides look a little off, but all the angles will check out at the end).
+
+\begin{center} \includegraphics [scale=0.5] {pt13.png} \end{center}
+
+We can fill in the angles needed to make a parallelogram using the alternate interior angles theorem.
+
+\begin{center} \includegraphics [scale=0.5] {pt14.png} \end{center}
+
+If this is going to be a parallelogram, the left and right sides must be equal in length.  We achieve this by scaling each of the two original triangles, using the opposing sides as the scale factor.
+
+\begin{center} \includegraphics [scale=0.5] {pt15.png} \end{center}
+
+Suddenly, we realize that we have a matching triangle in the original figure.  It just needs to be scaled by $m$ to fit.  The red and green dotted angles are switched (the large triangle is inverted), but that's no problem.
+
+\begin{center} \includegraphics [scale=0.5] {pt16.png} \end{center}
+
+As opposing sides in a parallelogram, the top and bottom must be equal in length.  Therefore
+\[ mn = ac + bd \]
+
+$\square$
 
 \subsection*{proof by switching sides}
 

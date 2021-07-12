@@ -18,7 +18,7 @@ Euclid's proof
 Pythagoras by area
 
 Similar triangles
-Stacked triangles
+Angle bisectors
 Parallelograms
 Similar triangles
 Midpoint theorem
@@ -34,10 +34,14 @@ Pizza theorem
 More triangles
 Basic trigonometry
 Sum of angles
+Law of Cosines
+
+More trigonometry
 Broken Chord
 Equilateral triangle
 Menelaus theorem
 Concurrence
+Computations
 
 Polygons
 Cyclic quadrilateral
@@ -58,10 +62,6 @@ Pi is a constant
 Proof
 Proof by contradiction
 Induction
-
-More Trigonometry
-Law of Cosines
-Computations
 
 Later geometry
 Pappus

@@ -141,9 +141,9 @@ Since the figure is a rectangle, you can read the relevant formulas off the figu
 
 As so often, we begin with an inspired diagram.  Let's build it up in stages.
 
-\begin{center} \includegraphics [scale=0.4] {sum3.png} \end{center}
+On the left, below, we have stacked two right triangles.  The one containing angle $t$ is rotated so that its base is parallel to the hypotenuse of the triangle containing angle $s$.  
 
-On the left, we have stacked two right triangles.  The one containing angle $t$ is rotated so that its base is parallel to the hypotenuse of the triangle containing angle $s$.  
+\begin{center} \includegraphics [scale=0.4] {sum3.png} \end{center}
 
 The crucial step is to re-scale the triangle on the bottom so that the parallel line segments are also equal in length (right panel).
 
@@ -201,7 +201,7 @@ The two angles, $s$ and $t$, taken together, are equal to the angle at the top o
 
 We fill in lengths for the dotted lines of the fourth right triangle in the figure below.
 
-This is a rectangle (all four corners are right angles).  Therefore, opposite sides are equal.
+This forms a rectangle (all four corners are right angles).  Therefore, opposite sides are equal.
 \begin{center} \includegraphics [scale=0.5] {sum8.png} \end{center}
 
 We just write down the formula by reading off the figure:
@@ -272,5 +272,59 @@ Let $s = t$
 
 That's correct.  We already know that
 \[ \cos \pi/3 = \sin \pi/6 = \frac{1}{2} \]
+
+\subsection*{alternative derivation}
+
+There are many derivations of the sum of angles formulas.  Here is an algebraic one based on the \hyperref[sec:law_of_sines]{\textbf{law of sines}}.
+\[ \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c} \]
+
+Start with this triangle
+\begin{center} \includegraphics [scale=0.35] {sum_angles_9.png} \end{center}
+
+\[ a = x + y = c \cos B + b \cos C \]
+From the law of sines:   $\sin A = (a/b) \sin B$.  Substituting for $a$:
+\[ \sin A = \frac{c \cos B + b \cos C}{b} \sin B \]
+\[ = \frac{c}{b} \sin B \cos B + \sin B \cos C \]
+
+Again from the law of sines:  $\sin B = (b/c) \sin C$, so
+\[ \sin A = \sin C \cos B + \sin B \cos C \]
+
+But since $A$ and $B + C$ are supplementary, their sines are equal, thus
+\[ \sin B + C = \sin C \cos B + \sin B \cos C \]
+
+$\square$
+
+The proof for an obtuse angle is left as an exercise.
+
+\subsection*{double angle}
+
+The formula for cosine was
+\[ \cos s + t = \cos s \cos t - \sin s \sin t \]
+
+If $s = t$ this becomes
+\[ \cos 2 \theta = \cos^2 \theta - \sin^2 \theta \]
+
+And since $-\sin^2 \theta = \cos^2 \theta - 1$
+\[ \cos 2 \theta = 2\cos^2 \theta - 1 \]
+\[ 2 \cos^2 \theta = 1 + \cos 2 \theta \]
+
+There is a neat geometric derivation of this formula.  Draw a right triangle with its hypotenuse along the diagonal in a circle of diameter 1.  The sides of this right triangle are just $\sin \theta$ and $\cos \theta$.
+
+Now drop the altitude (in red) to make two smaller right triangles still with angle $\theta$.  This triangle has one side equal to $ \cos^2 \theta$, since $\cos^2 x/\cos x = \cos x$.  The red vertical is $\sin \theta \cos \theta$.
+
+\begin{center} \includegraphics [scale=0.5] {half_angle_3.png} \end{center}
+
+The second part of the hypotenuse along the diameter is equal to $\sin^2 \theta$, since all three right triangles are similar.  This is a quick proof of the Pythagorean theorem.
+
+By the properties of inscribed angles, the central angle is $2 \theta$, and its cosine is the part of hypotenuse lying between the center of the circle and the base of the altitude, times by $1/2$, so that after dividing by the hypotenuse (equal to $1/2$), we obtain our result.
+
+We have
+\[ \cos^2 \theta = \frac{1}{2} + \frac{1}{2} \cos 2 \theta \]
+\[ 2 \cos^2 \theta - 1 = \cos 2 \theta \]
+\[ \cos 2 \theta = cos^2 \theta - \sin^2 \theta \]
+
+We also have that 
+\[ \frac{1}{2} \sin 2 \theta = \sin \theta \cos \theta \]
+\[ \sin 2 \theta = 2 \sin \theta \cos \theta \]
 
 \end{document}

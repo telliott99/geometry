@@ -34,11 +34,11 @@ The formula is the Pythagorean theorem with a correction factor, $-2ab \cos C$, 
 
 The correction factor is positive for an angle larger than $\pi/2$.  It also depends on the lengths of both the base sides, as we would expect.
 
-The law of cosines is developed relatively easily from the Pythagorean theorem by looking at the altitude.
+The law of cosines is developed relatively easily from the Pythagorean theorem by looking at the altitude (the notation on this figure has changed from the previous one).
 
 \begin{center} \includegraphics [scale=0.5] {Hopkins_964.png} \end{center}
 
-We switch to focus on $\angle A$.  We have that $\angle A$ is an acute angle, and the triangle is either obtuse (left) or acute (right).  We look at both cases for this example, although often in this book we just figure proofs or computations for acute triangles.  Usually that works out the same for both cases.
+We have that $\angle A$ is an acute angle, and the triangle is either obtuse (left) or acute (right).  We look at both cases for this example, although often in this book we just figure proofs or computations for acute triangles.  Usually that works out the same for both cases.
 
 Let $c$ be the base of the triangle, and let $x$ be the whole length of the line segment $AD$ from the vertex $A$ to the place where the altitude $h$ reaches $c$.
 
@@ -46,22 +46,23 @@ For the first case, we have two right triangles.  The larger one gives:
 \[ x^2 + h^2 = b^2 \]
 and the other one is
 \[ (x - c)^2 + h^2 = a^2 \]
+
 Subtract
 \[ x^2 - (x - c)^2 = b^2 - a^2 \]
 \[ 2xc - c^2 = b^2 - a^2 \]
 \[ a^2 = b^2 + c^2 - 2xc \]
+
 and since $x/b = \cos A$
 \[ a^2 = b^2 + c^2 - 2bc \cos A \]
 
-This is the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them $\angle A$.
+This is the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them, $\angle A$.
 
 Using the cosine in the formula is just a form of shorthand for the ratio $x/b$ and gets rid of that pesky term $x$.
 
-The same result will be found for the acute triangle.  Again $x$ is the length of $AD$.
-
+The same result will be found for the acute triangle.  
 \begin{center} \includegraphics [scale=0.5] {Hopkins_964.png} \end{center}
 
-We write more directly:
+Again $x$ is the length of $AD$.  We write more directly:
 \[ b^2 - x^2 = a^2 - (c - x)^2 \]
 \[ = a^2 - c^2 + 2xc - x^2 \]
 \[ b^2 = a^2 - c^2 + 2xc \]
@@ -69,6 +70,30 @@ Rearranging:
 \[ a^2 = b^2 + c^2 - 2xc \]
 
 That's exactly the same relationship.
+
+\subsection*{alternative proof of sum of angles}
+
+As we saw, the law of cosines is a relatively simply consequence of the Pythagorean theorem.  It can be used in a straightforward derivation of the formula for the sum of angles, specifically, 
+\[ \cos x - y = \cos x \cos y + \sin x \sin y \]
+
+I saw this here
+\url{https://www.youtube.com/watch?v=JOg9kQp7pig}
+
+Here is the derivation.  I am using Daniel Rubin's figure.
+\begin{center} \includegraphics [scale=0.5] {daniel_rubin.png} \end{center}
+
+We simply compute the length of the chord $AB$ in two different ways.  The first way uses the coordinates of the two points.
+\[ (AB)^2 = (\cos y - \cos x)^2 + (\sin y - \sin x)^2 \]
+\[ = \cos^2 y - 2 \cos y \cos x + \cos^2 x + \sin^2 y - 2 \sin y \sin x + \sin^2 x \]
+\[ = 1 + 1 - 2 (\cos y \cos x + \sin x \sin y) \]
+
+(Either of these differences in the first line can be reversed without changing the result).  The second way uses the law of cosines from above.
+\[ AB^2 = 1^2 + 1^2 - 2 \cdot 1 \cdot 1 (\cos x - y) \]
+
+We obtain
+\[ \cos x - y =  \cos x \cos y + \sin x \sin y \]
+
+$\square$
 
 \subsection*{preview of another theorem}
 
@@ -132,21 +157,20 @@ This happens when any two sides are exactly equal to the third.  This is another
 
 \subsection*{problem}
 
-\begin{center} \includegraphics [scale=0.4] {dartmouth_4.png} \end{center}
-
 To prove:
+\[ c^2 = a^2 + b^2 + 2ab \cos \theta' \]
 
 \begin{center} \includegraphics [scale=0.5] {dartmouth4b.png} \end{center}
 
-\[ c^2 = a^2 + b^2 + a \cdot b \cos \theta' \]
-\[ c^2 = a^2 + b^2 - a \cdot b \cos \theta \]
-
-Wonder if this is a misprint?   (Missing a factor of $2$.  Notice also
+Notice also
 \[ (a + b \cos \theta')^2 + b^2 \sin^2 \theta' = c^2 \]
 \[ a^2 + 2ab \cos \theta' + b^2 (\cos^2 \theta' + \sin^2 \theta') = c^2 \]
+\[ a^2 + b^2 + 2ab \cos \theta' = c^2 \]
 
 Since $\cos \theta' = - \cos \theta$:
 \[ a^2 - 2ab \cos \theta + b^2 = c^2 \]
+
+The law of cosines again.
 
 \subsection*{philosophy}
 

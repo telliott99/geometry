@@ -1,0 +1,246 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Angle bisectors}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{Euclid Prop. I.9:  bisection of an angle}
+
+\label{sec:Euclid9}
+
+To bisect a given angle.
+
+\begin{center} \includegraphics [scale=0.4] {PI_9a.png} \end{center}
+
+As radii of a circle on center $O$, we first find points $A$ and $B$ equidistant from $O$ (left panel).  Let that distance be $r$.
+
+As radii of circles on the centers $A$ and $B$ that pass through $O$ (so the radius is equal to $r$), we find $C$ equidistant from $A$ and $B$ (middle panel), with radius also equal to $r$.
+
+Thus, $OA = OB = AC = BC$ (right panel).  
+
+So $\triangle OAC \cong \triangle OBC$ by SSS.
+
+Therefore $\angle BOC$ is equal to $\angle AOC$ and the given angle is bisected.
+
+$\square$
+
+\subsection*{bisector equidistant from sides}
+
+\label{sec:bisector_equidistant_sides}
+
+$\bullet$ \ Any point on the bisector of an angle is equidistant from the sides at the point of closest approach.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector2b.png} \end{center}
+
+We simply draw the vertical line $RS$.  The resulting triangle is congruent to $\triangle PQR$ by AAS.  Therefore, $QR = RS$.
+
+$\square$
+
+\subsection*{equidistant from sides $\rightarrow$ bisector}
+
+\label{sec:bisector_equidistant_sides_converse}
+
+$\bullet$ \ If a point is equidistant from the sides of an angle, then it lies on the angle bisector.
+
+\emph{Proof}.
+
+We are given $QR = RS$ and have the shared side $PR$, which is the hypotenuse, in two right triangles.  We have hypotenuse-leg (HL), hence the two triangles are congruent.  
+
+Therefore the two smaller angles at $P$ are equal, so $PR$ is the bisector of $\angle QPS$.
+
+$\square$
+
+\subsection*{problem}
+
+Here is a problem to exercise some concepts we've seen to this point:  isosceles triangles, complementary angles, and vertical angles.
+
+\begin{center} \includegraphics [scale=0.4] {tr3.png} \end{center}
+
+Given that $AB = AC$.  Pick any point $D$ on the base $BC$ (except directly under $A$), and draw the vertical $DF$.  Extend $AC$ to meet that vertical line.
+
+Prove that $\triangle AEF$ is isosceles.
+
+\subsection*{angle bisector}
+
+\label{sec:angle_bisector}
+
+We now consider a classic problem:  the ratio of sides when there is an angle bisector.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector_r1.png} \end{center}
+
+Suppose the large triangle is a right triangle.  We draw a line joining the vertex on the left with the side opposite. 
+
+This line could in general be drawn anywhere, however two interesting cases are when  the side opposite is bisected (left panel), or when the angle at the left is bisected (right panel).  These two cases are not the same.  In the first $\phi \ne \theta$ and in the second, $c \ne d$.
+
+Let's investigate the second possibility, equal angles.  We are in a position to prove an important theorem.
+
+\subsection*{angle bisector theorem}
+
+\label{sec:angle_bisector_theorem}
+
+With reference to the right-hand figure above, we are to prove that
+\[ \frac{d}{b} = \frac{c}{a} \]
+
+$\bullet$ \ The sides and bases are in proportion for a right triangle with bisected angle.
+
+\emph{Proof}.
+
+Draw an altitude for the upper of the two small triangles, meeting the side of length $b$.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector_r2.png} \end{center}
+
+The red triangle and the one directly above it are congruent (right panel).  They share a side (the hypotenuse of each), and they are right triangles with the same smaller angle $\theta$.  Therefore, the altitude we just drew has length $c$.
+
+The small triangle with sides $c$ and $d$ (at the top) is similar to the original large triangle.  The reason is that they are both right triangles containing the smaller angle $\gamma$.
+
+By similar triangles, we form equal ratios of the angle opposite $\gamma$ to the hypotenuse:
+
+\[ \frac{a}{b} = \frac{c}{d} \]
+
+This is rearranged simply to give
+\[ \frac{d}{b} = \frac{c}{a} \]
+which is what we were asked to prove.
+
+The result can be pushed a little further:
+\[ \frac{a}{b} = \frac{c}{d} \]
+Add $1$ to both sides:
+\[ \frac{a + b}{b} = \frac{c + d}{d} \]
+\[ \frac{a + b}{c + d} = \frac{b}{d} = \frac{a}{c} \]
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector_r5.png} \end{center}
+
+which is a surprising result and becomes important later in looking at Archimedes method for approximating the value of $\pi$. 
+
+In the proof just completed, we took advantage of the fact that the large triangle was a right triangle.  However, if you think about it for a minute, you should be able to see that the same result holds for an isosceles triangle.  There, the two sides are equal, and if the top angle is bisected, so is the base.  So the ratio of each side to its part of the base is also equal.
+
+This might lead you to wonder about whether the proof holds for a general triangle.  Indeed, we will show later on the at the sides and bases are in proportion for any triangle, if the angle is bisected.
+
+\subsection*{midpoint theorem}
+
+\label{sec:right_triangle_midpoint_theorem}
+
+The line which bisects the hypotenuse in a right triangle is called the median, but this is commonly called the midpoint theorem.  It is a specific case of the theorem for a right triangle.
+
+\begin{center} \includegraphics [scale=0.35] {rt_tri_bisector.png} \end{center}
+
+In a right triangle, draw the line segment from the vertex that contains a right angle to the midpoint of the hypotenuse, separating it into two equal lengths $a$.  We will show that the length of the bisector is also $a$.
+
+\emph{Proof}.
+
+In the right panel, draw the perpendicular from the midpoint $S$ to the base $PR$.  The triangle $SQR$ is similar to the original right triangle by AAA.
+
+Hence the two parts of the base are equal (labeled $b$), because $a/2a = b/2b$.  
+
+Therefore we have two congruent triangles:  $SQR$ and $PQS$ (by SAS).  So the bisector $PS$ is equal in length to $SR$.
+
+Both of the new isosceles triangles formed by the original dashed line have equal base angles.
+
+$\square$
+
+The length $a$ is the radius of the circle, centered at $S$, that contains the three vertices of the original right triangle.
+
+An alternative proof of the midpoint theorem would be to start with any right triangle, and use the hypotenuse as the diameter of a circle.  The center of the circle is on the midpoint of the hypotenuse.
+
+By the converse of Thales circle theorem, the vertex with the right angle is also on the circle.  Therefore, the line connecting that vertex with the midpoint is a radius.
+
+\subsection*{isosceles angle bisector theorem}
+
+\label{sec:isosceles_bisector}
+
+The next theorem involves angle bisectors in an isosceles triangle.  It is easy in the forward direction, but the converse is very challenging, at least until you draw the right diagram.  Then, as usual, it's not so bad.
+
+\begin{center} \includegraphics [scale=0.3] {bisector4.png} \end{center}
+
+We are given that $\triangle ABC$ is isosceles, and also that the angles at the base are both bisected.
+
+We claim that the lengths of the angle bisectors are equal.
+
+\emph{Proof}.
+
+Given that all four angles dotted blue and magenta are equal.
+
+Then $\triangle ABD \cong \triangle ABF$ by ASA.
+
+As a result, $AF = BD$ and $AD = BF$.  
+
+The angle bisectors $AF$ and $BD$ are equal.
+
+$\square$
+
+Furthermore, since the original triangle is isosceles and $AD = BF$, the smaller triangle $\triangle CDF$ is also isosceles, by subtraction.  Thus, $\triangle CDF \sim \triangle ABC$.
+
+By alternate interior angles, $DF \parallel AB$.
+
+That's the easy part.
+
+The converse theorem says that if we have angle bisectors and they are equal in length, then the triangle is isosceles.  This theorem is called the Steiner-Lehmus Theorem.
+
+\url{https://en.wikipedia.org/wiki/Steiner–Lehmus_theorem}
+
+It is easy to show that if $DF \parallel AB$ everything else follows.  
+
+Here is a different proof which I found on the web.  It's a proof by contradiction.
+
+\url{https://www.algebra.com/algebra/homework/word/geometry/Angle-bisectors-in-an-isosceles-triangle.lesson}
+
+\begin{center} \includegraphics [scale=0.3] {bisector5.png} \end{center}
+
+We claim that if $AD = BE$ and the angles are bisected, then $\alpha = \beta$.
+
+\emph{Proof}.
+
+Draw $EF \parallel AD$ and $DF \parallel AEC$, meeting at $F$.  Draw $BF$.  
+
+As we'll see later, a four-sided figure with opposite sides parallel is a parallelogram, with equal side lengths and equal opposing angles at the vertices.
+
+Since $ADFE$ is a parallelogram, $\angle DFE$ (marked as $\beta$) is equal to the other angles marked $\beta$.
+
+We argue by contradiction.  Suppose that $\alpha > \beta$.
+
+Then the triangles $\triangle ABE$ and $\triangle ABD$ have two sides equal and the included angle $\alpha$ in $\triangle ABE$ is greater.  Therefore, side $AE > BD$.
+
+(Sketch of a \emph{proof} of this lemma:  overlay the two triangles with equal sides corresponding.  If $\alpha > \beta$ then the altitude and so also the area of the triangle with $\alpha$ at the vertex is obviously larger.  Since area is a function of the side lengths and only one length is changing, that length must be larger as well, for the triangle with $\alpha$ at the vertex.  See \hyperref[sec:Heron_formula]{\textbf{here}}).
+
+Then, $DF = AE > BD$.
+
+As a result $\phi > \gamma$.  We have 
+
+\[ \alpha > \beta \]
+\[ \phi > \gamma \]
+\[ \alpha + \phi > \beta + \gamma \]
+
+This means that in triangle $\triangle BFE$, $EF > BE$.
+
+\begin{center} \includegraphics [scale=0.3] {bisector5.png} \end{center}
+
+But then $EF = AD$ (since $ADFE$ is a parallelogram) and so $AD > BE$, which is a contradiction.  We are given that $AD = BE$.
+
+Therefore, $\alpha \ngtr \beta$.
+
+The reverse supposition, that $\alpha < \beta$, also leads to a contradiction by a symmetrical argument. 
+
+Since $\alpha$ is neither greater than nor less than $\beta$, we conclude that $\alpha = \beta$.  $\triangle ABC$ is therefore isosceles.
+
+$\square$.
+
+
+\end{document}

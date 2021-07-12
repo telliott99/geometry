@@ -87,14 +87,29 @@ Any two sides of a triangle multiplied together, and then times the sine of the 
 
 \subsection*{law of sines}
 
+\label{sec:law_of_sines}
+
 This also leads to the equality
-\[ b \sin A = a \sin B \]
+\[ h = b \sin A = a \sin B \]
 \[ \frac{a}{b} = \frac{\sin A}{\sin B} \]
 
 which by symmetry we extend to all three angles
-\[ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} \]
+\[ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = k \]
 
-This simple formula is called the law of sines.
+This simple formula is called the law of sines.  
+
+The constant ratio has an interesting value, which can be seen by drawing the circumcicle containing the three points of the triangle.
+
+\begin{center} \includegraphics [scale=0.25] {Coxeter_1_1a.png}
+\includegraphics [scale=0.25] {Coxeter_1_1b.png} \end{center}
+
+In the figure (left panel), we have $\triangle ABC$ inscribed in a circle of radius $R$, so that $CJ = 2R$.  $\angle J$ is drawn with the diameter of the circle as one side, and cuts off the same chord of length $a$ as does $\angle A$.  Since $\angle A = \angle J$ (inscribed angle theorem), we have 
+\[ \sin A = \sin J = \frac{a}{2R} \]
+
+The right panel covers the case where $\angle A$ is larger than a right angle.  Here $\angle J + \angle A = \pi$, but still $\sin A = \sin J$, so we have the same result.
+
+Rearranging
+\[ \frac{a}{\sin A} = 2R \]
 
 \subsection*{area proportional to the product of two sides}
 
