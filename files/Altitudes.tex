@@ -1,0 +1,108 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Altitudes}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Each of the three sides of a triangle has a corresponding altitude.
+
+For an acute triangle, the three altitudes meet at a point inside the triangle (they are said to be concurrent).  The point is called the \emph{orthocenter}.   We will prove this later.
+
+\begin{center} \includegraphics [scale=0.4] {tr1.png} \end{center}
+For a right triangle, the orthocenter is just the vertex containing the right angle.  
+
+For an obtuse triangle, two of the altitudes are external to the triangle, and the third altitude must be extended past its vertex, to meet the other two at the orthocenter.
+
+In the latter case, it may take some thought to determine which altitude goes with which side.  The rule is that the altitude forming a right angle with any side originates at the vertex opposite that side.  If necessary, the side is extended to meet the altitude at a right angle.
+
+\begin{center} \includegraphics [scale=0.4] {tr2.png} \end{center}
+
+In the figure above, we have one obtuse angle in the triangle.  The altitudes to sides $a$, $b$ and $c$ are indicated, in turn, by arrows.
+
+\subsection*{computing triangular area}
+
+\begin{center} \includegraphics [scale=0.4] {area3.png} \end{center}
+
+You recall the formula:  one-half base times height.  In the figure above, twice the area is 
+
+\[ 2A = af = bg = ch \]
+
+We can choose any side of the triangle to be the base and then multiply by the height to get twice the area.  
+
+We must always get the same answer!  The area of the triangle is surely the same no matter how you calculate it.
+
+Here's a proof by counting up the area of smaller triangles:
+
+\emph{Proof}.
+
+In $\triangle ABC$ with sides $a,b,c$, drop the three altitudes from the vertices to form right angles on the opposing sides.  We label two of them:  $f$ for side $a$ and $h$ for side $c$.
+
+These altitudes cross at a single point.  We look at Newton's proof of this in just a bit (\hyperref[sec:Newton_altitude]{\textbf{here}}).  
+
+Each altitude and side is then divided into two parts as shown.
+
+This gives six small triangles.  To make it easier to keep track of them, they are labeled with colors.
+\begin{center} \includegraphics [scale=0.5] {area8d.png} \end{center}
+
+So then twice the area of the whole triangle is $2A = af = ch$.  Start with $ch$
+\[ ch = c_1 h_1 + c_1 h_2 + c_2 h_1 + c_2 h_2 \]
+
+The single right triangles are easy to see:  $c_1 h_2$ and $c_2 h_2$.  The other two are composed of two right triangles.  For both, the base is $h_1$, and then, for green and blue, the height is $c_1$, or for red and magenta, the height is $c_2$.   For these obtuse triangles, the height must be extended to the base to form the right angle.
+
+But the same six triangles can be arranged in a different way so that twice the area of the whole triangle is
+\[ af = a_1 f_1 + a_1 f_2 + a_2 f_1 + a_2 f_2 \]
+\begin{center} \includegraphics [scale=0.5] {area8c.png} \end{center}
+$f1$ is the base and $a_1$ or $a_2$ the height, for the compound cases.
+
+A similar calculation can be carried out for side $b$ and altitude $g$.  The area is the same regardless of which side is chosen as the base.
+
+$\square$
+
+\subsection*{an approach using the sine}
+
+We claim that twice the area of $\triangle ABC$ with sides $a,b,c$ is
+\[ 2 (\triangle ABC) = a \cdot h_a = b \cdot h_b = c \cdot h_c \]
+where the $h_i$ are altitudes to those sides.
+
+\emph{Proof}.
+
+The altitude from vertex $A$ to side $a$ can be defined in terms of one of the other angles, say $\angle B$.  We will see that all right triangles with the same angles have the same ratios of sides, and altitudes.  So we can define, say,
+\[ \frac{h_a}{b} = \sin C \]
+where $a$ and $b$ flank $\angle C$.
+
+But drawing altitude altitude $h_b$, we have that the similar ratio is
+\[ \frac{h_b}{a} = \sin C \]
+
+It follows that
+\[ \frac{h_a}{b} = \frac{h_b}{a}  \]
+
+So
+\[ a \cdot h_a = b \cdot h_b \]
+$\square$
+
+As indeed, it must.
+
+\subsection*{problem}
+
+\emph{To prove}:
+
+Any triangle with two equal altitudes is isosceles.
+
+\end{document}

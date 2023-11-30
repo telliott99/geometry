@@ -1,0 +1,187 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Pappus' theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{more about Menelaus}
+
+We proved  \hyperref[sec:Menelaus_theorem]{\textbf{Menelaus's theorem}} previously.
+
+In the figure below, subscripts indicate the parts of a side, for example, $a_1$ and $a_2$ are the components of side $a$.  
+
+$c'$ is the extension of base.  We will take a different definition for $c$ in talking about this theorem, it is the length of the whole side plus the extension.  So we are redefining $c$, using that symbol to refer to what would normally be called $c + c'$.
+
+\begin{center} \includegraphics [scale=0.4] {menelaus1.png} \end{center}
+
+We showed that the product of three ratios is equal to $1$:
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c'} = 1 \]
+
+We get this result by similar triangles using the altitudes.  Take three terms in order for the left-hand and right-hand sides:
+
+\[ \frac{r}{p} \cdot \frac{p}{q} \cdot \frac{q}{r} = \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c}{c'} \]
+
+One way to remember the terms is that, going around counter-clockwise, we take the first length we run into and put it into the numerator.  It doesn't matter which direction you go, as long as you take $c'$ first when going clockwise and $c$ first when going counter-clockwise.
+
+Take the extension first if you run into it first.
+
+We also need to prove the theorem for an alternative setup.  Even though the black line does not go through the triangle, it is technically a traversal.
+
+\begin{center} \includegraphics [scale=0.4] {menelaus3.png} \end{center}
+
+\[ \frac{r}{p} \cdot \frac{p}{q} \cdot \frac{q}{r} = \frac{a'}{a} \cdot \frac{b}{b'} \cdot \frac{c}{c'} \]
+
+Once again, we can remember this as, take the first length we run into, and put it on top.
+
+We mainly did this as a preliminary lemma to an easy proof of Ceva's theorem, which becomes important in thinking about the concurrency of lines in a triangle, like those which bisect the opposing sides and meet at the centroid.
+
+Ceva's theorem gives a condition under which three lines like this are concurrent, or meet at a point.
+
+Menelaus's theorem can be seen as in some sense as similar to Ceva, because it provides conditions under which three points can be proved collinear, or on one line.
+
+\subsection*{alternative definition}
+There is a somewhat more sophisticated version of Menelaus's Theorem which views the path around a triangle as consisting of \emph{directed} (that is, \emph{signed}) line segments.
+
+\begin{center} \includegraphics [scale=0.15] {menelaus4.png} \end{center}
+The transversal is $XZY$, which meets the extension of $BC$ at $Y$.  Since $Y$ does not lie between $B$ and $C$, the line segments $BY$ and $YC$ point in opposite directions.  The ratio $BY:YC$ thereby acquires a minus sign.
+
+Every transversal has this property.  Here (on the right) is a transversal that does not go through the triangle at all.
+\begin{center} \includegraphics [scale=0.15] {menelaus5.png} \end{center}
+
+The path around the triangle has three parts:
+
+$A$ to $X$ to $B$ $\Rightarrow$  $AX:XB$
+
+$B$ to $Y$ to $C$  $\Rightarrow$    $BY:YC$
+
+$C$ to $Z$ to $A$  $\Rightarrow$   $CZ:ZA$
+
+Each ratio has a minus sign so the total product also has a minus sign.  Menelaus's Theorem says:
+\[ \frac{AX}{XB} \cdot \frac{BY}{YC} \cdot \frac{CZ}{ZA} = - 1 \]
+
+\subsection*{Pappus' theorem}
+
+As a way to explore the usefulness of Menelaus's theorem, let us look at a remarkable theorem of Pappus.  
+
+One version says that if we inscribe a hexagon in a circle and then connect some of the vertices, certain points will be co-linear.  The hexagon we are talking about has its vertices connected in the order $1-2-3-4-5-6$ --- it is a \emph{degenerate} hexagon.
+
+\begin{center} \includegraphics [scale=0.4] {pp0.png} \end{center}
+
+The points of interest are the intersections of opposing sides.  The point where $1-2$ cuts $4-5$ is on the red line, the next is $2-3$ and $5-6$, and the third is $3-4$ and $6-1$.
+
+It seems like the red line does connect three co-linear points.  We will not prove this version of the theorem.
+
+Remarkably, this hexagon can be deformed into two lines.
+
+\begin{center} \includegraphics [scale=0.35] {pp1.png} \end{center}
+
+We claim that if $UVW$ and $XYZ$ are co-linear, then the three points $PQR$ are also co-linear.  These points are formed by the intersections of corresponding lines.  We count the intersection of top left to bottom middle v. bottom left to top middle at $P$, for example.  
+
+Again, the idea is that $UYWXVZ$ is a (degenerate) hexagon.  The points of interest are at the intersections of opposite sides:  $UY$ cuts $XV$ at $P$, $YW$ cuts $VZ$ at $R$, and $WX$ cuts $ZU$ at $Q$.
+
+We will use some of the unlabeled intersections in our proof, as you will see.  We focus on one particular triangle.
+\begin{center} \includegraphics [scale=0.35] {pp2.png} \end{center}
+
+I have labeled the vertices $ABC$.
+\begin{center} \includegraphics [scale=0.35] {pp3.png} \end{center}
+
+You will notice that the points $PQR$ apparently lie on a transversal of $\triangle ABC$.  In particular, if we can prove that the product of Menelaus's ratios is equal to $1$ for $PQR$ in $\triangle ABC$, we will have established co-linearity of the points $PQR$, in other words, that it really is a transversal.
+
+We will show that 
+\[ \frac{AQ}{QB} \cdot \frac{BR}{RC} \cdot \frac{CP}{PA} = -1 \] 
+
+\begin{center} \includegraphics [scale=0.35] {pp11.png} \end{center}
+
+We will achieve this by applying the forward theorem to five other transversals.  
+
+\subsection*{first three}
+
+The first one is $VRZ$.  Just read it off the diagram below:
+\begin{center} \includegraphics [scale=0.35] {pp12.png} \end{center}
+\[ \frac{BR}{RC} \cdot \frac{CV}{VA} \cdot \frac{AZ}{ZB} = -1 \] 
+
+The second is $XQW$:
+\begin{center} \includegraphics [scale=0.35] {pp13.png} \end{center}
+\[ \frac{AQ}{QB} \cdot \frac{BW}{WC} \cdot \frac{CX}{XA} = -1 \] 
+
+And the third is $UPY$:
+
+\[ \frac{CP}{PA} \cdot \frac{AU}{UB} \cdot \frac{BY}{YC} = 1 \] 
+
+\begin{center} \includegraphics [scale=0.35] {pp14.png} \end{center}
+
+It is harder in this case, since all three points of the transversal lie outside the triangle.  The key is to take the points in order:  vertex-intermediate-vertex.  
+
+For each ratio, start and end at a vertex of $\triangle ABC$.  The ratios go like vertex $\rightarrow$ point divided by point $\rightarrow$ vertex.
+
+Thus
+\[ \frac{BR}{RC} \cdot \frac{CV}{VA} \cdot \frac{AZ}{ZB} = -1 \] 
+\[ \frac{AQ}{QB} \cdot \frac{BW}{WC} \cdot \frac{CX}{XA} = -1 \] 
+\[ \frac{CP}{PA} \cdot \frac{AU}{UB} \cdot \frac{BY}{YC} = -1 \] 
+
+Recall that we need
+\[ \frac{AQ}{QB} \cdot \frac{BR}{RC} \cdot \frac{CP}{PA} = -1 \] 
+
+\subsection*{finishing up}
+
+The first term in each of the products above are what we seek.  The other terms need to disappear.
+
+The fourth transversal is $UVW$.
+
+\[ \frac{BW}{WC} \cdot \frac{CV}{VA} \cdot \frac{AU}{UB} =  -1 \] 
+\begin{center} \includegraphics [scale=0.35] {pp15.png} \end{center}
+
+And finally, the last one is:
+\[ \frac{BZ}{ZA} \cdot \frac{AX}{XC} \cdot \frac{CY}{YB} = -1 \] 
+\begin{center} \includegraphics [scale=0.35] {pp16.png} \end{center}
+which we invert as:
+\[ \frac{ZA}{BZ} \cdot \frac{XC}{AX} \cdot \frac{YB}{CY} = -1 \] 
+
+If we multiply together all five of these expressions, all fifteen terms, on the right we obtain just $-1$.  Instead, we will construct a numerator with the first three of them and a denominator with the last two.  Again we obtain $-1$ on the right-hand side.
+
+\[ \frac{\frac{BR}{RC} \cdot \frac{CV}{VA} \cdot \frac{AZ}{ZB} \cdot \frac{AQ}{QB} \cdot \frac{BW}{WC} \cdot \frac{CX}{XA} \cdot \frac{CP}{PA} \cdot \frac{AU}{UB} \cdot \frac{BY}{YC} } { \frac{BW}{WC} \cdot \frac{CV}{VA} \cdot \frac{AU}{UB} \cdot \frac{ZA}{BZ} \cdot \frac{XC}{AX} \cdot \frac{YB}{CY}  } \]
+
+Then it's time for some cancelation.
+
+\begin{center} \includegraphics [scale=0.17] {pappus4.png} \end{center}
+
+In three cases we needed to flip terms in a ratio, but because we flipped both terms, the sign changes cancel.
+
+We are left with simply:
+\[ \frac{BR}{RC} \cdot \frac{AQ}{QB} \cdot \frac{CP}{PA} = -1 \] 
+which is what we wanted.
+
+By the converse of Menelaus's theorem, we have that $PQR$ are collinear.
+
+$\square$
+
+This proof is a constructive proof.  It shows that for this diagram, the relationship holds and the points $PQR$ are collinear.  
+
+What would happen if $AC \parallel BC$, or put another way, $VX \parallel WY$?  Suppose also $UY \parallel VZ$?  For some arrangements, we would not be able to draw the triangle we need.
+
+If you construct the diagram in an online tool like Geogebra and then play with it by sliding points around, one sees that it is easy to change a diagram where we could not draw the triangle, to one in which we can, and that the lines and intersections retain their relationships when this is done.
+
+\begin{center} \includegraphics [scale=0.20] {pappus5a.png}
+ \includegraphics [scale=0.20] {pappus6a.png} \end{center}
+
+
+Projective geometry solves this problem formally by showing that any arrangement can be transformed to one in which this proof holds, also without changing any of the intersections or collinearity properties.  But projective geometry is well beyond what we can do now, so let's just breathe a sigh of relief that it all came out as hoped.
+
+\end{document}

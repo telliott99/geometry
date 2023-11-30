@@ -1,0 +1,201 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Heron and Excircles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+I came across some sophisticated ``elementary'' notes on geometry, including an introduction to excircles.  The author is Paul Yiu. He taught at Florida Atlantic University and is now retired as Professor Emeritus.  We have two proofs of Heron's theorem in this chapter that utilize similarity.  An algebraic excursion is delayed until \hyperref[sec:Heron_formula]{\textbf{later}}, when we also look at Brahmagupta.
+
+\url{http://math.fau.edu/yiu/Oldwebsites/}
+
+The incircle of a triangle sits inside and just touches all three sides.  It can be drawn by finding the intersection of the angle bisectors at point $I$, which will be the center of the incircle.  Drop perpendiculars from $I$ to the sides.
+\begin{center} \includegraphics [scale=0.4] {yiu1.png} \end{center}
+Long ago we proved that the two perpendiculars from any point on the bisector to the rays of the bisected angle are equal (\hyperref[sec:bisector_equidistant_sides]{\textbf{here}}).
+
+Thus we have formed two congruent right triangles, by hypotenuse-leg in a right triangle (HL).  But we can do the same for any pair of sides.  Therefore all three distances are equal, and we can then draw the circle, called the incircle, with that distance as the radius $r$.
+
+Let the two right triangles containing the half-angle at $A$ have base $x$ (the pieces \emph{not} having $X$ as an endpoint, $AY$ and $AZ$ in the diagram), and the two at $B$  base $y$ and the two at $C$ base $z$.  (These are not labeled as such in the diagram, we will see why in a minute).
+
+Then, first of all we have that the perimeter is $p = 2x + 2y + 2z$.  Hence the \emph{semi-perimeter} $s$ is
+\[ s = x + y + z = \frac{a + b + c}{2} \]
+And secondly, the area of the triangle is
+\[ A = xr + yr + zr = rs \]
+A commonly used notation for area is $\triangle$, so we rewrite this as
+\[ \triangle = rs \]
+
+We can also write $x,y,z$ in terms of the side lengths.  Let $a$ be the side opposite $\angle A$ and so on.  Then, since $a = y + z$, using the first equation above we can write
+\[ s = x + a \]
+from which
+\[ x = s - a \]
+and this explains the labels in the figure in the right panel.
+\begin{center} \includegraphics [scale=0.4] {yiu1.png} \end{center}
+
+We will see terms like $s-a$, $s-b$, etc. again.  We note that 
+\[ s - a = \frac{a+b+c}{2} - a = \frac{b + c - a}{2} \]
+Subtract side $a$ from $s$ on the left and change the sign on $a$ in the formula for the semi-perimeter.
+
+Any triangle has a single incircle and three excircles, one for each side of the triangle.  The excircle opposite $\angle A$ is formed by extending sides $b$ and $c$ and then finding the circle that is tangent to those two extensions and also tangent to side $a$.
+\begin{center} \includegraphics [scale=0.4] {yiu2.png} \end{center}
+Practically speaking, one way to do this is to bisect the angle that each extension forms with side $a$.  The point where the two bisectors meet is the center of that excircle, $I_a$. Drop the vertical to side $a$, or to either of the extensions, to find the radius $r_a$.
+
+It might also help to realize that $I_a$ lies on the bisector of the original $\angle A$.  This follows from the fact that $AZ$ and $AY$ are tangent to this excircle.
+
+Another surprising, simple relationship can be found:
+\[ r_a \cdot (s-a) = \triangle \]
+and the same is true for $b$ and $c$ as well.
+
+Since we're using the symbol $\triangle$ for area, we will not use it to designate triangles, as we normally do.  We now have two expressions for the area
+\[ \triangle = rs = r_a \cdot (s-a)  \]
+We will use this the corresponding ratio later, namely
+\[ \frac{r}{r_a} = \frac{s}{s-a} \]
+First we derive the basic relationship, by computing triangle areas in two ways.
+
+\emph{Proof}.
+
+Consider the triangle $ABI_a$ formed with side $AB$ and vertex $I_a$, the center of the excircle.  The sides have not been drawn, except for $AB$.
+\begin{center} \includegraphics [scale=0.4] {yiu2.png} \end{center}
+
+The base is side $c$ and the altitude is $r_a$.  Hence twice the area is $c \cdot r_a$.  In the same way, twice the area of $ACI_a$ is $b \cdot r_a$.  Add the two together to form a quadrilateral
+
+The area of this quadrilateral \emph{can also be computed} as twice $a \cdot r_a$ plus twice $\triangle$.  Hence
+\[ \triangle = \frac{b + c - a}{2} \cdot r_a = r_a \cdot (s - a) \]
+using the general relationship we found earlier for $s-a$.
+
+Although it is tempting to see the diagram above and think that the length of the extension $BZ$ is equal to $BX$, which is just $s - b$, this is incorrect because $BX \ne s - b$.
+
+Here is another view, the labels have changed.
+\begin{center} \includegraphics [scale=0.4] {heron.png} \end{center}
+There are \emph{two} points of tangency for side $a$ (to the incircle and the excircle) and these divide the length $a$ into the same pieces, in two different ways.  It is the first one, to the incircle, that gives $s - b$ on top and $s - c$ on the bottom.
+
+Let the triangle be ABC.  As usual, the side opposite $\angle A$ is $a = BC$ and so on.
+
+The incircle is drawn with radius $r$ and an excircle drawn on side $a$ of radius $r_a$.
+
+We can obtain the previous result most simply by similar triangles.
+\[ \frac{r}{s-a} = \frac{r_a}{s} \]
+Alternatively, we can use this result to see that the entire length $AE' = AF' = s$, which means that $CE' = s - b$.
+
+Here are the details.  As we saw above, the radii divide the sides as follows:
+\[ AE = AF = s - a \]
+\[ BF = BZ = s - b \]
+\[ CE = CZ = s - c \]
+
+The extensions of sides $b$ and $c$ are $AE'$ and $AF'$.  These are tangent to the excircle, and so is side $a$ tangent at point $Y$.
+
+We can find convenient expressions for $BY$ and $CY$.  As lines drawn tangent to the excircle from the same point, 
+\[ BY = BF' = p \]
+\[ CY = CE' = a - p \]
+(Only an absence of artistic ability makes this seem remarkable).
+\begin{center} \includegraphics [scale=0.4] {heron.png} \end{center}
+
+And since they are also tangents from the same point
+\[ AE' = AF' \]
+\[ (s-a) + (s-c) + (a-p) = (s-a) + (s-b) + p \]
+\[ s - c + a = 2p + s - b \]
+\[ 2p = a + b - c \]
+\[ p = s - c \]
+
+So $BY = p = s - c$ and then
+\[ AF' = (s - a) + (s - b) + (s - c) = 3s - 2s = s \]
+and since $AE'$ is equal to this, we have that $CE' = CY = s - b$.
+
+Alternatively, the division of side $a$ at $Z$ gives 
+\[ a = (s-b) + (s-c) \]
+Since the division at $Y$ gives $BY = p = s-c$ it follows that $CY$ is equal to $s-b$, and $CE' = CY$.
+
+\subsection*{Heron's formula}
+This leads to a beautiful, simple proof of Heron's formula.  
+
+It depends on the fact that two triangles in the figure above are similar.
+\begin{center} \includegraphics [scale=0.4] {heron.png} \end{center}
+
+$COE \sim COE'$.
+
+\emph{Proof}.
+
+$O'C$ bisects the angle formed by the tangents to the excircle at $C$, while $OC$ bisects the supplementary angle formed by the tangents to the incircle at $C$.  
+
+Since these lie in right triangles, it follows that $\angle COE = \angle O'CE$.  Thus the  triangles OCE and O'CE' are similar.  The proportion of like sides is:
+\[ \frac{CE}{r} = \frac{r_a}{CE'} \]
+\[ \frac{s-c}{r} = \frac{r_a}{s-b} \]
+\[ r \cdot r_a = (s-b)(s-c) \]
+
+But triangles AOE and AO'E' are also similar right triangles with ratio
+\[ \frac{r}{r_a} = \frac{s-a}{s} \]
+\[ rs = r_a \cdot (s-a) \]
+
+Combining the two results
+\[ rs = \frac{(s-b)(s-c)}{r} \cdot (s-a) \]
+\[ r^2s = (s-a)(s-b)(s-c) \]
+Multiply by $s$
+\[ (rs)^2 = A^2 = s(s-a)(s-b)(s-c) \]
+\[ A = \sqrt{s(s-a)(s-b)(s-c)} \]
+
+which is Heron's formula.  Very elegant.
+
+\subsection*{Heron's proof}
+
+Here we go through Heron's proof of the eponymous theorem (as given by Paul Yiu).  I've stolen the diagram, but switched labels on a few of the points.  The triangle is $ABC$ with incircle radii $OD$, $OE$ and $OF$.
+\begin{center} \includegraphics [scale=0.3] {heron2.png} \end{center}
+$BT$ is drawn equal in length to $AD$.  Two right triangles are drawn on the diameter of a circle $LC$, so $B$ and $O$ lie on the circle.
+
+As usual, the whole triangle is the sum of three pairs of equal triangles whose total base is the semiperimeter and altitude is equal to the radius $EO$.  $CT$ is drawn to be equal to the semiperimeter, hence the area of the triangle is $CT \cdot OE$.
+
+The total angle at $L$ is equal to $\angle AOD$.  \emph{Proof}.  Because $L$ and $\angle BOC$ are opposing angles in a quadrilateral inscribed into a circle, they are supplementary.  But the components of $\angle BOC$ ($\angle BOE$ and $\angle COE$) are, together with $\angle AOD$, one-half the total angle at $O$.  
+
+Thus $\angle BOC + \angle AOD$ are together equal to two right angles.  Hence $\angle L = \angle AOD$.
+
+As a result, we have two pairs of similar right triangles:  $\triangle CBL \sim \triangle AOD$ and $\triangle LBK \sim EKO$ (since $OE \parallel BL$).
+\begin{center} \includegraphics [scale=0.3] {heron2.png} \end{center}
+We have to follow quite a long chain of ratios.
+
+From the first pair of similar triangles, we have the ratio of bases as
+\[ \frac{BC}{BL} = \frac{AD}{DO} \]
+Rearranging:
+\[ \frac{BC}{AD} = \frac{BL}{DO} \]
+Substituting $BT = AD$ and $EO = DO$
+\[ \frac{BC}{BT} = \frac{BL}{EO} \]
+
+From the second pair we have
+\[ \frac{BL}{BK} = \frac{OE}{KE} \]
+\[ \frac{BL}{OE} = \frac{BK}{KE} \]
+Hence
+\[ \frac{BC}{BT} = \frac{BK}{KE} \]
+The rest is relatively straightforward.
+
+Adding $1$ to both sides
+\[ \frac{BC+BT}{BT} = \frac{BK+KE}{KE} \]
+\[ \frac{CT}{BT} = \frac{BE}{KE} \]
+\begin{center} \includegraphics [scale=0.3] {heron2.png} \end{center}
+
+Rearranging
+\[ CT = BT \cdot \frac{BE}{KE} \]
+Multiply top and bottom by $CE$:
+\[ CT = BT \cdot \frac{BE}{KE} \cdot \frac{CE}{CE} \]
+$\triangle COK$ is right, thus $OE^2 = CE \cdot KE$ and 
+\[ OE^2 \cdot CT = BT \cdot BE \cdot CE \]
+\[ OE^2 \cdot CT^2 = BT \cdot BE \cdot CE \cdot CT \]
+\[ OE^2 \cdot CT^2 = AD \cdot BE \cdot CE \cdot CT \]
+$\square$
+
+This is Heron's theorem.
+
+
+\end{document}
