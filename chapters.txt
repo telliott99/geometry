@@ -38,7 +38,6 @@ Secant tangent theorem
 Ratio Boxes
 
 Practice with proofs
-Proof by contradiction
 Broken Chord
 Euclid's elements
 Angle bisectors
@@ -53,6 +52,7 @@ Law of Cosines
 
 Applications of similarity
 Menelaus's theorem
+Ceva's Theorem
 Pythagoras by area
 Heron and Excircles
 
@@ -62,11 +62,11 @@ Pentagon
 Polygons
 
 Revisiting proofs
+Proof by contradiction
+Induction
 Ptolemy revisited
-Concurrence
 Stewart and Apollonius
 Pizza theorem
-Induction
 
 Special points
 Four points

@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+\graphicspath{{/Users/telliott/Github-math/figures/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Secant-tangent theorem}
@@ -77,7 +77,7 @@ Therefore $\angle QSP$ is equal to the angle at $R$, and $\triangle PQS$ is simi
 
 Given a point $P$ outside the circle, the external part of any secant times the entire secant is a constant.
 
-One curious thing about this theorem is that these triangles are similar but flipped.
+One curious thing about this theorem is that these triangles are similar, and nested, but flipped.
 
 \[ \frac{PS}{PQ} = \frac{PR}{PT} \]
 
@@ -116,7 +116,16 @@ Note:  we've seen this sort of reverse logic a few times already.  The method ha
 
 The angle $\angle PTQ$ formed by the tangent $PT$ and the chord $QT$ cut off the same arc of the circle as the angle formed at vertex $R$ (see the last example of the previous chapter), so the two angles marked with black dots are equal.
 
-Therefore $\triangle PQT$ is similar to $\triangle PRT$ by AAA, since they also share the angle at $P$.  This gives
+Here is a proof using similar right triangles.
+\begin{center} \include graphics [scale=0.15] {tangent angle.png} \end{center}
+\[ \triangle TPA \sim \triangle TBA \sim \triangle PBT \]
+so
+\[ \angle BAT = \angle BTP \]
+
+Therefore, in this figure
+\begin{center} \includegraphics [scale=0.4] {arcs9c.png} \end{center}
+
+$\triangle PQT$ is similar to $\triangle PRT$ by AAA, since they also share the angle at $P$.  This gives
 
 \[ \frac{PT}{PQ} = \frac{PR}{PT} \]
 
@@ -124,8 +133,7 @@ which can be rearranged easily to the statement of the theorem.
 
 $\square$
 
-We can add a little more to this proof by drawing a diagonal to the tangent point.
-
+We can simplify this proof even more by drawing a diagonal to the tangent point.
 \begin{center} \includegraphics [scale=0.4] {arcs9d.png} \end{center}
 
 Now it is clear that $\angle S = \angle R$ because they both sweep out the arc $QT$.  $\angle QTS$ marked in magenta is complementary to the angle at $S$, marked with a black dot because $\angle SQT$ is a right angle,  by Thales' theorem.
@@ -136,19 +144,31 @@ One application of this theorem is to a determination of the size of the earth. 
 
 \subsection*{power of a point}
 
-The previous results are sometimes united in a definition called the "power" of a point.  Recall that for these three situations
-
+The previous results regarding secants and tangents are sometimes united in a definition called the "power" of a point, which unifies the treatment of points inside and outside the circle.
 \begin{center} \includegraphics [scale=0.5] {ppoint1.png} \end{center}
 
 \url{https://artofproblemsolving.com/wiki/index.php/Power_of_a_Point_Theorem}
 
-we can make the following definition.
+Let's start with a point outside.
+\begin{center} \includegraphics [scale=0.20] {power1.png} \end{center}
+The length of the tangent and the radius are simply related to the distance from any point $P$ to the center of the circle, $d$:
+\[ d^2 = t^2 + r^2 \]
+\[ t^2 = d^2 - r^2 \]
+$d^2 - r^2$ is defined as the \emph{power} $p$ of the point $P$.
 
-Draw a line through a point, which also goes through a circle.  The product of the distance to one intersection with the circle and the distance to the second intersection with the circle, is a constant.  
+From our previous work, we know that 
+\[ p = t^2 = PT^2 = PA \cdot PA' \]
 
-(We use the same point twice in the case where the line is a tangent).
+The definition also works for a point inside the circle.
+\begin{center} \includegraphics [scale=0.20] {power2.png} \end{center}
 
-If the point is \emph{on} the circle, it's a bit strange, but we can say that the point and the first intersection are separated by length zero, so then it still works.
+By the crossed chords theorem:
+\[ PA \cdot PA' = (r+d)(r-d) \]
+\[ = r^2 - d^2 = -p \]
+That is, it works if we use \emph{directed line segments}, so that the product $PA \cdot PA'$ for $P$ inside the circle has its two components pointing in opposite directions, and thus acquires a minus sign.
+
+If the point is \emph{on} the circle, it's a bit strange, but we are at the boundary between $p < 0$ and $p > 0$, so it seems reasonable that $p = 0$ for points on the circle.  And there, of course
+\[ p = d^2 - r^2 = 0 \]
 
 \subsection*{Looking at Euclid}
 
@@ -162,7 +182,7 @@ We resist the temptation to make a dumb joke.
 
 \begin{center} \includegraphics [scale=0.25] {bogie.png} \end{center}
 
-In any event, we'd like to get the widest angular view, giving the largest apparent size of the statue.  If you get too close, the statue is greatly foreshortened and the angle small, and naturally, it is small at a distance.  There must be a best view, in the middle.
+In any event, we'd like to get the widest angle view, giving the largest apparent size of the statue.  If you get too close, the statue is greatly foreshortened and the angle small, and naturally, it is small at a distance.  There must be a best view, in the middle.
 
 Here is Acheson's solution:
 

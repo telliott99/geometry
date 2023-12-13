@@ -220,11 +220,13 @@ As an example, in thinking about isosceles triangles, we've seen various proofs 
 
 \emph{Proof}.
 
-For $\triangle ABC$, if we are given that $AB = AC$, then it follows that the base angles at vertices $B$ and $C$ (marked with black dots) are equal.  The proof (which we gave previously) involves drawing the angle bisector from $A$, the equal angles being marked with an $x$.  
+For $\triangle ABC$, if we are given that $AB = AC$, then it follows that the base angles at vertices $B$ and $C$ (marked with black dots) are equal.
 
-Then, we have SAS, since $AB = AC$, $\angle BAD \cong \angle DAC$ and $AD = AD$ (of course).  It follows that $AD$ is not only the angle bisector, but also the altitude and the median of the original triangle.
+One proof (which we gave previously) involves drawing the angle bisector from $A$, the equal angles being marked with an $x$.  Then, we have SAS, since $AB = AC$, $\angle BAD \cong \angle DAC$ and $AD = AD$ (of course).  It follows that $AD$ is not only the angle bisector, but also the altitude and the median of the original triangle.
 
 $\square$
+
+There is a logical difficulty with the last proof which may be missed.  It depends on the proof that angle bisection can be done.  And \emph{that} proof depends, in turn, on this one.  That is the reason why Euclid uses his famously difficult proof of the theorem, which is discussed \hyperref[sec:Euclid5]{\textbf{here}}.
 
 \subsection*{converse theorems}
 
@@ -450,7 +452,7 @@ Therefore, ASA is sufficient to prove triangle congruence.
 
 \subsection*{a hard problem}
 
-\begin{center} \includegraphics [scale=0.12] {Coxeter_1_9_3_a.png} \end{center}
+\begin{center} \includegraphics [scale=0.15] {Coxeter_1_9_3_a.png} \end{center}
 
 Here's a very tough problem from Coxeter.  I was not able to solve it, but I'm putting it here because it uses a preliminary result that is really important.
 
@@ -469,7 +471,7 @@ That is, $\gamma = \delta$.
 
 Like many problems, the solution starts with an inspired construction.  Find $Q$ such that $AQPD$ is a parallelogram. 
 
-\begin{center} \includegraphics [scale=0.15] {Coxeter_1_9_3_b.png} \end{center}
+\begin{center} \includegraphics [scale=0.20] {Coxeter_1_9_3_b.png} \end{center}
 
 Then $BQPC$ is also a parallelogram.
 
@@ -510,9 +512,9 @@ The arms of $\angle BAQ$ and $\angle CDP$ are both parallel, so the angles are e
 
 So then they are both equal to $\alpha$.
 
-\begin{center} \includegraphics [scale=0.15] {Coxeter_1_9_3_b.png} \end{center}
+\begin{center} \includegraphics [scale=0.20] {Coxeter_1_9_3_b.png} \end{center}
 
-$\angle BAQ$ cuts chord $BQ$.
+$\angle BAQ$ is subtended by chord $BQ$.
 
 The diagonal of $BQPC$  forms equal $\angle BPQ$ and $\angle PBC$ where the latter is equal to $\alpha$.  Therefore
 \[ \angle BAQ = \angle BPQ = \alpha \]
@@ -522,13 +524,13 @@ So by the lemma, $P$ is on the circle and $ABQP$ is concyclic.
 By the inscribed angle theorem
 \[ \angle APB = \gamma + \epsilon = \angle AQB \]
 
-because both angles cut $AB$.
+because both angles are subtended by $AB$.
 
 At the same time:
 \[ \angle AQB = \angle DPC \]
 because both arms of each angle are parallel.
 
-And $\angle CPD = delta + epsilon$.  It follows that $\gamma = \delta$.
+And $\angle CPD = \delta + \epsilon$.  It follows that $\gamma = \delta$.
 
 $\square$
 

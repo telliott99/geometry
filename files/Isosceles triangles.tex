@@ -131,7 +131,7 @@ Thus, $AB = AC$.  And then, as before, there are right angles at the base, and t
 
 $\square$
 
-Euclid's proof of the isosceles triangle theorem is more complicated that what we have given above, and there is a reason for this.  Our proof depends on the existence of the angle bisector, but we haven't actually shown how to do bisect an angle.  And it will turn out that our \hyperref[sec:Euclid9]{\textbf{demonstration}} will depend on this theorem.  
+Euclid's proof of the isosceles triangle theorem is more complicated that what we have given above, and there is a good reason for this.  Our proof depends on the existence of the angle bisector, but we haven't actually shown how to do that.  And it will turn out that our \hyperref[sec:Euclid9]{\textbf{demonstration}} will depend on the Isosceles triangle theorem.  
 
 That's a problem because the reasoning is circular.
 
@@ -186,6 +186,39 @@ But this is absurd.  $PB$ cannot both be equal to and less than $PC$.  Therefore
 $\square$
 
 See \hyperref[sec:perp_bi_converse]{\textbf{here}} for a somewhat fuller explanation.
+
+\subsection*{alternative proof}
+
+After SAS and the two theorems on isosceles triangles, the next is \hyperref[sec:Euclid7]{\textbf{this one}}:  Euclid $I.7$.
+\begin{center} \includegraphics [scale=0.13] {Euclid_I_7.png} \end{center}
+
+Suppose that, lying on the same side of $AB$, we have two points $P$ and $Q$ with $AP = AQ$ and $BP = BQ$.
+
+By the Isosceles triangle theorem, $\triangle APQ$ is isosceles, and so is $\triangle BPQ$. 
+
+Hence
+\[ (1) \ \angle APQ = \angle AQP \]
+\[ (2) \ \angle BPQ = \angle BQP \]
+
+The whole angle at $\angle APQ$ is greater than the part:
+\[ \angle APQ > \angle BPQ \]
+
+By (1)
+\[ \angle AQP > \angle BPQ \]
+
+The whole angle at $\angle BQP$ is greater than the part:
+\[ \angle BQP >  \angle AQP  \]
+
+By (2):
+\[ \angle BPQ >  \angle AQP \]
+
+This is a contradiction.  $\angle AQP$ cannot be both greater than and also less than the same angle, $\angle BPQ$.
+
+Therefore we cannot have $AP = BP$ and $AQ = BQ$.  There cannot be two points on the same side of $AB$ such that their distances to $A$ are equal and also their distances to $B$ are equal.
+
+Going back to the perpendicular bisector
+\begin{center} \includegraphics [scale=0.4] {iso13c.png} \end{center}
+We supposed that $PB = AB$ and $PC = AC$ (and all four are equal as well).  This is a contradiction, according to Euclid I.7.
 
 \subsection*{SSS $\rightarrow$ SAS}
 

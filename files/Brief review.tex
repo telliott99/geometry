@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+\graphicspath{{/Users/telliott/Github-math/figures/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Introduction}
@@ -75,7 +75,47 @@ and the tremendously important general theorem that similar triangles have sides
 
 $\circ$ \ \ \hyperref[sec:similarity_and_ratios]{\textbf{similarity theorems}}
 
+I've decided that we will sneak this proof in here.  If it's too difficult, it is OK to move on.  
 
+\subsection*{Prop. I.5}
+
+One of the most famous proofs in Euclid's book I is the forward version of the isosceles triangle theorem:  if two sides in a triangle are equal, then so are the opposing angles.  It is really only the second proof in all of Euclid (the first three propositions are constructions, and no. 4 is SAS).  It's difficult because Euclid proves it \emph{before} we know how to bisect an angle.
+
+\label{sec:Euclid5}
+
+\begin{center} \includegraphics [scale=0.5] {Euclid_1_5.png} \end{center}
+
+Given AB = AC.  We will prove that the base angles are equal:  $\angle ABC = \angle ACB$.
+
+\emph{Proof}.
+
+Extend those two line segments so that AD = AE.  So then BD = CE by subtraction.  Connect BE and CD.
+
+$\triangle ACD \cong \triangle ABE$ by SAS ($AB = AC$, $AD = AE$, and a shared angle at vertex $A$).
+
+Therefore, the pair of marked angles in the left panel $\angle ABE = \angle ACD$.  And for the same reason, CD = BE. 
+
+We also have that $BD = CE$, and the angle at D equals the angle at E.
+
+Therefore, $\triangle BCD \cong \triangle BCE$ by SAS.
+
+Thus, the angles marked with magenta dots are equal.
+
+But now, black + magenta = red.  Since the latter two pairs are equal, by subtraction, so is the first.
+
+$\angle ABC = \angle ACB$.
+
+$\square$
+
+Notice how the original figure is extended to provide auxiliary shapes helpful in the proof.  This is a common theme.
+
+\subsection*{Prop. I.6}
+
+We proved the converse of I.5 early in the book based on angle bisection.  Later, we will give another proof by contradiction.
+
+The theorem together with its converse says that, in an isosceles triangle, the base angles are equal $\iff$ the two sides sides are equal (not the base).  
+
+The symbol $\iff$ means \emph{if and only if}, so $A \iff B$ means that both $A \rightarrow B$ and $B \rightarrow A$.
 
 
 \end{document}
