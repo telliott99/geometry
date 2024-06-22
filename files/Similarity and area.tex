@@ -1,0 +1,184 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Area}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{similar right triangles}
+
+\label{sec:similar_right_triangles}
+
+We will prove that for similar right triangles, all angles equal implies equal ratios of sides.  Our approach is from Acheson and is based on an observation about area.
+
+\begin{quote}Draw a rectangle ABCD, and a diagonal AC.  Then pick a point E on the diagonal and draw lines through it parallel to the sides.\end{quote}
+
+\begin{center} \includegraphics [scale=0.6] {Acheson_G42.png} \end{center}
+
+All of the right triangles in the figure are similar.  Start with the alternate interior angles theorem, then use complementary angles in a right triangle, and finish with vertical angles.  
+
+By changing the height of the figure, we can obtain any two complementary angles we wish.  And by changing the placement of $E$ we can get any ratio we like.
+
+So then, the two shaded rectangles are bisected by the diagonal $AEC$ (\emph{proof}:  this is a basic property of rectangles;  we have congruent $\triangle$ by SSS).  So the two light-gray triangles have equal area, and the two dark gray ones do as well.
+
+But $\triangle ABC$ and $\triangle ADC$ also have equal area.
+
+Therefore, we just subtract equal areas to find that the two unshaded rectangles above and below the diagonal are equal in area.  The one on top has area $bc$ and the one below has area $ad$.  We have
+
+\[ bc = ad \]
+\[ \frac{a}{c} = \frac{b}{d} \]
+and also
+\[ \frac{a}{b} = \frac{c}{d} \]
+
+$\square$
+
+Corresponding sides are in the same proportion, but also the ratio of the two sides is the same for similar triangles.  Don't mix them up however, the ratios are different.
+
+\subsection*{similar parts and the whole}
+
+\label{sec:parts_and_whole}
+
+We showed that the two smaller triangles have corresponding sides in proportion. 
+
+But the large triangle (one-half of the entire rectangle) has the same angles, and should have the same ratios.  Here is a simple manipulation to obtain that result:
+
+\begin{center} \includegraphics [scale=0.4] {Acheson_G42b.png} \end{center}
+
+\[ bc = ad \]
+\[ bc + ab = ad + ab \]
+\[ b(a + c) = a(b + d) \]
+\[ \frac{a}{b} = \frac{a + c}{b + d} \]
+
+Given any two of these relationships we can derive the third.  This is the same math in reverse.
+
+\[ \frac{a + c}{b + d} = \frac{c}{d} \]
+\[ (a + c)d = c(b + d) \]
+\[ ad + cd = bc + cd \]
+\[ ad = bc \]
+
+$\square$
+
+\subsection*{hypotenuse in proportion}
+
+The proof we gave only involves the two shorter sides of similar right triangles.  It is natural to ask, what about the hypotenuse?
+
+Consider any right triangle.  Drop the altitude to the hypotenuse.
+
+Using complementary angles, we can show easily that the two new smaller triangles formed by the altitude are similar to each other and to the original large one.
+\begin{center} \includegraphics [scale=0.45] {triangle3.png} \end{center}
+Now, write the ratio of the long to the short side \emph{for each one} of the three triangles:
+\[ \frac{h}{x} = \frac{y}{h} = \frac{b}{a} = k \]
+
+From our previous theorem we know this equality is valid.
+
+However the same statement can be viewed in a different way.  
+
+$b/a$ is the ratio for the hypotenuse of the medium triangle compared to the small one.  
+
+And $y/h$ is the ratio of the long side in the medium triangle to the long side in the small one.
+
+They are equal, and this completes the proof!
+
+$\square$
+
+We can also give an algebraic proof, by looking ahead to the Pythagorean theorem.  As you likely know, for a right triangle with sides $a$ and $b$ and hypotenuse $g$:
+\[ a^2 + b^2 = g^2 \]
+
+We can use the Pythagorean theorem to prove that:
+\[ \frac{a}{c} = \frac{b}{d} = \frac{g}{h} \]
+
+\emph{All} of the sides of two similar right triangles have the same ratio.  
+
+We must be careful, however.  A deep connection exists between similarity, area and the Pythagorean theorem.  It is important that we will have Euclid's proof of the Pythagorean theorem, and that proof depends on SAS rather than on similarity.
+
+Equal ratios extends to the hypotenuse.
+
+\emph{Proof}.
+
+Start with 
+\[ \frac{a}{c} = \frac{b}{d} = k \]
+\[ a = kc, \ \ \ \ \ \ b = kd \]
+\[ a^2 + b^2 = k^2c^2 + k^2d^2 \]
+\[ g^2 = k^2h^2 \]
+
+Since these are lengths, we can take the positive square root and obtain
+
+\[ \frac{g}{h} = k \]
+\[ = \frac{a}{c} = \frac{b}{d} \]
+
+$\square$
+
+Thus, AAA similarity is established for right triangles.  If either of the smaller angles matches between two right triangles, then they are not only similar but all the side lengths are in the same ratio as well.
+
+Getting the converse, going from equal ratios to equal angles, uses a result about parallelograms.  Also, the proofs apply not just to right triangles, but to triangles of any type.  For that reason, we defer further development of similarity to a later chapter.
+
+\subsection*{area}
+The area of a triangle is one-half the base times the height, and this is independent of which base and which height we choose.  The ratios given by similarity provide a simpler proof than counting small triangles, as we did before.
+
+\begin{center} \includegraphics [scale=0.12] {pyth_corollary3.png} \end{center}
+
+In $\triangle ABC$ draw altitudes to sides $AB$ and $BC$.  Because they are right triangles with shared acute $\angle C$, $\triangle CFA \sim \triangle CGB$.  Thus
+\[ \frac{AF}{AC} = \frac{BG}{BC} \]
+\[ AF \cdot BC = BG \cdot AC \]
+
+A similar construction can be done for any pair of sides.
+
+$\square$
+
+\subsection*{orthocenter:  Newton's proof}
+
+\label{sec:Newton_altitude}
+
+As we've said, the orthocenter is the point where all three altitudes cross.
+
+\begin{center} \includegraphics [scale=0.6] {orthocenter2.png} \end{center}
+
+An altitude is a line drawn from any vertex to the opposing side, forming a right angle with the base, thereby dividing the triangle into two right triangles.
+
+\begin{center} \includegraphics [scale=0.4] {newton2.png} \end{center}
+
+In the left panel, we draw the altitude from the vertex $C$ down in $\triangle ABC$ to meet the base at a right angle.
+
+The altitude divides the base into lengths $a$ and $b$.  Now draw a second altitude from vertex $A$ to the side opposite (left panel).  
+
+What is the height $h$ above the base where the two lines cross?
+
+The small triangle with sides $a$ and $h$ and the large triangle $\triangle BCD$ are similar, which means that the angles marked with magenta dots are equal.  The reason is that they are both right triangles that have equal vertical angles.  Therefore the marked angles are also equal.
+
+Similar triangles have equal ratios for the corresponding sides.  This is a very important theorem in geometry which we haven't completely proved yet, and we will spend several chapters on the idea later.  However, we have proved it for right triangles, which these are.
+
+In the small triangle the side opposite the marked angle ($\angle BAC$) has length $h$, while the entire length of the altitude is $L$.  By similar triangles
+
+\[ \frac{h}{a} = \frac{b}{L} \]
+
+(the side opposing the marked angle is in the numerator on both sides).  So the height $h$ is
+
+\[ h = \frac{ab}{L} \]
+
+The formula is noteworthy because it is symmetrical in $a$ and $b$ and does not contain any term related to side $AC$, opposite vertex $B$.
+
+Therefore, if we draw the third altitude to side $BC$, opposite vertex $A$, we can calculate that it crosses the vertical altitude at the same height $h = ab/L$ (right panel).
+
+This means that the three altitudes cross at a single point, at height $h$.
+
+\begin{center} \includegraphics [scale=0.5] {newton3.png} \end{center}
+
+Newton published this proof about 1680.
+
+\end{document}

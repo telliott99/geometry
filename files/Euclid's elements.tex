@@ -1,0 +1,382 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Euclid's Elements}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this chapter we will study some \emph{Propositions} from the first volume of Euclid's \emph{Elements}.
+
+This book was put together as a compendium of geometry for students.  One thing we will see is how the propositions build on one another to make a dependent chain.
+
+\subsection*{Prop. I.4}
+
+\label{sec:Euclid4}
+
+\begin{quote}If two triangles have two sides equal to two sides respectively, and have the angles contained by the equal straight lines equal, then they also have the base equal to the base, the triangle equals the triangle, and the remaining angles equal the remaining angles respectively, namely those opposite the equal sides.\end{quote}
+
+\begin{center} \includegraphics [scale=0.4] {PI_4a.png} \end{center}
+
+This is a method for proving congruence (equality) of two triangles 
+\[ \triangle ABC \cong \triangle DEF \]
+
+Elsewhere in this book we would call the method SAS or \emph{side angle side}.  Given that $AB = DE$ and $AC = DF$ and that the angles between them at the vertices $A$ and $D$ are also equal, the two triangles are congruent:  all three angles and all three sides are equal.
+
+This (P $I.4$) is a proof that SAS is correct.
+
+The proof is by superposition.  The facts establish the positions of the points $B$ and $C$, which determines $AB$ and so the angles at vertices $B$ and $C$.
+
+Euclid says that if we lift up $\triangle ABC$ and lay it on top of $\triangle DEF$ then $B$ coincides with $E$ and $C$ coincides with $F$ so $BC = EF$.
+
+$\square$
+
+This seems perhaps a little shaky logically, and it's not a method of proof that Euclid uses much.
+
+But one might instead have taken this proposition as a postulate.  The source, above, says that David Hilbert claims that under the hypotheses of the proposition it is true that the two base angles are equal, and then proves that the bases are equal.
+
+We have used (in the chapter on congruence) SAS to prove SSS, that for congruent triangles all three sides are equal.
+
+\subsection*{Prop. I.5}
+
+\label{sec:Euclid5}
+
+Euclid's proofs of the isosceles triangle theorem and its converse are \hyperref[sec:Euclid5]{\textbf{Prop $I.5$}} and \hyperref[sec:Euclid6]{\textbf{Prop $I.6$}}.
+
+The proof of the forward theorem is one of the most famous proofs in Euclid's book I:  if two sides in a triangle are equal, then so are the opposing angles.  It is really only the second proof in all of Euclid (the first three propositions are constructions, and no. 4 is SAS).  
+
+It's difficult precisely because Euclid proves it \emph{before} we know how to bisect an angle.
+
+\begin{center} \includegraphics [scale=0.5] {Euclid_1_5.png} \end{center}
+
+Given AB = AC.  We will prove that the base angles are equal:  $\angle ABC = \angle ACB$.
+
+\emph{Proof}.
+
+Step 1.  
+
+$\circ$ \ Extend $AB$ and $AC$ so that $AD = AE$.  So then BD = CE by subtraction.  Connect BE and CD.  
+
+$\circ$ \ $\triangle ACD \cong \triangle ABE$ by SAS ($AB = AC$, $AD = AE$, and they share the angle at vertex $A$).
+
+Step 2.
+
+$\circ$ \  Therefore, a pair of angles is marked equal in the left panel:  $\angle ABE = \angle ACD$.  Also from the above congruence, CD = BE,  We are given that $BD = CE$, and from step 1, $\angle D$ equals $\angle E$.  
+
+$\circ$ \  Therefore, $\triangle BCD \cong \triangle BCE$ by SAS.  Thus, the angles marked with magenta dots are equal.
+
+Step 3.  
+
+$\circ$ \ But now, black + magenta = red.  Since the latter two pairs are equal, by subtraction, so is the first.  $\angle ABC = \angle ACB$.
+
+$\square$
+
+Notice how the original figure is extended to provide auxiliary shapes helpful in the proof.  This is a common theme.
+
+\subsection*{Prop. I.6}
+
+We proved Euclid I.6, which is the converse of I.5, early in this chapter, based on angle bisection.  Now that we have proved I.5, which provides the basis for bisection, this is logically solid.  Later, we will give another proof by contradiction.
+
+\subsection*{$\iff$}
+
+The theorem together with its converse says that, in an isosceles triangle, the base angles are equal $\iff$ the two sides sides are equal (not the base).  
+
+The symbol $\iff$ means \emph{if and only if}, so both base angles equal $\rightarrow$ two sides equal  \emph{and} two sides equal $\rightarrow$ base angles equal.
+
+Here are several more propositions from Euclid's first book.  They are short, sweet and powerful.  
+
+\subsection*{Prop. I.7}
+
+\label{sec:Euclid7}
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7c.png} \end{center}
+
+$\bullet$  \ Let $\triangle ABC$ be drawn and a point $D$ be chosen on the same side of $AB$ as $C$ lies.  It cannot be true that both $AC = AD$ and $BC = BD$. 
+
+\emph{Proof}.
+
+Suppose that both statements are true: $AC = AD$ and $BC = BD$.
+
+Then $\triangle ACD$ is isosceles so $\angle ACD = \angle ADC$.
+
+We notice that 
+\[ \angle BCD < \angle ACD = \angle ADC < \angle BDC \]
+
+But since $\triangle BCD$ is also isosceles, $\angle BCD = \angle BDC$.
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7c.png} \end{center}
+
+This is a contradiction.  Therefore it cannot be that both $AC = AD$ and $BC = BD$.
+
+$\square$
+
+Going back to the perpendicular bisector
+
+\begin{center} \includegraphics [scale=0.4] {iso13c.png} \end{center}
+We supposed that $PB = AB$ and $PC = AC$ (and all four are equal as well).  This is a contradiction, according to Euclid I.7.
+
+\subsection*{revisit Euclid I.7}
+However, there is a problem with our proof of Euclid I.7.  Recall that $AC = AD$ and it is supposed that $BC = BD$.
+
+\begin{center} \includegraphics [scale=0.13] {Euclid_I_7c.png} \end{center}
+Notice that the point $D$ is drawn so that it is not contained within $\triangle ABC$.  But suppose it were?  
+
+This illustrates a problem with drawing diagrams, we may introduce unrecognized assumptions into the proof.  The most common is to draw an acute triangle and presume it stands for all triangles.  Here the problem is that the proof given before makes no sense if $D$ lies inside $\triangle ABC$.
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7d.png} \end{center}
+
+\emph{Proof} (Alternate).
+
+We can find a different proof for this case in several ways.  Suppose $AC = AD$ and $BC = BD$.  Then $\triangle ABC \cong \triangle ABD$ by SSS, since $AB$ is shared.
+
+But the base angles are \emph{not} equal (e.g. $\angle CAB > \angle DAB$).  This is a contradiction.
+
+$\square$
+
+This leads to a second difficulty, SSS is Euclid I.8, and Euclid actually proves I.8 by relying on I.7!
+
+Luckily, we have a proof of SSS (given in the isosceles triangle chapter) that does not depend on I.7, so this could still work.
+
+Perhaps a better solution is this:  
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7d.png} \end{center}
+
+\emph{Proof}.
+
+Suppose that both $AC = AD$ and $BC = BD$.
+
+Then $\triangle ACD$ is isosceles so $\angle ACD = \angle ADC$.  Euclid I.5 says that the supplementary angles are also equal.  $\angle ECD = \angle FDC$.
+
+We notice that 
+\[ \angle BCD < \angle ECD = \angle FDC < \angle BDC \]
+
+But since $\triangle BCD$ is also isosceles, $\angle BCD = \angle BDC$. 
+This is a contradiction.  Therefore it cannot be that both $AC = AD$ and $BC = BD$.
+
+$\square$
+
+[ Another idea might be to use Euclid I.21, which says that if $D$ lies inside $\triangle ABC$, then $AD + BD < AC + BC$,  but that proposition turns out to be dependent through several steps, on I.8. ]
+
+\subsection*{Prop. I.16}
+
+In the other four examples from \emph{Elements}, we use letters late in the alphabet ($s, t, u, v$) for angles, while $a, b, c$ are labels for sides.
+
+\label{sec:Euclid16}
+
+$\bullet$  \ In any triangle, if one of the sides is produced (extended), then the exterior angle is greater than either of the interior and opposite angles.
+
+\begin{center} \includegraphics [scale=0.4] {PI_16a.png} \end{center}
+
+The claim is that the exterior angle $x$ is greater than either of the interior angles:  $s$ or $t$.  
+
+\emph{Proof}.
+
+Find the midpoint of the side opposite $s$ and draw the indicated line segment (below), so that the two segments marked with black arrows are equal, as well as the segments marked with red arrows.  
+\begin{center} \includegraphics [scale=0.4] {PI_16b.png} \end{center}
+
+By SAS and the vertical angle theorem, the two smaller triangles to the left and right are congruent, as indicated in the right panel by the labels on the angles:  $t = t', u = u', v = v'$.
+
+The original external angle $x$ is seen to be composed of $t' + w$, that is
+\[ x = t' + w \]
+so clearly (the whole is greater than its parts):
+\[ x > t' \]
+but since $t = t'$:
+\[ x > t \]
+
+We can make a similar construction and proof for angle $s$.
+
+The exterior angle is greater than either of the interior and opposite angles.
+
+$\square$
+
+One might ask why Euclid doesn't use supplementary angles to obtain a stronger proof.  The main reason is that he has not yet proved the triangle sum theorem.  That is Euclid $I.32$.
+
+However, we did previously show a proof of the triangle sum theorem, that the sum of angles in any triangle is equal to two right angles.  
+
+And you were asked then to find the relationship between an external angle and the angles of the corresponding triangle.  Here is our version of that proof.
+
+\subsection*{external angle theorem}
+
+\label{sec:external_angle_theorem}
+
+$\bullet$ \ the external angle is equal to the sum of two internal angles
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.4] {PI_16d.png} \end{center}
+
+As supplementary angles, $u + u' =$ two right angles.  As the three angles of a triangle, $s + t + u =$ two right angles as well.
+
+But things equal to the same thing are equal to each other:
+\[ u + u' = s + t + u \]
+
+Subtracting equals from equals:
+\[ u' = s + t \]
+
+$\square$
+
+This relationship is fundamental.
+
+The next theorem is also extremely useful, and it follows from Euclid I.16.
+
+\subsection*{Prop. I.18}
+
+\label{sec:Euclid18}
+
+$\bullet$  \ Comparing two sides in any triangle, if one side is longer than the other, then the angle opposite is larger.
+
+\begin{center} \includegraphics [scale=0.4] {PI_18a.png} \end{center}
+
+\emph{Proof}.
+
+Given that side $b > a$, mark off $a$ on $b$.
+
+\begin{center} \includegraphics [scale=0.4] {PI_18b.png} \end{center}
+
+By the external angle theorem (I.16)
+\[ v > t \]
+
+
+
+But $v = s'$ (by isosceles $\triangle$, $I.5$) so 
+\[ s' > t \]
+And since $s > s' $
+\begin{center} \includegraphics [scale=0.4] {PI_18a.png} \end{center}
+\[ s >  s' > t \]
+
+$\square$
+
+We get the converse almost for free.
+
+\subsection*{Prop. I.19}
+
+\label{sec:Euclid19}
+
+$\bullet$  \ Comparing two angles in any triangle, if one angle is larger than the other, then the side opposite is longer.
+
+\begin{center} \includegraphics [scale=0.4] {PI_18a.png} \end{center}
+
+\emph{Proof}.
+
+We are given $s > t$ and claim that $b > a$.
+
+We proceed by eliminating the other two possibilities.  Rewrite the order of terms as $t < s$, with the claim $a < b$.
+
+It cannot be that $a = b$ because then $s = t$ by isosceles $\triangle$ ($I.5$), but we are given $s > t$.
+
+So then suppose $a > b$.  By the previous proposition ($I.18$), we would have that $t > s$.  But this is again contrary to what we were given.  
+
+Since the other two possibilities are eliminated, we must have $a < b$.
+
+$\square$
+
+We have made use of what's called a trichotomy.  There are only three possibilities:
+\[ a < b, \ \ \ \ \ \ a = b, \ \ \ \ \ \ a > b \]
+
+This applies to line segments and angles as well as many other things.
+
+\subsection*{Prop. I.20.  Triangle inequality}
+
+\label{sec:triangle_inequality}
+
+$\bullet$  \ In any triangle, the longest side is smaller than the sum of the two shorter sides.  
+
+Clearly, if a given side is not the longest, so it is shorter than one of the others, then it must also be shorter than the sum of that other one plus the third.  For this reason, we consider only the longest side.
+
+\begin{center} \includegraphics [scale=0.4] {triangle_inequality3.png} \end{center}
+
+Given that side $AC$ is the longest in $\triangle ABC$.
+
+Extend side $BC$ so that $BD = AB$.  By Euclid $I.5$, $\triangle ABD$ is isosceles.
+
+Then $\angle D$ is smaller than $\angle DAC$ and therefore, by Euclid $I.19$ just above, $AC$ is less than $DC$.  But $DC$ is equal to the sum of the two smaller sides of $\triangle ABC$.  Hence
+
+\[ AC < AB + BC \]
+
+$\square$
+
+An equivalent statement is the famous ``a straight line is the shortest distance between two points''.
+
+The triangle inequality has corresponding statements and proofs in other parts of mathematics including real and complex analysis.
+
+This is enough of the \emph{Elements} to give us a good taste of the basics of Greek geometry of lines and triangles, and methods of proof.
+
+\subsection*{angle of reflection}
+
+Suppose we shine a light at a mirror, or just look at the reflection of someone else, or even our own outstretched hand.  The question arises, what determines the path of the light or the image as it travels to the eye?  Heron of Alexandria discovered a proof of the answer in about 100 A.D.
+
+The diagram shows two \emph{possible} paths light might take, but there is only one path that it \emph{does} take, shown in the right panel.  Light takes the path where it reaches our eyes the fastest.
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_G46.png} \end{center}
+
+What is this path?  What is the angle the ray of light makes with the mirror?  This angle is called the angle of reflection.
+
+Draw $\triangle POB'$, imagined to be on the other side of the mirror, with $B$ the same distance away from the mirror as $B'$, but on the other side.  The two triangles $\triangle BPO$ and $\triangle B'PO$ are congruent by SAS.
+
+Clearly, the shortest distance from $A$ to $B'$ is a straight line, by the triangle inequality.
+
+So the result is that $\angle APQ$ equals $\angle B'PO$, which (by congruent triangles) equals $\angle BPO$.  This is usually stated as "the angle of incidence is equal to the angle of reflection."
+
+\subsection*{smallest perimeter}
+
+\label{sec:smallest_perimeter}
+
+Show that for two triangles with the same area, an isosceles triangle has the \emph{smallest} perimeter. 
+
+\emph{Proof}.
+
+We suppose that the base of the isosceles triangle $\triangle ABC$ is equal to one of the sides of the other triangle $\triangle ABD$.  If we would need to re-scale one side to have equality, we could then make a corresponding change in the altitude to that side to maintain equal area.
+
+The equal area constraint means that points $C$ and $D$ lie along a horizontal line parallel to the common base $AB$.
+
+\begin{center} \includegraphics [scale=0.5] {least_perimeter1.png} \end{center}
+
+Draw a vertical from $B$ to meet the extension of $AC$ at $K$.  Extend $CD$ to meet $KB$ at $H$ and also draw $DK$.
+
+We're given that $AC = BC$ and so $\angle CAB = \angle CBA$ (magenta dots).
+
+\begin{center} \includegraphics [scale=0.5] {least_perimeter2.png} \end{center}
+
+It follows that other angles are also equal to those two (by alternate interior angles).
+
+\begin{center} \includegraphics [scale=0.5] {least_perimeter3.png} \end{center}
+
+$\angle BCH = \angle ABC$ and $\angle KCH = \angle CAB$.  
+
+Since $\angle CAB = \angle ABC$, it follows that $\angle BCH = \angle KCH$.
+
+The angles at $H$ are right angles, since $BK$ is perpendicular to $AB$ and $CH$ is parallel to $AB$.
+
+Therefore $\triangle CHK \cong \triangle BCH$ by ASA, so $BC = CK$.  
+
+Similar reasoning will give that $BD = DK$.
+
+But now by the triangle inequality:
+\[ AC + CK < AD + DK \]
+Substituting from above
+\[ AC + BC < AD + BD \]
+Add $AB$ to both sides
+\[ AC + BC + AB < AD + BD + AB \]
+
+The perimeter of $\triangle ABC$ is less than that of $\triangle ABD$.
+
+$\square$
+
+
+
+\end{document}

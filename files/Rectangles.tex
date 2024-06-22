@@ -1,0 +1,243 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Rectangles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Polygons are figures constructed from straight sides, called line segments.  If the sides are all the same length, the figure is called a \emph{regular} polygon.
+
+A polygon may have $3$, $4$, $5$ or more sides.  There is a famous theorem from Gauss that involves the construction of a 17-sided regular polygon.
+
+In this chapter we deal with four-sided polygons, also called quadrilaterals.
+
+\subsection*{quadrilaterals}
+
+There are a number of types, some of which are:
+
+$\circ$ parallelogram: opposite sides equal and parallel, opposite angles equal
+
+$\circ$ rectangle:  a parallelogram with four right angles
+
+$\circ$ square:  a rectangle with four sides equal 
+
+\begin{center} \includegraphics [scale=0.35] {rect4.png} \end{center}
+
+We specify these shapes according to the most restrictive conditions they meet.  Usually, when we think about a parallelogram we mean one without right angles, and when we think about a rectangle, we mean one that is not a square.
+
+There are three more quadrilaterals that we mention in passing:
+
+$\circ$ rhombus:  special type of parallelogram with all sides equal
+
+$\circ$ trapezoid: just two sides parallel
+
+$\circ$ kite: pairs of \emph{adjacent} sides equal
+
+\begin{center} \includegraphics [scale=0.35] {rect5.png} \end{center}
+
+\subsection*{rectangles}
+
+As we said, rectangles are four-sided polygons with opposing sides both equal and parallel, and all vertices containing right angles.
+
+Let's think about the minimum conditions that establish whether a given figure is a rectangle.
+
+It is clearly not enough just to have opposing sides equal and parallel, because the parallelogram satisfies those conditions and yet it does not have the right angles.
+
+Here is a preliminary theorem we will use.
+
+$\bullet$ \ The sum of the internal angles in any quadrilateral  is equal to four right angles.  
+
+\emph{Proof}. 
+
+Connect two opposing vertices to form two triangles.  Use the triangle sum theorem, then add the component angles at all four vertices.
+
+$\square$
+
+For more, see \hyperref[sec:induction_chapter]{\textbf{here}}.
+
+In considering a shape that might be a rectangle, and given only some of these properties, the rest may follow.  For example, if we know that all four of the vertices are right angles, then the shape is a rectangle.  
+
+\emph{Proof}.
+
+From the right angles it follows that opposing sides are parallel.  Draw one diagonal and mark equal angles by alternate interior angles.  Then we have SAS.  Equal opposing sides follows easily.
+
+$\square$
+
+By the sum theorem above, if three vertices are right angles, then the fourth must also be right.  Hence, the shape is a rectangle.  We might write this as:
+
+3 $\angle$ right  $\Rightarrow$ 4 $\angle$ right  $\Rightarrow$ Rectangle.
+
+However, two right angles are not enough, as counter-examples are easily constructed for both cases (right angles as either neighbors or opposite one another).
+
+\begin{center} \includegraphics [scale=0.35] {rect3.png} \end{center}
+
+In the left panel $\angle A$ and $\angle B$ are right angles, and in the middle panel, $\angle F$ and $\angle H$ are right angles.  But neither $ABCD$ nor $EFGH$ is a rectangle.
+
+Even if both pairs of sides are equal and parallel, and we don't know there is a right angle, that's not enough by itself.  The rhombus $PQRS$ is a special case of the parallelogram, which is a polygon that we will study in some detail later.  
+
+But add one known right angle, and the shape must be a rectangle, because the parallel property gives us more right angles by the alternate interior angles theorem.
+
+Here's another way to prove the same thing.
+
+Let $AD = BC$ and let $\angle A$ and $\angle B$ both be right angles.  $ABCD$ is a rectangle.
+
+\begin{center} \includegraphics [scale=0.35] {rect8.png} \end{center}
+
+\emph{Proof.}
+
+Bisect $AB$ at $E$ and draw the half-diagonals.  $\triangle ADE \cong \triangle BCE$ by SAS.  Therefore $ED = EC$ so the angles marked with a red dot are equal by the forward isosceles theorem.  
+
+The other components of $\angle C$ and $\angle D$ are equal because of the congruent triangles, so $\angle C = \angle D$.  
+
+By the angle sum theorem for quadrilaterals $\angle A + \angle B = \angle C + \angle D$.  
+Because $\angle A = \angle B$ and $\angle C = \angle D$, we obtain $2 \angle A = 2 \angle C$ and then $\angle C = \angle A$, a right angle.  Thus, all four angles are right angles.
+
+$\square$
+
+\subsection*{connection to right triangles}
+
+Rectangles are closely related to right triangles, because a diagonal can always be drawn in a rectangle to produce two identical right triangles.  
+
+Conversely, an identical copy of a right triangle joined to itself after rotation, forms a rectangle.  Further, an identical copy of any triangle joined to itself after rotation forms, at least, a parallelogram.
+
+In the figure below, this has been done with a right triangle.  The vertices of the quadrilateral are all right angles.  This is obviously true for the original right angles, but it's also true for $\angle A$ and $\angle C$.  For each of those angles the two component angles are complementary, so they add up to one right angle.
+\begin{center} \includegraphics [scale=0.35] {rect.png} \end{center}
+
+Suppose we start with a right triangle, form a copy, and rotate it.  Then all the components are equal, so $\angle B$ and $\angle D$ are both right angles, and also $AB = CD$ and $AD = BC$.  The other vertices are formed from complementary angles so they are right angles as well.
+
+We can see other properties just by considering symmetry.  The rectangle has mirror image symmetry by reflection in both the left-right and top-bottom dimensions.  As a result, the black-dotted angles in the figure below are equal, and so are the red ones.
+
+\begin{center} \includegraphics [scale=0.35] {rect2.png} \end{center}
+And in turn, that implies that all four segments from a vertex to the central point are equal in length, by the converse of the isosceles triangle theorem.
+
+Going back to the first figure and reasoning more formally, we had that $\triangle ABC \cong \triangle ACD$.
+\begin{center} \includegraphics [scale=0.35] {rect.png} \end{center}
+
+Therefore, the black-dotted angles are equal.  But this means that $AB \parallel CD$, by alternate interior angles.  Also because of the congruent triangles, the second pair of opposing sides are equal.  $BC = AD$. 
+
+I claim that $\triangle ABM \cong \triangle CDM$.  
+
+\emph{Proof}.  
+
+The angles at $M$ are equal by vertical angles, the black-dots are equal, so the red ones are too.  Since $AB = CD$, the result follows.  
+
+$\square$
+
+Because $\triangle ABM \cong \triangle CDM$, $M$ is the midpoint of both diagonals:  $AM = MC$ and $BM = MD$.  
+
+But the whole diagonals are equal (since $\triangle ABC \cong \triangle BCD$ by SAS or SSS), so the halves must be as well.  Since $AM = BM$, the red- and black-dotted angles are equal, by the isosceles triangle theorem.
+
+Any right triangle can be duplicated and then formed into a rectangle in this way.  
+
+Therefore, a line from the vertex that is a right angle in a right triangle, to the midpoint of the hypotenuse, forms two isosceles triangles, and the length of that line is equal to one-half of the hypotenuse.
+
+We will see other proofs of the \textbf{midpoint theorem} later.
+
+\subsection*{bisection of a rectangle}
+
+\label{rectangle_bisection}
+
+Suppose we are given that $ABCD$ is a rectangle and that $EF$ is the perpendicular bisector of one of the sides, say $AD$.  Then $AE$ is also the perpendicular bisector of the other side, $BC$.
+
+\begin{center} \includegraphics [scale=0.35] {rect6.png} \end{center}
+
+\emph{Proof}.
+
+Draw the diagonals of the two small quadrilaterals, namely $AF$ and $DF$.
+
+Then $\triangle AEF \cong \triangle DEF$ by SAS, using the right angles at $E$.  But $\triangle AEF$ is also congruent to $\triangle ABF$ (by SSS or SAS).  Reasoning in the same way, and using transitivity, we have four congruent right triangles.
+
+It follows easily that the two small rectangles $ABFE$ and $DCFE$ are congruent, so $\angle BFE$ and $\angle CFE$ are right angles, with $BF = CF$.
+
+Therefore $EF$ is the perpendicular bisector of $BC$.
+
+$\square$
+
+\subsection*{area of a rectangle}
+
+Let's just say a few words about rectilinear area, the area of shapes like squares or rectangles with perpendicular sides.  We will then extend this to the areas of triangles and parallelograms, which are like squashed rectangles.
+
+To find areas, we must first fix a unit length.  For now, in geometry, we will need an even number of units for each dimension.  (There is an exception, but it occurs in a case where we only care about the squared area --- see the chapter on the Pythagorean theorem).
+
+Suppose that, in the figure below, the small squares have side lengths of 1 cm, and 6 squares stack vertically and 8 horizontally to fill the shape.
+
+\begin{center} \includegraphics [scale=0.35] {area5.png} \end{center}
+Just multiply the width by the height (in cm) to obtain $48$ cm$^2$.
+
+But then suppose instead that the squares have side lengths of $2.54$ cm.  Define $1$ in $= 2.54$ cm.  The total area would be $48$ in$^2$.
+
+This particular figure above (from Lockhart) shows the distributive law in action:
+\[ (3 + 5) \cdot (4 + 2) \]
+\[ =3 \cdot 4 + 3 \cdot 2 + 5 \cdot 4 + 5 \cdot 2 \]
+\[ = 48 \]
+Any combination of numbers that add up to $8$, times any combination of numbers that add up to $6$, gives the same result.
+
+\subsection*{problem}
+
+From Jacobs, chapter 9.  
+
+\begin{center} \includegraphics [scale=0.4] {sciam2.png} \end{center}
+
+Suppose each of $A$ through $I$ is a square, and the areas of squares $C$ and $D$ are 64 and 81, respectively.  
+
+Can you find the areas of all the other squares?  
+
+Is the entire figure a square?  What is the total area?
+
+\subsection*{problem}
+
+Next is a problem from the web.  Given three identical squares arranged as follows:
+\begin{center} \includegraphics [scale=0.75] {gardner7.png} \end{center}
+what is the sum of the two angles?
+
+\[ \angle AOC + \angle BOC = \ \text{?} \]
+
+There is a simple solution, to be obtained without measuring or using trigonometry.
+
+As in so many problems, the key is to draw an inspired diagram, one that extends the figure somehow.  Here, a major hint was provided, namely, a grid of squares.
+\begin{center} \includegraphics [scale=0.5] {gardner6b.png} \end{center}
+
+So let's draw the same angles using that grid and form a triangle.
+\begin{center} \includegraphics [scale=0.5] {gardner8.png} \end{center}
+
+We can fill in many of the other angles using the theorem on alternate interior angles, as well as the fact that $AC$ and $CB$ are the diagonals of identical (congruent) rectangles.
+\begin{center} \includegraphics [scale=0.5] {gardner9.png} \end{center}
+
+Notice that the angle at $C$ is basically a rotated version of the square, that is, a right angle.  State this proof using sums of angles.
+
+Furthermore $\angle CAB \cong \angle CBA$.  Why?
+
+Thus, two pairs of the two angles whose sum we need are equal to a right angle.  Why?
+
+So, the sum of one of each is one-half of a right angle.
+
+Here is a similar proof, more compactly executed
+
+\begin{center} \includegraphics [scale=0.4] {gardner12.png} \end{center}
+
+\url{https://mathenchant.wordpress.com/2022/07/17/twisty-numbers-for-a-screwy-universe/}
+
+(Endnote 5).
+
+$\square$
+
+Martin Gardner has a version of this problem for which he gives this diagram:
+\begin{center} \includegraphics [scale=0.3] {gardner1.png} \end{center}
+
+\end{document}
