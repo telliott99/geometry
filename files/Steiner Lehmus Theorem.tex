@@ -73,9 +73,14 @@ If two triangles $\triangle ABC$ and $\triangle DEF$ have two pairs of sides equ
 Let $d$ be opposite $\phi$ and $c$ be opposite $\theta$.  Use the law of cosines:
 \[ c^2 = a^2 + b^2 - 2ab \cos \theta \]
 \[ d^2 = a^2 + b^2 - 2ab \cos \phi \]
-\[ d^2 - c^2 = \cos \theta - \cos \phi \]
 
-$d > c \Rightarrow \cos \phi < \cos \theta \Rightarrow \phi > \theta$.  Similarly, $\phi > \theta \Rightarrow d > c$  $\square$
+Then if $d > c$, so $d^2 > c^2$, and
+\[ a^2 + b^2 - 2ab \cos \phi  > a^2 + b^2 - 2ab \cos \theta \]
+\[ - 2ab \cos \phi  > - 2ab \cos \theta \]
+\[ \cos \phi  < \cos \theta \]
+\[ \phi > \theta \]
+
+Similarly, $\phi > \theta \Rightarrow d > c$  $\square$
 
 Back to our problem.  We argue by contradiction.  Suppose that $\alpha > \beta$.
 
@@ -161,7 +166,57 @@ SSS then gives:
 
 $\square$
 
-For more about SSA and the importance of the additional information about the angle, see \hyperref[sec:use_of_SSA]{\textbf{here}}.
+For more about SSA and the importance of the information about the unknown angle, see \hyperref[sec:use_of_SSA]{\textbf{here}}.
+
+\subsection*{trigonometric proof by Paul Yiu}
+
+Let the vertices and sides be labeled in the usual way.  Let the half-angles be $\beta$ and $\gamma$ also.
+
+Let $AC$ (side $b$) be divided by $BY$ into $u$ and $U$, and let $AB$ (side $c$) be similarly divided by $CZ$ into $v$ and $V$.
+
+\begin{center} \includegraphics [scale=0.18] {Steiner_Lehmus_Yiu.png} \end{center}
+
+We will show that assuming $\beta < \gamma$ will lead to a contradiction:
+\[ \frac{b}{u} < \frac{c}{v} \ \ \ \ \text{and also} \ \ \ \  \frac{b}{u} > \frac{c}{v} \]
+
+First consider
+
+\[ \frac{b}{u} - \frac{c}{v} = \frac{u + U}{u} - \frac{v + V}{v} \]
+\[ = \frac{U}{u} - \frac{V}{v} \]
+By the angle bisector theorem $a/U = c/u$ so $U = au/c$ and similarly $V = av/b$.  So
+\[ = \frac{a}{c} - \frac{a}{b} \]
+Since $c > b$ (by Euclid I.19, since $\gamma > \beta$) this expression is less than zero.  Retrieving the original LHS:
+\[ \frac{b}{u} - \frac{c}{v} < 0 \]
+\[ \frac{b}{u} < \frac{c}{v} \]
+
+The second part is
+
+\[ \frac{b}{u} \div \frac{c}{v} = \frac{b}{c} \ \frac{v}{u} \]
+By the Law of Sines
+\[ = \frac{\sin B}{\sin C} \ \frac{v}{u} \]
+\begin{center} \includegraphics [scale=0.18] {Steiner_Lehmus_Yiu.png} \end{center}
+By the sum of angles (really double angle)
+\[ = \frac{2 \cos \beta \sin \beta}{2 \cos \gamma \sin \gamma} \ \frac{v}{u} \]
+\[ = \frac{\cos \beta}{\cos \gamma} \ \frac{\sin \beta}{u} \ \frac{v}{\sin \gamma} \]
+Drop the altitude $h$ from $Y$ to $AB$ (side $c$).  Then
+\[ \frac{h}{BY} = \sin \beta \]
+\[ \frac{h}{u} = \sin A \ \ \ \ \ \ \ \ \frac{h}{\sin A} = u  \]
+Thus $\sin \beta/u = \sin A/BY$:
+\[ = \frac{\cos \beta}{\cos \gamma} \ \frac{\sin A}{BY} \ \frac{CZ}{\sin A} \]
+The third term has been massaged in just the same way.
+
+And then, almost everything cancels!
+\[ = \frac{\cos \beta}{\cos \gamma} > 1 \]
+The inequality comes from the assumption that $\beta < \gamma$.  Retrieve the original LHS:
+\[ \frac{b}{u} \div \frac{c}{v} > 1 \]
+\[ \frac{b}{u} > \frac{c}{v} \]
+
+We have that
+\[ \frac{b}{u} < \frac{c}{v} \ \ \ \ \text{and also} \ \ \ \  \frac{b}{u} > \frac{c}{v} \]
+
+This is a contradiction.  It cannot be that $\beta < \gamma$.  Similar logic reaches a contradiction for $\beta > \gamma$, so it must be that $\beta = \gamma$.  Then it is trivial to show that $\triangle ABC$ is isosceles.
+
+$\square$
 
 \subsection*{algebraic proof of Steiner-Lehmus}
 
@@ -244,8 +299,16 @@ The two sides of $\triangle ABC$ are equal, it is an isosceles triangle.
 
 $\square$
 
-One more proof (reprinted in Coxeter) can be found here:
+One more very nice proof (reprinted in Coxeter) can be found here:
 
 \url{https://proofwiki.org/wiki/Steiner-Lehmus_Theorem#Proof_4}
+
+In fact, I put it there.  This proof is probably due to Lehmus.
+
+There is some interesting discussion in Coxeter as well.  Much of the literature concerns the question of whether it is possible to provide a direct proof of the theorem.  The last example we gave above, the algebraic proof, has been cited as such.  
+
+However, that algebraic proof depends on Stewart's Theorem, which as we derived it depends on the Law of Cosines, which depends in turn on the theorem of Pythagoras.  And although there are several hundred proofs of Pythagoras most (all?) of them depend on the sum of angles and also on the parallel postulate, which explicitly depends on a proof by contradiction.  
+
+The question of a direct proof for Steiner-Lehmus is hard to answer conclusively.  There are proofs claiming that it is impossible.
 
 \end{document}
