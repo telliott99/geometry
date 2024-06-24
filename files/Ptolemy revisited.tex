@@ -105,11 +105,11 @@ This is Ptolemy's theorem.
 
 $\square$
 
-\subsection*{corollaries}
+\textbf{corollaries}
 
 Here are just a few of the results that follow from this remarkable theorem.
 
-\textbf{equilateral triangle}
+\subsection*{equilateral triangle}
 
 \begin{center} \includegraphics [scale=0.2] {equi4.png} \end{center}
 
@@ -143,15 +143,33 @@ Hence
 But of course $AB = BC$ and $AQ + QC = AC = AB = BC$, so finally:
 \[ \frac{1}{PC} + \frac{1}{PA} = \frac{1}{PQ} \]
 
-\textbf{Pythagorean theorem}
+\subsection*{Pythagorean theorem}
 
 Let the quadrilateral be a rectangle.  The the sum of squares of opposing sides is
 \[ a^2 + b^2 \]
 
 Triangles made by opposing diagonals are congruent, so the diagonals are equal in length.  The diagonal is the hypotenuse, hence
-\[ a^2 + b^2 = h^2 \]
+\[ a^2 + b^2 = c^2 \]
 
-\textbf{golden mean in the pentagon}
+\subsection*{Law of Cosines}
+
+Draw $\triangle ABC$ (suppress the $B$ label) and then draw another triangle congruent with it, with a shared base, and all four points in a circle, forming a cyclic quadrilateral.  The points are $A, A', C, C'$.  $\beta$ marks the original $\angle B$, but will not be used.
+
+\begin{center} \includegraphics [scale=0.15] {law_of_cosines3.png} \end{center}
+
+We need an expression for $x$.  From our work on rectangles in a circle we have that the base of the altitude from $C$ to side $c$ is a distance from $A$ equal to $(c-x)/2$.  It follows that
+\[ \frac{c-x}{2} \div b = \cos A \]
+\[ c - x = 2b \cos A \]
+\[ x = c - 2b \cos A \]
+
+Now, apply Ptolemy's Theorem.  We have:
+\[ a^2 = b^2 + cx \]
+\[ = b^2 + c(c - 2b \cos A) \]
+\[ = b^2 + c^2 - 2bc \cos A \]
+
+$\square$
+
+\subsection*{golden mean in the pentagon}
 
 \begin{center} \includegraphics [scale=0.3] {Ptolemy5.png} \end{center}
 

@@ -9,6 +9,7 @@ Triangles
 Congruent triangles
 Isosceles triangles
 Constructions
+Perpendicular bisector and SSS
 Right triangles
 
 Area
@@ -32,11 +33,12 @@ Chords in a circle
 Similarity
 Parallelograms
 Similarity and angles
-Similarity and ratios
+Fundamental theorems of similarity
+More about similarity and ratios
 Ptolemy
-Secant tangent theorem
 
 Practice with proofs
+Secant tangent theorem
 Broken Chord
 Euclid's elements
 Angle bisectors
@@ -51,6 +53,7 @@ Sum of angles by Ptolemy
 Law of Cosines
 
 Applications of similarity
+Ptolemy revisited
 Menelaus's theorem
 Ceva's Theorem
 Pythagoras by area
@@ -64,7 +67,6 @@ Polygons
 Revisiting proofs
 Proof by contradiction
 Induction
-Ptolemy revisited
 Stewart and Apollonius
 Steiner Lehmus Theorem
 Pizza theorem
