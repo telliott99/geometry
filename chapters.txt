@@ -9,7 +9,7 @@ Triangles
 Congruent triangles
 Isosceles triangles
 Constructions
-Perpendicular bisector and SSS
+Perpendicular bisector
 Right triangles
 
 Area
@@ -33,8 +33,8 @@ Chords in a circle
 Similarity
 Parallelograms
 Similarity and angles
-Fundamental theorems of similarity
-More about similarity and ratios
+Fundamental similarity
+More similarity
 Ptolemy
 
 Practice with proofs
@@ -68,7 +68,7 @@ Revisiting proofs
 Proof by contradiction
 Induction
 Stewart and Apollonius
-Steiner Lehmus Theorem
+Steiner Lehmus
 Pizza theorem
 
 Special points

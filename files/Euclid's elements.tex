@@ -242,6 +242,43 @@ An equivalent statement is the famous ``a straight line is the shortest distance
 
 The triangle inequality has corresponding statements and proofs in other parts of mathematics including real and complex analysis.
 
+\subsection*{Prop. I.24.  SAS inequality theorem}
+
+\label{sec:hinge_theorem}
+
+\begin{center} \includegraphics [scale=0.16] {Euclid_I_24b.png} \end{center}
+
+The next theorem is called the SAS inequality theorem, or informally, the ``hinge'' theorem.
+
+$\bullet$  \ If two triangles have two pairs of sides which are the same length, the triangle with the larger included angle also has the larger third side.
+
+We have $\triangle ABC$ with sides $a$ and $c$ flanking $\angle \theta$ and $\triangle ZBC$ with sides $a$ and $c$ flanking $\angle \phi$, and $\theta < \phi$.  We claim that side $b$ in $\triangle ABC$ is smaller than side $d$ in $\triangle ZBC$.
+
+Draw the two triangles nestled inside one another.  Notice that $\triangle AZB$ is isosceles, so $\angle AZB = \angle ZAB$.
+
+\emph{Proof}.
+
+\[ \angle AZC < \angle AZB \ \ \ \ \text{and} \ \ \angle ZAB < \angle ZAC  \]
+From above
+\[ \angle AZB = \angle ZAB \]
+So
+\[ \angle AZC < \angle ZAC \]
+
+\begin{center} \includegraphics [scale=0.16] {Euclid_I_24b.png} \end{center}
+By Euclid I.19, it follows that side $d$ opposite the larger angle $\angle ZAC$ is larger than side $b$ opposite the smaller angle $\angle AZC$ in $\triangle AZC$.
+
+At the same time, in the two triangles $\triangle ABC$ and $\triangle ZBC$ the smaller angle $\theta$ is opposite the smaller side $b$, while the larger angle is $\phi$, opposite the longer side, $d$.
+
+$\square$
+
+\url{https://proofwiki.org/wiki/Hinge_Theorem}
+
+Note that Euclid I.24 says that where the included angle is larger, then the side opposite is larger.  The converse is Euclid I.25.
+
+\emph{Proof}.  Aiming for a contradiction, given side $d$ is smaller than side $b$, suppose that $\angle ABC < \angle ZBC$.  The forward theorem gives $d > b$.  This is a contradiction. $\square$
+
+Another subtlety is that it cannot be that $b = d$, by Euclid I.7, and also then the two triangles would be congruent by SSS, but the angles differ, so this is a contradiction.
+
 This is enough of the \emph{Elements} to give us a good taste of the basics of Greek geometry of lines and triangles, and methods of proof.
 
 \subsection*{angle of reflection}

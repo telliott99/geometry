@@ -21,7 +21,7 @@
 
 %[my-super-duper-separator]
 
-This chapter involves angle bisectors in an isosceles triangle.  We called the forward version the \hyperref[sec:isosceles_bisector]{\textbf{isosceles bisector}} theorem.
+This chapter discusses a theorem about angle bisectors in an isosceles triangle.  We called the forward version the \hyperref[sec:isosceles_bisector]{\textbf{isosceles bisector}} theorem.
 
 It is easy in the forward direction, but the converse is very challenging, at least until you draw the right diagram.  Then, as usual, it's not so bad.
 
@@ -35,7 +35,7 @@ That's the easy part.
 
 \label{sec:Steiner_Lehmus_Theorem}
 
-The converse theorem says that if we have angle bisectors and they are equal in length, then the triangle is isosceles.  This is called the Steiner-Lehmus Theorem.
+The converse theorem says that if we have angle bisectors and they are equal in length, then the triangle is isosceles.
 
 \url{https://en.wikipedia.org/wiki/Steiner–Lehmus_theorem}
 
@@ -63,9 +63,7 @@ In the diagram above
 \[ s > t \Rightarrow b > a \]
 \[ b > a \Rightarrow s > t \]
 
-We prove both these theorems \hyperref[sec:Euclid18]{\textbf{here}}.  We also need the following lemma.  
-
-\emph{Lemma}.
+We prove both these theorems \hyperref[sec:Euclid18]{\textbf{here}}.  We also need the following as a preliminary result.
 
 If two triangles $\triangle ABC$ and $\triangle DEF$ have two pairs of sides equal, and the included angle is greater in one ($\phi > \theta$), then the side opposite $\phi$ also greater.
 \begin{center} \includegraphics [scale=0.16] {SAS_gt} \end{center}
@@ -82,7 +80,12 @@ Then if $d > c$, so $d^2 > c^2$, and
 
 This chain of reasoning works just as well in reverse.  So, $\phi > \theta \Rightarrow d^2 > c^2$, and then $d > c$.   $\square$
 
-I struggled to find a good proof of this lemma.  The closest I got is Euclid I.7 to show that $c \ne d$.  This proof using the law of cosines seems like overkill, but it does work, and quickly.  I would like to find something more fundamental.
+This is known as the \hyperref[sec:hinge_theorem]{\textbf{hinge theorem}}.  We showed a proof earlier.  It is Euclid I.24.
+
+\emph{Proof}.
+
+
+$\square$
 
 Back to our problem.  We argue by contradiction.  Suppose that $\alpha > \beta$.
 
@@ -153,7 +156,9 @@ We find that:
 Crucially, they are not only equal but obtuse.
 \begin{center} \includegraphics [scale=0.15] {hesse3.png} \end{center}
 
-Draw $CD$.  Comparing $\triangle CBD$ and $\triangle DYC$, we have that $CD$ is shared, $DY = BC$ by construction, $\angle CYD = \angle CBD$ (SSA) and also, the angle between the two known sides must be acute in both, since $\angle CYD$ and $\angle CBD$ are obtuse.
+Draw $CD$.  Comparing $\triangle CBD$ and $\triangle DYC$, we have that $CD$ is shared, and $DY = BC$ by construction.  $\angle CYD = \angle CBD$.  
+
+We have SSA and in addition, the angle between the two known sides must be acute in both, since $\angle CYD$ and $\angle CBD$ are obtuse.  It follows that $\triangle CBD \cong \triangle DYC$
 
  \begin{center} \includegraphics [scale=0.15] {hesse4.png} \end{center}
 This then gives 
