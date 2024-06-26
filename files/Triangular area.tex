@@ -25,7 +25,9 @@
 
 \label{sec:triangle_area}
 
-$\bullet$ \ the area of a triangle is one-half the base times the height
+$\bullet$ \ the area of any triangle is one-half the base times the height.
+
+The base can be any side, then the height is the perpendicular distance to the vertex opposite that side.
 
 Probably the best way to think about the area of a triangle is to start with the simplest case:  a right triangle.
 
@@ -36,7 +38,7 @@ In the figure, we are given that the triangle with side lengths $a,b$, and $c$ i
 Any right triangle can be viewed as one-half of a rectangle, cut along the diagonal.  Using the theorem on complementary angles, we can show that all four corners of the figure on the right above are right angles.  
 
 As a result, this right triangle has one-half the area of a rectangle with the same two sides $a$ and $b$:
-\[ A_{\triangle} = \frac{1}{2} \ ab \]
+\[ \mathcal{A}_{\triangle} = \frac{1}{2} \ ab \]
 
 Now, any triangle can be cut into two right triangles by drawing its \emph{altitude}, $h$, where $h$ is perpendicular to $c$.  
 
@@ -50,7 +52,7 @@ This formula is correct even for an obtuse triangle like the one in the right pa
 \begin{center} \includegraphics [scale=0.4] {area_obtuse.png} \end{center}
 
 We get that by computing the area of the large triangle with base $c + c'$ and then subtracting the area of the skinny triangle with the base $c'$: 
-\[ A = \frac{h(c + c') - h(c')}{2} = \frac{hc}{2} \]
+\[ \mathcal{A} = \frac{h(c + c') - h(c')}{2} = \frac{hc}{2} \]
 
 Of course, for an obtuse triangle we could choose one of the other sides as the base and proceed in the usual way, but this works as well.
 
@@ -64,11 +66,13 @@ Draw two parallel lines.  Mark off equal distances between adjacent points $A$ t
 
 In this figure the areas of $\triangle PAB$, $\triangle PDE$, and $QDE$ are equal, as are $\triangle QHJ$ and $\triangle RFH$.  Further, the latter two have twice the area of any of the first three.
 
-There are several different conventions for referring to the area of a triangle.  One is just to use the capital letter $A$ (for area):
-\[ A_{\triangle_{PDE}} = A_{\triangle_{QDE}} \]
+There are several different conventions for referring to the area of a triangle.  One is just to use the capital letter $A$ (for area).  To make it stand out, we might use a fancy font:  $\mathcal{A}$.
+\[ \mathcal{A}_{\triangle_{PDE}} = \mathcal{A}_{\triangle_{QDE}} \]
 
-That becomes awkward when $A$ has another meaning in the problem.  Some people switch to using $K$, but a second approach is to use the $\triangle$ symbol, as in
+That helps but can still become awkward when $\mathcal{A}$ has another meaning in the problem.  Some people switch to using $K$, but a second approach is to use the $\triangle$ symbol, as in
 \[ \triangle_{PAB} = \triangle_{PDE} = \triangle_{QDE} \]
+
+Euclid always refers to angles as $\angle ABC$ etc., so when he says $ABC = DEF$, he means the \emph{area} of those triangles.
 
 And yet another is to use parentheses.  This is a good solution when there are other shapes like rectangles in the problem.
 \[ (\triangle QHJ) = (\triangle RFH) \]
@@ -124,6 +128,9 @@ Alternatively, one can imagine slicing the parallelogram into horizontal slices 
 \begin{center} \includegraphics [scale=0.4] {pgram_sliced.png} \end{center}
 
 \subsection*{Euclid's Proof}
+
+\label{sec:Euclid_I_35}
+
 Euclid's approach is detailed in three propositions in Book I of \emph{Elements}.  Here is $I.35$.  This proposition (theorem) says that given parallelograms $ABCD$ and $EBCF$ on the same base $BC$ and with $ADEF \parallel BC$, they have the same area.
 \begin{center} \includegraphics [scale=0.15] {Euclid_I_35.png} \end{center}
 
@@ -148,7 +155,7 @@ In this example, the horizontal line that runs through $C'$, $A$, $D$ and $E'$ i
 $E'H$ is equal in length to what we will call the altitude of the triangle.  That would be a line dropping vertically from $A$ and making a right angle with the base, $BC$.
 
 The area of the triangle is one-half that of the parallelogram that contains two copies of the triangle.
-\[ A = \frac{1}{2} \cdot BC \cdot E'H \]
+\[ \mathcal{A} = \frac{1}{2} \cdot BC \cdot E'H \]
 
 \subsection*{area-ratio theorem}
 
@@ -163,13 +170,13 @@ If in a triangle we draw the line connecting the upper vertex to any point on th
 \emph{Proof.}
 
 The area of $\triangle A$ is $ah/2$, while that of $\triangle B$ is $bh/2$, so the ratio of areas is 
-\[ \frac{A_A}{A_B} = \frac{ah/2}{bh/2} = \frac{a}{b} \]
+\[ \frac{\mathcal{A}_A}{\mathcal{A}_B} = \frac{ah/2}{bh/2} = \frac{a}{b} \]
 
 $\square$
 
 It is also the case that the ratio of the area of any sub-triangle to the whole is the same as the proportion of its base length to that of the whole base.
 
-\[ \frac{A_A}{A_A + A_B} = \frac{a}{a+b} \]
+\[ \frac{\mathcal{A}_A}{\mathcal{A}_A + \mathcal{A}_B} = \frac{a}{a+b} \]
 
 \emph{Proof}.  
 
@@ -219,40 +226,17 @@ We might note as well that since $DE$ bisects the sides it is parallel to the ba
 
 It is probably less confusing for an introductory text to use the formula we gave above for a triangle's area:
 
-\[ A_{\triangle} = \frac{1}{2} \ ab \]
+\[ \mathcal{A}_{\triangle} = \frac{1}{2} \ ab \]
 
 However, it can be convenient to write the same formula as \emph{twice} the area, and we will often do that.
 
-\[ 2 A_{\triangle} = ab \]
+\[ 2 \mathcal{A}_{\triangle} = ab \]
 
 We rewrite two important formulas from this chapter:
 
 \[ d \cdot h + e \cdot h = (d+e) \cdot h = c \cdot h \]
-\[ \frac{A_A}{A_B} = \frac{ah}{bh} = \frac{a}{b} \]
+\[ \frac{\mathcal{A}_A}{\mathcal{A}_B} = \frac{ah}{bh} = \frac{a}{b} \]
 
 The first one is an equality of different areas, and the second involves a ratio of areas on the left-hand side.  The result is unchanged by using twice the area, as long as we are consistent.
-
-\subsection*{problem}
-
-\begin{center} \includegraphics [scale=0.4] {area_prob2.png} \end{center}
-We have a square with side $a$ and an equilateral triangle, also with side $a$.  Their bases are colinear and a red line is drawn as shown.  What is the area of the blue triangle?
-
-The angles marked $\theta$ are equal because the base and the top of the square are parallel, but the angle is \emph{not} $30$.  The red line intersects the side of the square at half the height, so $a/2$.
-
-We compute \emph{twice} the area of the combined blue and part of the equilateral triangle as $a^2/2$ and that of the blue triangle as $xa/2$.  But what is $x$?
-
-We need a preliminary result.  The Pythagorean theorem allows us to calculate that the altitude of an equilateral triangle is $\sqrt{3}$ times one-half the base.
-\begin{center} \includegraphics [scale=0.2] {equi.png} \end{center}
-
-Back to our problem.  The triangle with $x$ as its base does have an angle of $30$ so its height $h$ is $\sqrt{3} \cdot x$.  We compute twice the area of the part of the equilateral triangle as $\sqrt{3} xa$.
-\begin{center} \includegraphics [scale=0.4] {area_prob2.png} \end{center}
-
-Put the whole thing together as
-\[ 2A = \frac{a^2}{2} = \frac{xa}{2} + \sqrt{3} xa \]
-\[ a = x + 2 \sqrt{3} x \]
-\[ x = \frac{a}{1 + 2 \sqrt{3}} \]
-
-The final result is $1/2$ times $a/2$ times what we have above.
-
 
 \end{document}

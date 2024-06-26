@@ -222,6 +222,28 @@ In Jaynes' words, the problem is not well-formed.
 
 \subsection*{problem}
 
+\begin{center} \includegraphics [scale=0.4] {area_prob2.png} \end{center}
+We have a square with side $a$ and an equilateral triangle, also with side $a$.  Their bases are colinear and a red line is drawn as shown.  What is the area of the blue triangle?
+
+The angles marked $\theta$ are equal because the base and the top of the square are parallel, but the angle is \emph{not} $30$.  The red line intersects the side of the square at half the height, so $a/2$.
+
+We compute \emph{twice} the area of the combined blue and part of the equilateral triangle as $a^2/2$ and that of the blue triangle as $xa/2$.  But what is $x$?
+
+We need a preliminary result.  The Pythagorean theorem allows us to calculate that the altitude of an equilateral triangle is $\sqrt{3}$ times one-half the base.
+\begin{center} \includegraphics [scale=0.2] {equi.png} \end{center}
+
+Back to our problem.  The triangle with $x$ as its base does have an angle of $30$ so its height $h$ is $\sqrt{3} \cdot x$.  We compute twice the area of the part of the equilateral triangle as $\sqrt{3} xa$.
+\begin{center} \includegraphics [scale=0.4] {area_prob2.png} \end{center}
+
+Put the whole thing together as
+\[ 2\mathcal{A} = \frac{a^2}{2} = \frac{xa}{2} + \sqrt{3} xa \]
+\[ a = x + 2 \sqrt{3} x \]
+\[ x = \frac{a}{1 + 2 \sqrt{3}} \]
+
+The final result is $1/2$ times $a/2$ times what we have above.
+
+\subsection*{problem}
+
 Here is a problem from the entrance exam for Brown, 1901.
 
 \begin{center} \includegraphics [scale=0.4] {Brown1901_4.png} \end{center}
