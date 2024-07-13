@@ -1,0 +1,215 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Right triangles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:right_triangles}
+
+As you might expect, a \emph{right}  triangle is a triangle containing one right angle.  We saw previously that the definition of a right angle is that two of them add up to one straight line or $180$ degrees.
+
+No triangle can contain two right angles, because the measure of the third angle would then have to be zero.  This goes back to the parallel postulate as well as the sum of angles in a triangle.  Two right angles at both ends of a line segment send out parallel lines.
+
+Right angles and right triangles are special in many ways.
+
+In the figure below, let us have the angle at vertex $P$ as a right angle.  It is common practice to mark a right angle with a little square, as shown, but usually I will not do that.
+
+The side opposite $P$, here labeled $c$, is called the \emph{hypotenuse}.
+
+\begin{center} \includegraphics [scale=0.35] {right_triangle.png} \end{center}
+
+\subsection*{complementary angles}
+
+\label{sec:complementary_angle_theorem}
+
+Since the sum of angles in a triangle is equal to two right angles, the sum of the angles $\theta$ and $\phi$ above is equal to one right angle, or 90 degrees.  Together with $\angle P$ they sum up to two right angles.
+
+Angles $\theta$ and $\phi$ are said to be \emph{complementary}.  This fact is often exploited in proofs.
+
+$\bullet$ \ the sum of the two smaller angles in a right triangle is equal to one right angle.
+
+\subsection*{Pythagorean theorem}
+
+A second very important fact about right triangles is expressed in the Pythagorean theorem.  Although we haven't proved it yet, we will do so shortly, and call on it here.  Given the hypotenuse $c$ and two "legs" (sometimes called "arms") of a right triangle, $a$ and $b$, the theorem says that
+\[ a^2 + b^2 = c^2 \]
+
+It follows that if we know any two sides in a right triangle, then we know all three sides.
+
+A third fact is that the hypotenuse is the longest side in a right triangle.  We will prove later that in any triangle, if one side is longer than another, then the angle opposite that side is also larger than the angle opposite the shorter side.
+
+Previously, we gave several ways to prove that two triangles are congruent.  These four methods (SAS, SSS, ASA, and AAS) are also useful with right triangles.  Some books give them new names in the context of a right triangle.  One of these is useful.
+
+\subsection*{hypotenuse-angle (HA)}
+
+For two right triangles, if one hypotenuse is equal to the other, and also one pair of smaller angles equal, the two triangles are congruent.
+
+\emph{Proof}.
+
+It wasn't stated explicitly but we also know the right angle is shared, so we have all three angles congruent (AAA) by the triangle sum theorem.
+
+We also have the longest side (hypotenuse) equal, so the triangles are congruent by ASA.  Alternatively, if we have one of the other sides equal (we know it is flanked by the right angle), then the triangles are congruent.
+
+$\square$
+
+\subsection*{hypotenuse-leg in a right triangle}
+ 
+\label{sec:SSA_in_right}
+
+For two right triangles, if one hypotenuse is equal to the other, and also one pair of legs equal, the two triangles are congruent.  This condition is called hypotenuse-leg in a right triangle (HL).
+
+\begin{center} \includegraphics [scale=0.4] {hyp_side_cong.png} \end{center}
+
+In the figure, imagine the hypotenuse swinging on the hinge of its vertex with the horizontal base.  There is only one angle where it will terminate on the vertical side with the correct length.  That point is marked with a black dot.
+
+\emph{Proof}.
+
+The third leg is determined by the other two sides by the Pythagorean theorem, since we know which side is the hypotenuse, and therefore we have SSS.
+
+$\square$
+
+The HL criterion is sometimes called RHS (right triangle, hypotenuse, side).
+
+Previously we showed this figure:
+
+\begin{center} \includegraphics [scale=0.4] {angle_side_side.png} \end{center}
+
+and we said that in the special case where $b$ meets the opposing side in a right angle, that SS-right angle is enough to prove congruence.
+
+It is worth pointing out that if we have SSA not in a right triangle, then for an appropriate length of $b$ there are only two possibilities, as illustrated.  So if we can further specify whether the angle $b$ makes with the third side is acute or obtuse (or the angle $a$ makes with $b$), we may be able to show congruence.
+
+\subsection*{altitudes}
+
+\begin{center} \includegraphics [scale=0.5] {complementary.png} \end{center}
+
+In the large right triangle above, drawn in red, we know that
+\[ s + t = 90 \]
+When we draw the perpendicular to the hypotenuse that goes through the upper vertex, that is an \emph{altitude} of the triangle.  Because of the right angle, we obtain two smaller right triangles.  Thus
+\[ s + t' = 90 \]
+\[ s' + t = 90 \]
+Hence
+\[ s + t = 90 = s + t' \]
+so
+\[ t = t' \]
+and similarly, $s = s'$.
+
+This is another really important result:  if the altitude to the hypotenuse is drawn in a right triangle, the two smaller right triangles are both similar to the original one.  All the triangles have the same three angles.
+
+\subsection*{theorems about right triangles}
+
+\label{sec:right_angle_largest}
+
+$\bullet$ \ In any right triangle, the right angle is larger than either of the other two angles.
+
+\emph{Proof}.
+
+Suppose $\alpha$ and $\beta$ are complementary angles in a right triangle,  Then $\alpha + \beta$ is equal to one right angle.  
+\[ \alpha + \beta = 90 \]
+
+Both angles $\alpha$ and $\beta$ must be non-zero:  $\alpha > 0$ and $\beta > 0$ (otherwise one leg is exactly equal to the hypotenuse and we do not have a triangle).  
+
+Suppose that $\alpha \le \beta$.  Subtract $\alpha$ from both sides of the equation above
+\[ \beta = 90 - \alpha \]
+
+But $90 - \alpha < 90$ (since $\alpha > 0$), so $\beta < 90$.  And since $\alpha \le \beta$, $\alpha < 90$ also.
+
+$\square$
+
+\subsection*{only one perpendicular to a line from a point}
+Suppose we have a line and a point not on the line.
+
+\begin{center} \includegraphics [scale=0.4] {perp1.png} \end{center}
+
+We claim that only one perpendicular can be drawn from the point to the line.
+
+\emph{Proof}.
+
+Assume that two such lines can be drawn.  So, in addition to $PQ \perp AB$, we draw $PR$ and claim that it is also perpendicular to $AB$.
+
+Then, by the converse of the alternate interior angles theorem, $PQ \parallel PR$.  
+
+But $PQ$ and $PR$ also meet at the point $P$.  This contradicts the fundamental definition of parallel lines.  Our assumption must be false.
+
+Only one such line can be drawn.
+
+$\square$
+
+\subsection*{hypotenuse longest side}
+
+\label{sec:hypotenuse_longest}
+
+$\bullet$ \ In any right triangle, the hypotenuse is longer than either side.
+
+\emph{Proof}.
+
+We showed above that in any right triangle, the right angle is larger than either of the other two angles.  By Euclid \hyperref[sec:Euclid1]{\textbf{Euclid I.18}}:  in any triangle, a greater side is opposite a greater angle.  
+
+$\square$
+
+Or we look ahead again to the Pythagorean theorem.  Since $a > 0$ and $b > 0$ and 
+\[ c^2 = a^2 + b^2 \]
+Suppose $b > a$.  Since $a > 0$, it follows that $c^2 > b^2$ so $c > b > a$.
+
+The fact that the hypotenuse is the longest side in a right triangle will come in handy when we investigate the tangent to a circle.  It is also useful in the next theorem.
+
+\subsection*{shortest distance from a point to a line}
+
+\label{sec:shortest_distance_to_line}
+
+$\bullet$ \ The distance from a fixed point to a line is least when the new line segment makes a right angle with the line.
+
+\emph{Proof}.
+
+Draw the perpendicular $QR$.  We showed that only one such perpendicular can be drawn.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector2a.png} \end{center}
+
+Any other line segment  (for example, the dotted line) from $R$ to the upper edge (the extension of $PQ$), forms a right triangle also containing $QR$, where the dotted line is the hypotenuse.
+
+Since the hypotenuse is the longest side of a right triangle, by the previous theorem, $QR$ must be shorter than the dotted line.
+
+\subsection*{midpoint theorem}
+
+In a right triangle, draw the line segment from the vertex that contains a right angle to the midpoint of the hypotenuse, separating it into two equal lengths $a$.  We will show that the length of the bisector is also $a$.
+
+\begin{center} \includegraphics [scale=0.35] {rt_tri_bisector.png} \end{center}
+
+\emph{Proof}.
+
+In the right panel, draw the perpendicular from the midpoint $S$ to the base $PR$.  The triangle $SQR$ is similar to the original right triangle by AAA.
+
+Hence the two parts of the base are equal (labeled $b$), because $a/2a = b/2b = 1/2$.  
+
+Therefore we have two congruent triangles:  $SQR$ and $PQS$ (by SAS).  So the bisector $PS$ is equal in length to $SR$.
+
+Both of the new isosceles triangles formed by the original dashed line have equal base angles.
+
+$\square$
+
+Conversely, if we are given that the line drawn to the midpoint of the longest side of any triangle also has length $a$, then the triangle is a right triangle.
+
+\emph{Proof}.
+
+The two smaller triangles are isosceles.  Therefore, the total angle at $P$ is $\theta + \phi$ which is one-half the total for the entire triangle, or one right angle.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.35] {rt_tri_bisector.png} \end{center}
+
+\end{document}

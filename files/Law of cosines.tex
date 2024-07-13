@@ -1,0 +1,130 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Law of Cosines}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{Law of cosines}
+
+\label{sec:law_of_cosines}
+
+The law of cosines relates the side lengths of any triangle to the cosine of an angle.  Rewritten appropriately, it applies to all three angles of the triangle.  This relationship is used extensively in geometry.
+
+For a triangle with sides $a$ and $b$ flanking vertex $C$, the formula is:
+\begin{center} \includegraphics [scale=0.5] {cosine_law.png} \end{center}
+
+The formula is the Pythagorean theorem with a correction factor, $-2ab \cos C$, that depends on the angle opposite the hypotenuse and which disappears when that angle is $\pi/2$.  
+
+The correction factor is negative for an angle $< \pi/2$, which makes sense, since the smaller angle squeezes the hypotenuse to be smaller as well.  
+
+And the factor is positive for an angle larger than $\pi/2$ and eventually becomes equal to $2ab$.  In that extreme when $\angle C$ is 180, then the right-hand side becomes $a^2 + b^2 + 2ab = (a + b)^2 = c^2$.  $a$ plus $b$ becomes just equal to $c$.
+
+The law of cosines is developed relatively easily from the Pythagorean theorem by looking at the altitude (the notation on this figure has changed from the previous one).
+\begin{center} \includegraphics [scale=0.5] {Hopkins_964.png} \end{center}
+
+We have that $\angle A$ is an acute angle, and the triangle is either obtuse (left) or acute (right).  We look at both cases for this example, although often in this book we just figure proofs or computations for acute triangles.  Usually that works out the same for both cases.
+
+Let $c$ be the base of the triangle, and let $x$ be the whole length of the line segment $AD$ from the vertex $A$ to the place where the altitude $h$ reaches $c$ or its extension.
+
+For either case, we have two right triangles.  On the left, the larger one gives:
+\[ x^2 + h^2 = b^2 \]
+and
+\[ (x - c)^2 + h^2 = a^2 \]
+
+Subtract
+\[ x^2 - (x - c)^2 = b^2 - a^2 \]
+\[ 2xc - c^2 = b^2 - a^2 \]
+\[ a^2 = b^2 + c^2 - 2xc \]
+
+Since by definition, the cosine of $A$ or $\cos A = x/b$, we finally obtain
+\[ a^2 = b^2 + c^2 - 2bc \cos A \]
+
+This is called the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them, $\angle A$.
+
+Using the cosine in the formula is just a form of shorthand for the ratio $x/b$ and gets rid of that pesky term $x$.
+
+The same result can be obtained for the second triangle.  
+\begin{center} \includegraphics [scale=0.5] {Hopkins_964.png} \end{center}
+
+Again $x$ is the length of $AD$.  We write more directly:
+\[ b^2 - x^2 = a^2 - (c - x)^2 \]
+\[ = a^2 - c^2 + 2xc - x^2 \]
+\[ b^2 = a^2 - c^2 + 2xc \]
+
+Rearranging:
+\[ a^2 = b^2 + c^2 - 2xc \]
+
+That's exactly the same relationship.
+
+\subsection*{alternative proof}
+Here is an alternative derivation based on the products of parts of two secants, for the special case of a right triangle.
+
+Draw a right triangle on one diameter in a circle of radius $a$.  Draw a second diameter such that it crosses the base of the right triangle at a right angle, forming a smaller, similar right triangle.
+\begin{center} \includegraphics [scale=0.35] {law_of_cosines2.png} \end{center}
+The smaller triangle has sides $a,b$ and $c$.  The lengths of the other parts are easy to compute.  Now multiply
+\[ (a + c)(a - c) = b (2a \cos \theta - b) \]
+\[ a^2 - c^2 = 2ab \cos \theta - b^2 \]
+The result follows immediately.
+
+$\square$
+
+\subsection*{algebraic proof}
+
+\label{sec:law_of_cosines_algebraic}
+
+In $\triangle ABC$ drop the altitude from vertex $A$ to side $a$ opposite
+then
+\[ a = b \cos C + c \cos B \]
+
+In the same way:
+\[ b = a \cos C + c \cos A \]
+\[ c = a \cos B + b \cos A \]
+
+Multiply  the first by $a$
+\[ a^2 = ab \cos C + ac \cos B \]
+
+In the same way
+\[ b^2 = ab \cos C + bc \cos A \]
+\[ c^2 = ac \cos B + bc \cos A \]
+
+Subtract the first and second from the third:
+\[ c^2 - a^2 - b^2 = - 2 ab \cos C \]
+\[ c^2 = a^2 + b^2 - 2ab \cos C \]
+
+\subsection*{philosophy}
+
+Trigonometry is not just about problems like finding the measure of the angle complementary to $23^{\circ}$ as $67^{\circ}$.
+
+Instead, trigonometry uses formulas like the sum of angles, and especially, the law of cosines, to solve problems in calculus.
+
+One of the most famous applications came when Newton derived Kepler's laws about the orbits of the planets.  Originally, to do that he made the approximation that the mass of the earth acts \emph{as if} it were concentrated at a single point corresponding to the center of the earth, and likewise for the sun.
+
+However, for a rigorous demonstration he needed to prove that this approximation is correct.  We do not have the tools yet to see how he did that, but here are two equations from my write-up:
+\[ \rho^2 = D^2 + s^2 - 2Ds \cos \gamma \]
+\[ \cos \gamma = \frac{D^2 + s^2 - \rho^2}{2Ds} \]
+
+and the relevant diagram:
+\begin{center} \includegraphics [scale=0.35] {newton_volume.png} \end{center}
+
+You should recognize the law of cosines at work.
+
+Trigonometry is hugely important in math and science.  Although it has (simple) applications for activities like surveying that is not at all what it is about.
+
+\end{document}

@@ -1,0 +1,165 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+
+\title{Fundamental similarity}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:similarity_and_ratios}
+
+Similar triangles are defined to have three angles equal (equiangular), but they are scaled differently and so, not congruent.
+
+Previously we showed that if two equiangular triangles are superimposed at one vertex ($\angle A$), so the adjacent sides coincide, and angles lie in the same order (left panel), then the sides opposite $\angle A$ are parallel ($DE \parallel BC$).  In the right panel, the angles are in opposite order and this doesn't work.
+
+\begin{center} \includegraphics [scale=0.15] {similar27.png} \end{center}
+
+This can be demonstrated by employing the parallel postulate, or as Euclid does in VI.2, by an argument based on area and the properties of two parallel lines.  Actually, Euclid says to take a triangle and draw the line segment $DE$ either parallel to the base or with the given angles, but the result is the same.
+
+All angles equal and the third side parallel are closely related and easily proven in both directions.
+
+Equal angles $\iff$ parallel sides.  
+
+We will call this property similarity:  all angles equal and the third side parallel.
+
+Another property is that similar triangles have their sides in the same proportion.  This comes in two flavors:  either two sides in equal proportion flanking an equal angle, often called SAS similarity, or all three sides in the same proportion with no prior knowledge about angles..
+
+We now explore all of these situations:
+
+$\bullet$ \ $\parallel$ sides and equal $\angle \iff$ equal ratios
+
+We will call these the \emph{forward} ratio theorem, and the \emph{converse} ratio theorem, even though there are two cases, either SAS or ratios only.
+ 
+\subsection*{parallel third side implies equal ratios}
+
+As background, we recall two fundamental ideas about triangles.  
+
+The first is that if two triangles have their bases on the same line, and they also share the same vertex opposite, then they have the same altitude.  It follows that the areas are in the same proportion as the lengths of the bases.  This is the \hyperref[sec:area_ratio_theorem]{\textbf{area-ratio theorem}}.  
+\begin{center} \includegraphics [scale=0.5] {area11.png} \end{center}
+
+There is only one line that can be drawn from a point vertically to a straight line.  So there is only one altitude that can be drawn from a point to a base.  Since the triangles share the vertex point, they have the same altitude.
+
+The second idea is that if two triangles share the same base, and the two opposing vertices both lie along a lie that is parallel to the base, then the triangles have the same area.  (See \hyperref[sec:triangle_area]{\textbf{here}}).
+\begin{center} \includegraphics [scale=0.4] {area2.png} \end{center}
+$\triangle PDE$ and $\triangle QDE$ have equal area and so does $\triangle PAB$.  \emph{Any} point along $PQR$ forms a triangle with base $DE$ that has the same area.  And any line segment with length equal to $DE$ anywhere along $A$ to $J$ with a vertex on the line $PQR$ will have exactly the same area as well.
+
+These two ideas can be combined.  If two triangles have their bases lying on the same line, and also the opposing vertices along a line parallel to the first, then their areas are in the same proportion as the lengths of the bases.  Two parallel lines are the same distance apart, no matter where the perpendicular or vertical is placed.
+
+\subsection*{converse}
+
+Triangles with the same area and the same base have the same height.  It follows that the top vertices lie along a line parallel to the base.
+
+\emph{Proof}.  (sketch)
+
+If a perpendicular is erected joining two parallel lines, its length is the same no matter where it is placed.  The converse is also true.
+
+Two triangles share the same base and have the same area but have different vertices.  The lines forming the altitudes for each triangle are perpendicular to the same line, so parallel to each other and also have the same length.  Therefore they form a rectangle, so the line holding the vertices is parallel to the base.  $\square$
+
+\subsection*{colored triangles}
+
+$\bullet$ \ $\parallel$ sides and equal $\angle \rightarrow$ equal ratios
+
+\label{sec:similarity_equal_ratios}
+
+\begin{center} \includegraphics [scale=0.4] {Euclid_VI_3d.png} \end{center}
+
+We first show a simplified proof of the forward theorem, with very few labels to avoid clutter.  The top panels below show slightly different views of the same two similar triangles, one shaded gray and a larger one outlined in red.  
+
+The first triangle has sides $a$ and $b$ and the second has sides $A$ and $B$.  One of the third sides is black and the other red, and these lie parallel to each other.
+
+In the left (top) panel we draw another triangle in magenta.  Now consider the combination of the magenta and gray together as a single triangle.  
+
+If we angle our heads and consider $a$ as the \emph{base} of the gray triangle and its extension $A$ as the base of the combination, then the areas of the two triangles are in the same ratio as the bases, namely, $a/A$, as indicated in the lower part, by the area-ratio theorem, since they share the same point as the opposing vertex.
+
+The same argument used for the cyan triangle yields the result given as $b/B$.
+
+But the magenta and cyan triangles are equal in area.  The reason is that, viewed another way, they have the same base, the black horizontal line, and their vertices lie on the same line, the red line running across the bottom, which is parallel to the bases of the magenta and cyan triangles.
+
+\begin{center} \includegraphics [scale=0.4] {Euclid_VI_3d.png} \end{center}
+
+Therefore the two ratios given above are equal:
+\[ \frac{a}{A} = \frac{b}{B} \]
+
+Equal angles (parallel third side) implies equal ratios.
+
+$\square$
+
+This result applies to any vertex of the two similar triangles and its adjacent sides, hence it applies to all three sides of the two triangles.
+
+\subsection*{converse theorem}
+
+By far the most common use of similarity is to go from equal angles to equal ratios, and SAS for similarity is also seen fairly often.
+
+A different proof of the converse theorem, that equal ratios implies equal angles, is given by Kiselev.
+
+\emph{Proof}.
+
+Let there be two triangles $\triangle ABC \sim \triangle A'B'C'$ with three pairs of sides in the same ratio.  Let $\triangle ABC$ be the larger one.
+
+\begin{center} \includegraphics [scale=0.15] {similar26.png} \end{center}
+
+Mark off inside $\triangle ABC$, for example, $AD = A'B'$ and then draw $DE \parallel BC$.  By the forward theorem, $\triangle ABC \sim \triangle ADE$.
+
+We can form the dual equality:
+\[ \frac{A'B'}{B'C'} = \frac{AB}{BC} = \frac{AD}{DE} \]
+since we are given the first (equal ratios), and have the second from similar triangles, $\triangle ABC \sim \triangle ADE$.
+
+Equating the first and third terms:
+\[ \frac{A'B'}{B'C'} = \frac{AD}{DE} \]
+
+But we also have $A'B' = AD$, by construction.  Cancel to obtain $B'C' = DE$.
+
+The same can also be done for the third side.  Thus, $\triangle ADE \cong \triangle A'B'C'$ by SSS.  
+
+It follows that $\triangle A'B'C'$ is equiangular with $\triangle ADE$ and thus with $\triangle ABC$.
+
+\subsection*{SAS for similar triangles}
+
+\label{sec:SAS_similar}
+
+Now, we mix and match the conditions, taking two sides in proportion and one angle shared.  This is often called SAS similarity.
+
+We will prove that this mix of conditions is enough for two triangles to be similar.
+
+\begin{center} \includegraphics [scale=0.5] {mod_midpoint.png} \end{center}
+
+\emph{Proof}.
+
+Given two triangles with the same vertex angle at $A$ and two of three sides known to be in the same proportion ($BD/AB = CE/AC = k$).
+
+Draw $EF$ parallel to $ABD$ and extend $BC$ to meet $EF$ at $F$.  
+
+$\triangle ABC \sim \triangle CEF$ by vertical angles plus alternate interior angles (red dots).  The corresponding sides opposite the vertical angles are $EF$ and $AB$.
+
+By the forward theorem
+\[ \frac{EF}{AB} = k = \frac{CE}{AC} \]
+but
+\[ \frac{CE}{AC}  = \frac{BD}{AB} \]
+
+Therefore, $BD = EF$.  We are given $BD \parallel EF$.  Therefore, $BDEF$ has one pair of opposing sides equal and parallel, so it is a parallelogram.  
+
+It follows that $BC \parallel DE$ and $BF = DE$.
+
+It also follows that $\angle D = \angle ABC$ by alternate interior angles, so we have two angles equal which means that $\triangle ABC \sim \triangle ADE$.  
+
+The forward theorem then gives $(DE-BC)/BC = BD/AB = k$
+
+$\square$
+
+Each of the standard congruence theorems (yes, even SSA) has a similarity version.  We won't take the time to prove the others.
+
+\end{document}

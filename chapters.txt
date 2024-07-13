@@ -1,0 +1,122 @@
+# First
+
+Lines and Angles
+Introduction
+Angles
+Parallel lines
+
+Triangles
+Congruent triangles
+Isosceles triangles
+Constructions
+Perpendicular bisector
+Right triangles
+
+Area
+Rectangles
+Triangular area
+Altitudes
+Similarity and area
+
+Pythagorean theorem
+Simple proofs
+Euclid's proof of Pythagoras
+Brief review
+
+Circles
+Circles and angles
+Inscribed angles
+Tangents
+Arcs of a circle
+Chords in a circle
+
+Similarity
+Parallelograms
+Similarity and angles
+Fundamental similarity theorems
+More similarity
+Ptolemy
+
+Practice with proofs
+Introduction to Euclid
+More isosceles
+Euclid's elements
+Secant tangent theorem
+Broken Chord
+Angle bisectors
+Excircles and Heron
+Equilateral triangles
+
+Trigonometry
+Basic trigonometry
+Double angle
+Sum of angles by scaling
+Sum of angles by Ptolemy
+Law of Cosines
+
+Applications of similarity
+Ptolemy revisited
+Menelaus's theorem
+Ceva's Theorem
+Pythagoras by area
+Ratio Boxes
+
+Polygons
+Cyclic quadrilateral
+Pentagon
+Polygons
+
+Revisiting proofs
+Proof by contradiction
+Induction
+Stewart and Apollonius
+Steiner Lehmus
+Pizza theorem
+
+Special points
+Four points
+Triangles in triangles
+Euler line
+Special circles
+Euler's theorem
+
+Vectors without coordinates
+Simple vectors
+Napoleon's theorem
+
+Curves
+Parabola
+Ellipse
+Cycloid intro
+
+Pi
+Area of a circle
+Pi is a constant
+Estimating Pi
+
+Later geometry
+The Almagest
+Pappus
+Hippocrates
+Heron and Brahmagupta
+
+Celestial applications
+Equal area, equal time
+Aristarchus
+Circular orbits
+
+Archimedes
+Pyramid and cone
+Archimedes and the sphere
+Platonic solids
+
+Addendum
+Author's notes
+Angular measure
+Additional constructions
+Additional proofs
+Two final proofs
+Pythagorean triples
+Resources
+List of theorems
+References

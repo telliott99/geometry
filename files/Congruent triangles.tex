@@ -1,0 +1,218 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+
+\title{Congruence of triangles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{rectangles and right triangles}
+For the next several chapters, our focus for the most part will be on triangles.  A major task in geometry is to consider two triangles and ask whether we can prove that they are the same.  If so, we call them congruent.  Congruence is a fancy word for equal.
+
+If two triangles are congruent, then all three sides have the same length, all three angles have the same measure and are in the same place with respect to the sides.  
+\begin{center} \includegraphics [scale=0.4] {triangle5.png} \end{center}
+What do we mean by \emph{in the same place}?  In the figure, the side labeled $a$ is opposite to the vertex or angle labeled $A$.  It lies between $B$ and $C$.  If another triangle is congruent to $\triangle ABC$, then the side that is equal to $a$ will lie between two angles equal to $B$ and $C$ and opposite another one equal to $A$.
+
+Note that we do not require all that information to know that two triangles are congruent, as we will see.  For example, all three sides the same is enough.
+
+\subsection*{preliminary stuff}
+
+However, let's start with a different shape, namely, with the rectangle.  While a triangle has three sides, a rectangle has four of them.  It's important that the opposite sides are equal in a rectangle (i.e. equal in \emph{length}), so $AB = DC$ and $AD = BC$.   Also all four angles are right angles.
+\begin{center} \includegraphics [scale=0.4] {rect7.png} \end{center}
+If we connect opposite vertices, as in the middle figure, the new line (in red) is called a diagonal.  The diagonal divides the four-sided figure into two triangles.
+ 
+ When comparing the two triangles $\triangle ABC$ and $\triangle ADC$, we can ask the question, are they the same or different?  That is, are they congruent?
+ 
+As we said, two triangles are congruent if they have all three sides the same.  We noted that opposite sides in the original triangle were equal.  The diagonal $AC$ appears as the ``same" side in both triangles --- it has the same length.  Therefore they do have all three sides equal.  This condition is called side-side-side (SSS).  
+ 
+ SSS implies that the two triangles are congruent.  We may write
+ \[ \triangle ABC \cong \triangle ADC \]
+ This is the case any time we cut a rectangle in half along one diagonal.  It will even turn out to be true for other quadrilaterals that do not have right angles at the vertices, as long as the opposing sides are equal.
+
+\subsection*{identical triangles}
+
+\begin{center} \includegraphics [scale=0.4] {congruent.png} \end{center}
+
+It is important to remember that we allow the triangles to be rotated at any angle with respect to the other.  An example of this is the two triangles at the top in the figure above.
+
+We will also allow the term congruent to apply to the case of a triangle and its mirror image.  All of the triangles shown are congruent, even though two are flipped --- they are mirror images.
+
+Perhaps a practical definition would be that if you used a pair of scissors to cut out a drawing of one triangle and then lay it on top of the second one so that it superimposes exactly, they would be congruent.
+
+A little thought may convince you that this is the same as saying that all three corresponding side lengths are equal.
+
+You may wonder why this is so.  Draw one side of a triangle, and from its endpoints draw circles with radii the length of the other two sides.
+
+\begin{center} \includegraphics [scale=0.4] {congruent4.png} \end{center}
+
+The two radii map out all the points that are the same distance from the centers.  Thus among many shapes that are not triangles, they include two possibilities for three given side lengths which do result in triangles.
+
+We see that the radii cross at two and only two different points, which have mirror image symmetry above and below the original base (black line).  Three given side lengths can only be drawn together to give two resulting triangles, and these two shapes are mirror images.
+
+Of course, it is possible to come up with side lengths that \emph{cannot} form a triangle.
+
+Thus, we arrive at a fundamental theorem about congruency for triangles:
+
+$\bullet$  Two triangles are \emph{congruent} if and only if they have the same three side lengths. 
+
+This test is abbreviated SSS (side-side-side).
+
+\subsection*{other tests}
+
+The test from above is not the one with which Euclid starts.  Instead he introduces (in his fourth proposition and first non-construction), side-angle-side (SAS).
+
+In fact, in addition to SSS (side-side-side), there are three other conditions that always lead to congruence of two triangles when they are satisfied, namely
+
+$\circ$  SAS (side-angle-side)
+
+$\circ$  ASA (angle-side-angle)
+
+$\circ$  AAS (angle-angle-side)
+
+When any one of these is true then SSS is also true.  That's why we said above that triangles are congruent \emph{if and only if} SSS.
+
+Note:  when we say SAS, we mean that the angle we know lies between the two sides.  Similarly, ASA means that we know one side of a triangle and the two angles at either end of that side are the angles in question.
+
+\subsection*{constructions}
+
+A good way to think about the congruence conditions is to imagine trying to construct a triangle from the given information, and ask whether it is uniquely determined.  
+
+\label{sec:SAS}
+
+We already did SSS above.  SAS is also easy.
+
+\begin{center} \includegraphics [scale=0.4] {SAS2.png} \end{center}
+
+Two sides and the angle between them are given.  So draw that part of the triangle.  Notice that the second and third vertices are also determined, because they just lie at the ends of the two sides we're given.  All that remains is to draw the line segment that joins them.
+
+Of course we might have drawn the longer side on top.  If we did that, it would generate the mirror image, and still be congruent by our rule.
+
+\label{sec:ASA}
+
+The next one is ASA.  Since we know two angles, we know the third.  Here is a diagram of the situation:
+
+\begin{center} \includegraphics [scale=0.4] {ASA1.png} \end{center}
+ 
+Draw the known side, then using the known angles, start two other sides from the ends of that side.  They must cross at a unique point.
+
+But...actually, if we start the two lines from opposite ends of the horizontal
+
+\begin{center} \includegraphics [scale=0.4] {ASA4.png} \end{center}
+
+there is another solution, the mirror image.  These two triangles are congruent to the one above.
+ 
+I'm tempted to draw the constructions below the starting line.  But this doesn't give anything new.  These are merely rotated versions of the ones above.  Try it and see.  Congruent triangles include a pair of mirror images and that's it.
+
+Now, if we know two angles we also know the third, by the angle sum theorem.  For this reason, ASA and AAS mean that we have exactly the same information, because we know all three angles and we know one side.  
+
+Crucially, we know \emph{which} two angles flank the known side.  Equivalently, it is enough to know which angle is opposite to the known side.
+ 
+\subsection*{SAS, ASA, AAS but not SSA}
+
+We need some way of marking sides and angles to show they are equal.  Here is 
+
+SAS
+  
+\begin{center} \includegraphics [scale=0.4] {SAS.png} \end{center}
+
+In this diagram, sides of equal length are indicated by one or more short lines called hash marks.  
+
+Equal angles are usually indicated by dots in this book. Dots are easier to place on the figures, and lend themselves to color-coding;  the common method for pencil and paper is to draw an arc with a hash across it, or just use a filled and open circle.
+
+ASA
+\begin{center} \includegraphics [scale=0.4] {ASA3.png} \end{center}
+
+AAS
+\begin{center} \includegraphics [scale=0.4] {AAS.png} \end{center}
+
+\subsection*{one that works only sometimes}
+
+There is one set of three that doesn't work in the general case, and that is SSA (side-side-angle).
+
+\begin{center} \includegraphics [scale=0.4] {angle_side_side.png} \end{center}
+
+Suppose we know sides $a$ and $b$ and the angle $\theta$ adjacent to $a$ and facing opposite side $b$.  Imagine $b$ swinging on a hinge at the blue dot.  
+
+There is one particular length for $b$ which forms a triangle with a right angle between the two sides marked with a dotted line.  If $b$ is shorter, then we cannot form a triangle at all.
+
+If $b$ is longer than this but still $b < a$, there are two points where $b$ can intersect with the side projecting from angle $\theta$.
+
+In this case, there are two possibilities for the triangle, not just one, so we say that the triangle is not determined.  If two different triangles match the SSA criterion, we cannot say whether they are congruent or not without more information.
+
+Two triangles which satisfy SSA will be congruent, \emph{if}:
+
+$\circ$ \ $b >= a$ (why?)
+
+$\circ$ \ $b$ forms a right angle with the third side
+
+In this case we have SSA where the angle is a right angle.  Most books call this HL (hypotenuse-leg) and we will adopt this terminology here:  hypotenuse-leg in a right triangle (HL).
+
+We will use the right angle case often.  You can think of it like this:  in a right triangle the Pythagorean theorem will tell us the third side, given two.  Then we have SSS.
+
+Although SSA is often just dismissed out of hand, it does work sometimes.  There is a temptation to call this case by the reverse acronym, ASS.  I think Tony Randall described it best:
+
+\url{https://www.youtube.com/watch?v=KEP1acj29-Y}
+
+\subsection*{proofs}
+
+If you compare this chapter with most others in the book you'll notice that we have not formally proved that any of these methods are correct.  Even Euclid encounters some difficulty with this point.  He "proves" SAS by a method that is arguably not really a proof.
+
+You can think of them as axioms if you like.  We will revisit this issue when we look at Euclid's proofs.  In any event, from here on out we prove \emph{everything}.
+
+\subsection*{similar triangles have equal angles}
+
+\label{sec:two_angles_similar}
+
+Sometimes two triangles are not congruent, but \emph{similar}.
+
+\begin{center} \includegraphics [scale=0.4] {similar.png} \end{center}
+
+Similarity means that all three angles are the same but the triangles are of different overall sizes.
+
+We will describe our basic criterion for similarity as AAA (angle-angle-angle).  
+
+However, because of the (\hyperref[sec:triangle_sum_theorem]{\textbf{triangle sum theorem}}), if any two angles of a pair of triangles are known to be equal, then the third one must be equal as well.  We can say that:
+
+$\bullet$  Two triangles are similar if they have at least two angles equal.
+
+\subsection*{scaling}
+
+For similar triangles, the three corresponding pairs of sides are in the same proportions, but re-scaled by a constant factor.
+
+\begin{center} \includegraphics [scale=0.4] {similar2.png} \end{center}
+
+From the above diagram of two similar triangles, similarity implies that (for example)
+\[ \frac{A}{a} = \frac{B}{b} \]
+
+which can be rearranged to give:
+
+\[ \frac{a}{b} = \frac{A}{B} \]
+
+For any pair of similar triangles, there is a constant $k$ such that
+
+\[ k = \frac{A}{a} = \frac{B}{b} = \frac{C}{c} \]
+
+We will come back to proofs about similar triangles in a later chapter.  In particular, we will show that AAA implies equal ratios of sides as given here, as well as the converse.
+
+\subsection*{note}
+
+When two triangles are congruent, each of the three angles and all three sides are the same.  You might wonder whether the sides might be in a different order.  We usually draw side of length $a$ opposite $\angle A$, side $b$ opposite $\angle B$ and side $c$ opposite $\angle C$.  Can we switch the sides so that say, the length $c$ is opposite $\angle B$?
+
+It turns out not to be possible.  Later we will have a \hyperref[sec:Euclid18]{\textbf{theorem}} (and its converse) which say that in any triangle, the longest side is opposite the largest angle, and the smallest side opposite the smallest angle.  If switching two sides were possible, the theorem could not be correct, but it is correct, which means that switching sides is not possible.
+
+
+\end{document}

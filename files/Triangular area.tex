@@ -1,0 +1,242 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Area}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{area of a triangle}
+
+\label{sec:triangle_area}
+
+$\bullet$ \ the area of any triangle is one-half the base times the height.
+
+The base can be any side, then the height is the perpendicular distance to the vertex opposite that side.
+
+Probably the best way to think about the area of a triangle is to start with the simplest case:  a right triangle.
+
+\begin{center} \includegraphics [scale=0.4] {area9.png} \end{center}
+
+In the figure, we are given that the triangle with side lengths $a,b$, and $c$ is a right triangle, with the angle between sides $a$ and $b$ being a right angle.  
+
+Any right triangle can be viewed as one-half of a rectangle, cut along the diagonal.  Using the theorem on complementary angles, we can show that all four corners of the figure on the right above are right angles.  
+
+As a result, this right triangle has one-half the area of a rectangle with the same two sides $a$ and $b$:
+\[ \mathcal{A}_{\triangle} = \frac{1}{2} \ ab \]
+
+Now, any triangle can be cut into two right triangles by drawing its \emph{altitude}, $h$, where $h$ is perpendicular to $c$.  
+
+\begin{center} \includegraphics [scale=0.4] {area10.png} \end{center}
+
+The area of the triangle with sides $a,d,h$ is $dh/2$, and that with sides $a,e,h$ is $eh/2$ so the area of the original triangle is
+\[ \frac{dh}{2} + \frac{eh}{2} = \frac{(d+e)h}{2} = \frac{ch}{2} \]
+
+This formula is correct even for an obtuse triangle like the one in the right panel, below.  The area of the two red triangles is the same:  $ch/2$.
+
+\begin{center} \includegraphics [scale=0.4] {area_obtuse.png} \end{center}
+
+We get that by computing the area of the large triangle with base $c + c'$ and then subtracting the area of the skinny triangle with the base $c'$: 
+\[ \mathcal{A} = \frac{h(c + c') - h(c')}{2} = \frac{hc}{2} \]
+
+Of course, for an obtuse triangle we could choose one of the other sides as the base and proceed in the usual way, but this works as well.
+
+An important consequence is that:
+
+$\bullet$ \ all triangles with the same base and height have the same area.
+
+Draw two parallel lines.  Mark off equal distances between adjacent points $A$ through $J$ on the bottom.  Now pick any point on the top and draw the triangle with two \emph{equidistant} points on the bottom.  Any other triangle drawn with an equal base has the same area.
+
+\begin{center} \includegraphics [scale=0.4] {area2.png} \end{center}
+
+In this figure the areas of $\triangle PAB$, $\triangle PDE$, and $QDE$ are equal, as are $\triangle QHJ$ and $\triangle RFH$.  Further, the latter two have twice the area of any of the first three.
+
+There are several different conventions for referring to the area of a triangle.  One is just to use the capital letter $A$ (for area).  To make it stand out, we might use a fancy font:  $\mathcal{A}$.
+\[ \mathcal{A}_{\triangle_{PDE}} = \mathcal{A}_{\triangle_{QDE}} \]
+
+That helps but can still become awkward when $\mathcal{A}$ has another meaning in the problem.  Some people switch to using $K$, but a second approach is to use the $\triangle$ symbol, as in
+\[ \triangle_{PAB} = \triangle_{PDE} = \triangle_{QDE} \]
+
+Euclid always refers to angles as $\angle ABC$ etc., so when he says $ABC = DEF$, he means the \emph{area} of those triangles.
+
+And yet another is to use parentheses.  This is a good solution when there are other shapes like rectangles in the problem.
+\[ (\triangle QHJ) = (\triangle RFH) \]
+
+The reason for the equalities we have written is that all line segments drawn from $P$, $Q$ or $R$ to the base and perpendicular to it, are equal in length, so the areas are in proportion to the length of the base.
+
+You can move the top vertex as far to one side as you wish, as long as the movement is parallel to the base.  The area of these two triangles is the same.
+
+\begin{center} \includegraphics [scale=0.6] {area6.png} \end{center}
+
+The altitude of $\triangle PAB$ is equal to that of $PIJ$, because there is only a single line that can be drawn from a given point perpendicular to a line.
+
+The altitude for any triangle with a vertex on $PQR$ and base on $AJ$ is the same.
+
+\emph{Proof}.
+
+We are given that $PQR \parallel AJ$.  Draw verticals down from the two vertices to $AJ$.  The shape formed is a rectangle, because we have four right angles, one at each vertex.  Therefore the sides are equal.
+
+$\square$
+
+A right triangle has the largest area for a given pair of side lengths.  If we imagine side $a$ tilting right or left, then the resulting triangle will have a smaller area, because the altitude $h$ will be less than $a$.
+
+\begin{center} \includegraphics [scale=0.4] {area9.png} \end{center}
+
+\subsection*{area of a parallelogram}
+
+A parallelogram is a four-sided polygon whose two pairs of opposite sides are equal and parallel.  It also has opposing vertex angles equal.
+
+\begin{center} \includegraphics [scale=0.4] {pgram6.png} \end{center}
+
+Suppose we are given, at first, only that $AD \parallel BC$, but nothing about lengths.  Then the angles marked with black dots are equal, by the alternate interior angles theorem.  
+
+If we are also given that $AB \parallel CD$, the angles marked with red dots are equal.  This is one way to determine that we have a parallelogram:  both pairs of opposing sides parallel.
+
+I claim that knowing only the pairs of opposing sides are parallel, it follows that they are also equal, and that we have a parallelogram with the other properties we'll see in a bit.
+
+\emph{Proof}.
+
+Draw $AC$ as one diameter of $ABCD$, and notice that the two resulting triangles are congruent, by ASA.  One of the triangles is just rotated by $180^{\circ}$ with respect to the other.
+
+$\square$
+
+To find the area of this parallelogram, cut off a right triangle from the left side and attach it on the right.  The angles add up to form a straight line along the base and a right triangle at the upper right.    The area is clearly $h \cdot b$.
+
+\begin{center} \includegraphics [scale=0.4] {area7.png} \end{center}
+
+If the parallelogram is particularly skinny for a given height, then it will not be possible to cut off just one triangle.  Euclid spends some time working through this issue to prove that the area of any parallelogram is the base times the height.
+
+A simple solution:  turn any skinny parallelogram by one-quarter turn plus or minus what is needed so that the top and bottom sides are horizontal, and it will become fat.  Then proceed as before.
+
+Alternatively, one can imagine slicing the parallelogram into horizontal slices and add small triangles on to each slice.  One could even use non-equal slices and then scale the triangles in proportion.  You will find that each small rectangle will have the same base, and together, the heights will add to the whole.
+
+\begin{center} \includegraphics [scale=0.4] {pgram_sliced.png} \end{center}
+
+\subsection*{Euclid's Proof}
+
+\label{sec:Euclid_I_35}
+
+Euclid's approach is detailed in three propositions in Book I of \emph{Elements}.  Here is Euclid I.35.  This proposition (theorem) says that given parallelograms $ABCD$ and $EBCF$ on the same base $BC$ and with $ADEF \parallel BC$, they have the same area.
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_35.png} \end{center}
+
+The diagram is drawn for the awkward case, where the two parallelograms overlap.  We return to the properties of parallelograms later, but for now it is enough that $AB = DC$, $AD = BC$ and the sides are parallel as well.
+
+Because of the shared base, $EF = BC = AD$.  So then by addition:  $AE = DF$.  We also have $AB = DC$ and because $AB \parallel DC$, $\angle EAB = \angle FDC$.  By SAS we obtain $\triangle EAB \cong \triangle FDC$.
+
+Subtract the shared area of $\triangle DGE$ and add the shared area of $\triangle GBC$ to obtain equality for the area of the two parallelograms.
+
+$\square$
+
+\subsection*{any triangle is one-half of a parallelogram}
+
+We recognize that any triangle can be turned into a parallelogram, by attaching a rotated image of itself, like this:
+
+\begin{center} \includegraphics [scale=0.4] {area4.png} \end{center}
+
+$ACBC'$ is a parallelogram composed of two copies of $\triangle ABC$.  The copy has simply been rotated 180 degrees and re-attached along side $AB$.  The area of this parallelogram is twice that of $\triangle ABC$.  To obtain the value, multiply the base $BC$ times the "height" $E'H$.
+
+In this example, the horizontal line that runs through $C'$, $A$, $D$ and $E'$ is parallel to the line that contains the base segments $BC$ and $EF$.  $E'H$ is perpendicular to both lines.
+
+$E'H$ is equal in length to what we will call the altitude of the triangle.  That would be a line dropping vertically from $A$ and making a right angle with the base, $BC$.
+
+The area of the triangle is one-half that of the parallelogram that contains two copies of the triangle.
+\[ \mathcal{A} = \frac{1}{2} \cdot BC \cdot E'H \]
+
+\subsection*{area-ratio theorem}
+
+\label{sec:area_ratio_theorem}
+
+Sometimes this corollary is called the area-ratio theorem (drawing from Acheson):
+
+\begin{center} \includegraphics [scale=0.5] {area11.png} \end{center}
+
+If in a triangle we draw the line connecting the upper vertex to any point on the bottom side, then the areas of the two smaller triangles are in the same ratio as the lengths of their bases.
+
+\emph{Proof.}
+
+The area of $\triangle A$ is $ah/2$, while that of $\triangle B$ is $bh/2$, so the ratio of areas is 
+\[ \frac{\mathcal{A}_A}{\mathcal{A}_B} = \frac{ah/2}{bh/2} = \frac{a}{b} \]
+
+$\square$
+
+It is also the case that the ratio of the area of any sub-triangle to the whole is the same as the proportion of its base length to that of the whole base.
+
+\[ \frac{\mathcal{A}_A}{\mathcal{A}_A + \mathcal{A}_B} = \frac{a}{a+b} \]
+
+\emph{Proof}.  
+
+Simple algebra:  invert, add one to both sides, and invert again.  We show only the right-hand side.  Start with the fraction $b/a$ and add $1$ to it:
+
+\[ \frac{b}{a} + 1 = \frac{b}{a} + \frac{a}{a} = \frac{a + b}{a} \]
+
+Inverted:
+\[ \frac{a}{a + b} \]
+
+Do the same to both sides and the result follows.
+
+The area-ratio theorem shows the deep relationship between similarity and area.
+
+\subsection*{problem}
+
+Given that $D$ and $E$ are midpoints of their sides:  $AD = DB$ and $AE = EC$.  Prove that the colored areas are equal.
+
+\begin{center} \includegraphics [scale=0.4] {tra1.png} \end{center}
+
+\emph{Solution}.
+
+Let the four triangular areas be labeled $I-IV$.  
+\begin{center} \includegraphics [scale=0.5] {tra2.png} \end{center}
+
+Then, by the area-ratio theorem and using $AC$ as the base, and since the base is bisected:
+
+\[ I + II = III + IV \]
+
+But using $AB$ as the base
+
+\[ I + III = II + IV \]
+
+Add the two equations:
+
+\[ 2 \cdot I + II + III = 2 \cdot IV + II + III \]
+\[ I = IV  \]
+
+$\square$
+
+We might note as well that since $DE$ bisects the sides it is parallel to the base $BC$.  (We will get to that, it is a consequence of similar triangles).  As a result, $II + IV$ and $III + IV$ have the same altitude as well as the same base $BC$, so they are equal.  In other words, subtracting the two equations:
+
+\[ II - III = III - II \]
+\[ II = III \]
+
+\subsection*{twice the area}
+
+It is probably less confusing for an introductory text to use the formula we gave above for a triangle's area:
+
+\[ \mathcal{A}_{\triangle} = \frac{1}{2} \ ab \]
+
+However, it can be convenient to write the same formula as \emph{twice} the area, and we will often do that.
+
+\[ 2 \mathcal{A}_{\triangle} = ab \]
+
+We rewrite two important formulas from this chapter:
+
+\[ d \cdot h + e \cdot h = (d+e) \cdot h = c \cdot h \]
+\[ \frac{\mathcal{A}_A}{\mathcal{A}_B} = \frac{ah}{bh} = \frac{a}{b} \]
+
+The first one is an equality of different areas, and the second involves a ratio of areas on the left-hand side.  The result is unchanged by using twice the area, as long as we are consistent.
+
+\end{document}

@@ -1,0 +1,186 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+
+\title{Parallelograms}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Starting with this chapter, the material gets more difficult and the proofs a little deeper.  Try to read with pencil and paper in hand and reproduce the diagrams and arguments for yourself as we go.
+
+\label{sec:parallelogram_theorems}
+
+Here we look at parallelograms, which are quadrilaterals with opposite sides equal and parallel (left panel, below).
+
+\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+
+They also have opposite angles equal.
+
+We want to find the \emph{minimum} conditions that ensure a given quadrilateral is a parallelogram.
+
+Right away, we can see that having just (i) one pair of sides equal, (ii) one pair of sides parallel, or (iii) one pair of angles equal, will not be enough.  We handle these cases by constructing a counter-example that is clearly not a parallelogram.
+
+\begin{center} \includegraphics [scale=0.4] {pgram1b.png} \end{center}
+
+For case (i), draw the equal sides not parallel.  Then the other pair of sides cannot be equal.  For (ii) draw the parallel sides unequal and align them so there is a square corner on one end.  The other end must be longer.  For (iii) consider a kite.
+
+The first example also rules out one pair of sides equal and the other pair parallel.  The kite doesn't fit our conditions for sides because the equal sides are adjacent rather than opposite.
+
+Here are some that do work.
+
+$\circ$ \ \ If a quadrilateral has two pairs of parallel line segments, then the opposing angles and sides are equal.
+
+\emph{Proof.}
+
+The alternate interior angles theorem gives us the angle equalities shown.  
+\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+
+$AD$ is parallel to $BC$, therefore the angles marked with black dots are equal.  $AB$ is parallel to $DC$, therefore the angles marked with red dots are equal.
+
+In the left panel, we have three angles the same and a shared side, hence $\triangle ABC \cong \triangle ACD$.
+
+Therefore, $AB = DC$ and $AD = BC$, fulfilling the definition. 
+
+$\square$
+
+$\circ$ \ \ If a quadrilateral has opposing angles equal, then the opposing sides are parallel and equal.
+
+\emph{Proof.}
+
+\begin{center} \includegraphics [scale=0.20] {pgram1a.png} \end{center}
+
+The sum of all the angles is equal to four right angles or $360^{\circ}$.  This follows from the fact that any quadrilateral can be decomposed into two triangles, and the sum of angles in any triangle is equal to two right angles (left panel, above).
+
+\[ \alpha + \beta + \gamma = 180 = s + t + u \]
+\[ \alpha + \beta + \gamma + s + t + u = 360 \]
+
+Since there are two pairs of angles, the sum of one from each pair, say $\angle A$ plus $\angle B$ is equal to two right angles.  Therefore, the opposing sides are parallel.
+
+Then proceed as in the previous proof to show equality of opposing sides.
+
+$\square$
+
+$\circ$ \ \ If a quadrilateral has opposing sides equal, the other properties follow.
+
+\emph{Proof.}
+
+Parallelograms can be viewed as two congruent triangles that have been stitched together.  In the left panel below, we are given that $AB = CD$ and $AD = BC$ and the diagonal is shared.  Therefore $\triangle ABC \cong \triangle ADC$ by SSS.
+
+It follows that opposing angles ($\angle A$ and $\angle C$) of the quadrilateral are equal (red and black dots, and their sums).  $\angle B = \angle D$ as well.
+
+\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+
+But there is nothing special about the diagonal $AC$.  So draw diagonal $BD$.  The equality of the angles marked with green dots, and the pair marked with blue dots, follows.  
+
+But then the opposing sides are parallel, by the converse of alternate interior angles.  And opposing angles are equal, by summing the individual components.
+
+$\square$
+
+An important property of parallelograms follows from this congruency relationship:  the \emph{diagonals cross at their midpoints}. 
+
+ \emph{Proof}.
+ 
+ $\triangle ABE \cong \triangle CDE$.  Therefore $AE = EC$ and $DE = EB$.
+ 
+ $\square$
+
+\subsection*{summary and one more}
+
+\label{sec:one_pair_of_sides}
+
+We've shown that we have a parallelogram when
+
+$\circ$ \ \ both pairs of opposing sides are parallel
+
+$\circ$ \ \ both pairs of opposing angles are equal
+
+$\circ$ \ \ both pairs of opposing sides are equal
+
+There is one other important case we will need when we discuss similar triangles:
+
+$\circ$ \ \ one set of opposing sides both parallel and equal
+
+\emph{Proof}.
+
+In the figure below (left panel), suppose we know only that $AB = DC$ and $AB \parallel DC$.  
+
+\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+
+By alternate interior angles, the red-dotted angles are equal.  So the two triangles are congruent by SAS:  $\triangle ABC \cong \triangle ACD$.  
+
+Therefore the black-dotted angles are equal.  As well, $AD \parallel BC$ and $AD = BC$.
+
+We can also draw the crossed diagonals.  We have the angles with red dots and the angles with green dots equal by alternate interior angles.  
+
+So then $\triangle AEB \cong \triangle DEC$ by ASA (three equal angles and $AB = DC$).
+
+Considering the other pair of triangles $\triangle AED \cong \triangle BCE$ by SAS (vertical angles and congruent sides $DE = EB$ and $AE = EC$).  Therefore the other marked angles are equal.
+
+Then $AD = BC$ (congruent triangles) and $AD \parallel BC$ by the converse of the alternate interior angles theorem.  
+
+$\square$
+
+\subsection*{rhombus}
+
+If we further constrain all the sides to be equal, then the half triangles like $\triangle ADC$ become isosceles.  
+
+The isosceles triangle theorem says that in a triangle with two sides equal the base angles are equal.  The converse is also true.
+
+By the isosceles triangle theorem, all the angles marked with red dots in figure below are equal, and all the blue ones as well.  Because each quarter triangle has a red and a blue, the central angles are all equal.
+
+Therefore, all four central angles (at the midpoint $F$) are all right angles.
+
+\begin{center} \includegraphics [scale=0.4] {pgram2.png} \end{center}
+
+\subsection*{adding triangles}
+
+Going back to the parallelogram, let us assemble one whole parallelogram and two half parallelograms (triangles) starting with the same triangle (left panel).  
+
+\begin{center} \includegraphics [scale=0.3] {pgram4c.png} \end{center}
+
+The angles are equal as marked, by construction, so the large triangle is similar to the four smaller ones.  The four small triangles are congruent.
+
+I'll leave the proof of this statement as an exercise.
+
+\subsection*{Pappus's parallelogram theorem}
+
+\label{sec:PProof_Pappus}
+
+Pappus came up with a beautiful theorem which includes the Pythagorean theorem as an extension.  First, we need a simple lemma about parallelograms.
+
+Draw two parallel lines, and on one, mark off two equal segments.  Draw any two parallelograms with those segments as the base.  Then, they have equal areas.  \emph{Proof}.  They are composed of two pairs of triangles of equal area, having the same base and the same altitude.  $\square$
+
+On the two sides of any $\triangle ABC$ draw any parallelograms $ACDE$ and $BCFG$.  Extend the two new sides to meet at $H$ and then draw $HC$ and its extension such that $AJ \parallel HCTU \parallel BI$ and also $AJ = HC = TU = BI$.
+\begin{center} \includegraphics [scale=0.2] {Pappus_pyth.png} \end{center}
+
+\emph{Proof}.
+
+Given $ACDE$ is a parallelogram, so $AC \parallel DE$ and also equal.  Then the new parallelogram drawn with $AC$ as one side and $RH$ the other, is equal, by our lemma.  That is, $ACDE = ACHR$.  
+
+But then since $RAJ \parallel HCTU$ and $RA = HC = AJ = TU$, $ATUJ = ACHR$ for the same reason.  So $ATUJ = ACDE$.
+
+Using the same argument for parallelograms on the right hand side, we obtain $BCFG = BCHS = BTUI$.  So the sums are equal as well:
+\[ ACDE + BCFG = ATUJ + BTUI \]
+\[ = ABIJ \]
+
+$\square$.
+
+Let the $\angle ACB$ be a right angle, and let the parallelograms be squares.  Pappus' theorem becomes the Pythagorean theorem as a special case.
+
+[ Reference:  George F. Simmons, \emph{Calculus Gems}. ]
+
+\end{document}
