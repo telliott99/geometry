@@ -149,7 +149,7 @@ $\bullet$  \ In any triangle, the longest side is smaller than the sum of the tw
 
 Clearly, if a given side is not the longest, so it is shorter than one of the others, then it must also be shorter than the sum of that other one plus the third.  For this reason, we consider only the longest side.
 
-\begin{center} \includegraphics [scale=0.4] {triangle_inequality3.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {triangle_inequality3.png} \end{center}
 
 Given that side $AC$ is the longest in $\triangle ABC$.
 
@@ -213,6 +213,34 @@ It follows that since the greater side is opposite the greater angle in $\triang
 $\square$
 
 This is enough of the \emph{Elements} to give us a good taste of the basics of Greek geometry of lines and triangles, and methods of proof.
+
+\subsection*{problem}
+\begin{center} \includegraphics [scale=0.16] {isosceles13.png} \end{center}
+Let $\triangle ABC$ be isosceles, and $D$ lie on $BC$.  Using Euclid I.19, prove that $DC < DA$.  Separately, use I.20 for the same proof.
+
+Here is another idea.  \emph{Proof}.  (Sketch).  Let the perpendicular bisector of $AC$ be $BE$.  Drop another perpendicular from $D$ to $AC$ at $F$.  Clearly, $EC < AF < AE$.  So
+\[ EC^2 < AE^2 \]
+\[ EC^2 + DE^2 < AE^2 + DE^2 \]
+But by the Pythagorean theorem, the left-hand side is $DC^2$, and the right-hand side is $AD^2$.  Taking side lengths as the positive square root, we have $DC < AD$.  $\square$
+
+In fact, \emph{every} point which lies on the same side of the perpendicular bisector of $AC$ as $C$, is closer to $C$ than to $A$.
+
+\subsection*{Triangle inequality by circles}
+
+Here is a modern proof of Euclid I.20.
+
+\emph{Proof}.
+
+Consider $\triangle ABC$.  Draw circle $\mathcal{C}_1$ on center $B$ with radius $AB$ and also circle $\mathcal{C}_2$ on center $C$ with radius $AC$.  The third vertex $A$ lies on the intersection of the two circles.  
+\begin{center} \includegraphics [scale=0.25] {tri_inequalityb.png} \end{center}
+
+If $BC$ is longer (greater) than the sum of the two radii, then the circles will not cross one another. 
+
+If $BC$ is equal to this sum, then they only touch, on the line $BC$.  Thus, in order for there to be a triangle, $BC$ must be less than the sum of the diameters:  $BC < AB + AC$.  
+
+$\square$
+
+\url{https://arxiv.org/pdf/1803.01317}
 
 \subsection*{angle of reflection}
 

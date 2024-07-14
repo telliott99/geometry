@@ -197,5 +197,48 @@ This is Ptolemy's Theorem.
 
 $\square$
 
+\subsection*{Ceva's Theorem by parallel lines}
+
+\label{sec:ceva_parallel_lines}
+
+Here is another proof of \ \hyperref[sec:Ceva_theorem]{\textbf{Ceva's theorem}}.
+
+\emph{Proof}.
+
+Consider $\triangle ABC$.  Draw $AD$, $BE$ and $CF$ concurrent at $P$.  Draw a line through $B$ parallel to $AEC$ and extend $APDA'$ and $CPFC'$.  
+
+We have five pairs of similar triangles.
+\begin{center} \includegraphics [scale=0.15] {ceva9.png} \end{center}
+
+Three with vertical angles at $P$:
+\[ (1) \ \triangle APC \sim \triangle A'PC' \Rightarrow \frac{AP}{A'P} = \frac{PC}{PC'} = \frac{CA}{C'A'} \]
+\[ (2) \ \triangle APE \sim \triangle A'PB \Rightarrow \frac{AP}{A'P} = \frac{PE}{PB} = \frac{EA}{BA'} \]
+\[ (3) \ \triangle CPE \sim \triangle C'PB \Rightarrow \frac{CP}{C'P} = \frac{PE}{PB} = \frac{EC}{BC'} \]
+And two more with vertical angles at $D$ and $F$:
+\[ (4) \ \triangle ADC \sim \triangle A'DB \Rightarrow \frac{AD}{A'D} = \frac{DC}{DB} = \frac{CA}{BA'} \]
+\[ (5) \ \triangle AFC \sim \triangle BFC' \Rightarrow \frac{AF}{BF} = \frac{FC}{FC'} = \frac{CA}{C'B} \]
+
+It is helpful to remember that when similar triangles are formed by an ``X'' containing vertical angles lying between two parallel lines, corresponding vertices go in mirror image order, and the point at the ``X'' is a corresponding point in each triangle.
+
+We label the triangles so that corresponding vertices match.  Also, do not worry yet about the order in each line segment so for example, $AB = BA$.
+
+\begin{center} \includegraphics [scale=0.15] {ceva9.png} \end{center}
+
+Now look for the ratios we need namely:
+\[ \frac{CD}{DB} = \frac{AD}{A'D} = \frac{CA}{BA'} \]
+\[ \frac{BF}{FA} = \frac{FC'}{FC} = \frac{C'B}{CA} \]
+
+We are encouraged by the fact that $CA$ cancels in one product.
+\[ \frac{CD}{DB} \cdot \frac{BF}{FA} = \frac{C'B}{BA'}  \]
+
+The third ratio is $AE/EC$.  $AE$ and $EC$ do not occur in the same box (they do not lie in similar triangles), but in $(2)$ and $(3)$ we find:
+\[ AE = A'B \cdot \frac{PE}{PB} \ \ \ \ \ \ \ \ EC = BC' \cdot \frac{PE}{PB} \]
+so the ratio is just
+\[ \frac{AE}{EC} = \frac{A'B}{BC'} \]
+which is exactly what we need to cancel!
+\[ \frac{CD}{DB} \cdot \frac{BF}{FA} \cdot \frac{AE}{EC} = \frac{C'B}{BA'} \cdot \frac{A'B}{BC'}  = 1 \]
+
+$\square$
+
 
 \end{document}

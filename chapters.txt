@@ -14,12 +14,12 @@ Right triangles
 
 Area
 Rectangles
-Triangular area
+Area of triangles and parallelograms
 Altitudes
 Similarity and area
 
 Pythagorean theorem
-Simple proofs
+Simple proofs of Pythagoras
 Euclid's proof of Pythagoras
 Brief review
 
