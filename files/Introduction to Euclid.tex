@@ -38,7 +38,9 @@ This is a method for proving congruence (equality) of two triangles
 
 Now we call the method SAS or \emph{side angle side}.  Given that $AB = DE$ and $AC = DF$ and that the angles between them at the vertices $A$ and $D$ are also equal, the two triangles are congruent:  all three angles and all three sides are equal.
 
-This (Euclid I.4) is a proof that SAS is correct.
+Euclid I.4 is a proof that SAS is correct.
+
+\emph{Proof}.
 
 The proof is by superposition.  The facts establish the positions of the points $B$ and $C$, which determines $AB$ and so the angles at vertices $B$ and $C$.
 
@@ -48,7 +50,7 @@ $\square$
 
 This seems perhaps a little shaky logically, and it's not a method of proof that Euclid uses much.
 
-But one might instead have taken this proposition as a postulate.  The source, above, says that David Hilbert claims that under the hypotheses of the proposition it is true that the two base angles are equal, and then proves that the bases are equal.
+But one might instead have taken this proposition as a postulate.  The source, above, says that David Hilbert claims that under the hypotheses of the proposition it is true that the two base angles are equal, and then proves that the sides are equal.
 
 \subsection*{Euclid I.5}
 
@@ -56,7 +58,7 @@ But one might instead have taken this proposition as a postulate.  The source, a
 
 Euclid's proofs of the isosceles triangle theorem and its converse are \hyperref[sec:Euclid5]{\textbf{Euclid I.5}} and \hyperref[sec:Euclid6]{\textbf{Euclid I.6}}.
 
-The proof of the forward theorem is one of the most famous proofs in Euclid's book I:  if two sides in a triangle are equal, then so are the opposing angles.  It is really only the second proof in all of Euclid (the first three propositions are constructions, and no. 4 is SAS).  
+The proof of the forward theorem is one of the most famous proofs in book I (aside from the proof of the Pythagorean theorem):  if two sides in a triangle are equal, then so are the opposing angles.  It is really only the second proof in all of Euclid --- the first three propositions are constructions, and no. 4 is SAS.  
 
 It's difficult precisely because Euclid proves it \emph{before} we know how to bisect an angle.
 
@@ -81,11 +83,9 @@ As a result, we have two more pairs of angles equal:  $\angle ADC = \angle AEB$ 
 
 \begin{center} \includegraphics [scale=0.18] {Euclid_I_5c.png} \end{center}
 
-Since $\angle ADC = \angle AEB$ and the flanking sides are equal, namely, $AD = AE$ and $CD = BE$, we have $\triangle BCD \cong \triangle CBE$ by SAS.
+Since $\angle ADC = \angle AEB$ and the flanking sides are equal, namely, $BD = CE$ and $CD = BE$, we have $\triangle BCD \cong \triangle CBE$ by SAS.
 
-But now, $\angle DBC = \angle ECB$.
-
-By supplementary angles, $\angle ABC = \angle ACB$.
+It follows that $\angle DBC = \angle ECB$.  By supplementary angles, $\angle ABC = \angle ACB$.
 
 $\square$
 
@@ -93,17 +93,19 @@ Notice how the original figure is extended to provide auxiliary shapes helpful i
 
 We will use both results ($\angle DBC = \angle ECB$ and $\angle ABC = \angle ACB$), going forward.
 
-\subsection*{Euclis I.6}
+To summarize:  in a triangle with two equal sides, the angles opposite those sides are also equal, as well as their supplementary angles.
+
+\subsection*{Euclid I.6}
 
 We proved the converse of I.5, earlier, based on angle bisection.  Now that we have proved Euclid I.5, which provides the basis for bisection, this is logically solid.  Nevertheless, for completeness, here is Euclid's proof of I.6.
 
-\begin{center} \includegraphics [scale=0.3] {Euclid_I_6.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {Euclid_I_6.png} \end{center}
 
 \emph{Proof}.
 
 Given $\angle ABC = \angle ACB$.  Suppose $AB \ne AC$.  Then let one be less, say $AC$.  So cut off from $AB$ the length $BD = AC$.
 
-Compare $\triangle ABC$ with $\triangle DBC$.  We have the sides equal, namely $BD = AC = AB$.  We have $BC$ and $\angle DBC$ shared.  Therefore $\triangle ABC \cong \triangle DBC$ by Euclid I.4 (SAS).
+Compare $\triangle DBC$ with $\triangle ABC$.  We have the sides equal, namely $DB = AC$ and  $BC = BC$.  As well, $\angle DBC = \angle ACB$.  Therefore $\triangle ABC \cong \triangle DBC$ by Euclid I.4 (SAS).
 
 But this is absurd.  The part cannot be equal to the whole.
 
