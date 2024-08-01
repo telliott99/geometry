@@ -25,112 +25,99 @@
 
 \label{sec:Thales_theorem}
 
-In this chapter, we introduce the inscribed angle theorem.  Let's start by revisiting Thales' circle theorem:
+In this chapter, we will introduce the inscribed angle theorem.  Let's start by revisiting Thales' circle theorem:
 
 $\bullet$  Any angle inscribed in a semicircle is a right angle.
 
 Take any diameter of the circle and any third, distinct point.  The three points on the circumference of the circle form a triangle, and the angle at the third vertex is always a right angle.
 
-In the figure below, $\angle PRQ$ is a right angle.
-\begin{center} \includegraphics [scale=0.4] {arcs12.png} \end{center}
+In the figure below, $\angle ABC$ is a right angle.
+
+\begin{center} \includegraphics [scale=0.14] {EIII_20a.png} \end{center}
 
 \emph{Proof}.
 
-Draw the radius $OR$ (right panel). 
+By I.32, the sum of angles in a triangle is equal to two right angles.  So
+\[ \angle OAB + \angle OBA + \angle OBC + \angle OCB = 180 \]
 
-The two smaller triangles produced --- $\triangle OPR$ and $\triangle OQR$ --- are both isosceles, since two of their sides are radii of the circle.
+But $\triangle OAB$ and $\triangle OBC$ are both isosceles, so the base angles are equal, with
+\[ \angle OAB = \angle OBA \ \ \ \ \ \ \ \ \angle OBC = \angle OCB \]
 
-Therefore, in each triangle the two base angles marked with dots of the same color are equal, by the (\hyperref[sec:isosceles_triangle_theorem]{\textbf{isosceles triangle theorem}}).
-
-Since $\angle PRQ$ contains one angle of each type, it is equal to one-half the angle sum for the triangle, so $\angle PRQ$ is a right angle.
-
-To restate this in more conventional notation:  in the figure below, $\angle PRQ = \phi + \theta$.  
-
-\begin{center} \includegraphics [scale=0.4] {arcs13.png} \end{center}
-
-Since the full measure of the triangle is $180^\circ = \pi$ radians, and
-\[ \phi + \phi + \theta + \theta = \pi \]
-it follows that
-\[ \phi + \theta = \pi/2 \]
+It follows that 
+\[ 2 \angle OBA + 2 \angle OBC = 180 \]
+\[ \angle OBA + \angle OBC = 90 \]
 
 $\square$
 
-This theorem is Euclid III.31.  Rather than use the angle sum theorem and arithmetic, he uses the external angle theorem to reach the result.  (The central angle $\angle ROQ$ is equal to 2 $\phi$).
-
 According to Boyer, this result was known to the Egyptians 1000 years before Thales.  But it is yet another example of knowing a result before proving that it is so.  Archimedes had something to say about the importance of having discovered a fact, before finding a way to prove it.
 
-\subsection*{angles on the perimeter}
+We can use the same diagram to introduce the inscribed angle theorem.
 
-\label{sec:peripheral_angle}
-
-The right angle on the perimeter of the circle which corresponds to one-half of the circle is
-\[ \angle PRQ = \pi/2 \]
-
-One-half the arc of the circle is $\pi$ but the angle subtended by it is $\pi/2$.  What's going on?
-
-To clarify, let us label the angles at the center of the circle, as well as three segments of arc.
-
-\begin{center} \includegraphics [scale=0.4] {arcs8.png} \end{center}
-
-$a$ is the arc swept out by angle $s$.  We say that $a$ and $s$ have the same measure.  By definition, the length of arc that subtends a central angle (in a unit circle) is the measure of that angle.  
-
-\[ s = a \]
+\begin{center} \includegraphics [scale=0.14] {EIII_20a.png} \end{center}
 
 \subsection*{inscribed angle theorem}
 
 \label{sec:inscribed_angle_theorem}
 
-By the (\hyperref[sec:external_angle_theorem]{\textbf{external angle theorem}}), we know that
-\[ s = 2 \phi \]
-and so conclude that
-\[ \phi = \frac{s}{2} \]
+An inscribed angle is an angle whose vertex lies on the circle, such as $\angle BAC$
 
-The angle $\phi$ lying on the perimeter sweeps out the same arc as $s$, even though $\phi$ is one-half of $s$.
-
-This is clear in the special case where one arm of the inscribed angle is a diameter of the circle, but it turns out to be generally true, as we'll see.
-
-$\square$
-
-A related approach is to simply count up the angles in two triangles.  For the large right triangle we have
-
-\[ \pi = \phi + \phi + \theta + \theta \]
-
-and for the smaller triangle with central angle $s$
-
-\[ \pi = s + \theta + \theta \]
-
-Clearly, then, $s = 2 \phi$ so
-
-\[ \phi = \frac{s}{2} \]
-
-$\square$
-
-$\phi$ is farther away from the arc, so we get a bigger arc for the same angular measure.  Another way to say the same thing:  for an angle on the periphery, we get a smaller angle than for a central angle for the same arc.
-
-An angle on the perimeter of a circle is generally called an \emph{inscribed} angle.  One can view an inscribed angle as part of a triangle whose vertices are all on the circle.  The following is called the \emph{inscribed angle theorem} (Euclid III.20).
-
-$\bullet$  An inscribed angle is one-half the central angle corresponding to the same arc.
-
-Here is a proof of the inscribed angle theorem for the case where the peripheral angle does not include a diameter of the circle.  It uses various isosceles triangles and the sum of angles theorem.
-
-\begin{center} \includegraphics [scale=0.5] {broken_chord1.png} \end{center}
+$\bullet$  An inscribed angle is one-half the corresponding central angle lying on the same arc, $\angle BOC$.  The central angle is twice the corresponding inscribed angle.
 
 \emph{Proof}.
 
-The figure has two isosceles triangles, where the equal sides are all radii of the circle.  By the isosceles triangle theorem and the triangle sum theorem:
-
-\[ 2(A + \phi) + C = \pi \]
-\[ 2A + \theta + C = \pi \]
-
-Equating the two results and canceling we get
-\[ 2A + 2\phi = 2A + \theta \]
-\[ \theta = 2 \phi \]
+Euclid's proof uses the external angle theorem.   $\angle BOC$ is the external angle to $\triangle OAB$, so it is equal to the sum of $\angle OAB + \angle OBA$.  The triangle is isosceles, so these two angles are equal.  It follows that $\angle BOC = 2 \angle BAC$.
 
 $\square$
 
-A proof using this approach for the case where the peripheral angle includes the center of the circle is left as an exercise.
+This proof is short and sweet, but limited by the fact that we used the diameter for one of the arms of the inscribed angle.  Here is a more general proof.
 
-A different method is to start with the result for an angle where one adjacent side is a diameter of the circle.  Any other peripheral angle can be constructed as either the sum or the difference of two such constructs.  We'll show that later.
+\begin{center} \includegraphics [scale=0.14] {EIII_20b.png} \end{center}
+
+The claim is that $\angle BOD = 2 \angle BAD$.
+
+\emph{Proof}.
+
+Just add the results obtained using the previous proof.  $\angle DOC = 2 \angle DAC$ and $\angle BOC = 2 \angle BAC$.
+
+\[ \angle BOD = \angle BOC + \angle DOC \]
+\[ = 2 \angle BAC + 2 \angle DAC = 2 \angle BAD \]
+
+$\square$
+
+The proof is \emph{still} limited, since the angle we looked at includes the center of the circle.  There are two ways to fix this.  The first is subtraction.
+
+\begin{center} \includegraphics [scale=0.14] {EIII_20c.png} \end{center}
+
+\emph{Proof}.
+
+By the first proof, $\angle BOD = 2 \angle BAD$ and $\angle COD = 2 \angle CAD$.  The angle of interest, $\angle BOC$, is the difference:
+
+\[ \angle BOC = \angle BOD - \angle COD \]
+\[ = 2 \angle BAD - 2 \angle CAD = 2 \angle BAC \]
+
+$\square$
+
+A slightly more elegant proof of the second case is as follows.
+
+\begin{center} \includegraphics [scale=0.14] {EIII_20d.png} \end{center}
+
+\emph{Proof}.
+
+The total angle at $A$ is $\angle OAB = \angle OAC + \angle BAC$.  Since $\triangle OAB$ is isosceles, the base angles are equal.  
+
+With the addition of the central angle $\angle AOB$, by sum of angles we get two right angles for $\triangle OAB$.
+\[ 2 \angle OAC + 2 \angle BAC + \angle AOB = 180 \]
+
+In $\triangle OAC$, again isosceles, we have by sum of angles
+\[ \angle AOB + \angle BOC + 2 \angle OAC = 180 \]
+
+\begin{center} \includegraphics [scale=0.14] {EIII_20d.png} \end{center}
+
+Subtracting
+\[ 2 \angle BAC - \angle BOC = 0 \]
+\[ \angle BOC = 2 \angle BAC \]
+
+$\square$
 
 \subsection*{angles on the same arc}
 
@@ -146,7 +133,34 @@ This is an immediate consequence of the previous theorem, since two such angles 
 
 $\square$
 
-This theorem is Euclid III.21.  It is not the \textbf{inscribed angles theorem}, although I once thought of it as if it were so, and possibly I have mis-spoken elsewhere in the book on this point.  This theorem will appear \emph{many} times in the pages to come.
+This theorem is Euclid III.21.  It is such an immediate consequence of the \textbf{inscribed angles theorem} (Euclid III.20) that they are sometimes thought the same.
+
+Possibly I have mis-spoken elsewhere in the book on this point.  Theorem III.21 will appear \emph{many} times in the pages to come.
+
+The converse of Thales theorem is also true.  If the third point of a triangle contains a right angle, then it must lie on the circle where the other two points form the diameter.
+
+\subsection*{Thales circle theorem converse}
+A nice direct proof of this is given in Acheson.
+
+\label{sec:Thales_circle_theorem_converse}
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.4] {Acheson_G59.png} \end{center}
+
+We are given that $\angle APB$ is a right angle.  
+
+Draw $OD$ parallel to $PB$.  $\triangle AOD$ is similar to $\triangle ABP$ because they are both right triangles with a shared vertex at $A$.  
+
+Since $AO$ is one-half $AB$, the scale factor is $1/2$.  In particular, $AD = DP$.
+
+Now draw $OP$.  The two smaller triangles $\triangle AOD$ and $\triangle DOP$ are congruent by SAS.  Therefore, $OP = OA$.  
+
+But $OA$ is a radius of the circle.  Therefore, $OP$ is also a radius.
+
+Therefore $P$ must lie on the circle.
+
+$\square$
 
 \subsection*{theorem on cyclic quadrilaterals}
 
@@ -154,7 +168,7 @@ This theorem is Euclid III.21.  It is not the \textbf{inscribed angles theorem},
 
 All this leads to a wonderful simple theorem about quadrilaterals (Euclid III.22).  A cyclic quadrilateral is a four-sided polygon whose four vertices all lie on one circle.
 
-\begin{center} \includegraphics [scale=0.4] {circles_4.png} \end{center}
+\begin{center} \includegraphics [scale=0.12] {EIII_22.png} \end{center}
 
 $\bullet$ \ For \emph{any} cyclic quadrilateral, the opposing angles are supplementary (they sum to $180^\circ$ or two right angles).
 
@@ -162,29 +176,23 @@ $\bullet$ \ For \emph{any} cyclic quadrilateral, the opposing angles are supplem
 
 Together, opposing angles in a cyclic quadrilateral exactly correspond to the whole arc of the circle.
 
-Since the central angle for that arc is $2 \pi$, the sum of opposing inscribed angles is just $\pi$.
+Since the central angle for that arc is $360^{\circ}$ or $2 \pi$, the sum of opposing inscribed angles is just $\pi$.
 
 $\square$
 
-\subsection*{tangent-chord theorem}
+Euclid's proof uses sum of angles:
 
-\label{sec:tangent_chord_theorem}
-
-A tangent is a line that just touches the circle (or another curve, like a parabola).  By definition it touches the circle at a single point, and is perpendicular to the radius which extends to that point.
-
-$\bullet$  The arc swept out between a tangent and a chord is equal to the arc lying between the point of tangency and the point where the chord meets the circle.
-
-\begin{center} \includegraphics [scale=0.4] {arcs14.png} \end{center}
+\begin{center} \includegraphics [scale=0.12] {EIII_22.png} \end{center}
 
 \emph{Proof}.
 
-The arc $a$ is equal to twice the arc swept out by angle $\theta$ on the far right of the diameter.  But the angle between the tangent and the chord is also equal to $\theta$, because $\phi$ is complementary to $\theta$.
+$\angle ADC = \angle ADB + \angle BDC$, subtended by arcs $AB$ and $BC$.
 
-Therefore the arc swept out between the tangent and the chord is equal to $a$.
+As angles on equal arcs (III.21) the latter two angles are equal to $\angle ACB$ and $\angle BAC$.
+
+But by I.32, the same two angles plus the total angle at vertex $B$ are equal to two right angles.
 
 $\square$
-
-This is Euclid III.32, the tangent-chord theorem.  Acheson calls this the alternate segment theorem.  
 
 \subsection*{geometric mean}
 
@@ -243,7 +251,69 @@ The geometry shows that $h \le r$ so:
 
 The geometric mean is always less than the arithmetic mean, except when $a = b$, where they are equal (or all of $n$ values are equal).
 
-\newpage
+\subsection*{converse proof}
+
+\label{sec:inscribed_angles_converse}
+
+\label{sec:equal_angle_on_circle_contradiction}
+
+There are several different setups which are essentially converses of the inscribed angles theorem.  Here is one:
+
+Let $\triangle ABC$ lie on a circle.  
+
+Let point $D$ be such that $\angle BDC = \angle BAC$.  
+
+\begin{center} \includegraphics [scale=0.16] {Coxeter_1_9_3_c.png} \end{center}
+
+Then $D$ is also on the same circle.
+
+\emph{Proof}.
+
+Suppose otherwise, for example, let $D$ be external.
+
+Then let $D'$ be on the circle so that $\angle BD'C$ is subtended by $BC$.
+
+By the forward version of the inscribed angle theorem:  
+$\angle BD'C = \angle BAC$.
+
+But that means $\angle BDC = \angle BD'C$.
+
+Since $\angle BCD > \angle BCD'$, we have that $\angle BD'C > \angle BDC$.
+
+But this is absurd.  So there is a contradiction.
+
+A similar argument will show that $D$ cannot be internal to the circle.
+
+Therefore, it must be that $D$ \emph{is on the circle}.
+
+$\square$
+
+\subsection*{another converse proof}
+
+\label{sec:inscribed_angles_converse2}
+
+Let $\triangle ABD$ lie on a circle.  
+
+Let point $C$ be such that $\angle BCD$ is supplementary to $\angle BAD$ by the theorem on cyclic quadrilaterals.
+
+Then $C$ lies on the same circle.
+\begin{center} \includegraphics [scale=0.16] {inscribed_angles_converse2} \end{center}
+
+\emph{Proof}.
+
+Suppose $C$ does not lie on the circle.
+
+Let $C$ be external and $C'$ lie on the point where $DC$ cuts the circle (right panel).  By the forward theorem, $\angle BC'D$ is supplementary to $\angle BAD$ and so equal to $\angle BCD$.
+
+But by the external angle theorem $\angle BC'D = \angle BCD + \angle CBC' > \angle BCD$.  
+
+This is a contradiction.  Therefore $C$ is not external.  
+
+A similar argument will show that $C$ is not internal.  
+
+Therefore $C$ lies on the circle and $C$ and $C'$ are the same point.
+
+$\square$
 
 \subsection*{problem}
 

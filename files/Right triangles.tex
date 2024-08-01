@@ -23,15 +23,15 @@
 
 \label{sec:right_triangles}
 
-As you might expect, a \emph{right}  triangle is a triangle containing one right angle.  We saw previously that the definition of a right angle is that two of them add up to one straight line or $180$ degrees.
+A \emph{right}  triangle is a triangle containing one right angle.  We saw previously that the Greek definition of a right angle is that two of them add up to one straight line or $180$ degrees.
 
 No triangle can contain two right angles, because the measure of the third angle would then have to be zero.  This goes back to the parallel postulate as well as the sum of angles in a triangle.  Two right angles at both ends of a line segment send out parallel lines.
 
 Right angles and right triangles are special in many ways.
 
-In the figure below, let us have the angle at vertex $P$ as a right angle.  It is common practice to mark a right angle with a little square, as shown, but usually I will not do that.
+In the figure below, let us have the angle at vertex $P$ as a right angle.  It is common practice to mark a right angle with a little square, and we have followed that here, as shown.
 
-The side opposite $P$, here labeled $c$, is called the \emph{hypotenuse}.
+The side opposite $P$, here labeled $c$, is called the \emph{hypotenuse}, and the other two sides $a$ and $b$ are sometimes called legs.
 
 \begin{center} \includegraphics [scale=0.35] {right_triangle.png} \end{center}
 
@@ -41,38 +41,26 @@ The side opposite $P$, here labeled $c$, is called the \emph{hypotenuse}.
 
 Since the sum of angles in a triangle is equal to two right angles, the sum of the angles $\theta$ and $\phi$ above is equal to one right angle, or 90 degrees.  Together with $\angle P$ they sum up to two right angles.
 
-Angles $\theta$ and $\phi$ are said to be \emph{complementary}.  This fact is often exploited in proofs.
+Angles $\theta$ and $\phi$, the two smaller angles in a right triangle, are said to be \emph{complementary}.  This fact is often exploited in proofs.
 
 $\bullet$ \ the sum of the two smaller angles in a right triangle is equal to one right angle.
 
 \subsection*{Pythagorean theorem}
 
-A second very important fact about right triangles is expressed in the Pythagorean theorem.  Although we haven't proved it yet, we will do so shortly, and call on it here.  Given the hypotenuse $c$ and two "legs" (sometimes called "arms") of a right triangle, $a$ and $b$, the theorem says that
+A second very important fact about right triangles is expressed in the Pythagorean theorem.  Although we haven't proved it yet, we will do so shortly, and call on it here.  Given the hypotenuse $c$ and two legs (sometimes called "arms") of a right triangle, $a$ and $b$, the theorem says that
 \[ a^2 + b^2 = c^2 \]
 
 It follows that if we know any two sides in a right triangle, then we know all three sides.
 
-A third fact is that the hypotenuse is the longest side in a right triangle.  We will prove later that in any triangle, if one side is longer than another, then the angle opposite that side is also larger than the angle opposite the shorter side.
+A third fact is that the hypotenuse is the longest side in a right triangle.  We will prove later that in any triangle, one side is longer than another in any triangle \emph{if and only if} the angle opposite that side is also larger than the angle opposite the shorter side.
 
 Previously, we gave several ways to prove that two triangles are congruent.  These four methods (SAS, SSS, ASA, and AAS) are also useful with right triangles.  Some books give them new names in the context of a right triangle.  One of these is useful.
-
-\subsection*{hypotenuse-angle (HA)}
-
-For two right triangles, if one hypotenuse is equal to the other, and also one pair of smaller angles equal, the two triangles are congruent.
-
-\emph{Proof}.
-
-It wasn't stated explicitly but we also know the right angle is shared, so we have all three angles congruent (AAA) by the triangle sum theorem.
-
-We also have the longest side (hypotenuse) equal, so the triangles are congruent by ASA.  Alternatively, if we have one of the other sides equal (we know it is flanked by the right angle), then the triangles are congruent.
-
-$\square$
 
 \subsection*{hypotenuse-leg in a right triangle}
  
 \label{sec:SSA_in_right}
 
-For two right triangles, if one hypotenuse is equal to the other, and also one pair of legs equal, the two triangles are congruent.  This condition is called hypotenuse-leg in a right triangle (HL).
+For two right triangles, if one hypotenuse is equal to the other, and also one pair of legs equal, the two triangles are congruent.  This condition is called hypotenuse-leg in a right triangle (HL).  It is effectively SSA in the case where we know that the angle is a right angle.
 
 \begin{center} \includegraphics [scale=0.4] {hyp_side_cong.png} \end{center}
 
@@ -80,19 +68,15 @@ In the figure, imagine the hypotenuse swinging on the hinge of its vertex with t
 
 \emph{Proof}.
 
-The third leg is determined by the other two sides by the Pythagorean theorem, since we know which side is the hypotenuse, and therefore we have SSS.
+The third leg is determined by the other two sides by the Pythagorean theorem, since we know which side is the hypotenuse.  Therefore we have SSS.
 
 $\square$
 
 The HL criterion is sometimes called RHS (right triangle, hypotenuse, side).
 
-Previously we showed this figure:
+\subsection*{hypotenuse-angle (HA)}
 
-\begin{center} \includegraphics [scale=0.4] {angle_side_side.png} \end{center}
-
-and we said that in the special case where $b$ meets the opposing side in a right angle, that SS-right angle is enough to prove congruence.
-
-It is worth pointing out that if we have SSA not in a right triangle, then for an appropriate length of $b$ there are only two possibilities, as illustrated.  So if we can further specify whether the angle $b$ makes with the third side is acute or obtuse (or the angle $a$ makes with $b$), we may be able to show congruence.
+For two triangles, if we know they are both right triangles, and also one pair of smaller angles is equal, the two triangles are similar and equiangular.  If we also know that the hypotenuse of one is equal to the hypotenuse of another, we have ASA.
 
 \subsection*{altitudes}
 
@@ -109,7 +93,7 @@ so
 \[ t = t' \]
 and similarly, $s = s'$.
 
-This is another really important result:  if the altitude to the hypotenuse is drawn in a right triangle, the two smaller right triangles are both similar to the original one.  All the triangles have the same three angles.
+This is another really important result:  if the altitude to the hypotenuse is drawn in a right triangle, the two smaller right triangles are both similar to the original one.  All three triangles have the same angles.
 
 \subsection*{theorems about right triangles}
 
@@ -158,7 +142,7 @@ $\bullet$ \ In any right triangle, the hypotenuse is longer than either side.
 
 \emph{Proof}.
 
-We showed above that in any right triangle, the right angle is larger than either of the other two angles.  By Euclid \hyperref[sec:Euclid1]{\textbf{Euclid I.18}}:  in any triangle, a greater side is opposite a greater angle.  
+We showed above that in any right triangle, the right angle is larger than either of the other two angles.  By \hyperref[sec:Euclid_I_18]{\textbf{Euclid I.18}}:  in any triangle, a greater side is opposite a greater angle.  
 
 $\square$
 
@@ -208,8 +192,8 @@ Conversely, if we are given that the line drawn to the midpoint of the longest s
 
 The two smaller triangles are isosceles.  Therefore, the total angle at $P$ is $\theta + \phi$ which is one-half the total for the entire triangle, or one right angle.
 
-$\square$
-
 \begin{center} \includegraphics [scale=0.35] {rt_tri_bisector.png} \end{center}
+
+$\square$
 
 \end{document}

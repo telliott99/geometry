@@ -23,25 +23,25 @@ Simple proofs of Pythagoras
 Euclid's proof of Pythagoras
 Brief review
 
+Similarity
+Parallelograms
+Similarity and angles
+Fundamental similarity theorems
+More similarity
+
 Circles
 Circles and angles
 Inscribed angles
 Tangents
 Arcs of a circle
 Chords in a circle
-
-Similarity
-Parallelograms
-Similarity and angles
-Fundamental similarity theorems
-More similarity
 Ptolemy
 
 Practice with proofs
 Introduction to Euclid
 More isosceles
 Euclid's elements
-Secant tangent theorem
+Power of a point
 Broken Chord
 Angle bisectors
 Excircles and Heron
@@ -55,6 +55,7 @@ Sum of angles by Ptolemy
 Law of Cosines
 
 Applications of similarity
+Secant tangent theorem
 Ptolemy revisited
 Menelaus's theorem
 Ceva's Theorem

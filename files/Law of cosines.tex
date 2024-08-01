@@ -41,6 +41,8 @@ The law of cosines is developed relatively easily from the Pythagorean theorem b
 
 We have that $\angle A$ is an acute angle, and the triangle is either obtuse (left) or acute (right).  We look at both cases for this example, although often in this book we just figure proofs or computations for acute triangles.  Usually that works out the same for both cases.
 
+\emph{Proof}.
+
 Let $c$ be the base of the triangle, and let $x$ be the whole length of the line segment $AD$ from the vertex $A$ to the place where the altitude $h$ reaches $c$ or its extension.
 
 For either case, we have two right triangles.  On the left, the larger one gives:
@@ -56,7 +58,9 @@ Subtract
 Since by definition, the cosine of $A$ or $\cos A = x/b$, we finally obtain
 \[ a^2 = b^2 + c^2 - 2bc \cos A \]
 
-This is called the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them, $\angle A$.
+$\square$
+
+This is called the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them, $\angle A$.  This is identical to Euclid Book II.12, except that he cannot do the last step.
 
 Using the cosine in the formula is just a form of shorthand for the ratio $x/b$ and gets rid of that pesky term $x$.
 
@@ -107,6 +111,42 @@ In the same way
 Subtract the first and second from the third:
 \[ c^2 - a^2 - b^2 = - 2 ab \cos C \]
 \[ c^2 = a^2 + b^2 - 2ab \cos C \]
+
+\subsection*{parallelogram sides}
+
+The law of cosines leads to an interesting relationship between the sides and diagonals of a parallelogram.  Recall that the diagonals divide the figure into two congruent triangles.  They also bisect one another.
+
+\begin{center} \includegraphics [scale=0.16] {pgram_squares2.png} \end{center}
+
+\emph{Proof}.
+
+For convenience we label the half-diagonals as $m$ and $n$.  Applying the theorem twice we have
+\[ a^2 = m^2 + n^2 - 2mn \cos \theta \]
+\[ b^2 = m^2 + n^2 + 2mn \cos \theta \]
+
+The sign change on the last term arises because the angles at the center are supplementary, so their cosines are negatives.  By addition:
+\[ a^2 + b^2 = 2(m^2 + n^2) \]
+
+But if $e$ and $f$ are the diagonals then $m^2 = e^2/4$ and $n^2 = f^2/4$ so
+\[ 2(a^2 + b^2) = e^2 + f^2 \]
+The sum of the squares of all four sides is equal to the sum of the squares of the diagonals.
+
+Of course this is correct for a rectangle (by Pythagoras's theorem), but it remains true when the shape leans to one side.
+
+$\square$
+
+Al alternative proof (Byer) is to apply Pythagoras directly
+\begin{center} \includegraphics [scale=0.16] {pgram_squares.png} \end{center}
+
+\emph{Proof}.
+
+\[ a^2 = h^2 + k^2 \]
+\[ e^2 = h^2 + (b - k)^2 \]
+\[ f^2 = h^2 + (b + k)^2 \]
+\[ e^2 + f^2 = 2h^2 + 2b^2 + 2k^2 \]
+\[ = 2(a^2 + b^2) \]
+
+$\square$
 
 \subsection*{philosophy}
 

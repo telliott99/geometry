@@ -20,15 +20,15 @@
 
 %[my-super-duper-separator]
 
-Starting with this chapter, the material gets more difficult and the proofs a little deeper.  Try to read with pencil and paper in hand and reproduce the diagrams and arguments for yourself as we go.
-
 \label{sec:parallelogram_theorems}
 
-Here we look at parallelograms, which are quadrilaterals with opposite sides equal and parallel (left panel, below).
+Here we look at parallelograms, which are quadrilaterals with opposite sides parallel.
 
-\begin{center} \includegraphics [scale=0.4] {pgram1.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {pgram7.png} \end{center}
 
-They also have opposite angles equal.
+Take any two parallel lines and form transversals with another pair of parallel lines.  The four-sided figure that is formed is a parallelogram.
+
+Other conditions that ensure we have a parallelogram:  two pairs of opposite sides equal, two pairs of opposing angles equal.
 
 We want to find the \emph{minimum} conditions that ensure a given quadrilateral is a parallelogram.
 
@@ -51,9 +51,9 @@ The alternate interior angles theorem gives us the angle equalities shown.
 
 $AD$ is parallel to $BC$, therefore the angles marked with black dots are equal.  $AB$ is parallel to $DC$, therefore the angles marked with red dots are equal.
 
-In the left panel, we have three angles the same and a shared side, hence $\triangle ABC \cong \triangle ACD$.
+In the left panel, we have three angles the same and a shared side, hence $\triangle ABC \cong \triangle CDA$ by ASA.
 
-Therefore, $AB = DC$ and $AD = BC$, fulfilling the definition. 
+Therefore, $AB = DC$, $AD = BC$.  Also, $\angle ABC = \angle ADC$ and $\angle BAD = \angle BCD$, rounding out the list of properties.
 
 $\square$
 
@@ -63,12 +63,16 @@ $\circ$ \ \ If a quadrilateral has opposing angles equal, then the opposing side
 
 \begin{center} \includegraphics [scale=0.20] {pgram1a.png} \end{center}
 
-The sum of all the angles is equal to four right angles or $360^{\circ}$.  This follows from the fact that any quadrilateral can be decomposed into two triangles, and the sum of angles in any triangle is equal to two right angles (left panel, above).
+In the right panel, we have $\angle A = \angle C$ and $\angle B = \angle D$.
 
-\[ \alpha + \beta + \gamma = 180 = s + t + u \]
-\[ \alpha + \beta + \gamma + s + t + u = 360 \]
+The sum of all the angles is equal to four right angles or $360^{\circ}$.  This follows from the fact that any quadrilateral can be decomposed into two triangles, and the sum of angles in any triangle is equal to two right angles.
 
-Since there are two pairs of angles, the sum of one from each pair, say $\angle A$ plus $\angle B$ is equal to two right angles.  Therefore, the opposing sides are parallel.
+We have that 
+\[ \angle A + \angle B + \angle C + \angle D = 360 \]
+\[ 2 \angle A + 2 \angle B = 360 \]
+\[ \angle A + \angle B = 180 \]
+
+Since there are two pairs of equal angles, the sum of one from each pair, say $\angle A$ plus $\angle B$ is equal to two right angles.  Therefore, the opposing sides are parallel.
 
 Then proceed as in the previous proof to show equality of opposing sides.
 
@@ -142,7 +146,7 @@ The isosceles triangle theorem says that in a triangle with two sides equal the 
 
 By the isosceles triangle theorem, all the angles marked with red dots in figure below are equal, and all the blue ones as well.  Because each quarter triangle has a red and a blue, the central angles are all equal.
 
-Therefore, all four central angles (at the midpoint $F$) are all right angles.
+For example $\angle AFD = \angle AFB$.  But this means that all four central angles (at the midpoint $F$) are all right angles.
 
 \begin{center} \includegraphics [scale=0.4] {pgram2.png} \end{center}
 
@@ -154,7 +158,24 @@ Going back to the parallelogram, let us assemble one whole parallelogram and two
 
 The angles are equal as marked, by construction, so the large triangle is similar to the four smaller ones.  The four small triangles are congruent.
 
-I'll leave the proof of this statement as an exercise.
+\subsection*{problem}
+
+Prove the last statement.
+
+\subsection*{Euclid I.43:  parallelogram complements equal}
+
+\label{sec:Euclid_I_43}
+
+In the figure below, the two white parallelograms are equal.
+\begin{center} \includegraphics [scale=0.15] {EI_43.png} \end{center}
+
+\emph{Proof}.
+
+The diagonal of any parallelogram divides it into two congruent triangles with equal area.
+
+By subtraction, the result follows.
+
+$\square$
 
 \subsection*{Pappus's parallelogram theorem}
 

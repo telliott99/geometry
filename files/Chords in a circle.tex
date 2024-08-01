@@ -58,38 +58,6 @@ It follows that
 \[ ab = cd \]
 The products of the two parts of each chord are equal.
 
-This leads to yet another proof of the Pythagorean theorem.
-
-\subsection*{Pythagorean theorem by crossed chords}
-
-\label{sec:PProof_chords}
-
-\emph{Proof}.
-
-A right triangle with sides $a,b$ and $c$ is inscribed in a circle.  By Thales' theorem, the hypotenuse $c$ is a diagonal.  Draw two more diagonals, parallel to the sides $a$ and $b$.  We can use similar right triangles to show that these bisect sides $a$ and $b$.
-\begin{center} \includegraphics [scale=0.45] {pyth20.png} \end{center}
-
-So then, we will use the crossed chords theorem, multiplying the two halves of $a$ together.  The question is, what are the two parts of the dotted diameter that crosses $a$ at right angles?
-
-The long part is $c/2 + b/2$.  Can you see why?  
-
-The very short part is $c - (c/2 + b/2) = c/2 - b/2$.  The reason is that when added to the long part, the result is just
-\[ c/2 + b/2 + c/2 - b/2 = c \]
-
-We have
-\[ \frac{a}{2} \cdot \frac{a}{2} = (\frac{c}{2} + \frac{b}{2})  (\frac{c}{2} - \frac{b}{2}) \]
-\[ a \cdot a = (c + b)(c - b)  = c^2 - b^2 \]
-\[ a^2 + b^2 = c^2 \]
-
-$\square$
-
-The theorem on crossed chords also leads to a basic theorem on cyclic quadrilaterals.
-
-$\bullet$ \ The crossed chords formed for the vertices of any cyclic quadrilateral form two pairs of similar triangles.  The sides that are in the same ratio are on different chords, so they are adjacent in the figure.
-\begin{center} \includegraphics [scale=0.4] {crossed_chords.png} \end{center}
-
-This is different that the case of crossed segments between two parallel lines, where sides in the same ratio lie on the same line segment.  If in doubt, make sure that the sides you think are corresponding sides lie opposite to equal angles.
-
 \subsection*{bisected chord theorem}
 
 \label{sec:perpendicular_bisector_of_a_chord}
@@ -142,6 +110,109 @@ which can be solved as a quadratic in $d$.
 \[ = r \pm \sqrt{r^2 - h^2} \]
 which is already fairly obvious since $OP = r$ and, it's the hypotenuse in a right triangle with $PS = h$, so $OS$ is exactly the square root, while $r$ minus that is just $d$.
 
+\subsection*{Euclid's proof of crossed-chords}
+
+This proof, III.35, uses only the Pythagorean theorem, the previous theorem about perpendicular bisectors, and some algebra from Book II.
+
+\begin{center} \includegraphics [scale=0.15] {crossed_chords2.png} \end{center}
+
+First we prove the following:
+
+\emph{Lemma}.
+
+Let $AB$ be a chord (not diagonal) in a circle on center $O$, with $OM \perp AB$ and bisecting $AB$ so $AM = BM$.
+
+Let $E$ be an arbitrary point on $AB$.
+
+I claim that 
+\[ AE \cdot EB + EM^2 = BM^2 \]
+
+This can be proved by geometry (Euclid II.5), but algebra is quicker:
+
+Let $x = AM = BM$, and $y = EM$.  
+
+Then $EB = x - y $ and $AE = x + y$.  We have
+\[ (x+y)((x-y) + y^2 = x^2 \]
+which is easily verified.
+
+Starting with
+\[ AE \cdot EB + EM^2 = BM^2 \]
+Add the square on $OM$ to both sides.
+\[ AE \cdot EB + EM^2 + OM^2 = BM^2 + OM^2 \]
+\[ AE \cdot EB + OE^2 = OB^2 \]
+\[ AE \cdot EB = OB^2 - OE^2 \]
+
+$\square$
+
+The product of the two parts of a chord cut at any point $E$ is equal to the difference of squares of the radius of the circle and the distance from the center to the point $E$.
+
+This leads to our proof of the crossed-chords theorem.
+
+\emph{Proof}.
+
+So then let some other chord $CD$ (not diagonal) cut $AB$ at $E$.  We will have the same right-hand side.
+
+\[ CE \cdot ED = OB^2 - OE^2 \]
+Thus
+\[ AE \cdot EB = CE \cdot ED \]
+
+$\square$
+
+\subsection*{Euclid II.14}
+
+\label{sec:Euclid_II_14}
+
+As an aside, suppose it is desired to construct the square equal in area to a given rectangle $APQR$.
+
+Extend $AP$ to $B$ such that PB = PQ.  
+
+Bisect AB to find center M for a circle with radius $AM = BM$.
+\begin{center} \includegraphics [scale=0.20] {EII_14.png} \end{center}
+
+By II.5
+\[ AP.PB = MB^2 - MP^2 \]
+\[ AP \cdot PQ = MC^2 - MP^2 = PC^2 \]
+
+Thus $PC$ is the side of the desired square.
+
+This can also be done by similar triangles, since $ \triangle CAP \sim \triangle BCP$.  Thus $PB/PC = PC/AP$ so $AP \cdot PB = PC^2$.
+
+$\square$
+
+Since we can get from Pythagoras to the crossed chord theorem, it may not be so surprising that we can go backward.
+
+\subsection*{Pythagorean theorem by crossed chords}
+
+\label{sec:PProof_chords}
+
+\emph{Proof}.
+
+A right triangle with sides $a,b$ and $c$ is inscribed in a circle.  By Thales' theorem, the hypotenuse $c$ is a diagonal.  Draw two more diagonals, parallel to the sides $a$ and $b$.  We can use similar right triangles to show that these bisect sides $a$ and $b$.
+\begin{center} \includegraphics [scale=0.45] {pyth20.png} \end{center}
+
+So then, we will use the crossed chords theorem, multiplying the two halves of $a$ together.  The question is, what are the two parts of the dotted diameter that crosses $a$ at right angles?
+
+The long part is $c/2 + b/2$.  Can you see why?  
+
+The very short part is $c - (c/2 + b/2) = c/2 - b/2$.  The reason is that when added to the long part, the result is just
+\[ c/2 + b/2 + c/2 - b/2 = c \]
+
+We have
+\[ \frac{a}{2} \cdot \frac{a}{2} = (\frac{c}{2} + \frac{b}{2})  (\frac{c}{2} - \frac{b}{2}) \]
+\[ a \cdot a = (c + b)(c - b)  = c^2 - b^2 \]
+\[ a^2 + b^2 = c^2 \]
+
+$\square$
+
+$\bullet$ \ The crossed chords formed for the vertices of any cyclic quadrilateral form two pairs of similar triangles.  The sides that are in the same ratio are on different chords.  The fundamental ratio $a/A = b/B$ leads directly to the crossed chord theorem.
+
+The basic rule is that corresponding sides lie opposite corresponding (equal) angles.  In the figure $a$ and $A$ lie opposite to the angle marked with a red dot.
+\begin{center} \includegraphics [scale=0.18] {crossed_chords3.png} \end{center}
+
+In the left panel (circle) corresponding sides lie on different chords, while in the right panel they lie on the same chord.  With crossed chords, the corresponding angles and sides are in clockwise order, while for the other case the order is counter-clockwise.
+
+If in doubt, make sure that the sides you think are corresponding sides lie opposite to equal angles.
+
 \subsection*{another view}
 Another way to look at this is shown in the following diagram:
 \begin{center} \includegraphics [scale=0.3] {annulus.png} \end{center}
@@ -165,6 +236,27 @@ I think the idea of the problem was to use similar triangles somehow.  But given
 
 So, as peripheral angles corresponding to equal arcs, $\angle CAT = \angle TAB$.
 
+\subsection*{diameters form a rectangle}
+
+\label{sec:diameters_form_rectangle}
+
+$\circ$  When any two diameters of a circle are drawn and consecutive chords on the circle joined together, the result is a rectangle.
+
+\begin{center} \includegraphics [scale=0.14] {rect_in_circle.png} \end{center}
+
+\emph{Proof}.
+
+A simple proof relies on Thales' circle theorem.  All four vertices are right angles.  
+
+It follows that both pairs of opposing sides are parallel.  For example 
+\[ AD \perp AB \perp BC \Rightarrow AD \parallel BC \]
+
+So $ABCD$ is a parallelogram with right-angled vertices, a rectangle.
+
+$\square$
+
+One can, of course, also use the fact that certain angles are subtended by equal arcs, so they are equal (for example $\angle DAC = \angle DBC$). Then use congruent triangles.
+
 \subsection*{problem}
 
 Construct a square circumscribed by a circle, i.e. all four vertices lie on the circle.
@@ -177,11 +269,49 @@ $\square$
 
 Try it and see.
 
+\subsection*{parallel chords subtended by equal arcs}
+
+\begin{center} \includegraphics [scale=0.5] {parallel_chords.png} \end{center}
+
+Given any two parallel chords in a circle, $AB$ and $PQ$.  
+
+Draw $AQ$.  
+
+The inscribed angles formed, $\angle BAQ$ and $\angle AQP$, are equal by alternate interior angles,
+
+By the converse of III.21, equal inscribed angles correspond to equal central angles.  
+
+And then by SAS we have congruent triangles, which gives equal chords.  $AP = BQ$.
+
+$\square$
+
 \subsection*{rectangle side on a circle}
 
 \label{sec:rectangle_side_on_a_circle}
 
 We derive a useful theorem about any rectangle in a circle, and its converse.
+
+\begin{center} \includegraphics [scale=0.16] {rect_in_circle2.png} \end{center}
+
+Let $ABCD$ be a rectangle such that $A$ and $B$ lie on the circle, but $C$ and $D$ do not.
+
+Then the extensions of $DC$ are equal, namely $DE = CF$.
+
+\emph{Proof}.
+
+Draw $AF$.  As before, $\angle AFE = \angle BAF$.
+
+Since the inscribed angles are equal, so are the arcs:  arc $AE =$ arc $BF$.
+
+Equal arcs have equal chords, hence $AE = BF$.
+
+So $\triangle ADE \cong \triangle BCF$ by HL.
+
+It follows that $DE = CF$.
+
+$\square$
+
+\emph{Proof}.  (Alternate).
 
 Suppose that $ACGE$ is a rectangle.  Let $BF$ be the perpendicular bisector of $AC$.
 
@@ -189,7 +319,7 @@ Suppose that $ACGE$ is a rectangle.  Let $BF$ be the perpendicular bisector of $
 
 Then, the extension of $BF$ passes through the center of the circle (it is part of a radius), by the converse of the theorem discussed earlier.  Every point that is equidistant from $A$ and $C$, including the center of the circle, lies on the extension of $BF$.
 
-$OB$ is also the perpendicular bisector of $DH$, since $ACGH$ is a rectangle (see the rectangle chapter for a proof).  So
+$OB$ is also the perpendicular bisector of $DH$, since $ACGH$ is a rectangle.  So
 \[ DF = FH \]
 
 but $AB = BC = EF = FG$.  Subtracting equals from equals:
@@ -199,12 +329,6 @@ but $AB = BC = EF = FG$.  Subtracting equals from equals:
 $\square$
 
 For any rectangle with two vertices lying on a circle and two inside the circle, when the side which connects the inside points is extended both ways to reach the circle, the extensions will be equal.
-
-\begin{center} \includegraphics [scale=0.5] {parallel_chords.png} \end{center}
-
-Given any two parallel chords in a circle, $AB$ and $PQ$, with $AB < PQ$.  Draw $AQ$.  
-
-The angles formed, $\angle BAQ$ and $\angle AQP$ are equal by alternate interior angles, so the arcs (and chords) they are subtended by are equal.  Namely, $AP = BQ$.
 
 \subsection*{converse}
 
@@ -220,28 +344,6 @@ $\square$
 Then all the consequences of the forward theorem follow.  In particular $DE = GH$.  
 
 And of course, the perpendicular bisector of $AC$ is also the perpendicular bisector of $DH$.  (\emph{Proof}.  Draw $\triangle OAB$ and $\triangle OCB$ as well as $\triangle ODF$ and $\triangle OHF$ to show that all the angles at $B$ and $F$ are right angles).
-
-\subsection*{diameters form a rectangle}
-
-\label{sec:diameters_form_rectangle}
-
-$\circ$  When any two diameters of a circle are drawn and the points on the circle joined together, the result is a rectangle.
-
-\emph{Proof}.
-
-\begin{center} \includegraphics [scale=0.4] {perp_chords2.png} \end{center}
-
-There are four triangles in the diagram, the top and bottom are congruent by SAS (two radii and vertical angles), as are the left and right.  Further, all are isosceles triangles.
-
-The angles at the corners of the quadrilateral are all equal and so all are right angles, and therefore the quadrilateral is a rectangle.
-
-$\square$
-
-\emph{Proof}.  (Alternate).
-
-An even simpler proof relies on Thales circle theorem.  All four vertices are right angles.  Therefore, the figure is a rectangle.
-
-$\square$
 
 \subsection*{Extraordinary property} 
 
