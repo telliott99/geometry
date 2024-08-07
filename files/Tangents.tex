@@ -35,7 +35,7 @@ $\bullet$   The tangent line, defined as perpendicular to the radius, touches th
 
 By definition, the tangent line at $P$ is perpendicular to the diameter or radius including $O$ and $P$.  Let $Q$ be some other point on that tangent line.  Then $\angle OPQ$ is a right angle.
 
-\begin{center} \includegraphics [scale=0.33] {circle3.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {circle3.png} \end{center}
 
 We suppose the tangent line also touches the circle at a second point $T$.
 
@@ -49,7 +49,7 @@ In fact, $OT > OP$.  So $T$ must lie outside of the circle.
 
 $\square$
 
-\begin{center} \includegraphics [scale=0.33] {circle3.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {circle3.png} \end{center}
 
 \subsection*{tangent:  touches one point $\rightarrow$ perpendicular}
 
@@ -71,7 +71,7 @@ The angle between the tangent and the radius is greater than a right angle on on
 
 Let us suppose the point is $T$, in the figure above.  $OTP$ is a right angle and we are in doubt about whether $T$ lies inside or outside the circle.
 
-\begin{center} \includegraphics [scale=0.33] {circle3.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {circle3.png} \end{center}
 
 But then $OTP$ is a right angle, with the side opposite, namely, $OP$, the hypotenuse of a right triangle.  But the hypotenuse is the longest side in a right triangle, so therefore $OT < OP$, so the point $T$ is \emph{inside} the circle.
 
@@ -82,7 +82,7 @@ $\square$
 \subsection*{shortest distance to the circle}
 
 Let $A$ be any point inside a circle.  Draw the radius that passes through $A$ to point $P$ on the circle.  I claim that the length $AP$ is smaller than the distance to \emph{any} other point on the circle, such as $Q$.
-\begin{center} \includegraphics [scale=0.33] {tangent3d.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {tangent3d.png} \end{center}
 
 \emph{Proof}.
 
@@ -114,7 +114,7 @@ By the theorem, $\angle OTP$ is a right angle, and since $OT$ is a radius of the
 
 To construct a tangent on a circle at a given point $T$:
 
-\begin{center} \includegraphics [scale=0.33] {tangent3.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {tangent3.png} \end{center}
 
 Extend $OT$ to $P$ so that $OP$ is twice the radius $OT$.  Construct the perpendicular bisector at $T$.  The bisector is also the tangent of the circle.
 
@@ -122,7 +122,7 @@ $\bullet$   From any external point $P$, one can draw two tangents to a circle. 
 
 $\bullet$   From any external point $P$, the line to the center of the circle bisects the angle between the two tangents, as well as the angle between the radii drawn to the two points of tangency.
 
-\begin{center} \includegraphics [scale=0.33] {tangent9.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {tangent9.png} \end{center}
 
 \emph{Proof.}
 
@@ -148,7 +148,7 @@ A tangent is a line that just touches the circle (or another curve, like a parab
 
 $\bullet$  The arc swept out between a tangent and a chord is equal to the arc lying between the point of tangency and the point where the chord meets the circle.
 
-\begin{center} \includegraphics [scale=0.16] {tc_theorem.png} \end{center}
+\begin{center} \includegraphics [scale=0.12] {tc_theorem.png} \end{center}
 
 \emph{Proof}.
 
@@ -193,38 +193,80 @@ and since $\angle DBF = \angle BAD$ we have
 
 $\square$
 
-\subsection*{problem}
+\subsection*{Euclid III.12}
 
-Two circles are tangent to each other at $A$.  In one circle draw the radius to $A$ and extend it.  This line goes through the center of the second circle.
-\begin{center} \includegraphics [scale=0.40] {3pts_tangent.png} \end{center}
+\label{sec:Euclid_III_12}
+
+Two circles are tangent to each other at $T$.  
+
+In one circle draw the radius to $T$ and extend it.  This line goes through the center of the second circle.
+
+\begin{center} \includegraphics [scale=0.12] {3pts_tangentc.png} \end{center}
+
 \emph{Proof}.
 
-Draw the tangent to the first circle at $A$.  This line goes through a single point ($A$) on the second circle.  The line perpendicular to it (the extension through $A$) is a radius of the second circle.
+Draw the tangent to the first circle at $T$.  This line goes through a single point ($T$) on both circles.
+
+The line perpendicular to it (the extension through $T$) is a radius of the second circle.
+
+$\square$
+
+Euclid's proof of III.12 is by contradiction.
+
+\emph{Proof}.
+
+Suppose the straight line $OQ$ does not go through $T$.
+
+By the triangle inequality, $OQ < OT + QT$.
+where $OT$ and $QT$ are radii of the two circles.
+
+Then $OQ$ must cut the two circles at different points, say $E$ and $F$.  
+
+The straight line is
+\[ OQ = OE + EF + QF \]
+\[ OQ > OE + QF \]
+where $OE$ and $QF$ are radii of the two circles.
+
+\begin{center} \includegraphics [scale=0.12] {3pts_tangente.png} \end{center}
+
+But $OT + QT = OE + QF$
+
+$OQ$ cannot be both less than the sum of radii and greater than the same sum.  This is a contradiction.
+
+Therefore $OTQ$ are collinear.  $OQ$ goes through $T$.
 
 $\square$
 
 \subsection*{problem}
-Prove that $\angle BAC$ is a right angle.
+Draw $AT$ and $BT$.  Prove that $\angle ATB$ is a right angle.
 
 \emph{Solution}.
 
-Draw the tangent line to both circles at $A$, the magenta line in the figure below. (exercise:  prove that there \emph{is} a single line that is tangent to both circles at the point where they touch).
+Draw the tangent line to both circles at $T$, the red line in the figure below.
 
-Drop radii of both circles to their respective tangent points at $B$ and $C$ (blue).  Draw the triangles $\triangle OAB$ and $\triangle PAC$.
+\begin{center} \includegraphics [scale=0.12] {3pts_tangentd.png} \end{center}
 
-$OB$ and $PC$ are both $\perp BC$, since $BC$ is a tangent to both, so $OB \parallel PC$.  Therefore, the blue-dotted angles are equal, by alternate interior angles.
+Draw radii of both circles to their respective tangent points at $A$ and $B$.
 
-\begin{center} \includegraphics [scale=0.4] {3pts_tangentb.png} \end{center}
+$DA$ and $DT$ are both tangent to the circle on center $O$, while $DT$ and $DB$ are both tangent to the circle on center $Q$
 
-Two angles labeled $\angle s$ in $\triangle OAB$ are equal because the triangle is isosceles (with two radii for sides).  The same is true for the angles labeled $\angle t$.
+The tangents are all equal in length, so $\triangle DAT$ and $\triangle DBT$ are both isosceles.
 
-The blue dotted angle is equal to $2s$ but supplementary to $2t$.  It follows that
-\[ 2s + 2t = 180 \]
-\[ s + t = 90 \]
+Since the base angles are equal, we have (by the external angle theorem) that
+\[ 2 \angle ATD = \angle BDT \]
+\[ 2 \angle BTD = \angle ADT \]
 
-Therefore, $s + t$ is equal to one right angle.  Since $\angle BAC$ adds to that to give two right angles, it is equal to one right angle.
+But the sum of the two right-hand sides is equal to two right angles.
+
+Therefore, the sum of the two left-hand sides is also equal to two right angles.
+Hence
+\[  \angle ATD + \angle BTD = 90 = \angle ATB \]
 
 $\square$
+
+Alternatively, since $\triangle DAT$ and $\triangle OAT$ are both isosceles, the sum of the angles making up $\angle OTD$ is equal to the sum of angles making up $\angle OAD$.
+
+But $\angle OAD$ is a right angle, therefore so is $\angle OTD$.
 
 \subsection*{tangents}
 As indicated in the previous problem, if two circles just touch one another at a single point, and the tangent is drawn at that point, then it is tangent to \emph{both} circles.  The perpendicular to the tangent at that point is a radius of both circles.  Thus a single line is collinear with both diameters.
@@ -239,42 +281,39 @@ The diameter through $P$ and $Q$ in the second case must be extended to meet the
 
 \label{sec:eyeball_theorem}
 
-This problem is from Acheson's Geometry book (Fig 131).  We have two circles with tangents drawn from the center of each circle to the other one.  Let the radius of the large circle be $R$ and that of the small one be $r$.
+This problem is from Acheson's Geometry book (Fig 131).  We have two circles with tangents drawn from the center of each circle to the other one.
 
-We are to compute the length of the chords formed by the tangents as they exit the originating circle.
+We are to show that the lengths of the chords formed by the tangents as they exit the originating circle are equal.
 
-\begin{center} \includegraphics [scale=0.33] {eyeball1.png} \end{center}
+\begin{center} \includegraphics [scale=0.15] {eyeball4.png} \end{center}
 
 \emph{Solution}.
 
-Obviously, the result depends on the distance separating the two circles.  Let us call that distance $D$.
+Let us label some points.
+\begin{center} \includegraphics [scale=0.15] {eyeball5.png} \end{center}
 
-\begin{center} \includegraphics [scale=0.33] {eyeball2.png} \end{center}
+The two triangles on the centerline with tangents as the base are equal:  $\triangle AOB \cong \triangle AOC$ by HL.
 
-The centerline (of length $D$) bisects the angle formed between the two tangents at $O$ (black lines).  \emph{Proof}:  the two right triangles containing the centers $O$ and $P$ as vertices and the black lines as hypotenuse are congruent by hypotenuse-leg in a right triangle (HL).
+Therefore, the centerline bisects $\angle BAC$.
 
-Let the half-angle at $O$ be $\theta$.
+So then the two small triangles $\triangle AXD \cong \triangle AXE$ by SAS.
 
-There are two similar right triangles with angle $\theta$.  One has side $s$ and hypotenuse $R$, while the other has side $r$ and hypotenuse $D$.  By similar triangles:
-\[ \frac{s}{R} = \frac{r}{D} \]
-\[ s = \frac{rR}{D} \]
+Therefore the angles formed at $X$ are right.  
 
-This is one-half of the chord, so $2s$ is the whole.
+We have similar right triangles:  $\triangle AXD \sim \triangle ABO$.
 
-But the result is symmetrical in $r$ and $R$.  Therefore the half-chord in the other circle has an identical length.
+Form the equal ratio of the hypotenuses on the left-hand side and of the shorter legs on the right-hand side:
+\[ \frac{AD}{AO} = \frac{DX}{OB} \]
+\[ DX =  \frac{AD \cdot OB}{AO} \]
 
-The chords are equal in length and parallel to each other (since they are perpendicular to the line containing $D$), so they form the sides of a rectangle.
+Define $OB = R$, $AD = r$ and $AO = d$ so
+\[ DX =  \frac{rR}{d} \]
 
-\begin{center} \includegraphics [scale=0.33] {eyeball3.png} \end{center}
+\begin{center} \includegraphics [scale=0.15] {eyeball5.png} \end{center}
 
-Later on we will compute the sine of the angle $\theta$ as the side opposite over the hypotenuse:
+$DX$ is one-half the chord.  Its length in the formula is symmetrical in $r$ and $R$.  Therefore the half-chord in the other circle has an identical length.
 
-\[ \sin \theta = \frac{s}{R} = \frac{r}{D} \]
-\[ s = R \sin \theta \]
-
-The total length of the chord is twice that for a central angle of $2 \theta$, so $2R \sin 2 \theta$.  
-
-This will be convenient because it will turn out that an inscribed angle, with the chord as its opposite side, will have a measure of one-half the central angle so its chord length will be $2R \sin \theta$.
+The chords are equal in length and parallel to each other (since they are perpendicular to the centerline, and bisected by it), so they form the sides of a rectangle.
 
 \subsection*{penny-farthing problem problem}
 

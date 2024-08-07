@@ -119,22 +119,32 @@ To find the area of this parallelogram, cut off a right triangle from the left s
 
 \begin{center} \includegraphics [scale=0.4] {area7.png} \end{center}
 
-If the parallelogram is particularly skinny for a given height, then it will not be possible to cut off just one triangle.  Euclid spends some time working through this issue to prove that the area of any parallelogram is the base times the height.
+It is possbile that a parallelogram is particularly skinny for a given height, then it will not be possible to cut off just one triangle.
 
-A simple solution:  turn any skinny parallelogram by one-quarter turn plus or minus what is needed so that the top and bottom sides are horizontal, and it will become fat.  Then proceed as before.
+There are at least three solutions to this.  One is to rotate the figure so that the sides become the base and the top.  Of course then we would have to prove that the formula still works.
 
-Alternatively, one can imagine slicing the parallelogram into horizontal slices and add small triangles on to each slice.  One could even use non-equal slices and then scale the triangles in proportion.  You will find that each small rectangle will have the same base, and together, the heights will add to the whole.
+A second idea is to slice the parallelogram into horizontal slices and add small triangles on to each slice.  One could even use non-equal slices and then scale the triangles in proportion.  You will find that each small rectangle will have the same base, and together, the heights will add to the whole.
 
 \begin{center} \includegraphics [scale=0.4] {pgram_sliced.png} \end{center}
 
-\subsection*{Euclid's Proof}
+The most sophisticated approach is to call on I.43.
+
+We will not prove it now, but this theorem  (\hyperref[sec:Euclid_I_43]{\textbf{parallelogram complements equal}} (Euclid I.43)) says that the two smaller parallelograms not on the diagonal, $ABED$ and $EFIH$, are equal.  
+
+Any parallelogram (such as $ABED$) can be turned into another with the same area but a different shape, simply by inclining the diameter $CG$ at an appropriate angle.
+
+\begin{center} \includegraphics [scale=0.12] {EI_43.png} \end{center}
+
+\subsection*{Euclid I.35}
 
 \label{sec:Euclid_I_35}
 
-Euclid's approach is detailed in three propositions in Book I of \emph{Elements}.  Here is Euclid I.35.  This proposition (theorem) says that given parallelograms $ABCD$ and $EBCF$ on the same base $BC$ and with $ADEF \parallel BC$, they have the same area.
+Euclid's approach is detailed in propositions from Book I of \emph{Elements}.  Here is Euclid I.35.  This proposition (theorem) says that given parallelograms $ABCD$ and $EBCF$ on the same base $BC$ and with $ADEF \parallel BC$, they have the same area.
 \begin{center} \includegraphics [scale=0.15] {Euclid_I_35.png} \end{center}
 
 The diagram is drawn for the awkward case, where the two parallelograms overlap.  We return to the properties of parallelograms later, but for now it is enough that $AB = DC$, $AD = BC$ and the sides are parallel as well.
+
+\emph{Proof}.
 
 Because of the shared base, $EF = BC = AD$.  So then by addition:  $AE = DF$.  We also have $AB = DC$ and because $AB \parallel DC$, $\angle EAB = \angle FDC$.  By SAS we obtain $\triangle EAB \cong \triangle FDC$.
 

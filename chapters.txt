@@ -8,13 +8,13 @@ Parallel lines
 Triangles
 Congruent triangles
 Isosceles triangles
-Constructions
-Perpendicular bisector
 Right triangles
+Introduction to Euclid
+Bisection
 
 Area
 Rectangles
-Area of triangles and parallelograms
+Area of polygons
 Altitudes
 Similarity and area
 
@@ -26,8 +26,7 @@ Brief review
 Similarity
 Parallelograms
 Similarity and angles
-Fundamental similarity theorems
-More similarity
+Similarity and ratios
 
 Circles
 Circles and angles
@@ -38,11 +37,11 @@ Chords in a circle
 Ptolemy
 
 Practice with proofs
-Introduction to Euclid
-More isosceles
 Euclid's elements
+Secant tangent theorem
 Power of a point
 Broken Chord
+More isosceles
 Angle bisectors
 Excircles and Heron
 Equilateral triangles
@@ -55,7 +54,6 @@ Sum of angles by Ptolemy
 Law of Cosines
 
 Applications of similarity
-Secant tangent theorem
 Ptolemy revisited
 Menelaus's theorem
 Ceva's Theorem

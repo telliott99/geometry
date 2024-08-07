@@ -49,7 +49,7 @@ Suppose we have one angle greater than another, or one chord greater than anothe
 
 \subsection*{crossed chords}
 
-\begin{center} \includegraphics [scale=0.4] {arcs6.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {arcs6.png} \end{center}
 Previously, we showed that when two arcs cross in a circle, each of the two equal vertical angles is equal to the \emph{average} of the two arcs they cut out.  It is also apparent that the two triangles formed are similar.
 
 In two similar triangles, the sides opposite equal angles are in the same ratio, so:
@@ -68,7 +68,7 @@ Given any chord of a circle and a line perpendicular to it, if the perpendicular
 
 Conversely, if the perpendicular is a bisector, then it is also a radius.  
 
-\begin{center} \includegraphics [scale=0.4] {perp_chords6.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {perp_chords6.png} \end{center}
 
 \emph{Proof}.
 
@@ -96,7 +96,7 @@ Furthermore, if we have a tangent and any chord that is parallel to it, then the
 
 This follows simply from the definition of the tangent as perpendicular to the radius at the point of tangency.
 
-\begin{center} \includegraphics [scale=0.4] {perp_chords7.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {perp_chords7.png} \end{center}
 
 By our previous theorem, $OT$ bisects $PR$ so that $PS = SR$.
 
@@ -215,7 +215,7 @@ If in doubt, make sure that the sides you think are corresponding sides lie oppo
 
 \subsection*{another view}
 Another way to look at this is shown in the following diagram:
-\begin{center} \includegraphics [scale=0.3] {annulus.png} \end{center}
+\begin{center} \includegraphics [scale=0.25] {annulus.png} \end{center}
 
 Given a larger circle of radius $R$ and a chord of it with length $2a$, draw the smaller circle of radius $r$ that just touches the chord.  Then, by the Pythagorean theorem we have that 
 \[ R^2 - r^2 = a^2 \]
@@ -267,21 +267,33 @@ The diagonals originate at vertices, by definition.  We also know that the diago
 
 $\square$
 
-Try it and see.
+\subsection*{parallel chords joined by equal arcs and chords}
 
-\subsection*{parallel chords subtended by equal arcs}
+\begin{center} \includegraphics [scale=0.14] {parallel_chords2.png} \end{center}
 
-\begin{center} \includegraphics [scale=0.5] {parallel_chords.png} \end{center}
+Given any two parallel chords in a circle, $AB$ and $CD$.  Draw $AD$.
 
-Given any two parallel chords in a circle, $AB$ and $PQ$.  
+The inscribed angles formed, $\angle ADC$ and $\angle BAD$, are equal by alternate interior angles,
 
-Draw $AQ$.  
+Thus arc $AC = $ arc $BD$.
 
-The inscribed angles formed, $\angle BAQ$ and $\angle AQP$, are equal by alternate interior angles,
+Equal arcs have equal chords so $AC = BD$.
 
-By the converse of III.21, equal inscribed angles correspond to equal central angles.  
+$\square$
 
-And then by SAS we have congruent triangles, which gives equal chords.  $AP = BQ$.
+It is a simple matter to extend this result to triangles such as $\triangle ABC \cong \triangle BAD$.
+
+\emph{Proof}.
+
+Since the arcs are equal $\angle ABC = \angle BAD$.
+
+\begin{center} \includegraphics [scale=0.14] {parallel_chords2.png} \end{center}
+
+But $\angle BDA$ and $\angle ACB$ both cut the same arc, $AB$.
+
+So $\triangle ABD$ and $\triangle BAC$ have three angles equal, and they share the same side $AB$ opposite one pair of equal angles.
+
+$\triangle ABD \cong \triangle BAC$ by ASA.
 
 $\square$
 
@@ -343,7 +355,7 @@ $\square$
 
 Then all the consequences of the forward theorem follow.  In particular $DE = GH$.  
 
-And of course, the perpendicular bisector of $AC$ is also the perpendicular bisector of $DH$.  (\emph{Proof}.  Draw $\triangle OAB$ and $\triangle OCB$ as well as $\triangle ODF$ and $\triangle OHF$ to show that all the angles at $B$ and $F$ are right angles).
+And of course, the perpendicular bisector of $AC$ is also the perpendicular bisector of $DH$.  (\emph{Proof}.  Draw $\triangle OAB$ and $\triangle OCB$ as well as $\triangle ODF$ and $\triangle OHF$ to show that all the angles at $B$ and $F$ are right angles.  $\square$)
 
 \subsection*{Extraordinary property} 
 
@@ -353,17 +365,21 @@ According to Acheson, this theorem comes from a book by Malton where it is descr
 
 \begin{center} \includegraphics [scale=0.6] {Acheson_G110.png} \end{center}
 
-Two chords of a circle meet at right angles.  
+Let two chords of a circle meet at right angles, and let the arms of the chords be $a + b$ and $c + d$.
 
-The squares of the four components add up to a constant, and that constant is equal to $(2R)^2$, twice the radius of the circle, squared.
+By crossed chords we have $ab = cd$.
 
-The key to the proof is to form the rectangle with two opposing sides equal to one of the chords.
+We will show that he squares of the four components add up to a constant, and that constant is equal to $(2R)^2$, twice the radius of the circle, squared.
 
-To do this, draw both diameters of the circle that terminate on each end of one of the chords, let's say the one composed of $a + b$.
+\[ a^2 + b^2 + c^2 + d^2 = (2R)^2 = 4R^2 \]
 
-\begin{center} \includegraphics [scale=0.4] {perp_chords3.png} \end{center}
+The key to the proof is to form a rectangle.
 
-If the four points at the ends of the two diameters are joined to form a rectangle (only the horizontal components are shown in the figure above), then it is clear by mirror-image symmetry that the short extension at the top is also equal to $c$, so the height of the rectangle is $d - c$.
+Pick one of the chords, say $a + b$.  Draw the diameter of the circle that terminates on one end of each of the chords.  The other diameter joins the other ends of chords $a + b$ but hasn't been drawn.
+
+\begin{center} \includegraphics [scale=0.17] {perp_chords3b.png} \end{center}
+
+If the four points at the ends of the two diameters are joined to form a rectangle then the short extension at the top is also equal to $d$, so the height of the rectangle is $c - d$.
 
 We proved this fact about rectangles in a circle \hyperref[sec:rectangle_side_on_a_circle]{\textbf{here}}.  
 
@@ -371,12 +387,12 @@ So then:
 
 \emph{Proof.}
 
-This is trivial now that we have $d - c$.  By the Pythagorean theorem
-\[ (a + b)^2 + (d - c)^2 = (2R)^2 \]
-\[ = a^2 + b^2 + d^2 + c^2 + 2ab - 2cd \]
+This is trivial now that we have $c - d$.  By the Pythagorean theorem
+\[ (a + b)^2 + (c - d)^2 = (2R)^2 \]
+\[ = a^2 + b^2 + c^2 + d^2 + 2ab - 2cd \]
 
 But $ab = cd$ so
-\[ (2R)^2 = a^2 + b^2 + c^2 + d^2 \]
+\[ 4R^2 = a^2 + b^2 + c^2 + d^2 \]
 
 $\square$
 

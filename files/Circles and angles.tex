@@ -40,7 +40,7 @@ $\bullet$   Given any straight line segment, a circle can be drawn having the se
 
 Suppose we start with the line segment $OP$ in the figure below, and choose $O$ as the center.  Place the needle point of the compass on $O$ and the pencil on $P$ and then draw the circle containing all the points the same distance from $O$ as $P$ is.
 
-\begin{center} \includegraphics [scale=0.4] {circle1.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {circle1.png} \end{center}
 
 Next, extend the radius $PO$ to meet the circle on the other side at $Q$.  This whole line segment $PQ$ is called a \emph{diameter} of the circle.
 
@@ -49,7 +49,7 @@ $\bullet$   Any diameter divides the circle into two equal parts.
 
 (Recall that we allow a mirror image of something to be called equal to itself).  So then, if we take the bottom half and flip it vertically, we claim the two halves are exactly equal.
 
-\begin{center} \includegraphics [scale=0.4] {circle2.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {circle2.png} \end{center}
 
 \emph{Proof}.
 
@@ -71,23 +71,31 @@ $\square$
 
 \label{sec:circumcenter}
 
-Suppose we have three points:  $Q$, $R$ and $S$.  We find the perpendicular bisector of $QR$ and also, the perpendicular bisector of $QS$.  Extend them to where they meet, at point $O$.
+\begin{center} \includegraphics [scale=0.15] {3pts_circle.png} \end{center}
 
-\begin{center} \includegraphics [scale=0.35] {perp_4.png} \end{center}
+Suppose we have three arbitrary points in the plane:  $A$, $B$ and $C$.  
 
-Point $O$ is:
+The claim is we can draw a circle that contains all three points on its circumference.
+  
+\emph{Proof}.
 
-$\circ$ \ equidistant from $Q$ and $R$.
+Pick two pairs of points and draw, say, $AB$ and $BC$.
 
-$\circ$ \ also equidistant from $Q$ and $S$.
+Find the perpendicular bisector of each.  We know that every point on the perpendicular bisector of $AB$ is equidistant from both $A$ and $B$, while for the latter case $AC$ every point is equidistant from $B$ and $C$.
 
-Therefore, $OQ = OR = OS$.  If we draw a circle on center $O$ with radius $OR$, it will pass through all three points.
+If $O$ is the point where the bisectors meet, that point is such that $OA = OB = OC$.
 
-\begin{center} \includegraphics [scale=0.3] {perp_5.png} \end{center}
+So if we draw the circle on center $O$ with radius $OA$ it contains all three points.
 
-The point $O$ is the center of a circle that includes all three vertices of a triangle, here the $\triangle QRS$.  We call this the circumcircle and $O$ the circumcenter.
+\begin{center} \includegraphics [scale=0.15] {3pts_circle.png} \end{center}
 
-In this example, the triangle is obtuse (it contains an angle greater than a right angle), so the origin of the circumcircle is not inside the triangle.
+$\square$
+
+The question arises whether there is a general rule about $\triangle ABC$ and it turns out there is:  if the origin of the circle lies on one of the sides of $\triangle ABC$ then it is a right triangle.  This is Thales' circle theorem.
+
+If $\triangle ABC$ contains an angle greater than a right angle, then the center of the circumcircle is not inside the triangle, while if it is acute, the center lies inside the triangle.
+
+We will not prove this now.  Euclid's proof for all three cases is III.31.
 
 \subsection*{Euclid III.1}
 
@@ -95,7 +103,7 @@ In this example, the triangle is obtuse (it contains an angle greater than a rig
 
 This is a simple method from Euclid to find the center of a circle.
 
-\begin{center} \includegraphics [scale=0.3] {perp_6.png} \end{center}
+\begin{center} \includegraphics [scale=0.25] {perp_6.png} \end{center}
 
 \emph{Proof}.
 
@@ -128,7 +136,7 @@ If there is no specification of an internal point, then it is possible for a lin
 
 \subsection*{radian measure}
 
-\begin{center} \includegraphics [scale=0.4] {arcs11.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {arcs11.png} \end{center}
 
 In the figure above, the angle $s$ is \emph{defined} as the length of arc $a$ that it sweeps out in a unit circle.
 
@@ -137,7 +145,9 @@ We talked briefly early in the book about the \emph{measure} of an angle.  It se
 The question is how to quantify this notion.
 
 Effectively what we'll do is imagine that we draw a circle with radius $1$, a \emph{unit} circle, which contains the angle as a central angle.
-\begin{center} \includegraphics [scale=0.4] {Simmons_1b.png} \end{center}
+
+\begin{center} \includegraphics [scale=0.3] {Simmons_1b.png} \end{center}
+
 Then, the measure of the angle is the distance traveled around the circle counter-clockwise from the horizontal on the right.
 
 Although this drawing shows angles in degrees, in calculus and analytical geometry angles are defined in terms of radians of arc.  For a unit circle with radius = $1$, the total circumference is $2\pi$.

@@ -14,7 +14,7 @@
 \PassOptionsToPackage{hyphens}{url}
 \usepackage[hidelinks, colorlinks=true, linkcolor=blue, urlcolor=red]{hyperref}
 
-%\setcounter{tocdepth}{2}
+%\setcounter{tocdepth}{3}
 
 \graphicspath{{_my_graphics_path}}
 

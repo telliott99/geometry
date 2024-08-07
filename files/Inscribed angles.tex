@@ -257,7 +257,7 @@ The geometric mean is always less than the arithmetic mean, except when $a = b$,
 
 \label{sec:equal_angle_on_circle_contradiction}
 
-There are several different setups which are essentially converses of the inscribed angles theorem.  Here is one:
+There are several variant arguments from similar setups which are converses of the inscribed angles theorem.  Here is one:
 
 Let $\triangle ABC$ lie on a circle.  
 
@@ -269,18 +269,22 @@ Then $D$ is also on the same circle.
 
 \emph{Proof}.
 
-Suppose otherwise, for example, let $D$ be external.
+Aiming for a contradiction, suppose otherwise.  Let $D$ be external and also let $\angle BDC = \angle BAC$.
 
-Then let $D'$ be on the circle so that $\angle BD'C$ is subtended by $BC$.
+Find where $BD$ cuts the circle at $D'$.
+
+So $D'$ is on the circle and $\angle BD'C$ is subtended by $BC$.
 
 By the forward version of the inscribed angle theorem:  
 $\angle BD'C = \angle BAC$.
 
-But that means $\angle BDC = \angle BD'C$.
+It follows that $\angle BDC = \angle BD'C$.
 
-Since $\angle BCD > \angle BCD'$, we have that $\angle BD'C > \angle BDC$.
+But $\angle BD'C$ is external to $\triangle CDD'$.
 
-But this is absurd.  So there is a contradiction.
+So $\angle BD'C > \angle BDC$
+
+This is a contradiction.
 
 A similar argument will show that $D$ cannot be internal to the circle.
 
@@ -290,28 +294,32 @@ $\square$
 
 \subsection*{another converse proof}
 
+This one uses Euclid III.22 rather than III.21.  
+
 \label{sec:inscribed_angles_converse2}
 
-Let $\triangle ABD$ lie on a circle.  
+Let $\triangle ABC$ lie on a circle.  
 
-Let point $C$ be such that $\angle BCD$ is supplementary to $\angle BAD$ by the theorem on cyclic quadrilaterals.
+Let point $D$ be such that $\angle ADC$ is supplementary to $\angle ABC$.
 
-Then $C$ lies on the same circle.
-\begin{center} \includegraphics [scale=0.16] {inscribed_angles_converse2} \end{center}
+Then $D$ lies on the same circle.
+\begin{center} \includegraphics [scale=0.22] {cyclic_quad_converse_b} \end{center}
 
 \emph{Proof}.
 
-Suppose $C$ does not lie on the circle.
+Aiming for a contradiction, suppose $D$ does not lie on the circle.
 
-Let $C$ be external and $C'$ lie on the point where $DC$ cuts the circle (right panel).  By the forward theorem, $\angle BC'D$ is supplementary to $\angle BAD$ and so equal to $\angle BCD$.
+Let $D$ be external and $D'$ lie on the point where $BD$ cuts the circle (right panel).  
 
-But by the external angle theorem $\angle BC'D = \angle BCD + \angle CBC' > \angle BCD$.  
+By the forward theorem, $\angle AD'C$ is supplementary to $\angle ABC$ and so equal to $\angle ADC$.
 
-This is a contradiction.  Therefore $C$ is not external.  
+But by Euclid I.21,  $\angle ADC < \angle AD'C$.  
 
-A similar argument will show that $C$ is not internal.  
+This is a contradiction.  Therefore $D$ is not external.  
 
-Therefore $C$ lies on the circle and $C$ and $C'$ are the same point.
+A similar argument will show that $D$ is not internal.  
+
+Therefore $D$ lies on the circle and $D$ and $D'$ are the same point.
 
 $\square$
 

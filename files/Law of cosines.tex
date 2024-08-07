@@ -21,71 +21,74 @@
 
 %[my-super-duper-separator]
 
-\subsection*{Law of cosines}
-
 \label{sec:law_of_cosines}
 
-The law of cosines relates the side lengths of any triangle to the cosine of an angle.  Rewritten appropriately, it applies to all three angles of the triangle.  This relationship is used extensively in geometry.
+This theorem is used extensively in geometry.  It relates the side lengths of any triangle to the cosine of an angle.  Rewritten appropriately, it can give any side in terms of the other two.
 
-For a triangle with sides $a$ and $b$ flanking vertex $C$, the formula is:
-\begin{center} \includegraphics [scale=0.5] {cosine_law.png} \end{center}
+Consider $\triangle ABC$ in two versions.  In one the angle at $A$ is acute, and in the other the angle is obtuse.  $\angle BAC = \angle B'AD$.
 
-The formula is the Pythagorean theorem with a correction factor, $-2ab \cos C$, that depends on the angle opposite the hypotenuse and which disappears when that angle is $\pi/2$.  
+$\angle BAC$ and $\angle BAD$ are supplementary.  Let the sides opposite be $a,b,c$, as usual. 
 
-The correction factor is negative for an angle $< \pi/2$, which makes sense, since the smaller angle squeezes the hypotenuse to be smaller as well.  
+\begin{center} \includegraphics [scale=0.20] {law_of_cosines4.png} \end{center}
+\[ c^2 = h^2 + x^2 \]
 
-And the factor is positive for an angle larger than $\pi/2$ and eventually becomes equal to $2ab$.  In that extreme when $\angle C$ is 180, then the right-hand side becomes $a^2 + b^2 + 2ab = (a + b)^2 = c^2$.  $a$ plus $b$ becomes just equal to $c$.
+For the acute case, we have
+\[ a^2 = h^2 + (b-x)^2 \]
+Subtracting the first from the second:
+\[ a^2 - c^2 = (b - x)^2 - x^2 = b^2 - 2xb \]
+Rearranging
+\[ a^2 = b^2 + c^2 - 2xb \]
 
-The law of cosines is developed relatively easily from the Pythagorean theorem by looking at the altitude (the notation on this figure has changed from the previous one).
-\begin{center} \includegraphics [scale=0.5] {Hopkins_964.png} \end{center}
-
-We have that $\angle A$ is an acute angle, and the triangle is either obtuse (left) or acute (right).  We look at both cases for this example, although often in this book we just figure proofs or computations for acute triangles.  Usually that works out the same for both cases.
-
-\emph{Proof}.
-
-Let $c$ be the base of the triangle, and let $x$ be the whole length of the line segment $AD$ from the vertex $A$ to the place where the altitude $h$ reaches $c$ or its extension.
-
-For either case, we have two right triangles.  On the left, the larger one gives:
-\[ x^2 + h^2 = b^2 \]
-and
-\[ (x - c)^2 + h^2 = a^2 \]
-
-Subtract
-\[ x^2 - (x - c)^2 = b^2 - a^2 \]
-\[ 2xc - c^2 = b^2 - a^2 \]
-\[ a^2 = b^2 + c^2 - 2xc \]
-
-Since by definition, the cosine of $A$ or $\cos A = x/b$, we finally obtain
+$x/c$ is the cosine of $\angle A$ so then finally
 \[ a^2 = b^2 + c^2 - 2bc \cos A \]
 
-$\square$
+\begin{center} \includegraphics [scale=0.20] {law_of_cosines4.png} \end{center}
 
-This is called the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them, $\angle A$.  This is identical to Euclid Book II.12, except that he cannot do the last step.
+For the obtuse case the arithmetic has a change of sign.  ($a$ is still the side opposite $\angle A$, but it is obviously bigger now).
+\[ a^2 = h^2 + (b+x)^2 \]
+Subtracting as before:
+\[ a^2 - c^2 = (b + x)^2 - x^2 = b^2 + 2xb \]
+Rearranging
+\[ a^2 = b^2 + c^2 + 2xb \]
+Just a change of sign on the last term.
+
+The other change is that the angle \emph{inside} the triangle is $\angle B'AC$, which is supplementary to the angles $\angle BAC = \angle B'AD$ whose cosine is $x/c$.
+
+Let $\theta$ and $\phi$ be supplementary so $\theta + \phi = \pi$.  Then
+\[ \cos \theta = \cos \pi - \phi \]
+\[ = \cos \pi \cos \phi  + \sin \pi \sin \phi = - \cos \phi \]
+
+Thus, when we change back to our usual (casual) terminology and just talk about $\angle A$ as the angle at vertex $A$ \emph{inside} the triangle
+
+\begin{center} \includegraphics [scale=0.20] {law_of_cosines4.png} \end{center}
+
+the formula is the same for the two cases:
+\[ a^2 = b^2 + c^2 - 2bc \cos A \]
+
+where $\angle A$ is $\angle BAC$ for the acute case and $\angle B'AC$ for the obtuse case.
+
+This is the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them, $\angle A$.  The result is identical to Euclid Book II.12, except that he cannot do the last step.
 
 Using the cosine in the formula is just a form of shorthand for the ratio $x/b$ and gets rid of that pesky term $x$.
 
-The same result can be obtained for the second triangle.  
-\begin{center} \includegraphics [scale=0.5] {Hopkins_964.png} \end{center}
+The formula is the Pythagorean theorem with a correction factor, $-2bc \cos A$, that depends on the angle opposite the hypotenuse and which disappears when that angle is $\pi/2$.  
 
-Again $x$ is the length of $AD$.  We write more directly:
-\[ b^2 - x^2 = a^2 - (c - x)^2 \]
-\[ = a^2 - c^2 + 2xc - x^2 \]
-\[ b^2 = a^2 - c^2 + 2xc \]
+The factor is negative for an angle $< \pi/2$, which makes sense, since the smaller angle squeezes the hypotenuse to be smaller as well.  
 
-Rearranging:
-\[ a^2 = b^2 + c^2 - 2xc \]
-
-That's exactly the same relationship.
+And the factor is positive for an angle larger than $\pi/2$.  
 
 \subsection*{alternative proof}
 Here is an alternative derivation based on the products of parts of two secants, for the special case of a right triangle.
 
 Draw a right triangle on one diameter in a circle of radius $a$.  Draw a second diameter such that it crosses the base of the right triangle at a right angle, forming a smaller, similar right triangle.
 \begin{center} \includegraphics [scale=0.35] {law_of_cosines2.png} \end{center}
+
 The smaller triangle has sides $a,b$ and $c$.  The lengths of the other parts are easy to compute.  Now multiply
 \[ (a + c)(a - c) = b (2a \cos \theta - b) \]
 \[ a^2 - c^2 = 2ab \cos \theta - b^2 \]
 The result follows immediately.
+\[ a^2 - c^2 = 2ab \cos \theta - b^2 \]
+\[ c^2 = a^2 + b^2 - 2ab \cos \theta \]
 
 $\square$
 
@@ -163,7 +166,7 @@ However, for a rigorous demonstration he needed to prove that this approximation
 and the relevant diagram:
 \begin{center} \includegraphics [scale=0.35] {newton_volume.png} \end{center}
 
-You should recognize the law of cosines at work.
+You can probably recognize the law of cosines at work.
 
 Trigonometry is hugely important in math and science.  Although it has (simple) applications for activities like surveying that is not at all what it is about.
 

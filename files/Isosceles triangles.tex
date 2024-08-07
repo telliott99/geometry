@@ -20,7 +20,7 @@
 
 %[my-super-duper-separator]
 
-Triangles are often classified on the basis of the largest angle they contain:  acute, right, or obtuse.  
+Triangles may be classified on the basis of the largest angle they contain:  acute, right, or obtuse.  
 \begin{center} \includegraphics [scale=0.4] {tri_types.png} \end{center}
 
 The acute triangle (left) has all three angles smaller than a right angle.  The right triangle, naturally, has one right angle.  We'll say a lot more about right triangles later.
@@ -83,7 +83,9 @@ The forward theorem about isosceles triangles is:
 
 $\bullet$ \ Two sides equal $\Rightarrow$ opposite angles equal.
 
-There is a simple demonstration based on angle bisection.  [We won't call it a proof.  See the discussion below.]
+There is a simple demonstration based on angle bisection, and another based on the ability to cut a line segment into two equal parts, also called a bisection.  
+
+[We won't label this part a proof.  See the discussion below.]
 
 \begin{center} \includegraphics [scale=0.4] {iso6b.png} \end{center}
 
@@ -117,7 +119,7 @@ The base is bisected, plus there is a right angle where the bisected cuts the ba
 
 \label{sec:isosceles_converse}
 
-We will prove the converse theorem:
+We also prove the converse theorem:
 
 $\bullet$ \ Two angles equal $\Rightarrow$ opposite sides equal.
 
@@ -135,11 +137,13 @@ Thus, $AB = AC$.  As before, there are right angles at the base, and the base is
 
 $\square$
 
-Euclid's proof of the isosceles triangle theorem is more complicated that what we have given above, and there is a good reason for this.  Our proof depends on the existence of the angle bisector, but we haven't actually shown how to do that.  It will turn out that our \hyperref[sec:Euclid_I_9]{\textbf{construction}} \emph{depends on} the isosceles triangle theorem.  
+Euclid's proof of the isosceles triangle theorem is more complicated that what we have given above, and there is a good reason for this.  
+
+Our demonstration depends on the existence of the angle bisector, but we haven't actually shown how to do that.  It will turn out that \hyperref[sec:Euclid_I_9]{\textbf{construction}} of the bisector \emph{depends on} the isosceles triangle theorem.  
 
 That's a problem because the reasoning is circular, thus invalid.  We cannot use $p$ to prove $q$ if we have previously used $q$ to prove $p$.  That proves nothing.
 
-Nevertheless, we prefer to sidestep Euclid's proof at this point.  You can find it \hyperref[sec:Euclid_I_5]{\textbf{here}}.
+Nevertheless, we prefer to sidestep Euclid's proof at this point.  We \hyperref[sec:Euclid_I_5]{\textbf{return}} to it later.
 
 \subsection*{other proofs}
 
@@ -159,6 +163,6 @@ Above, we are given $AB = AC$ and $BD = DC$, i.e. the base is bisected.  Since $
 
 \begin{center} \includegraphics [scale=0.4] {iso11.png} \end{center}
 
-Finally, we are given equal angles at $B$ and $C$ and we bisect the base.  We have SSA but do not know yet about the right triangle.  This presents some difficulties.  We will avoid those subtleties for now.  
+Finally, we are given equal angles at $B$ and $C$ and we bisect the base.  We have SSA but do not know yet about the right triangle.  This presents some difficulties, which we will not get into now.
 
 \end{document}

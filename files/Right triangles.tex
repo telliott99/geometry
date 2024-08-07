@@ -23,31 +23,37 @@
 
 \label{sec:right_triangles}
 
-A \emph{right}  triangle is a triangle containing one right angle.  We saw previously that the Greek definition of a right angle is that two of them add up to one straight line or $180$ degrees.
+A \emph{right}  triangle is a triangle containing one right angle.  We saw previously that the Greeks' definition of a right angle is that two of them add up to one straight line or $180$ degrees.
 
 No triangle can contain two right angles, because the measure of the third angle would then have to be zero.  This goes back to the parallel postulate as well as the sum of angles in a triangle.  Two right angles at both ends of a line segment send out parallel lines.
 
+\begin{center} \includegraphics [scale=0.20] {rt_tri2.png} \end{center}
+
 Right angles and right triangles are special in many ways.
 
-In the figure below, let us have the angle at vertex $P$ as a right angle.  It is common practice to mark a right angle with a little square, and we have followed that here, as shown.
+In the figure, let us have the angle at vertex $C$ be a right angle.  It is common practice to mark a right angle with a little square, but we often just state the fact.  So $\angle ACB$ is right.
 
-The side opposite $P$, here labeled $c$, is called the \emph{hypotenuse}, and the other two sides $a$ and $b$ are sometimes called legs.
-
-\begin{center} \includegraphics [scale=0.35] {right_triangle.png} \end{center}
+The side opposite $C$, it is common practice to label it $c$, is called the \emph{hypotenuse}, and the other two sides $a$ and $b$ are sometimes called legs.
 
 \subsection*{complementary angles}
 
 \label{sec:complementary_angle_theorem}
 
-Since the sum of angles in a triangle is equal to two right angles, the sum of the angles $\theta$ and $\phi$ above is equal to one right angle, or 90 degrees.  Together with $\angle P$ they sum up to two right angles.
+Since the sum of angles in a triangle is equal to two right angles, the sum of the two acute angles, $\angle BAC$ and $\angle ABC$ in the figure above, is equal to one right angle, or 90 degrees.  Together with $\angle ACB$ they sum up to two right angles.
 
-Angles $\theta$ and $\phi$, the two smaller angles in a right triangle, are said to be \emph{complementary}.  This fact is often exploited in proofs.
+\emph{Proof}.
+
+This is a direct consequence of the sum of angles theorem applied to a right triangle.
+
+$\square$
+
+The two smaller angles in a right triangle are said to be \emph{complementary}.  This fact is often exploited in proofs, since if we know one, we know the other, by sum of angles.
 
 $\bullet$ \ the sum of the two smaller angles in a right triangle is equal to one right angle.
 
 \subsection*{Pythagorean theorem}
 
-A second very important fact about right triangles is expressed in the Pythagorean theorem.  Although we haven't proved it yet, we will do so shortly, and call on it here.  Given the hypotenuse $c$ and two legs (sometimes called "arms") of a right triangle, $a$ and $b$, the theorem says that
+A second very important fact about right triangles is expressed in the Pythagorean theorem.  Although we haven't proved it yet, we will do so shortly, and call on it here.  Given the hypotenuse $c$ and two legs of a right triangle, $a$ and $b$, the theorem says that
 \[ a^2 + b^2 = c^2 \]
 
 It follows that if we know any two sides in a right triangle, then we know all three sides.
@@ -60,15 +66,17 @@ Previously, we gave several ways to prove that two triangles are congruent.  The
  
 \label{sec:SSA_in_right}
 
-For two right triangles, if one hypotenuse is equal to the other, and also one pair of legs equal, the two triangles are congruent.  This condition is called hypotenuse-leg in a right triangle (HL).  It is effectively SSA in the case where we know that the angle is a right angle.
+For two right triangles, if one hypotenuse is equal to the other, and also one pair of legs equal, the two triangles are congruent.  This condition is called hypotenuse-leg (HL).  It is effectively SSA in the case where we know that the angle is a right angle.
 
 \begin{center} \includegraphics [scale=0.4] {hyp_side_cong.png} \end{center}
 
-In the figure, imagine the hypotenuse swinging on the hinge of its vertex with the horizontal base.  There is only one angle where it will terminate on the vertical side with the correct length.  That point is marked with a black dot.
+In the figure, imagine the hypotenuse swinging on the hinge of its vertex with the horizontal base, since we do not know the angle between them.
+
+There is only one angle where the hypotenuse will terminate on the vertical extension from the right angle.  That point is marked with a black dot.
 
 \emph{Proof}.
 
-The third leg is determined by the other two sides by the Pythagorean theorem, since we know which side is the hypotenuse.  Therefore we have SSS.
+An algebraic proof is that the third side is determined by the other two sides by the Pythagorean theorem, since we know which side is the hypotenuse.  Therefore we have SSS.
 
 $\square$
 
@@ -106,12 +114,13 @@ $\bullet$ \ In any right triangle, the right angle is larger than either of the 
 Suppose $\alpha$ and $\beta$ are complementary angles in a right triangle,  Then $\alpha + \beta$ is equal to one right angle.  
 \[ \alpha + \beta = 90 \]
 
-Both angles $\alpha$ and $\beta$ must be non-zero:  $\alpha > 0$ and $\beta > 0$ (otherwise one leg is exactly equal to the hypotenuse and we do not have a triangle).  
+Both angles $\alpha$ and $\beta$ must be non-zero:  $\alpha > 0$ and $\beta > 0$ (otherwise we do not have a triangle).
 
-Suppose that $\alpha \le \beta$.  Subtract $\alpha$ from both sides of the equation above
-\[ \beta = 90 - \alpha \]
+\[ \alpha > 0 \]
+\[ \alpha + 90 > 90 \]
+\[ 90 > 90 - \alpha = \beta \]
 
-But $90 - \alpha < 90$ (since $\alpha > 0$), so $\beta < 90$.  And since $\alpha \le \beta$, $\alpha < 90$ also.
+The same proof applies starting with $\beta > 0$.
 
 $\square$
 
@@ -168,31 +177,49 @@ Any other line segment  (for example, the dotted line) from $R$ to the upper edg
 
 Since the hypotenuse is the longest side of a right triangle, by the previous theorem, $QR$ must be shorter than the dotted line.
 
-\subsection*{midpoint theorem}
+\subsection*{hypotenuse midpoint theorem}
 
-In a right triangle, draw the line segment from the vertex that contains a right angle to the midpoint of the hypotenuse, separating it into two equal lengths $a$.  We will show that the length of the bisector is also $a$.
+\label{sec:hypotenuse_midpoint}
 
-\begin{center} \includegraphics [scale=0.35] {rt_tri_bisector.png} \end{center}
+In a right triangle, draw the line segment from the vertex that contains a right angle to the midpoint of the hypotenuse, separating it into two equal lengths $m$.  We will show that the length of the bisector is also $m$.
+
+\begin{center} \includegraphics [scale=0.20] {rt_tri3.png} \end{center}
 
 \emph{Proof}.
 
-In the right panel, draw the perpendicular from the midpoint $S$ to the base $PR$.  The triangle $SQR$ is similar to the original right triangle by AAA.
+Draw the perpendicular from the midpoint $M$ to the base $BC$ at $D$.  Also draw the perpendicular from $M$ to the base $AC$ at $E$.
 
-Hence the two parts of the base are equal (labeled $b$), because $a/2a = b/2b = 1/2$.  
+\begin{center} \includegraphics [scale=0.20] {rt_tri5.png} \end{center}
 
-Therefore we have two congruent triangles:  $SQR$ and $PQS$ (by SAS).  So the bisector $PS$ is equal in length to $SR$.
+The triangle $\triangle MDB$ is a right triangle, hence by complementary angles it has all three angles equal to the original right triangle $\triangle ACB$ by AAA.
 
-Both of the new isosceles triangles formed by the original dashed line have equal base angles.
+The same is true of $\triangle AEM$.
+
+We are given that $AM = MB$.
+
+It follows that $\triangle MDB \cong \triangle AEM$.
+
+Therefore $EM = DB$.
+
+Because it has four right angles at its vertices, $EMDC$ is a rectangle.  (The fourth, at $M$, follows by sum of angles).
+
+Thus $EM = CD = BD$ so  $\triangle MDB \cong \triangle MDC$ by SAS.
+
+It follows that $MC = BM = AM$.
+
+Note that both $\triangle AMC$ and $\triangle CMB$ are isosceles.
 
 $\square$
 
-Conversely, if we are given that the line drawn to the midpoint of the longest side of any triangle also has length $a$, then the triangle is a right triangle.
+There are two even easier proofs of the above theorem.  The first uses Thales' theorem, which we will cover again later, but mentioned at the beginning of the book.  Any right triangle can be placed in (inscribed into) a circle, with the hypotenuse as the diameter.  $AM$ as well as $BM$ and $CM$ are all radii of this circle.
+
+Another proof uses similar triangles.  However, we have not established that theory yet, so we will skip it for nows.
+
+As a converse, if we are given that the line drawn to the midpoint of the longest side of any triangle also has length $m$, then the triangle is a right triangle.
 
 \emph{Proof}.
 
-The two smaller triangles are isosceles.  Therefore, the total angle at $P$ is $\theta + \phi$ which is one-half the total for the entire triangle, or one right angle.
-
-\begin{center} \includegraphics [scale=0.35] {rt_tri_bisector.png} \end{center}
+The two smaller triangles are isosceles.  Therefore, the total angle at vertex $C$ is half the total for the triangle, and thus equal to one right angle.
 
 $\square$
 
